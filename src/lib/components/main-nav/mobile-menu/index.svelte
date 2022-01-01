@@ -41,7 +41,7 @@
 
 {#if $menuState}
   <div
-    class="nav-items absolute flex flex-col pt-10 pb-16 w-screen items-center bg-off-white space-y-xx-small z-10 shadow-md"
+    class="nav-items absolute flex flex-col pt-3 pb-16 w-screen items-center bg-off-white space-y-xx-small z-10 shadow-md"
   >
     {#each navItems as navItem}
       <NavItem {navItem} on:click={toggle} />
