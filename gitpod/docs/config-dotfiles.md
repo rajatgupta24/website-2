@@ -26,6 +26,8 @@ Gitpod will recognize and run one of the following install scripts from your dot
 - setup
 - script/setup
 
+Note: Your installation script will be terminated if it exceeds 120 seconds.
+
 Make sure to make your installation script executable with `chmod 755 <install-script-name>.sh` before committing and pushing to your dotfiles repository.
 
 If there is no install script, your dotfiles will be symlinked into `/home/gitpod`.

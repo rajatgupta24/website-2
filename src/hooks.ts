@@ -64,7 +64,7 @@ const handleHeaders = async ({ event, resolve }) => {
   // Avoid clickjacking attacks, see https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html
   response.headers.set(
     "Content-Security-Policy",
-    "frame-ancestors *.gitpod.io;"
+    "frame-ancestors *.gitpod.io *.staging.gitpod-dev.com;"
   );
   return response;
 };
