@@ -1,6 +1,11 @@
 import type { TableData } from "$lib/types/table-data.type";
 import type { Card } from "$lib/types/card.type";
 import type { Intro } from "$lib/types/intro.type";
+import type {
+  FeatureTable,
+  FeatureTableColumn,
+  FeatureTableToc,
+} from "../components/ui-library/feature-table/feature-table.types";
 
 export const benefits: Card[] = [
   {
@@ -67,13 +72,15 @@ export const intros: Intro[] = [
   },
 ];
 
-export const bobTableData: TableData = {
-  image: {
-    src: "/images/local-development/bob.png",
-    class: "h-28",
+export const bobTableData: FeatureTableColumn = {
+  header: {
+    headline: "Bob",
+    image: {
+      path: "/images/local-development/bob.png",
+      alt: "Bob",
+    },
   },
-  title: "Bob",
-  details: [
+  items: [
     {
       term: "Setup new Project",
       list: [
@@ -124,13 +131,16 @@ export const bobTableData: TableData = {
   ],
 };
 
-export const aliceTableData: TableData = {
-  image: {
-    src: "/images/local-development/alice.png",
-    class: "h-28",
+export const aliceTableData: FeatureTableColumn = {
+  isHighlighted: true,
+  header: {
+    headline: " Alice",
+    image: {
+      path: "/images/local-development/alice.png",
+      alt: "alice",
+    },
   },
-  title: "Alice",
-  details: [
+  items: [
     {
       term: "Setup new Project",
       list: [
@@ -173,4 +183,42 @@ export const aliceTableData: TableData = {
       ],
     },
   ],
+};
+
+export const localToc: FeatureTableToc[] = [
+  {
+    type: "text",
+    data: {
+      text: "Setup new Project",
+    },
+  },
+  {
+    type: "text",
+    data: {
+      text: "Develop a new feature",
+    },
+  },
+  {
+    type: "text",
+    data: {
+      text: "Switch context",
+    },
+  },
+  {
+    type: "text",
+    data: {
+      text: "Set up a new computer",
+    },
+  },
+  {
+    type: "text",
+    data: {
+      text: "Contribute to Open-Source",
+    },
+  },
+];
+
+export const localComparison: FeatureTable = {
+  toc: localToc,
+  columns: [bobTableData, aliceTableData],
 };

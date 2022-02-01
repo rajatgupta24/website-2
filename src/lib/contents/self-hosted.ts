@@ -1,6 +1,11 @@
 import type { TableData } from "$lib/types/table-data.type";
 import type { Pricing } from "$lib/types/pricing.type";
 import { isEurope } from "$lib/utils/helpers";
+import type {
+  FeatureTable,
+  FeatureTableColumn,
+  FeatureTableToc,
+} from "../components/ui-library/feature-table/feature-table.types";
 import type { FAQ } from "../types/faq.type";
 
 export const pricingPlans: Pricing[] = [
@@ -49,17 +54,19 @@ export const pricingPlans: Pricing[] = [
   },
 ];
 
-export const freePlanTableData: TableData = {
-  title: "Free",
-  subtitle: `${isEurope() ? "€" : "$"}0 per user/month`,
+export const freePlanTableData: FeatureTableColumn = {
+  header: {
+    headline: "Free",
+    subtitle: `${isEurope() ? "€" : "$"}0 per user/month`,
+  },
   link: {
-    text: "Install now",
+    label: "Install now",
     href: "/docs/self-hosted/latest",
   },
-  details: [
+  items: [
     {
       term: "Public & Private Repos",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Team Limit",
@@ -83,50 +90,53 @@ export const freePlanTableData: TableData = {
     },
     {
       term: "Shared workspaces",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Snapshots",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Admin Dashboard",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Encrypted backups",
-      availibility: true,
+      availability: true,
     },
     {
       term: "multi-ide support",
-      availibility: true,
+      availability: true,
     },
     {
       term: "GitLab",
-      availibility: true,
+      availability: true,
     },
     {
       term: "GitHub",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Bitbucket",
-      availibility: true,
+      availability: true,
     },
   ],
 };
 
-export const professionalPlanTableData: TableData = {
-  title: "Professional",
-  subtitle: `${isEurope() ? "€29" : "$35"} per user/month`,
+export const professionalPlanTableData: FeatureTableColumn = {
+  isHighlighted: true,
+  header: {
+    headline: "Professional",
+    subtitle: `${isEurope() ? "€29" : "$35"} per user/month`,
+  },
   link: {
-    text: "Register and Install Now",
+    label: "Register and Install Now",
     href: "/enterprise-license",
   },
-  details: [
+  items: [
     {
       term: "Public & Private Repos",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Team Limit",
@@ -150,39 +160,156 @@ export const professionalPlanTableData: TableData = {
     },
     {
       term: "Shared workspaces",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Snapshots",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Admin Dashboard",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Encrypted backups",
-      availibility: true,
+      availability: true,
     },
     {
       term: "multi-ide support",
-      availibility: true,
+      availability: true,
     },
     {
       term: "GitLab",
-      availibility: true,
+      availability: true,
     },
     {
       term: "GitHub",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Bitbucket",
-      availibility: true,
+      availability: true,
     },
   ],
 };
 
+export const selfHostedToc: FeatureTableToc[] = [
+  {
+    type: "text",
+    data: {
+      text: "Public & Private Repos",
+    },
+  },
+  {
+    type: "tooltip",
+    data: {
+      text: "Team Limit",
+      tooltip: "Maximum number of users in the team.",
+    },
+  },
+  {
+    type: "tooltip",
+    data: {
+      text: "Inactivity Timeout",
+      tooltip: "Time after which workspaces are automatically stopped.",
+    },
+  },
+  {
+    type: "tooltip",
+    data: {
+      text: "timeout Boost",
+      tooltip: "Extra workspace inactivity timeout boost.",
+    },
+  },
+  {
+    type: "tooltip",
+    data: {
+      text: "Parallel Workspaces",
+      tooltip: "Run multiple workspaces at the same time.",
+    },
+  },
+  {
+    type: "tooltip",
+    data: {
+      text: "prebuilds",
+      tooltip:
+        "Enable prebuilds to continuously build your Git branches, so you and your team can always start coding right away.",
+    },
+  },
+  {
+    type: "tooltip",
+    data: {
+      text: "Shared workspaces",
+      tooltip: "Pair program with your team by sharing running workspaces.",
+    },
+  },
+  {
+    type: "tooltip",
+    data: {
+      text: "Snapshots",
+      tooltip:
+        "Create a copy of your workspace by sharing a snapshot with your team.",
+    },
+  },
+  {
+    type: "tooltip",
+    data: {
+      text: "Admin Dashboard",
+      tooltip: "Access to exclusive stats of your team.",
+    },
+  },
+  {
+    type: "tooltip",
+    data: {
+      text: "Encrypted backups",
+      tooltip:
+        "Keeps your data safe. More on <a href='/security'>security</a>.",
+    },
+  },
+  {
+    type: "tooltip",
+    data: {
+      text: "multi-ide support",
+      tooltip:
+        "Connect Gitpod with your favourite IDE. View <a href='/docs/editors'>docs/IDE</a> to see all suported IDE’s.",
+    },
+  },
+  {
+    type: "image",
+    data: {
+      text: "GitHub",
+      image: {
+        path: "/svg/github.svg",
+        alt: "GitHub",
+      },
+    },
+  },
+  {
+    type: "image",
+    data: {
+      text: "GitLab",
+      image: {
+        path: "/svg/gitlab.svg",
+        alt: "GitLab",
+      },
+    },
+  },
+  {
+    type: "image",
+    data: {
+      text: "Bitbucket",
+      image: {
+        path: "/svg/bitbucket.svg",
+        alt: "Bitbucket",
+      },
+    },
+  },
+];
+
+export const selfHostedComparison: FeatureTable = {
+  toc: selfHostedToc,
+  columns: [freePlanTableData, professionalPlanTableData],
+};
 export const selfhostedFAQ: FAQ = {
   headline: "FAQs",
   items: [
@@ -204,12 +331,12 @@ export const selfhostedFAQ: FAQ = {
     {
       title: "How can I install Self-Hosted?",
       content:
-        ' <p> You can either install <strong>Gitpod Self-Hosted</strong> on <a href="/docs/self-hosted/latest/installation/on-gke">Google GKE</a>, <a href="/docs/self-hosted/latest/installation/on-amazon-eks" >Amazon EKS</a >, <a href="/docs/self-hosted/latest/installation/on-microsoft-aks" >Azure AKS</a > or <a href="/docs/self-hosted/latest/installation/on-kubernetes">K3s</a>. See <a href="/docs/self-hosted/latest">Self-Hosted Docs</a> for more information. </p>',
+        '<p> You can either install <strong>Gitpod Self-Hosted</strong> on Google GKE, Amazon EKS, Azure AKS, or K3s. See <a href="/docs/self-hosted/latest">Self-Hosted Docs</a> for more information. </p>',
     },
     {
       title: "How can I pay?",
       content:
-        ' <p> Currently, <strong>Gitpod Self-Hosted</strong> can only be purchased on request. Please <a href="/enterprise-license">request a license key</a> and we\'ll contact you. If you have any questions, please <a href="/contact/sales">Get in touch</a>. All our plans can be paid via invoice. </p>',
+        '<p> Currently, <strong>Gitpod Self-Hosted</strong> can only be purchased on request. Please <a href="/enterprise-license">request a license key</a> and we\'ll contact you. If you have any questions, please <a href="/contact/sales">Get in touch</a>. All our plans can be paid via invoice. </p>',
     },
     {
       title: "Do you offer discounts for educational institutions?",

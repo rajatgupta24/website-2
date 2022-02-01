@@ -66,9 +66,12 @@ const main = async () => {
   });
   await sayHello(octokit);
 
+  console.log(
+    `repo:gitpod-io/gitpod is:pr is:merged merged:${from}..${to} sort:updated-desc`
+  );
   const { search } = await octokit.graphql(
     `query($searchQuery:String!) {
-    search(query: $searchQuery, type: ISSUE, last: 50) {
+    search(query: $searchQuery, type: ISSUE, last: 100) {
       edges {
         node {
           ... on PullRequest {

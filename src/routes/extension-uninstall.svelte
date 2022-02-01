@@ -79,10 +79,6 @@
 </script>
 
 <style lang="postcss">
-  header {
-    @apply mb-0 !important;
-  }
-
   form li {
     @apply mb-0;
   }
