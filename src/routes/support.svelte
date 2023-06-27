@@ -33,7 +33,7 @@
   />
 </Header>
 <Cta />
-<SectionCommon title="Helpful Resources">
+<SectionCommon title="Helpful Resources" id="resources" isTitleADeepLink={true}>
   <Resources {cards} slot="content" />
 </SectionCommon>
 

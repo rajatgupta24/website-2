@@ -19,6 +19,14 @@ export const cards: Card[] = [
     },
   },
   {
+    title: "Videos",
+    text: "Watch Videos to learn how to get started & make the most out of Gitpod.",
+    link: {
+      href: "/screencasts",
+      text: "Watch Videos",
+    },
+  },
+  {
     title: "Changelog",
     text: "Here you can view the latest product improvements and updates.",
     link: {
@@ -27,21 +35,29 @@ export const cards: Card[] = [
     },
   },
   {
-    title: "Discord Server",
+    title: "Blog",
+    text: "Here you can read about articles about developer experience & Gitpod.",
+    link: {
+      href: "/blog",
+      text: "View Blogs",
+    },
+  },
+  {
+    title: "Guides",
+    text: "Here you can read Gitpod guides to use Gitpod in your projects.",
+    link: {
+      href: "/guides",
+      text: "View Guides",
+    },
+  },
+  {
+    title: "Community Discord Server",
     text: "Would you like to take part in live coding sessions and connect with the community ? Then join us on Discord.",
     link: {
       href: "https://www.gitpod.io/chat",
       text: "Join Discord",
     },
   },
-  // {
-  //   title: "Gitpod Roadmap",
-  //   text: "Are you curious where Gitpod is heading to next? On the roadmap you can see our next steps.",
-  //   link: {
-  //     href: "https://www.gitpod.io/roadmap",
-  //     text: "View Roadmap",
-  //   },
-  // },
   {
     title: "Status",
     text: "On the status page you get informed on all past and current incidents.",
