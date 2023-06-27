@@ -100,68 +100,75 @@
     imageTwitter: `images/${imagesDirectoryName}/${slug}/${image}`,
   }}
 />
-<div class="flex justify-center mt-small mb-8">
-  <div class="w-full lg:w-[50rem] leading-[177.7%]">
-    <img
-      src="/images/{imagesDirectoryName}/{slug}/{teaserImage || image}"
-      alt={`${title}`}
-      class="max-h-[540px] rounded-tl-2xl rounded-tr-[1.3rem]"
-    />
-    <div
-      class="content-blog prose prose-img:rounded-tl-2xl prose-img:rounded-tr-[1.3rem] max-w-none mt-xx-small"
-    >
-      <p
-        class="{tags && tags.length > 0
-          ? '!mb-macro'
-          : '!mb-macro'} mt-[1.875rem] text-body"
+
+<article>
+  <div class="flex justify-center mt-small mb-8">
+    <div class="w-full lg:w-[50rem] leading-[177.7%]">
+      <img
+        src="/images/{imagesDirectoryName}/{slug}/{teaserImage || image}"
+        alt={`${title}`}
+        class="max-h-[540px] rounded-tl-2xl rounded-tr-[1.3rem]"
+      />
+      <div
+        class="content-blog prose prose-img:rounded-tl-2xl prose-img:rounded-tr-[1.3rem] max-w-none mt-xx-small"
       >
-        {dateDisplay}
-      </p>
-      <!-- {#if type === "digest"}
+        <p
+          class="{tags && tags.length > 0
+            ? '!mb-macro'
+            : '!mb-macro'} mt-[1.875rem] text-body"
+        >
+          {dateDisplay}
+        </p>
+        <!-- {#if type === "digest"}
         <Pill text="DevX Digest" class="mb-micro" />
       {/if} -->
-      {#if tags && tags.length > 0}
-        <div class="flex mb-macro items-center gap-macro">
-          {#each tags as tag}
-            <a
-              data-sveltekit-preload-data
-              href="/blog?{new URLSearchParams({ tag }).toString()}"
-              ><Pill variant="gray" text={tag} /></a
-            >
-          {/each}
-        </div>
-      {/if}
-      <h1>{title}</h1>
-      <p>
-        <span
-          ><Avatars
-            usernames={author}
-            displayNames={authorDisplayNames}
-            socialMediaLinks={authorSocialMediaLinks}
-            socialMediaLinkClasses="inline-flex mr-2 px-2 bg-white dark:bg-card rounded-xl text-body focus:bg-card focus:text-important hover:bg-card hover:text-important"
-            socialMediaImgClasses="mr-2 h-6 w-6 place-self-center"
-          /></span
-        >
-      </p>
-      <slot />
-    </div>
-    <div
-      class="flex items-center md:flex-row justify-between md:items-baseline border-t border-solid border-divider pt-4 mt-small"
-    >
-      <Share text="Share this post" {shareLinks} />
-      <div class="flex flex-row md:flex-row justify-between">
-        {#if imagesDirectoryName === "blog"}
-          <SubscribeRssFeed href="/blog/rss.xml" />
-          <RequestChanges
-            href={`https://github.com/gitpod-io/website/edit/main/src/routes/blog/${slug}.md`}
-          />
+        {#if tags && tags.length > 0}
+          <div class="flex mb-macro items-center gap-macro">
+            {#each tags as tag}
+              <a
+                data-sveltekit-preload-data
+                href="/blog?{new URLSearchParams({ tag }).toString()}"
+                ><Pill variant="gray" text={tag} /></a
+              >
+            {/each}
+          </div>
         {/if}
+        <header>
+          <h1>{title}</h1>
+          <p>
+            <span
+              ><Avatars
+                usernames={author}
+                displayNames={authorDisplayNames}
+                socialMediaLinks={authorSocialMediaLinks}
+                socialMediaLinkClasses="inline-flex mr-2 px-2 bg-white dark:bg-card rounded-xl text-body focus:bg-card focus:text-important hover:bg-card hover:text-important"
+                socialMediaImgClasses="mr-2 h-6 w-6 place-self-center"
+              /></span
+            >
+          </p>
+        </header>
+        <slot />
       </div>
-      {#if imagesDirectoryName === "guides"}
-        <RequestChanges
-          href={`https://github.com/gitpod-io/website/edit/main/src/routes/guides/${slug}/index.md`}
-        />
-      {/if}
+      <main>
+        <div
+          class="flex items-center md:flex-row justify-between md:items-baseline border-t border-solid border-divider pt-4 mt-small"
+        >
+          <Share text="Share this post" {shareLinks} />
+          <div class="flex flex-row md:flex-row justify-between">
+            {#if imagesDirectoryName === "blog"}
+              <SubscribeRssFeed href="/blog/rss.xml" />
+              <RequestChanges
+                href={`https://github.com/gitpod-io/website/edit/main/src/routes/blog/${slug}.md`}
+              />
+            {/if}
+          </div>
+          {#if imagesDirectoryName === "guides"}
+            <RequestChanges
+              href={`https://github.com/gitpod-io/website/edit/main/src/routes/guides/${slug}/index.md`}
+            />
+          {/if}
+        </div>
+      </main>
     </div>
   </div>
-</div>
+</article>
