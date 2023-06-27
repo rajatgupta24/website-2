@@ -90,6 +90,8 @@ ports:
     onOpen: open-preview
     name: Website
     description: Website Preview
+    visibility: private
+    protocol: https
 ```
 
 **Caption:** An example project configured to install, build and run a `yarn` project with a webserver, exposed on port 3000. On start, the webserver preview is opened automatically.
