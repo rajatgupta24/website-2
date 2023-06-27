@@ -40,8 +40,8 @@
 <Articles
   title="Popular articles"
   slugs={[
-    "i-said-goodbye-to-local-development-and-so-can-you",
-    "local-app",
-    "continuous-dev-environment-in-devops",
+    "introducing-gitpod-dedicated",
+    "future-of-software-cdes",
+    "securing-cncf-software-supply-chains-with-cd-es",
   ]}
 />
