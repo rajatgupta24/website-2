@@ -132,14 +132,9 @@ Some example patterns (**for GitLab**) and results for the mentioned `owner/some
 
 ## Project-Specific Environment Variables
 
-Environment variables which are defined in [project](/docs/configure/projects) settings will be visible in prebuilds, and optionally also in workspaces. This is useful for prebuilds to access restricted services.
+Environment variables which are defined in [project](/docs/configure/projects) settings will be visible in prebuilds, and optionally also in workspaces. This is useful for prebuilds to access restricted services. Project-Specific Environment Variables will take precedence over [User-Specific Environment Variables](#user-specific-environment-variables). Only members of the [Gitpod organization](/docs/configure/orgs) where the project resides will be able to access the environment variables inside a running workspace, if the associated repository is public then people outside of your Gitpod organization will _not_ have access to them normally.
 
-Important notes:
-
-- Project-Specific Environment Variables will take precedence over [User-Specific Environment Variables](#user-specific-environment-variables)
-- The `gp env` command is only linked with [User-Specific Environment Variables](#user-specific-environment-variables) but not Project-Specific Environment Variables. That means, if you set an environment variable with the `gp env` command, it will be saved in [your account settings](https://gitpod.io/variables).
-
-> **Warning:** Care should be taken with secrets. Allowing secrets to be accessed from workspaces will expose those secrets to anyone who can open the workspace.
+> **Warning:** Care should be taken with secrets. If your repository is public and prebuilds are enabled, ensure that neither of your `init` or `before` task commands in `.gitpod.yml` are exposing the sensitive environment variable values to the filesystem (i.e. persistent `/workspace` dir) and that [`pullRequestsFromForks` (for GitHub)](/docs/configure/projects/prebuilds#github-specific-configuration) is set to false.
 
 ## Task terminal-specific Environment Variables
 
