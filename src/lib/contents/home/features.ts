@@ -280,7 +280,7 @@ export const allYourDataSecured: Feature = {
 export const lockDownYourSourceCode: Feature = {
   title: "Centrally manage configs and secrets ",
   paragraph:
-    "Platform teams can enforce organisational security policies within CDEs. Manage and share dev environment configurations and secrets data from one place.",
+    "Platform teams can enforce organisational security policies within CDEs. Manage and share dev environment configurations and secrets data from one place and access third-party applications through secretless authorization.",
   image: {
     src: "/images/features/cloud-automation.webp",
     darkSrc: "/images/features/cloud-automation-dark.webp",
