@@ -30,6 +30,7 @@ Available Commands:
   ports               Interact with workspace ports.
   preview             Opens a URL in the IDE's preview
   snapshot            Take a snapshot of the current workspace
+  ssh                 Show the SSH connection command for the current workspace
   stop                Stop current workspace
   sync-await          Awaits an event triggered using gp sync-done
   sync-done           Notifies the corresponding gp sync-await calls that this event has happened
@@ -146,6 +147,10 @@ For sharing a complete clone of a workspace with others, `gp snapshot` is basica
 ```sh
 gp snapshot
 ```
+
+## ssh
+
+`gp ssh` outputs a command you can copy/paste to another terminal to connect to your workspace via SSH.  The command requires that you have [uploaded a public key to Gitpod](https://www.gitpod.io/docs/configure/user-settings/ssh#upload-an-ssh-key-to-gitpod).
 
 ## stop
 
