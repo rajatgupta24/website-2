@@ -12,7 +12,7 @@
 </script>
 
 <Section>
-  <h2 class="text-center text-h2" class:mb-small={!text}>{title}</h2>
+  <h2 class="text-center text-h3 sm:text-h2" class:mb-small={!text}>{title}</h2>
   {#if text}
     <p class="text-center text-large mb-small mx-auto {textMaxW}">
       {text}

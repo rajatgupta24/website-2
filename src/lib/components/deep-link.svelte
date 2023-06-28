@@ -16,7 +16,7 @@
     >
   </h3>
 {:else}
-  <h2 class={titleClassNames}>
+  <h2 class="{titleClassNames} text-h3 sm:text-h2">
     {text}
     <a href="#{target}" id={target} aria-label="{text} permalink"
       ><span class="icon icon-link" /></a
