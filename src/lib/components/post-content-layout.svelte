@@ -8,6 +8,7 @@
   import type { ShareLink } from "$lib/types/share-link";
   import RequestChanges from "./ui-library/request-changes.svelte";
   import SubscribeRssFeed from "./ui-library/subscribe-rss-feed.svelte";
+  import "$lib/assets/prism-solarized-light.css";
 
   export let baseUrl: string;
   export let imagesDirectoryName: string;
@@ -86,10 +87,6 @@
     @apply hidden;
   }
 </style>
-
-<svelte:head>
-  <link rel="stylesheet" href="/prism-solarized-light.min.css" />
-</svelte:head>
 
 <OpenGraph
   data={{

@@ -8,6 +8,7 @@
   import docsCurrentSectionStore from "$lib/stores/docs-current-section";
   import docsCurrentSubSectionStore from "$lib/stores/docs-current-subsection";
   import PrevNext from "./prev-next.svelte";
+  import "$lib/assets/prism-solarized-light.css";
 
   /** @type {string} */
   export let section;
@@ -22,10 +23,6 @@
   $: $docsCurrentSectionStore = section;
   $: $docsCurrentSubSectionStore = subsection;
 </script>
-
-<svelte:head>
-  <link rel="stylesheet" href="/prism-solarized-light.min.css" />
-</svelte:head>
 
 <OpenGraph
   data={{

@@ -29,6 +29,8 @@
   import OpenGraph from "$lib/components/open-graph.svelte";
   import "$lib/assets/markdown-commons.scss";
   import type { Load } from "@sveltejs/kit";
+  import "$lib/assets/prism-solarized-light.css";
+
   export let changelogEntry: ChangelogEntryType;
   const { date, title, excerpt, content, image, alt, ogImage } = changelogEntry;
 </script>
@@ -38,10 +40,6 @@
     @apply rounded-tl-lg rounded-tr-lg sm:rounded-tl-2xl sm:rounded-tr-2xl;
   }
 </style>
-
-<svelte:head>
-  <link rel="stylesheet" href="/prism-solarized-light.min.css" />
-</svelte:head>
 
 <OpenGraph
   data={{

@@ -25,13 +25,10 @@
   import ButtonsWrapper from "$lib/components/buttons-wrapper.svelte";
   import type { Load } from "@sveltejs/kit";
   import RSS from "$lib/components/svgs/rss.svelte";
+  import "$lib/assets/prism-solarized-light.css";
 
   export let changelogEntries: ChangelogEntryType[];
 </script>
-
-<svelte:head>
-  <link rel="stylesheet" href="/prism-solarized-light.min.css" />
-</svelte:head>
 
 <OpenGraph
   data={{
