@@ -455,7 +455,7 @@ export const dedicatedPlanTableData: FeatureTableColumn = {
         },
         {
           term: "Single sign-on",
-          text: "Coming soon",
+          availability: true,
         },
         {
           term: "Centralized organization billing",
