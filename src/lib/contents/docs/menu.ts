@@ -44,6 +44,7 @@ export const MENU: MenuEntry[] = [
     M("Tasks", "configure/workspaces/tasks"),
     M("Ports", "configure/workspaces/ports"),
     M("Collaboration", "configure/workspaces/collaboration", false, []),
+    M("OpenID Connect (OIDC)", "configure/workspaces/oidc", false, []),
     M("Multi-repo", "configure/workspaces/multi-repo", false, [], "beta"),
     M("Workspace classes", "configure/workspaces/workspace-classes"),
   ]),
@@ -227,8 +228,9 @@ export const MENU: MenuEntry[] = [
     M("FAQs", "references/ides-and-editors/faqs", false, []),
   ]),
   M("Integrations", "integrations", false, [
-    M("Tailscale", "integrations/tailscale"),
+    M("Amazon Web Services (AWS)", "integrations/aws", false, []),
     M("JetBrains Gateway", "integrations/jetbrains-gateway", false, [], "beta"),
+    M("Tailscale", "integrations/tailscale"),
   ]),
   M("Gitpod CLI", "references/gitpod-cli"),
   M("Compatibility", "references/compatibility?user"),

@@ -130,6 +130,10 @@ Some example patterns (**for GitLab**) and results for the mentioned `owner/some
 
 > **Beware:** While the variable values are stored encrypted, they are available as plain text inside a workspace. Be careful when sharing your live workspace or when using `*/*` or `*/**` as repository pattern.
 
+## Using secrets with 3rd-party services
+
+If you use tools like `aws`, `gcloud` or `vault` with Gitpod, you might want to consider using [OpenID Connect (OIDC)](/docs/configure/workspaces/oidc) over environment variables for authentication. OIDC makes the whole process of sharing secrets between a workspace and a 3rd-party more secure and scalable.
+
 ## Project-Specific Environment Variables
 
 Environment variables which are defined in [project](/docs/configure/projects) settings will be visible in prebuilds, and optionally also in workspaces. This is useful for prebuilds to access restricted services. Project-Specific Environment Variables will take precedence over [User-Specific Environment Variables](#user-specific-environment-variables). Only members of the [Gitpod organization](/docs/configure/orgs) where the project resides will be able to access the environment variables inside a running workspace, if the associated repository is public then people outside of your Gitpod organization will _not_ have access to them normally.
