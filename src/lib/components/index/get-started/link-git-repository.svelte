@@ -14,7 +14,7 @@
   }"}`}
 >
   <LinkButton
-    href="https://gitpod.io/workspaces/"
+    href="https://gitpod.io/login/"
     variant="unstyled"
     size="large"
     class="bg-[#5e48ba] h-12 text-white dark:text-important hover:text-white focus:text-white active:text-white hover:opacity-90 focus:opacity-90 active:opacity-90 flex items-center"
@@ -34,7 +34,7 @@
     Continue with GitLab
   </LinkButton>
   <LinkButton
-    href="https://gitpod.io/workspaces/"
+    href="https://gitpod.io/login/"
     variant="unstyled"
     size="large"
     class="bg-important h-12 text-white dark:text-black flex items-center hover:text-white focus:text-white active:text-white hover:bg-less-important focus:opacity-90 active:opacity-90 dark:hover:bg-sand-dark dark:hover:opacity-80"
@@ -59,7 +59,7 @@
   <LinkButton
     size="large"
     variant="unstyled"
-    href="https://gitpod.io/workspaces/"
+    href="https://gitpod.io/login/"
     class="bg-[#265583] h-12 text-white dark:text-important flex items-center hover:text-white focus:text-white active:text-white hover:opacity-90 focus:opacity-90 active:opacity-90"
   >
     <svg

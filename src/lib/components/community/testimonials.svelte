@@ -14,7 +14,7 @@
     <LinkButton variant="primary" size="large" href="https://www.gitpod.io/chat"
       >Join discord community</LinkButton
     >
-    <LinkButton variant="gray" size="large" href="https://gitpod.io/workspaces"
+    <LinkButton variant="gray" size="large" href="https://gitpod.io/login"
       >Try now</LinkButton
     >
   </ButtonsWrapper>

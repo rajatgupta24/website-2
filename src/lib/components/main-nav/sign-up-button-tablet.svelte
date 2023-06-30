@@ -7,7 +7,7 @@
 </style>
 
 <a
-  href="https://gitpod.io/workspaces/"
+  href="https://gitpod.io/login/"
   on:click
   data-analytics={`{"context":"dashboard"}`}
   class="hidden sm:inline no-underline text-sm">Login</a

@@ -13,7 +13,7 @@
     note = "",
     link = {
       text: "Start for free",
-      href: "https://gitpod.io/workspaces",
+      href: "https://gitpod.io/login",
     },
     secondaryLink = {
       text: "Get a demo",

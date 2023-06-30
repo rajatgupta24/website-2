@@ -66,7 +66,7 @@
       <ButtonsWrapper class="mt-x-small lg:mt-small mb-x-small">
         <LinkButton
           variant="primary"
-          href="https://gitpod.io/workspaces/"
+          href="https://gitpod.io/login/"
           size="large">Start for free</LinkButton
         >
         <LinkButton variant="cta" href="contact/get-demo" size="large"

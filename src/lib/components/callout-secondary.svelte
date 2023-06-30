@@ -7,7 +7,7 @@
   export let text: string;
   export let isGetADemoLinkShown: boolean = true;
   export let link: { href: string; text: string } = {
-    href: "https://gitpod.io/workspaces/",
+    href: "https://gitpod.io/login/",
     text: "Start for free",
   };
 </script>

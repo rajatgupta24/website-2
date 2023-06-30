@@ -40,7 +40,7 @@
     title="You are in good company"
     text="Learn how developers use Gitpod CDEs to increase velocity, improve collaboration and gain control of their development."
     btnPrimary={{
-      href: "https://gitpod.io/workspaces",
+      href: "https://gitpod.io/login",
       text: "Start for free",
     }}
     btnSecondary={{

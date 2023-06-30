@@ -18,7 +18,7 @@
       Spin up fresh, automated dev environments for each task, in the cloud, in
       seconds.
     </p>
-    <LinkButton href="https://gitpod.io/workspaces/" variant="primary"
+    <LinkButton href="https://gitpod.io/login/" variant="primary"
       >Start for free</LinkButton
     >
     <LinkButton href="/docs" variant="gray">View docs</LinkButton>

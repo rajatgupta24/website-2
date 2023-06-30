@@ -323,7 +323,7 @@ export const featureCards: {
         alt: "Cloud Icon",
       },
       link: {
-        href: "https://gitpod.io/workspaces/",
+        href: "https://gitpod.io/login/",
         text: "Start for free",
       },
     },

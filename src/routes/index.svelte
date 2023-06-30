@@ -74,7 +74,7 @@
     <LinkButton variant="primary" size="large" href="/cde"
       >Learn more about CDEs</LinkButton
     >
-    <LinkButton variant="gray" size="large" href="https://gitpod.io/workspaces"
+    <LinkButton variant="gray" size="large" href="https://gitpod.io/login"
       >Try now</LinkButton
     >
   </div>

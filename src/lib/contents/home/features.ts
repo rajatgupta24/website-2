@@ -100,7 +100,7 @@ export const otherFeatures: Feature[] = [
   //   paragraph:
   //     "Gitpod provisions powerful Linux containers under the hood. A Linux shell with root/sudo, a file system, Docker and all other tools and binaries that run on Linux. One OS for both dev and prod.",
   //   moreButton: {
-  //     href: "https://gitpod.io/workspaces/",
+  //     href: "https://gitpod.io/login/",
   //     text: "Start for free",
   //   },
   //   terminal: {
