@@ -98,6 +98,38 @@ export const overviewCards = [
 ];
 
 export const contributionHighlights: Record<string, ContentCard[]> = {
+  "June 2023": [
+    {
+      badge: "Content",
+      contributor: "Ibrahim Gharbi",
+      title: "Gitpod: Your mobile dev cloud IDE",
+      text: "Learn how to develop with android studio in the cloud with Gitpod",
+      link: {
+        text: "Read the post",
+        href: "https://blog.worldline.tech/2023/06/27/android-dev-with-gitpod.html",
+      },
+    },
+    {
+      badge: "Open Source",
+      contributor: "William Ghelfi",
+      title: "Gitpod and Nx",
+      text: "Quickly create a new Nx workspace in Gitpod and start hacking away",
+      link: {
+        text: "View on GitHub",
+        href: "https://github.com/trumbitta/gitpod-nx",
+      },
+    },
+    {
+      badge: "Gitpod Community",
+      contributor: "Gitpod & Elastic",
+      title: "DevX meetup in Athens",
+      text: "A community meetup hosted by Gitpod & Elastic on DevX in Athens",
+      link: {
+        text: "View the event",
+        href: "https://guild.host/events/developer-experience-82e9r3",
+      },
+    },
+  ],
   "May 2023": [
     {
       badge: "Open Source",
