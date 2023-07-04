@@ -3,7 +3,7 @@ import type { Lottie } from "./lottie";
 interface moreButton {
   text: string;
   href: string;
-  type?: "secondary" | "tertiary";
+  type?: "secondary" | "tertiary" | "gray";
 }
 
 export type Feature = {

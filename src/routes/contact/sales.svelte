@@ -30,6 +30,7 @@
   const enterpriseSubject = "Enterprise";
   const otherSubject = "Other";
   const demoSubject = "Get a demo";
+  const dedicatedSubject = "Dedicated self-serve";
 
   /**Example Usecase:
    * /contact/sales?subject=enterprise
@@ -37,7 +38,13 @@
    * ...
    */
 
-  const subjects = [enterpriseSubject, demoSubject, "Reselling", otherSubject];
+  const subjects = [
+    enterpriseSubject,
+    dedicatedSubject,
+    demoSubject,
+    "Reselling",
+    otherSubject,
+  ];
 
   onMount(() => {
     const subject = $page.url.searchParams.get("subject");
@@ -103,7 +110,10 @@
     },
   };
 
-  $: if (formData.selectedSubject.value == enterpriseSubject) {
+  $: if (
+    formData.selectedSubject.value == enterpriseSubject ||
+    formData.selectedSubject.value == dedicatedSubject
+  ) {
     isCloudPlatformsSelectShown = true;
     formData.cloudInfrastructure = cloudInfrastructure;
   } else {
@@ -138,7 +148,8 @@
     await trackEvent("message_submitted", {
       subject: formData.selectedSubject.value,
       infrastructure:
-        formData.selectedSubject.value == enterpriseSubject
+        formData.selectedSubject.value == enterpriseSubject ||
+        formData.selectedSubject.value == dedicatedSubject
           ? formData.cloudInfrastructure.value
           : undefined,
       full_name: formData.name.value,
@@ -216,7 +227,9 @@
   </div>
 {:else}
   <Header
-    title="Contact Sales"
+    title={formData.selectedSubject.value == dedicatedSubject
+      ? "Get started self-serve"
+      : "Contact Sales"}
     text="Let's talk about how we can work together!"
     tight={true}
     textAlign="left"

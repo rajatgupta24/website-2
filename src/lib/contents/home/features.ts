@@ -533,18 +533,18 @@ export const enterpriseReady: Feature = {
 };
 
 export const limitedOverHead: Feature = {
-  title: "Limited overhead",
+  title: "Dedicated resources",
   paragraph:
-    "Faster startup times and lower latency with dedicated resources exclusively available for your organization.",
+    "Faster startup times and lower latency with resources exclusively available for your organization and with the exact specs you need.",
   terminal: {
     source: terminalSource,
   },
 };
 
 export const enhancedSecurity: Feature = {
-  title: "Enhanced security",
+  title: "Runs in your Cloud & your region",
   paragraph:
-    "Isolated, single-tenant installations ensure source code, dependencies and dev environments are private and protected.",
+    "Isolated, single-tenant installations ensure source code, dependencies and dev environments are private and protected. All within the cloud region of your choice.",
   image: {
     src: "/images/features/encoded-data.webp",
     darkSrc: "/images/features/encoded-data-dark.webp",
@@ -555,9 +555,9 @@ export const enhancedSecurity: Feature = {
 };
 
 export const privateResourceAccess: Feature = {
-  title: "Private resource access",
+  title: "Air gapped resource access",
   paragraph:
-    "Running within your VPC enables access to resources that aren’t exposed to the internet.",
+    "Running within your VPC enables secure access to your private resources.",
   terminal: {
     source: linuxSource,
     dark: true,
@@ -579,6 +579,7 @@ export const compliantDataMovement: Feature = {
   moreButton: {
     href: "https://app.safebase.io/portal/71ccd717-aa2d-4a1e-942e-c768d37e9e0c/preview?product=default",
     text: "View trust center",
+    type: "gray",
   },
 };
 

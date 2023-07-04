@@ -50,7 +50,7 @@
 
 <style lang="postcss">
   :global(.banner-is-shown) :global(main > div:first-child) {
-    @apply mt-small;
+    @apply mt-macro md:mt-small;
   }
 
   :global(.display-banner) {
