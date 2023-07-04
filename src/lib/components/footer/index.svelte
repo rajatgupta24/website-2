@@ -54,6 +54,12 @@
         <li>
           <FooterLink href="/cde">CDEs</FooterLink>
         </li>
+        <li>
+          <FooterLink href="/cloud">Cloud</FooterLink>
+        </li>
+        <li>
+          <FooterLink href="/dedicated">Dedicated</FooterLink>
+        </li>
         <li><FooterLink href="/pricing">Pricing</FooterLink></li>
         <li><FooterLink href="/support">Support</FooterLink></li>
         <li><FooterLink href="/customers">Customers</FooterLink></li>
