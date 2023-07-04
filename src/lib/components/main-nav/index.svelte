@@ -17,6 +17,7 @@
 
   import ResourcesDropdown from "./resources-dropdown.svelte";
   import SolutionsDropdown from "./solutions-dropdown.svelte";
+  import PlatformsDropdown from "./platforms-dropdown.svelte";
   // import { session } from "$app/stores";
 
   let scroll: number;
@@ -105,13 +106,9 @@
       <li>
         <SolutionsDropdown />
       </li>
-      <NavItem
-        navItem={{
-          href: "/discover/enterprise",
-          label: "Enterprise",
-          highlight: false,
-        }}
-      />
+      <li>
+        <PlatformsDropdown />
+      </li>
       <NavItem
         navItem={{
           href: "/customers",

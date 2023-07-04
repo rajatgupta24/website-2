@@ -66,6 +66,23 @@ export const docsLinks: {
     description: "How to use Gitpod with any project.",
   },
 ];
+export const platformLinks: {
+  text: string;
+  href: string;
+  description: string;
+}[] = [
+  {
+    text: "Cloud",
+    href: "/cloud",
+    description: "No installation required, spin-up a CDE instantly",
+  },
+  {
+    text: "Dedicated",
+    href: "/dedicated",
+    description:
+      "Privately host CDEs within your cloud account, for maximum security and control.",
+  },
+];
 
 export const templateLinks: {
   text: string;

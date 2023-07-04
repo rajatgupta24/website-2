@@ -10,11 +10,13 @@
   import DemoButton from "../demo-button.svelte";
   import MobileSolutionsDropdown from "./mobile-solutions-dropdown.svelte";
   import MobileResourcesDropdown from "./mobile-resources-dropdown.svelte";
+  import MobilePlatformsDropdown from "./mobile-platforms-dropdown.svelte";
 
   export let isLoggedIn: boolean;
 
   let docsDropdownShown = false;
   let resourcesDropdownShown = false;
+  let PlatformsDropdownShown = false;
 
   onMount(() => {
     const handleTabletChange = (e: any) => {
@@ -76,7 +78,7 @@
   <div
     class="nav-items absolute flex flex-col py-x-small px-micro md:px-x-small w-screen bg-card z-10 shadow-md max-h-screen overflow-y-auto"
   >
-    {#if !docsDropdownShown && !resourcesDropdownShown}
+    {#if !docsDropdownShown && !resourcesDropdownShown && !PlatformsDropdownShown}
       <NavItem
         navItem={{
           href: "/cde",
@@ -84,20 +86,18 @@
         }}
       />
     {/if}
-    {#if !resourcesDropdownShown}
+    {#if !resourcesDropdownShown && !PlatformsDropdownShown}
       <MobileResourcesDropdown bind:shown={docsDropdownShown} />
     {/if}
-    {#if !docsDropdownShown}
+    {#if !docsDropdownShown && !PlatformsDropdownShown}
       <MobileSolutionsDropdown bind:shown={resourcesDropdownShown} />
     {/if}
 
     {#if !docsDropdownShown && !resourcesDropdownShown}
-      <NavItem
-        navItem={{
-          href: "/discover/enterprise",
-          label: "Enterprise",
-        }}
-      />
+      <MobilePlatformsDropdown bind:shown={PlatformsDropdownShown} />
+    {/if}
+
+    {#if !docsDropdownShown && !resourcesDropdownShown && !PlatformsDropdownShown}
       <NavItem
         navItem={{
           href: "/customers",
