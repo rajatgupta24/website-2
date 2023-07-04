@@ -90,6 +90,6 @@ We want to build a lasting company on top of a paradigm shift that will change h
 <Wrapper class="px-xx-small py-x-small sm:p-x-small xl:px-small xl:py-x-small !mx-auto">
 <Download class="mx-auto lg:m-0"
       toType="cde-whitepaper"
-      eventType="White paper"
+      eventType="white paper"
 />
 </Wrapper>

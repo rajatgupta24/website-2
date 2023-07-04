@@ -10,7 +10,7 @@
     <WhitepaperInfo
       title="CDEs for large teams"
       description="Curious why many of the largest companies have adopted CDEs? This white paper explores CDE benefits for engineering teams."
-      label="White paper"
+      label="white paper"
     />
   </div>
   <div class="w-full mx-auto">
@@ -20,7 +20,7 @@
       <Download
         class="mx-auto lg:m-0"
         toType="cde-whitepaper"
-        eventType="White paper"
+        eventType="white paper"
       />
     </Wrapper>
   </div>

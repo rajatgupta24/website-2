@@ -33,7 +33,7 @@
         <Download
           class="mx-auto lg:m-0"
           toType="cde-whitepaper"
-          eventType="White paper"
+          eventType="white paper"
         />
       </div>
     </div>
