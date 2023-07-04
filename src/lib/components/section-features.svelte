@@ -12,9 +12,8 @@
 
 <style lang="postcss">
   .top {
-    @media (min-width: 973px) {
-      @apply -mb-16;
-    }
+    @apply -mb-3;
+    @apply md:-mb-16;
   }
 </style>
 

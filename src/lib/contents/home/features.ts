@@ -590,3 +590,54 @@ export const dedicatedPageFeatures: Feature[] = [
   enterpriseReady,
   compliantDataMovement,
 ];
+
+/**Cloud Page Features,
+ * Using on /cloud
+ *
+ */
+
+export const flexibleSaasSolution: Feature = {
+  title: "The flexibility of any SaaS solution",
+  paragraph:
+    "Gitpod Cloud is fully deployed and managed by Gitpod, removing any overhead from your team's ability to get started with CDEs.",
+  previewComponent: Workspaces,
+};
+
+export const onboardDevsInSeconds: Feature = {
+  title: "Onboard developers in seconds",
+  paragraph:
+    "Developers are ready-to-code with the click of a button on day one.",
+  lottie: {
+    src: "/lottie/edit_workspace.json",
+    id: "edit_workspace",
+  },
+};
+
+export const noCommitments: Feature = {
+  title: "No commitments",
+  paragraph:
+    "Pay-as-you-go with consumption-based pricing to enable your teams to start and stop when needed.",
+  image: {
+    src: "/images/features/cloud-automation.webp",
+    darkSrc: "/images/features/cloud-automation-dark.webp",
+    alt: "All your data secured",
+    width: "65%",
+  },
+};
+
+export const minimizeCosts: Feature = {
+  title: "Minimize costs",
+  paragraph:
+    "Gitpod Cloud’s multi-tenant set-up allows for multiple organizations to minimize their cloud costs.",
+  lottie: {
+    src: "/lottie/share_workspace.json",
+    id: "share-workspace",
+  },
+};
+
+export const cloudPageFeatures: Feature[] = [
+  flexibleSaasSolution,
+  onboardDevsInSeconds,
+  noCommitments,
+  minimizeCosts,
+];
