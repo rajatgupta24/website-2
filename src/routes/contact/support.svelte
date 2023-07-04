@@ -384,14 +384,14 @@
                 >
               </p>
               <Button
-                variant="cta"
+                variant="primary"
                 size="medium"
                 type="submit"
                 class="btn"
                 disabled={(isFormDirty && !isFormValid) ||
                   isSubmissionInProgress}
                 isLoading={isSubmissionInProgress}
-                >Send message
+                >Submit
               </Button>
               {#if isFormDirty && !isFormValid}
                 <legend class="text-xs text-error block mt-1 mb-2">
