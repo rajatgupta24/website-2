@@ -62,6 +62,15 @@ export const conferences: {
   year: string;
 }[] = [
   {
+    imgDark: "/images/events/cde-universe-2023-dark.webp",
+    img: "/images/events/cde-universe-2023.svg",
+    text: "Gitpod's conference to learn about cloud-first developer tools",
+    alt: "CDE Universe 2023 Logo",
+    buttonText: "More on CDE Universe 23",
+    href: "https://cdeuniverse.com",
+    year: "2023",
+  },
+  {
     imgDark: "/images/events/kubecon-eu-2023-white.webp",
     img: "/images/events/kubecon-eu-2023.webp",
     text: "The CNCF's flagship conference in Amsterdam, April 2023.",
