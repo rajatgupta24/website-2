@@ -25,7 +25,7 @@
     contents={{
       title: "Get started for free",
       description:
-        "Spin up fresh, automated dev environments for each task, in the cloud, in seconds",
+        "Spin up a pre-configured development environments in seconds.",
     }}
   />
 </div>

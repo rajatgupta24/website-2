@@ -15,8 +15,7 @@
   <div>
     <h3 class="h4">Get started</h3>
     <p class="mb-micro">
-      Spin up fresh, automated dev environments for each task, in the cloud, in
-      seconds.
+      Spin up a pre-configured development environments in seconds.
     </p>
     <LinkButton href="https://gitpod.io/login/" variant="primary"
       >Start for free</LinkButton
