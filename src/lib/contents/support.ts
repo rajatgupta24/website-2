@@ -4,31 +4,39 @@ import type { Card } from "$lib/types/card";
 export const cards: Card[] = [
   {
     title: "Getting started",
-    text: "This page helps you understand how to provide a configuration for your project.",
+    text: "Learn how to start your first workspace.",
     link: {
       href: "/docs/introduction/getting-started",
-      text: "Get Started",
-    },
-  },
-  {
-    title: "Documentation",
-    text: "Have a look at our documentation to learn how to get the most out of Gitpod",
-    link: {
-      href: "/docs/",
-      text: "View Documentation",
+      text: "Get started",
     },
   },
   {
     title: "Videos",
-    text: "Watch Videos to learn how to get started & make the most out of Gitpod.",
+    text: "Watch videos to learn how to get started.",
     link: {
       href: "/screencasts",
       text: "Watch Videos",
     },
   },
   {
+    title: "Community",
+    text: "Always there to help and connect with like-minded people.",
+    link: {
+      href: "https://www.gitpod.io/chat",
+      text: "Join Discord",
+    },
+  },
+  {
+    title: "Docs",
+    text: "Explore the documentation to learn more about Gitpod.",
+    link: {
+      href: "/docs/",
+      text: "View Documentation",
+    },
+  },
+  {
     title: "Changelog",
-    text: "Here you can view the latest product improvements and updates.",
+    text: "View the latest product improvements and updates.",
     link: {
       href: "/changelog",
       text: "View Changelog",
@@ -36,7 +44,7 @@ export const cards: Card[] = [
   },
   {
     title: "Blog",
-    text: "Here you can read about articles about developer experience & Gitpod.",
+    text: "Read the latest news, article and opinions about Gitpod and CDEs.",
     link: {
       href: "/blog",
       text: "View Blogs",
@@ -44,42 +52,50 @@ export const cards: Card[] = [
   },
   {
     title: "Guides",
-    text: "Here you can read Gitpod guides to use Gitpod in your projects.",
+    text: "Learn how to use Gitpod with any project.",
     link: {
       href: "/guides",
       text: "View Guides",
     },
   },
   {
-    title: "Community Discord Server",
-    text: "Would you like to take part in live coding sessions and connect with the community ? Then join us on Discord.",
+    title: "Gitpod samples",
+    text: "Explore sample projects & quickstarts to get started.",
     link: {
-      href: "https://www.gitpod.io/chat",
-      text: "Join Discord",
+      href: "https://github.com/gitpod-samples",
+      text: "Checkout Gitpod samples",
+    },
+  },
+  {
+    title: "Support",
+    text: "Get help with any question or issue.",
+    link: {
+      href: "/contact/support",
+      text: "Contact support",
     },
   },
   {
     title: "Status",
-    text: "On the status page you get informed on all past and current incidents.",
+    text: "Get informed on all past and current incidents.",
     link: {
       href: "https://www.gitpodstatus.com/",
-      text: "View Status Page",
+      text: "View status page",
+    },
+  },
+  {
+    title: "Account settings",
+    text: "Update your account preferences like editors, themes, variables, etc..",
+    link: {
+      href: "https://gitpod.io/account",
+      text: "Go to account settings",
     },
   },
   {
     title: "Report a bug or request a feature",
-    text: "Head over to GitHub to submit your bug report or feature request.",
+    text: "",
     link: {
       href: "https://github.com/gitpod-io/gitpod/issues/new/choose",
       text: "File an issue",
-    },
-  },
-  {
-    title: "Account Settings",
-    text: "Here you can update your account prefences like themes, email notifications, integrations, etc..",
-    link: {
-      href: "https://gitpod.io/account",
-      text: "Go to Account Settings",
     },
   },
 ];
