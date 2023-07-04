@@ -11,10 +11,10 @@ title: PHP in Gitpod
 
 Gitpod supports PHP right out of the box, but more advanced features such as debugging can be configured, so here is how to do it!
 
-> There is also an awesome community project that utilizes [ddev](https://github.com/drud/ddev) with Gitpod and makes things much easier.
+> There is also an awesome community project that utilizes [ddev](https://github.com/ddev/ddev) with Gitpod and makes things much easier.
 > Be sure to check it out first from below!
 >
-> https://drud.github.io/ddev-gitpod-launcher/
+> https://ddev.github.io/ddev-gitpod-launcher/
 >
 > With it, you can run XDebug out of the box, change PHP versions on the fly, and much more!
 
