@@ -7,7 +7,18 @@
   import Webinars from "$lib/components/events/landing-page/webinars.svelte";
   import Conferences from "$lib/components/events/landing-page/conferences.svelte";
   import Explore from "$lib/components/explore.svelte";
+  import OpenGraph from "$lib/components/open-graph.svelte";
 </script>
+
+<OpenGraph
+  data={{
+    description:
+      "Gitpod Events: Learn about the latest in developer tools and technologies, attend developer conferences, meetups, and workshops, and hear from industry experts building CDEs.",
+    title: "Gitpod Events: Latest developer conferences we're taking part in",
+    keywords:
+      "gitpod, events, conferences, meetups, CDE, workshops, development environment, cloud development environment, dev environment, webinars",
+  }}
+/>
 
 <Hero
   title="Latest Events"
