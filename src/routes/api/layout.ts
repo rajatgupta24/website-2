@@ -3,7 +3,7 @@ import { USE_CACHE } from "$env/static/private";
 import path from "path";
 import fs from "fs";
 
-const fallbackStars = 11035;
+const fallbackStars = 11200;
 
 const startDate = new Date("June 14 2023 00:00:00 EST");
 const endDate = new Date("July 14 2023 06:00:00 EST");
