@@ -80,43 +80,42 @@
 {#if shown}
   <div
     class:extended={$displayBanner}
-    class="fixed top-20 left-0 w-screen flex justify-between bg-bg border-y border-divider !m-0 shadow-md dark:border-b-black dark:shadow-[0_10px_24px_0px_rgba(0,0,0,1)]"
+    class="fixed top-20 left-0 w-screen flex justify-center bg-bg border-y border-divider !m-0 shadow-md dark:border-b-black dark:shadow-[0_10px_24px_0px_rgba(0,0,0,1)]"
     in:fade={{ duration: 300 }}
     bind:this={wrapperEl}
   >
-    <div class="max-w-6xl mx-auto pl-60">
-      <div
-        class="grid grid-cols-2 pt-x-small pb-x-small max-w-3xl"
-        bind:this={linksGrid}
-      >
-        <p class="font-bold text-grey text-base ml-6">Use cases</p>
-        <p class="font-bold text-grey text-base ml-6">Personas</p>
-        {#each resourcesLinks as { href, text, description }}
-          <a
-            class="
+    <div
+      class="grid grid-cols-2 pr-[136px] xl:pr-[90px] py-x-small gap-x-8"
+      bind:this={linksGrid}
+    >
+      <p class="font-bold text-grey text-base ml-6">Use cases</p>
+      <p class="font-bold text-grey text-base ml-6">Personas</p>
+      {#each resourcesLinks as { href, text, description }}
+        <a
+          class="
               inline-block
               py-micro
               pl-xx-small
-              pr-medium
               text-p-small
               rounded-lg
+              pr-medium
               border
               border-transparent
               items
+              w-[342px]
             "
-            aria-selected={false}
-            on:click={() => (shown = false)}
-            {href}
-          >
-            <p class="text-important font-bold mb-1">{text}</p>
-            <p>{description}</p>
-          </a>
-        {/each}
-      </div>
+          aria-selected={false}
+          on:click={() => (shown = false)}
+          {href}
+        >
+          <p class="text-important font-bold mb-1">{text}</p>
+          <p>{description}</p>
+        </a>
+      {/each}
     </div>
     <a
       class:extended={$displayBanner}
-      class="mr-0 w-3/12 flex justify-center bg-white dark:bg-card border-y border-divider !m-0 shadow-md dark:border-b-black dark:shadow-[0_10px_24px_0px_rgba(0,0,0,1)] group"
+      class="ml-large absolute inset-y-0 right-0 flex w-1/4 justify-center bg-white dark:bg-card border-y border-divider !m-0 shadow-md dark:border-b-black dark:shadow-[0_10px_24px_0px_rgba(0,0,0,1)] group"
       in:fade={{ duration: 300 }}
       href="/customers"
     >

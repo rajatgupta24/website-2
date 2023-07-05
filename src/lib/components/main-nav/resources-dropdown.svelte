@@ -86,7 +86,7 @@
     bind:this={wrapperEl}
   >
     <div
-      class="grid grid-cols-2 mr-xx-small pt-10 pb-x-small max-w-3xl"
+      class="grid grid-cols-2 pr-x-small py-x-small gap-x-8"
       bind:this={linksGrid}
     >
       <p class="font-bold text-grey text-base ml-6">Get started</p>
@@ -97,11 +97,12 @@
             card
             py-micro
             pl-xx-small
-            pr-medium
             text-p-small
             rounded-lg
+            first:pr-medium
             border
             border-transparent
+            w-[342px]
             "
           aria-selected={false}
           on:click={() => (shown = false)}
