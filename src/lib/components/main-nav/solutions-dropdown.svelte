@@ -114,7 +114,6 @@
       {/each}
     </div>
     <a
-      class:extended={$displayBanner}
       class="ml-large absolute inset-y-0 right-0 flex w-1/4 justify-center bg-white dark:bg-card border-y border-divider !m-0 shadow-md dark:border-b-black dark:shadow-[0_10px_24px_0px_rgba(0,0,0,1)] group"
       in:fade={{ duration: 300 }}
       href="/customers"
