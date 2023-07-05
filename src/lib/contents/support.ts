@@ -15,7 +15,7 @@ export const cards: Card[] = [
     text: "Watch videos to learn how to get started.",
     link: {
       href: "/screencasts",
-      text: "Watch Videos",
+      text: "Watch videos",
     },
   },
   {
@@ -31,7 +31,7 @@ export const cards: Card[] = [
     text: "Explore the documentation to learn more about Gitpod.",
     link: {
       href: "/docs/",
-      text: "View Documentation",
+      text: "View documentation",
     },
   },
   {
@@ -39,7 +39,7 @@ export const cards: Card[] = [
     text: "View the latest product improvements and updates.",
     link: {
       href: "/changelog",
-      text: "View Changelog",
+      text: "View changelog",
     },
   },
   {
@@ -47,7 +47,7 @@ export const cards: Card[] = [
     text: "Read the latest news, article and opinions about Gitpod and CDEs.",
     link: {
       href: "/blog",
-      text: "View Blogs",
+      text: "View blogs",
     },
   },
   {
@@ -55,7 +55,7 @@ export const cards: Card[] = [
     text: "Learn how to use Gitpod with any project.",
     link: {
       href: "/guides",
-      text: "View Guides",
+      text: "View guides",
     },
   },
   {
@@ -64,14 +64,6 @@ export const cards: Card[] = [
     link: {
       href: "https://github.com/gitpod-samples",
       text: "Checkout Gitpod samples",
-    },
-  },
-  {
-    title: "Support",
-    text: "Get help with any question or issue.",
-    link: {
-      href: "/contact/support",
-      text: "Contact support",
     },
   },
   {
@@ -88,6 +80,14 @@ export const cards: Card[] = [
     link: {
       href: "https://gitpod.io/account",
       text: "Go to account settings",
+    },
+  },
+  {
+    title: "Support",
+    text: "Get help with any question or issue.",
+    link: {
+      href: "/contact/support",
+      text: "Contact support",
     },
   },
   {
