@@ -525,7 +525,7 @@ export const developersFeatures: Feature[] = [
 export const enterpriseReady: Feature = {
   title: "Enterprise-ready",
   paragraph:
-    "SSO, custom SLAs and dedicated support experts with help you scale Cloud Development Environments for your organization.",
+    "SSO, custom SLAs and dedicated support experts will help you scale Cloud Development Environments for your organization.",
   lottie: {
     src: "/lottie/edit_workspace.json",
     id: "edit_workspace",
