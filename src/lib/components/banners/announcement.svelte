@@ -29,9 +29,9 @@
   >
     <span class="flex-1 text-right">🔐</span>
     <p class="flex-2 px-4 md:px-2 font-normal">
-      Privately installed CDEs for large teams |
+      A CDE hosted by you, managed by us |
       <a href="/dedicated" data-sveltekit-preload-data on:click={closeBanner}
-        >Join the waitlist
+        >Install & try now
       </a>
     </p>
     <div class="flex-1 flex justify-end">
