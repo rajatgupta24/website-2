@@ -3,7 +3,7 @@ author: jakobhero
 date: Friday, 5 May 2023 11:00:00 UTC
 excerpt: Combine the rich feature set of your IDE with the ease of access of dbt Cloud by running dbt core in Gitpod
 slug: dbt-in-gitpod
-tags: ["Data", "Developer Experience"]
+tags: ["Data", "Developer experience"]
 image: teaser.webp
 teaserImage: teaser.webp
 title: Enhance your Data Team's Productivity with dbt and Gitpod
