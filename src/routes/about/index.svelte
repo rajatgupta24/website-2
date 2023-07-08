@@ -4,7 +4,7 @@
 
 <script lang="ts">
 	import Header from '$lib/components/header.svelte';
-	import Explore from '$lib/components/explore.svelte';
+	// import Explore from "$lib/components/explore.svelte";
 
 	import OpenGraph from '$lib/components/open-graph.svelte';
 	import Section from '$lib/components/section.svelte';
@@ -45,7 +45,6 @@
 		>
 			Gitpod’s Direction
 		</LinkIconExternal>
-
 		<Quote />
 	</div>
 </Header>
@@ -64,17 +63,23 @@
 
 <Articles
 	title="Additional Resources"
-	slugs={['gitpod-core-values', 'two-ceos-are-better-than-one', 'opensource']}
+	slugs={[
+		'future-of-software-cdes',
+		'gitpod-core-values',
+		'what-we-learned-growing-a-community-from-500-5000',
+	]}
 />
 
-<Explore
-	contents={{
-		title: 'We have open positions',
-		description: 'Come join us.',
-		link: {
-			text: 'See openings',
-			href: '/careers',
-		},
-		secondaryLink: null,
-	}}
-/>
+<!-- Un-comment this when we have some open positions -->
+
+<!-- <Explore
+  contents={{
+    title: "We have open positions",
+    description: "Come join us.",
+    link: {
+      text: "See openings",
+      href: "/careers",
+    },
+    secondaryLink: null,
+  }}
+/> -->
