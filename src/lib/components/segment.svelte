@@ -39,10 +39,6 @@
 		return cookieId;
 	};
 
-	const getAuthenticationStatus = () => {
-		return allowsAnalytics() ? !!Cookies.get('gitpod-user') : undefined;
-	};
-
 	const getPageProps = (): PageProps => {
 		return {
 			path: window.location.pathname,
@@ -55,17 +51,24 @@
 		};
 	};
 
+	const getEventContext = () => {
+		return {
+			page: getPageProps(),
+			allowsAnalytics: allowsAnalytics(),
+			authenticated: allowsAnalytics()
+				? !!Cookies.get('gitpod-user')
+				: undefined,
+			theme: localStorage.getItem('theme'),
+		};
+	};
+
 	export const trackEvent = async (eventName: string, props: any) => {
 		const body: AnalyticsPayload = {
 			cookieId: getOrSetCookieId(),
 			type: 'event',
 			eventName,
 			props: props,
-			context: {
-				page: getPageProps(),
-				allowsAnalytics: allowsAnalytics(),
-				authenticated: getAuthenticationStatus(),
-			},
+			context: getEventContext(),
 		};
 
 		await fetch('/api/collect-data', {
@@ -80,11 +83,7 @@
 			cookieId: getOrSetCookieId(),
 			type: 'page',
 			props: pageProps,
-			context: {
-				page: pageProps,
-				allowsAnalytics: allowsAnalytics(),
-				authenticated: getAuthenticationStatus(),
-			},
+			context: getEventContext(),
 		};
 
 		await fetch('/api/collect-data', {
@@ -98,11 +97,7 @@
 			cookieId: getOrSetCookieId(),
 			type: 'identity',
 			traits: traits,
-			context: {
-				page: getPageProps(),
-				allowsAnalytics: allowsAnalytics(),
-				authenticated: getAuthenticationStatus(),
-			},
+			context: getEventContext(),
 		};
 
 		await fetch('/api/collect-data', {
