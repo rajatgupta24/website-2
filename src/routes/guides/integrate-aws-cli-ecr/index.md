@@ -154,8 +154,8 @@ Now we have the whole [AWS Configuration shell script](https://github.com/gitpod
 
 ```yml
 tasks:
-  - name: Initialize & Configure AWS
-    command: bash $GITPOD_REPO_ROOT/configure_aws_with_gitpod.sh
+    - name: Initialize & Configure AWS
+      command: bash $GITPOD_REPO_ROOT/configure_aws_with_gitpod.sh
 ```
 
 In [demo-aws-with-gitpod](https://github.com/gitpod-io/demo-aws-with-gitpod) template repo, `configure_aws_with_gitpod.sh` is in the root directory of the repository. You can replace it with your own script’s path in `command` task.
@@ -172,19 +172,19 @@ Congratulations 🎉 Now, you are ready to use AWS CLI to access AWS ECR through
 
 ### Gitpod
 
-- [Build Projects in a Gitpod Ephemeral Dev Environment — The Ultimate Guide](https://www.gitpod.io/guides/guide-ephemeral-dev-environment-on-gitpod)
-- [One workspace per task](https://www.gitpod.io/docs/introduction/learn-gitpod/one-workspace-per-task)
-- [Environment variables](https://www.gitpod.io/docs/configure/projects/environment-variables#using-the-account-settings)
-- [Custom Docker Image](https://www.gitpod.io/docs/configure/workspaces/workspace-image)
-- [Config `.gitpod.yml`](https://www.gitpod.io/docs/references/gitpod-yml)
+-   [Build Projects in a Gitpod Ephemeral Dev Environment — The Ultimate Guide](https://www.gitpod.io/guides/guide-ephemeral-dev-environment-on-gitpod)
+-   [One workspace per task](https://www.gitpod.io/docs/introduction/learn-gitpod/one-workspace-per-task)
+-   [Environment variables](https://www.gitpod.io/docs/configure/projects/environment-variables#using-the-account-settings)
+-   [Custom Docker Image](https://www.gitpod.io/docs/configure/workspaces/workspace-image)
+-   [Config `.gitpod.yml`](https://www.gitpod.io/docs/references/gitpod-yml)
 
 ### AWS
 
-- [Automatically gets credentials for Amazon ECR on docker push/docker pull](https://github.com/awslabs/amazon-ecr-credential-helper)
-- [AWS CLI Command Reference // login](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sso/login.html)
-- [Using Amazon ECR with the AWS CLI](https://docs.aws.amazon.com/AmazonECR/latest/userguide/getting-started-cli.html)
-- [AWS Systems Manager Session Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html)
+-   [Automatically gets credentials for Amazon ECR on docker push/docker pull](https://github.com/awslabs/amazon-ecr-credential-helper)
+-   [AWS CLI Command Reference // login](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sso/login.html)
+-   [Using Amazon ECR with the AWS CLI](https://docs.aws.amazon.com/AmazonECR/latest/userguide/getting-started-cli.html)
+-   [AWS Systems Manager Session Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html)
 
 ### Docker
 
-- [Docker command line configuration files](https://docs.docker.com/engine/reference/commandline/cli/#configuration-files)
+-   [Docker command line configuration files](https://docs.docker.com/engine/reference/commandline/cli/#configuration-files)

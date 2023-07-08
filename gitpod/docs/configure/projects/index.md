@@ -54,5 +54,5 @@ To identify the problem: check browser console logs.
 
 Possible solution(s):
 
-- Try to disconnect Git(Hub/Lab) or Bitbucket from https://gitpod.io/integrations, then reconnect.
-- Make sure correct scopes are set for those Git integration providers as well.
+-   Try to disconnect Git(Hub/Lab) or Bitbucket from https://gitpod.io/integrations, then reconnect.
+-   Make sure correct scopes are set for those Git integration providers as well.

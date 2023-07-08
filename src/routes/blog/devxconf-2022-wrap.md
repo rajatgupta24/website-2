@@ -6,7 +6,7 @@ image: teaser.png
 slug: devxconf-2022-wrap
 subtitle: All twenty seven talks from the conference are now available on YouTube.
 teaserImage: teaser.png
-tags: ["Company building"]
+tags: ['Company building']
 title: Gitpod raises $22,600 at DevX Conf to give to Open-source maintainers
 ---
 
@@ -64,11 +64,11 @@ Gitpod hopes other companies will also start taking steps to mitigate this criti
 
 # So what did we learn at DevX Conf?
 
-- The current generation of product creators is building developer tools with developer experience top of mind. It’s inspiring to see how much effort is invested into making small details shine - to help developers get the job done.
+-   The current generation of product creators is building developer tools with developer experience top of mind. It’s inspiring to see how much effort is invested into making small details shine - to help developers get the job done.
 
-- Developer experience also touches on the soft aspects that make teams succeed. Companies increasingly care more about developer productivity. As almost every company on the planet is turning into a company that writes and works with software, developer experience will become ever more important.
+-   Developer experience also touches on the soft aspects that make teams succeed. Companies increasingly care more about developer productivity. As almost every company on the planet is turning into a company that writes and works with software, developer experience will become ever more important.
 
-- Modern engineering teams are mostly distributed and work on highly complex technology stacks. Tooling should not constrain; it should enable them.
+-   Modern engineering teams are mostly distributed and work on highly complex technology stacks. Tooling should not constrain; it should enable them.
 
 # The conference videos are now available
 

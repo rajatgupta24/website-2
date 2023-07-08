@@ -67,33 +67,33 @@ service containerd restart
 
 ```yaml
 overrideBootstrapCommand: |
-  #!/bin/bash
-  set -x
-  export CLUSTERNAME=gitpod
-  export NODEGROUP=services
-  export CONTAINER_RUNTIME=containerd
-  declare -a LABELS=(
-  eks.amazonaws.com/nodegroup="${NODEGROUP}"
-      gitpod.io/workload_meta=true
-      gitpod.io/workload_ide=true
-    )
-    export USE_MAX_PODS=false
-    export KUBELET_EXTRA_ARGS="$(printf -- "--node-labels=%s" $(IFS=$','; echo "${LABELS[*]}"))"
-  /etc/eks/bootstrap.sh ${CLUSTERNAME} --use-max-pods false
+    #!/bin/bash
+    set -x
+    export CLUSTERNAME=gitpod
+    export NODEGROUP=services
+    export CONTAINER_RUNTIME=containerd
+    declare -a LABELS=(
+    eks.amazonaws.com/nodegroup="${NODEGROUP}"
+        gitpod.io/workload_meta=true
+        gitpod.io/workload_ide=true
+      )
+      export USE_MAX_PODS=false
+      export KUBELET_EXTRA_ARGS="$(printf -- "--node-labels=%s" $(IFS=$','; echo "${LABELS[*]}"))"
+    /etc/eks/bootstrap.sh ${CLUSTERNAME} --use-max-pods false
 
-  # Update containerd config while waiting on https://github.com/gitpod-io/gitpod/issues/11005
+    # Update containerd config while waiting on https://github.com/gitpod-io/gitpod/issues/11005
 
-  apt-get update && apt-get install -y python3-pip
-  pip3 install toml mergedeep
-  /usr/bin/env python3 - << EOF > /var/log/update-containerd-config-out.txt 2>&1
-  import toml
-  from mergedeep import merge
-  c = toml.load('/etc/containerd/config.toml')
-  merge(c, {'plugins': {'io.containerd.grpc.v1.cri': {'registry': {'config_path': '/etc/containerd/certs.d'}}}})
-  with open('/etc/containerd/config.toml', 'w') as f:
-    toml.dump(c, f)
-  EOF
-  service containerd restart
+    apt-get update && apt-get install -y python3-pip
+    pip3 install toml mergedeep
+    /usr/bin/env python3 - << EOF > /var/log/update-containerd-config-out.txt 2>&1
+    import toml
+    from mergedeep import merge
+    c = toml.load('/etc/containerd/config.toml')
+    merge(c, {'plugins': {'io.containerd.grpc.v1.cri': {'registry': {'config_path': '/etc/containerd/certs.d'}}}})
+    with open('/etc/containerd/config.toml', 'w') as f:
+      toml.dump(c, f)
+    EOF
+    service containerd restart
 ```
 
 </details>
@@ -139,51 +139,51 @@ Update the `alb-ingress.yaml` below with your site-specific options (you need to
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  annotations:
-    kubernetes.io/ingress.class: alb
-    alb.ingress.kubernetes.io/actions.ssl-redirect: |-
-      {
-        "Type": "redirect",
-        "RedirectConfig": {
-          "Protocol": "HTTPS",
-          "Port": "443",
-          "StatusCode": "HTTP_301"
-        }
-      }
-    alb.ingress.kubernetes.io/backend-protocol: HTTPS
-    alb.ingress.kubernetes.io/healthcheck-protocol: HTTPS
-    alb.ingress.kubernetes.io/listen-ports: |-
-      [{
-        "HTTP": 80
-      }, {
-        "HTTPS": 443
-      }]
-    alb.ingress.kubernetes.io/load-balancer-attributes: idle_timeout.timeout_seconds=3600
-    alb.ingress.kubernetes.io/tags: Purpose=Gitpod,Service=proxy
-    alb.ingress.kubernetes.io/target-group-attributes: deregistration_delay.timeout_seconds=30
-    alb.ingress.kubernetes.io/target-node-labels: gitpod.io/workload_meta=true
-    alb.ingress.kubernetes.io/target-type: instance
-    alb.ingress.kubernetes.io/ssl-policy: ELBSecurityPolicy-FS-1-2-Res-2020-10
-    alb.ingress.kubernetes.io/certificate-arn: <YOUR-AWS-SSL-PROVIDED_CERTIFICATE>
-    alb.ingress.kubernetes.io/scheme: <SET THIS -> internet-facing or internal>
-    alb.ingress.kubernetes.io/load-balancer-name: <GITPOD-LOAD-BALANCER-NAME>
-  name: gitpod
+    annotations:
+        kubernetes.io/ingress.class: alb
+        alb.ingress.kubernetes.io/actions.ssl-redirect: |-
+            {
+              "Type": "redirect",
+              "RedirectConfig": {
+                "Protocol": "HTTPS",
+                "Port": "443",
+                "StatusCode": "HTTP_301"
+              }
+            }
+        alb.ingress.kubernetes.io/backend-protocol: HTTPS
+        alb.ingress.kubernetes.io/healthcheck-protocol: HTTPS
+        alb.ingress.kubernetes.io/listen-ports: |-
+            [{
+              "HTTP": 80
+            }, {
+              "HTTPS": 443
+            }]
+        alb.ingress.kubernetes.io/load-balancer-attributes: idle_timeout.timeout_seconds=3600
+        alb.ingress.kubernetes.io/tags: Purpose=Gitpod,Service=proxy
+        alb.ingress.kubernetes.io/target-group-attributes: deregistration_delay.timeout_seconds=30
+        alb.ingress.kubernetes.io/target-node-labels: gitpod.io/workload_meta=true
+        alb.ingress.kubernetes.io/target-type: instance
+        alb.ingress.kubernetes.io/ssl-policy: ELBSecurityPolicy-FS-1-2-Res-2020-10
+        alb.ingress.kubernetes.io/certificate-arn: <YOUR-AWS-SSL-PROVIDED_CERTIFICATE>
+        alb.ingress.kubernetes.io/scheme: <SET THIS -> internet-facing or internal>
+        alb.ingress.kubernetes.io/load-balancer-name: <GITPOD-LOAD-BALANCER-NAME>
+    name: gitpod
 spec:
-  defaultBackend:
-    service:
-      name: proxy
-      port:
-        number: 80
-  rules:
-    - http:
-        paths:
-          - backend:
-              service:
-                name: proxy
-                port:
-                  number: 443
-            path: /
-            pathType: Prefix
+    defaultBackend:
+        service:
+            name: proxy
+            port:
+                number: 80
+    rules:
+        - http:
+              paths:
+                  - backend:
+                        service:
+                            name: proxy
+                            port:
+                                number: 443
+                    path: /
+                    pathType: Prefix
 ```
 
 ### 4. Install ALB and NLB
@@ -197,29 +197,29 @@ Install the ALB (for HTTPS traffic) and NLB (for SSH traffic) using the .yaml fi
 apiVersion: v1
 kind: Service
 metadata:
-  name: gitpod-ssh
-  labels:
-    app: gitpod
-    component: ws-proxy-ssh
-  annotations:
-    service.beta.kubernetes.io/aws-load-balancer-name: gitpod-ssh-gateway
-    service.beta.kubernetes.io/aws-load-balancer-type: external
-    service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: "instance"
-    service.beta.kubernetes.io/aws-load-balancer-ip-address-type: ipv4
-    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: tcp
-    service.beta.kubernetes.io/aws-load-balancer-target-node-labels: gitpod.io/workload_workspace_services=true
-    service.beta.kubernetes.io/aws-load-balancer-target-group-attributes: stickiness.enabled=true,stickiness.type=source_ip,preserve_client_ip.enabled=true
-    service.beta.kubernetes.io/aws-load-balancer-additional-resource-tags: Project=gitpod-alb
+    name: gitpod-ssh
+    labels:
+        app: gitpod
+        component: ws-proxy-ssh
+    annotations:
+        service.beta.kubernetes.io/aws-load-balancer-name: gitpod-ssh-gateway
+        service.beta.kubernetes.io/aws-load-balancer-type: external
+        service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: 'instance'
+        service.beta.kubernetes.io/aws-load-balancer-ip-address-type: ipv4
+        service.beta.kubernetes.io/aws-load-balancer-backend-protocol: tcp
+        service.beta.kubernetes.io/aws-load-balancer-target-node-labels: gitpod.io/workload_workspace_services=true
+        service.beta.kubernetes.io/aws-load-balancer-target-group-attributes: stickiness.enabled=true,stickiness.type=source_ip,preserve_client_ip.enabled=true
+        service.beta.kubernetes.io/aws-load-balancer-additional-resource-tags: Project=gitpod-alb
 spec:
-  ports:
-    - name: ssh
-      protocol: TCP
-      port: 22
-      targetPort: 2200
-  selector:
-    app: gitpod
-    component: ws-proxy
-  type: LoadBalancer
+    ports:
+        - name: ssh
+          protocol: TCP
+          port: 22
+          targetPort: 2200
+    selector:
+        app: gitpod
+        component: ws-proxy
+    type: LoadBalancer
 ```
 
 ```

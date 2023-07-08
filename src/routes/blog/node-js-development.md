@@ -5,7 +5,7 @@ excerpt: Nowadays, there are many collaborative platforms for showcasing JS code
 image: node-js-development-with-only-a-browser.jpeg
 slug: node-js-development
 title: Sustainable Node.js development with only a browser
-tags: ["Engineering"]
+tags: ['Engineering']
 url: https://medium.com/gitpod/sustainable-node-js-development-with-only-a-browser-4887bc6e737b
 ---
 
@@ -23,17 +23,17 @@ The dev environment is called [Gitpod](/) and is entirely free for open-source d
 
 <h2>Table of Contents</h2>
 
-- [Hello World](#hello-world)
+-   [Hello World](#hello-world)
 
-- [Automating Node.js setup](#automating-nodejs-setup)
+-   [Automating Node.js setup](#automating-nodejs-setup)
 
-- [Working with Pull Requests](#working-with-pull-requests)
+-   [Working with Pull Requests](#working-with-pull-requests)
 
-- [Working Together](#working-together)
+-   [Working Together](#working-together)
 
-- [Developing full-stack Node.js applications](#developing-full-stack-nodejs-applications)
+-   [Developing full-stack Node.js applications](#developing-full-stack-nodejs-applications)
 
-- [Summary](#summary)
+-   [Summary](#summary)
 
 ## Hello World
 
@@ -43,9 +43,9 @@ Let’s get started by developing a simple “Hello World” application and lea
 
 Gitpod treats any GitHub repository as a project which can be opened. Let’s start by creating a new repository for our Hello World project:
 
-- open your GitHub dashboard and select New Repository;
+-   open your GitHub dashboard and select New Repository;
 
-- enter a repository name and click Create repository.
+-   enter a repository name and click Create repository.
 
 Now, we can open the created project in Gitpod. You can do it by simply prefixing the repository URL with gitpod.io/#. For example, I’ve called my repository node-hello-world and it can be opened in Gitpod with **gitpod.io/#**<a class="no-nowrap" href="https://github.com/akosyakov/node-hello-world">https://github.com/akosyakov/node-hello-world</a>.
 
@@ -66,13 +66,13 @@ _If you don’t want to create a new project from scratch, click on [a snapshot 
 
 By default, each workspace is preconfigured with standard tools like Node.js, npm, yarn and nvm. Later we will learn how to change the Node.js setup. Now, let’s code something and run it:
 
-- open the command palette (F1) and select New File command;
+-   open the command palette (F1) and select New File command;
 
-- create a new file with app.js name and type the following content:
+-   create a new file with app.js name and type the following content:
 
-  const message = 'Hello World';
+    const message = 'Hello World';
 
-  console.log(message, 'from Gitpod!');
+    console.log(message, 'from Gitpod!');
 
 ![As you type, you can see that Gitpod validates your code. It also provides you with smart completions and documentation on hover.](https://cdn-images-1.medium.com/max/2612/0*b-63v0Asfa09vfzG)_As you type, you can see that Gitpod validates your code. It also provides you with smart completions and documentation on hover._
 
@@ -86,13 +86,13 @@ Of course, you can have more than one terminal to your cloud workspace.
 
 Next up, let’s see how we can debug the application:
 
-- create a debug configuration (Debug-> Add Configuration) and select Node.js: Launch Program configuration snippet in the content assist of the opened editor;
+-   create a debug configuration (Debug-> Add Configuration) and select Node.js: Launch Program configuration snippet in the content assist of the opened editor;
 
-- add a breakpoint into app.js file, by clicking on the gutter on the left;
+-   add a breakpoint into app.js file, by clicking on the gutter on the left;
 
-- open the Debug View (View -> Debug),
+-   open the Debug View (View -> Debug),
 
-- press the green play icon to start debugging (or press F5).
+-   press the green play icon to start debugging (or press F5).
 
 Our program should run, and when a breakpoint hits you can inspect call stack, variables and even use the debug console to evaluate expressions.
 
@@ -136,12 +136,12 @@ The created files will be automatically opened in the editor. Let’s change the
 
 ```yml
 image:
-  file: Dockerfile
+    file: Dockerfile
 
 tasks:
-  - init: node --version
+    - init: node --version
 
-  - command: node app.js
+    - command: node app.js
 ```
 
 And change the Dockerfile to use Node.js 10.x as the base image:
@@ -160,13 +160,13 @@ Gitpod provides seamless integration with GitHub features like creating and revi
 
 Let’s open a new pull request from Gitpod:
 
-- commit your changes using the Git view (see above);
+-   commit your changes using the Git view (see above);
 
-- use Git: Checkout command or click the branch item in the status bar to create a new branch. Name it somehow, e.g. gitpodify;
+-   use Git: Checkout command or click the branch item in the status bar to create a new branch. Name it somehow, e.g. gitpodify;
 
-- next up open the Pull Request view on the right. You cannot create a new pull request yet, because first the new branch should be published to GitHub, click publish changes;
+-   next up open the Pull Request view on the right. You cannot create a new pull request yet, because first the new branch should be published to GitHub, click publish changes;
 
-- after that, the Pull Request view will be updated and you can open a new pull request.
+-   after that, the Pull Request view will be updated and you can open a new pull request.
 
 <figure>
 <video controls playsinline autoplay loop muted class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="How to make a PR in Gitpod" src="/images/blog/node-js-development/how-to-make-a-pr-in-gitpod.webm" type="video/webm"></video>
@@ -226,11 +226,11 @@ _The [shared workspace snapshot](https://gitpod.io/#snapshot/14dc69f1-0e8c-4a36-
 
 So far, we’ve only had a look at a simple Node.js application. In case you wonder whether it will scale to sophisticated applications you can try any of the following repositories:
 
-- [Node.js Shopping Cart](https://github.com/gitpod-io/nodejs-shopping-cart) is a reference Node.js application demonstrating how to use the Express framework. You can open it in Gitpod with [one-click](https://gitpod.io/#https://github.com/gitpod-io/nodejs-shopping-cart) and follow along [this blog post](https://medium.com/gitpod/debugging-node-js-applications-in-theia-76c94c76f0a1) explaining in details how to debug the app.
+-   [Node.js Shopping Cart](https://github.com/gitpod-io/nodejs-shopping-cart) is a reference Node.js application demonstrating how to use the Express framework. You can open it in Gitpod with [one-click](https://gitpod.io/#https://github.com/gitpod-io/nodejs-shopping-cart) and follow along [this blog post](https://medium.com/gitpod/debugging-node-js-applications-in-theia-76c94c76f0a1) explaining in details how to debug the app.
 
-- Gitpod is based on an open-source IDE framework — [Theia](http://theia-ide.org). It’s built with a lot of JS technologies, including Node.js, Express, TypeScript and React. And, of course, [Gitpod is used to develop Theia](https://github.com/theia-ide/theia/blob/master/doc/Developing.md#run-the-browser-example-with-gitpod).
+-   Gitpod is based on an open-source IDE framework — [Theia](http://theia-ide.org). It’s built with a lot of JS technologies, including Node.js, Express, TypeScript and React. And, of course, [Gitpod is used to develop Theia](https://github.com/theia-ide/theia/blob/master/doc/Developing.md#run-the-browser-example-with-gitpod).
 
-- You even can develop Electron applications in Gitpod, like VS Code. Chris demonstrates it in [this blog post](https://medium.com/gitpod/developing-native-ui-applications-in-gitpod-15af2967c24e).
+-   You even can develop Electron applications in Gitpod, like VS Code. Chris demonstrates it in [this blog post](https://medium.com/gitpod/developing-native-ui-applications-in-gitpod-15af2967c24e).
 
 ## Summary
 

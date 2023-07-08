@@ -81,14 +81,14 @@ If you haven't set up an SSH key with Gitpod, you can go to [gitpod.io/keys](htt
 
 You must have at least one public key uploaded to Gitpod, and a matching private key locally on your device to avoid this prompt. VS Code Desktop will look to find private keys in the following named files within the `.ssh` directory listed under your home directory.
 
-- `id_dsa`
-- `id_dsa`
-- `id_ecdsa`
-- `id_rsa`
-- `id_ed25519`
-- `id_xmss`
-- `id_ecdsa_sk`
-- `id_ed25519_sk`
+-   `id_dsa`
+-   `id_dsa`
+-   `id_ecdsa`
+-   `id_rsa`
+-   `id_ed25519`
+-   `id_xmss`
+-   `id_ecdsa_sk`
+-   `id_ed25519_sk`
 
 ### Connect to VS Code Desktop using the workspace owner token
 
@@ -155,11 +155,11 @@ The process of installing fonts matches how you typically install custom fonts l
 1. Download the desired font to your local machine and install it locally on your operating system.
 1. Open the editor's user settings (e.g. _File_ > _Preferences_ > _Settings_ > _User_)
 1. Configure your font with the `editor.fontFamily` setting:
-   ```json
-   {
-     "editor.fontFamily": "Your custom font name"
-   }
-   ```
+    ```json
+    {
+    	"editor.fontFamily": "Your custom font name"
+    }
+    ```
 
 ## Optimizing VS Code Desktop
 
@@ -219,8 +219,8 @@ _Accessing the owner token string manually from the Gitpod dashboard_
 
 If you're unsure whether you're connecting via the local companion, or SSH Gateway approach, when connected to your Gitpod workspace, VS Code Desktop will show the connection host in the bottom left.
 
-- **SSH Gateway** - `SSH: workspaceid.ssh.*.gitpod.io`
-- **Local Companion**: `workspaceid` (no domain)
+-   **SSH Gateway** - `SSH: workspaceid.ssh.*.gitpod.io`
+-   **Local Companion**: `workspaceid` (no domain)
 
 ![The SSH host information shown in the bottom left of VS Code Desktop](/images/editors/show-ssh-connection-vscode-light-theme.png)
 ![The SSH host information shown in the bottom left of VS Code Desktop](/images/editors/show-ssh-connection-vscode-dark-theme.png)

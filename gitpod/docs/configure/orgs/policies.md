@@ -22,6 +22,6 @@ To update an Organizational policy:
 
 Workspace sharing is enabled by default. Through this policy, Organization Owners can prevent Members from sharing workspaces that have been started within an Organization.
 
-- Prevents workspaces within an Organization from sharing access to a running workspace.
-- Members can stop sharing a workspace at any time, regardless of the Organizational Policy.
-- Any currently shared workspaces will not have sharing access removed.
+-   Prevents workspaces within an Organization from sharing access to a running workspace.
+-   Members can stop sharing a workspace at any time, regardless of the Organizational Policy.
+-   Any currently shared workspaces will not have sharing access removed.

@@ -6,7 +6,7 @@ image: teaser.jpg
 slug: gitpod-open-source-sustainability-fund
 subtitle:
 teaserImage: teaser.jpg
-tags: ["Gitpod updates"]
+tags: ['Gitpod updates']
 title: Gitpod Open-Source Sustainability Fund
 ---
 

@@ -95,9 +95,9 @@ Open your favorite browser and go to `http://localhost:8800` (port `8800` is ope
 
 Now, you will be asked for the password and the license. On the next page, you have to set:
 
-- the hostname of your registry (e.g. `my-registry.example.com:443`),
-- username and password (read access), as well as
-- the namespace that you used in the registry URI above (e.g. `gitpod`).
+-   the hostname of your registry (e.g. `my-registry.example.com:443`),
+-   username and password (read access), as well as
+-   the namespace that you used in the registry URI above (e.g. `gitpod`).
 
 Click on “choose a bundle to upload” and select your `gitpod-<version>.airgap` file on your local computer. Then hit the “Upload airgap bundle” button.
 

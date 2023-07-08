@@ -14,8 +14,8 @@ customSlug: validate-gitpod-yaml-without-commit
 
 **TL;DR;** - You can now validate a Gitpod configuration—both the `.gitpod.yml` and the workspace image—by running `gp validate` without needing to restart, leave your workspace, or commit your configuration.
 
-- With `gp validate` can now validate a configuration within the workspace without committing. This works in a very similar way to a regular Gitpod workspace start, allowing you to catch configuration mistakes earlier.
-- Using `gp validate --prebuild` you can create run a workspace just as a Prebuild would, which makes it easier to debug a Prebuild configuration by re-creating the exact state inside a running workspace.
+-   With `gp validate` can now validate a configuration within the workspace without committing. This works in a very similar way to a regular Gitpod workspace start, allowing you to catch configuration mistakes earlier.
+-   Using `gp validate --prebuild` you can create run a workspace just as a Prebuild would, which makes it easier to debug a Prebuild configuration by re-creating the exact state inside a running workspace.
 
 The power of a [CDE](https://www.gitpod.io/cde) comes with a well-defined configuration. Because, when your workspace is configured, you can make use of ephemeral workspaces, multi-track development and other benefits of developing in the cloud.
 

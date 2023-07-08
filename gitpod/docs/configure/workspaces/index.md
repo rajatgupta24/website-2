@@ -33,17 +33,17 @@ image: gitpod/workspace-full
 
 # Commands that will run on workspace start
 tasks:
-  - name: Setup, Install & Build
-    before: yarn global add express
-    init: yarn install
-    command: yarn build
+    - name: Setup, Install & Build
+      before: yarn global add express
+      init: yarn install
+      command: yarn build
 
 # Ports to expose on workspace startup
 ports:
-  - port: 3000
-    onOpen: open-preview
-    name: Website
-    description: Website Preview
+    - port: 3000
+      onOpen: open-preview
+      name: Website
+      description: Website Preview
 ```
 
 **Caption:** An example project configured to install, build and run a `yarn` project with a webserver, exposed on port 3000. On start, an in-editor preview of the webserver is opened automatically.
@@ -107,7 +107,7 @@ To apply your changes for all subsequent workspaces, commit and push the `gitpod
 Open the commit in a new workspace by either:
 
 1. Prefixing your repo URL with `https://gitpod.io/#`
-   - **For example:** https://gitpod.io/#https://github.com/nodejs/node
+    - **For example:** https://gitpod.io/#https://github.com/nodejs/node
 2. Opening a new workspace from the [Gitpod dashboard](https://gitpod.io/dashboard)
 3. Installing, and using the [Gitpod Browser Extension](/docs/configure/user-settings/browser-extension#browser-extension)
 
@@ -119,21 +119,21 @@ Open the commit in a new workspace by either:
 
 Android app development is possible in Gitpod, but you cannot directly run an Android emulator on Gitpod. Check this relevant issue:
 
-- [gitpod-io/gitpod#1273](https://github.com/gitpod-io/gitpod/issues/1273)
+-   [gitpod-io/gitpod#1273](https://github.com/gitpod-io/gitpod/issues/1273)
 
 You have two options:
 
 1. Connect to a physical device with a wirelessly exposed `adb` server. Some guides:
-   - [Connect to a device over Wi-Fi (Android Developer)](https://developer.android.com/tools/adb#connect-to-a-device-over-wi-fi)
+    - [Connect to a device over Wi-Fi (Android Developer)](https://developer.android.com/tools/adb#connect-to-a-device-over-wi-fi)
 2. Use the exposed `adb` server from a local Android emulator (e.g. from JetBrains Android Studio)
 
 In both methods, you need to use reverse SSH port forwarding to access the `adb` server inside a Gitpod workspace. For instructions, see:
 
-- [Port forwarding (Gitpod Documentation)](https://www.gitpod.io/docs/configure/workspaces/ports#port-forwarding)
+-   [Port forwarding (Gitpod Documentation)](https://www.gitpod.io/docs/configure/workspaces/ports#port-forwarding)
 
 You might also want to use Gitpod with JetBrains IDE locally:
 
-- [IntelliJ / CLion (Gitpod Documentation)](https://www.gitpod.io/docs/references/ides-and-editors/intellij)
+-   [IntelliJ / CLion (Gitpod Documentation)](https://www.gitpod.io/docs/references/ides-and-editors/intellij)
 
 For Flutter Android development, there is a template available: [gitpod-samples/template-flutter](https://github.com/gitpod-samples/template-flutter)
 

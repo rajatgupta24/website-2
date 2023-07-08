@@ -42,14 +42,14 @@ To use Gitpod on a GitLab repository, you have to connect your GitLab account wi
 
 Gitpod supports the following use cases:
 
-- [GitLab](#GitLab)
-  - [Starting Workspaces](#starting-workspaces)
-  - [Enabling Prebuilds](#enabling-prebuilds)
-  - [Connecting Your GitLab Account](#connecting-your-gitlab-account)
-    - [Connecting Your GitLab.com Account](#connecting-your-gitlabcom-account)
-    - [Connecting Your Self-Hosted GitLab Account](#connecting-your-self-hosted-gitlab-account)
-    - [Disconnecting Your GitLab Account](#disconnecting-your-gitlab-account)
-  - [Registering A Self-Hosted GitLab Installation](#registering-a-self-hosted-gitlab-installation)
+-   [GitLab](#GitLab)
+    -   [Starting Workspaces](#starting-workspaces)
+    -   [Enabling Prebuilds](#enabling-prebuilds)
+    -   [Connecting Your GitLab Account](#connecting-your-gitlab-account)
+        -   [Connecting Your GitLab.com Account](#connecting-your-gitlabcom-account)
+        -   [Connecting Your Self-Hosted GitLab Account](#connecting-your-self-hosted-gitlab-account)
+        -   [Disconnecting Your GitLab Account](#disconnecting-your-gitlab-account)
+    -   [Registering A Self-Hosted GitLab Installation](#registering-a-self-hosted-gitlab-installation)
 
 ### Connecting Your GitLab.com Account
 

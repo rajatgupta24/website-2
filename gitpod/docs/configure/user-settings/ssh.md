@@ -119,13 +119,13 @@ See the [Self-Hosted Reference Architectures](/docs/configure/self-hosted/latest
 
 ## unix_listener: path "/somewhere/xyz" too long for Unix domain socket
 
-- Open your SSH `config` file in a text editor. (i.e. `~/.ssh/config` or `/etc/ssh/ssh_config`[[1](https://www.ssh.com/academy/ssh/config)])
-- Append the following to it:
+-   Open your SSH `config` file in a text editor. (i.e. `~/.ssh/config` or `/etc/ssh/ssh_config`[[1](https://www.ssh.com/academy/ssh/config)])
+-   Append the following to it:
 
 ```
 Host *.gitpod.io
      ControlPath /tmp/%r-gitpod
 ```
 
-- Save the file.
-- Now try connecting via SSH or VS Code Desktop again.
+-   Save the file.
+-   Now try connecting via SSH or VS Code Desktop again.

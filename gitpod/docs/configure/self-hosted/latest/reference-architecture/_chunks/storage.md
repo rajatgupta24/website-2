@@ -73,31 +73,31 @@ Save the following file as `S3_policy.json`, replacing `${S3_BUCKET_NAME}` with 
 
 ```json
 {
-  "Statement": [
-    {
-      "Action": [
-        "s3:ListBucketMultipartUploads",
-        "s3:ListBucket",
-        "s3:GetBucketLocation"
-      ],
-      "Effect": "Allow",
-      "Resource": ["arn:aws:s3:::${S3_BUCKET_NAME}>"],
-      "Sid": ""
-    },
-    {
-      "Action": [
-        "s3:PutObject",
-        "s3:ListMultipartUploadParts",
-        "s3:GetObject",
-        "s3:DeleteObject",
-        "s3:AbortMultipartUpload"
-      ],
-      "Effect": "Allow",
-      "Resource": ["arn:aws:s3:::${S3_BUCKET_NAME}/*"],
-      "Sid": ""
-    }
-  ],
-  "Version": "2012-10-17"
+	"Statement": [
+		{
+			"Action": [
+				"s3:ListBucketMultipartUploads",
+				"s3:ListBucket",
+				"s3:GetBucketLocation"
+			],
+			"Effect": "Allow",
+			"Resource": ["arn:aws:s3:::${S3_BUCKET_NAME}>"],
+			"Sid": ""
+		},
+		{
+			"Action": [
+				"s3:PutObject",
+				"s3:ListMultipartUploadParts",
+				"s3:GetObject",
+				"s3:DeleteObject",
+				"s3:AbortMultipartUpload"
+			],
+			"Effect": "Allow",
+			"Resource": ["arn:aws:s3:::${S3_BUCKET_NAME}/*"],
+			"Sid": ""
+		}
+	],
+	"Version": "2012-10-17"
 }
 ```
 

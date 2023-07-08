@@ -34,17 +34,17 @@ The three main ways to edit code or access a Gitpod workspace:
 
 ### Supported IDE/editors
 
-- [VS Code Browser](ides-and-editors/vscode-browser)
-- [VS Code Desktop](ides-and-editors/vscode)
-- [IntelliJ](ides-and-editors/intellij)
-- [GoLand](ides-and-editors/goland)
-- [PhpStorm](ides-and-editors/phpstorm)
-- [PyCharm](ides-and-editors/pycharm)
-- [RubyMine](ides-and-editors/rubymine)
-- [WebStorm](ides-and-editors/webstorm)
-- [Rider](ides-and-editors/rider)
-- [CLion](ides-and-editors/clion)
-- [Command Line (e.g. Vim)](ides-and-editors/command-line)
+-   [VS Code Browser](ides-and-editors/vscode-browser)
+-   [VS Code Desktop](ides-and-editors/vscode)
+-   [IntelliJ](ides-and-editors/intellij)
+-   [GoLand](ides-and-editors/goland)
+-   [PhpStorm](ides-and-editors/phpstorm)
+-   [PyCharm](ides-and-editors/pycharm)
+-   [RubyMine](ides-and-editors/rubymine)
+-   [WebStorm](ides-and-editors/webstorm)
+-   [Rider](ides-and-editors/rider)
+-   [CLion](ides-and-editors/clion)
+-   [Command Line (e.g. Vim)](ides-and-editors/command-line)
 
 ### Start a workspace with an IDE/editor
 

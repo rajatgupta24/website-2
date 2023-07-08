@@ -6,7 +6,7 @@ image: teaser-launch-min.jpg
 slug: gitpod-launch
 subtitle: No Setup, Less Waiting, More Flow
 teaserImage: teaser-launch-min.jpg
-tags: ["Gitpod updates"]
+tags: ['Gitpod updates']
 title: Introducing Gitpod — Frictionless Coding on GitHub
 ---
 
@@ -84,9 +84,9 @@ In addition to one of the best code editors, Gitpod environments provide full fe
 
 Gitpod comes with two major features supporting collaboration.
 
-- [Sharing running dev environments](/docs/configure/workspaces/collaboration) with other users comes in handy if you want to look at code with a colleague to hunt down a bug together or do some pair programming. Collaborators will see the same code you see and even the terminals are synced and shared.
+-   [Sharing running dev environments](/docs/configure/workspaces/collaboration) with other users comes in handy if you want to look at code with a colleague to hunt down a bug together or do some pair programming. Collaborators will see the same code you see and even the terminals are synced and shared.
 
-- [Snapshots](/blog/workspace-snapshots) are useful in many ways. In a nutshell, they allow taking an immutable copy of your dev environment at any point in time. You can share the provided link wherever you want. Users opening such a snapshot link will get an exact clone of the environment including all state and even UI layout. This feature is great for sharing reproducibles in issues, but also good for blog posts or solutions on Stack Overflow.
+-   [Snapshots](/blog/workspace-snapshots) are useful in many ways. In a nutshell, they allow taking an immutable copy of your dev environment at any point in time. You can share the provided link wherever you want. Users opening such a snapshot link will get an exact clone of the environment including all state and even UI layout. This feature is great for sharing reproducibles in issues, but also good for blog posts or solutions on Stack Overflow.
 
 ![Collaboration: Share Running Workspace or Snapshot](../../../static/images/blog/gitpod-launch/collaboration.png)
 
@@ -96,9 +96,9 @@ An important part of leaving the beta was to find a good pricing model that addr
 
 We think we have found a good balance by providing the following individual subscription options:
 
-- a **free 100-hour per month plan** for open-source development
-- a **paid 100-hour per month plan** for individuals working privately
-- a **paid unlimited plan** for professional use
+-   a **free 100-hour per month plan** for open-source development
+-   a **paid 100-hour per month plan** for individuals working privately
+-   a **paid unlimited plan** for professional use
 
 _(I know some of you are lucky enough to do professional open-source. Decide what works best for you in that case ;-))_
 

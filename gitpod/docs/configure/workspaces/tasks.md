@@ -28,16 +28,16 @@ Tasks are shell scripts that run on top of the Docker image you configure (learn
 
 With Gitpod, you have the following three types of tasks:
 
-- `before`: Use this for tasks that need to run before `init` and before `command`. For example, customize the terminal or install global project dependencies.
-- `init`: Use this for heavy-lifting tasks such as downloading dependencies or compiling source code.
-- `command`: Use this to start your database or development server.
+-   `before`: Use this for tasks that need to run before `init` and before `command`. For example, customize the terminal or install global project dependencies.
+-   `init`: Use this for heavy-lifting tasks such as downloading dependencies or compiling source code.
+-   `command`: Use this to start your database or development server.
 
 The order in which these tasks execute depends on whether you have [Prebuilds](/docs/configure/projects/prebuilds) configured for your project and which startup scenario applies. Let's look at the details.
 
 > **Caveats**
 >
-> - Any file changes made outside of `/workspace` file hierarchy from `init` tasks will be lost on workspace start when prebuilds are enabled. [Learn more](/docs/configure/projects/prebuilds#workspace-directory-only)
-> - User specific environment variables are not loaded automatically for `init` and `before` tasks but can be loaded if you want. [Learn more](/docs/configure/projects/prebuilds#user-specific-environment-variables-in-prebuilds)
+> -   Any file changes made outside of `/workspace` file hierarchy from `init` tasks will be lost on workspace start when prebuilds are enabled. [Learn more](/docs/configure/projects/prebuilds#workspace-directory-only)
+> -   User specific environment variables are not loaded automatically for `init` and `before` tasks but can be loaded if you want. [Learn more](/docs/configure/projects/prebuilds#user-specific-environment-variables-in-prebuilds)
 
 ### Prebuild and New Workspaces
 
@@ -48,10 +48,10 @@ In this startup scenario, you can see how Prebuilds impact the execution order o
 
 The `init` task is where you want to do the heavy lifting, things like:
 
-- Download & install dependencies
-- Compile your source code
-- Run your test suite
-- Any other long-running, terminating processes necessary to prepare your project
+-   Download & install dependencies
+-   Compile your source code
+-   Run your test suite
+-   Any other long-running, terminating processes necessary to prepare your project
 
 As displayed in the diagram above, we highly recommend you enable Prebuilds for your project. In that case, Gitpod executes the `before` and most importantly, `init` tasks automatically for each new commit to your project.
 
@@ -85,11 +85,11 @@ Snapshots will first try to reuse existing terminals in the layout, before openi
 
 ```yml
 tasks:
-  - name: Static Server
-    command: python3 -m http.server 8080
-  - name: DB Server
-    command: sh ./scripts/start-db.sh
-    openMode: split-right
+    - name: Static Server
+      command: python3 -m http.server 8080
+    - name: DB Server
+      command: sh ./scripts/start-db.sh
+      openMode: split-right
 ```
 
 ### openMode
@@ -121,9 +121,9 @@ Each task contains a single `npm` command. The `init` task terminates once the d
 
 ```yml
 tasks:
-  - name: Dev Server
-    init: npm install
-    command: npm run dev
+    - name: Dev Server
+      init: npm install
+      command: npm run dev
 ```
 
 ### Multi-line tasks
@@ -136,11 +136,11 @@ In the following example, the `init` task installs dependencies and configures a
 
 ```yml
 tasks:
-  - name: Dependencies & Database
-    init: |
-      npm install
-      npm run configure-database
-    command: npm run dev
+    - name: Dependencies & Database
+      init: |
+          npm install
+          npm run configure-database
+      command: npm run dev
 ```
 
 > **Note**: This doesn't stop execution on errors. If `npm install` in the example above fails, the `npm run configure-database` will still run. See [how to exit after failure](#immediately-exit-for-any-command-failure-within-a-task) below for a workaround.
@@ -151,25 +151,25 @@ When working with multiple terminals, you may have a situation where terminal 1 
 
 ```yml
 tasks:
-  - name: Rails
-    init: >
-      bundle install &&
-      yarn install --check-files &&
-      rails db:setup &&
-      gp sync-done bundle # 'bundle' is an arbitrary name
-    command: rails server
+    - name: Rails
+      init: >
+          bundle install &&
+          yarn install --check-files &&
+          rails db:setup &&
+          gp sync-done bundle # 'bundle' is an arbitrary name
+      command: rails server
 
-  - name: Webpack
-    init: gp sync-await bundle # wait for the above 'init' to finish
-    command: bin/webpack-dev-server
+    - name: Webpack
+      init: gp sync-await bundle # wait for the above 'init' to finish
+      command: bin/webpack-dev-server
 
-  - name: Redis
-    init: gp sync-await bundle
-    command: redis-server
+    - name: Redis
+      init: gp sync-await bundle
+      command: redis-server
 
-  - name: Sidekiq
-    init: gp sync-await bundle
-    command: sidekiq
+    - name: Sidekiq
+      init: gp sync-await bundle
+      command: sidekiq
 ```
 
 ### Wait for a port to be available
@@ -180,14 +180,14 @@ You can achieve this with two terminals and the `gp ports await` CLI command.
 
 ```yml
 tasks:
-  - name: Dev Server
-    init: npm install
-    command: npm run dev
+    - name: Dev Server
+      init: npm install
+      command: npm run dev
 
-  - name: e2e Tests
-    command: |
-      gp ports await 3000
-      npm run test
+    - name: e2e Tests
+      command: |
+          gp ports await 3000
+          npm run test
 ```
 
 ### Immediately exit for any command failure within a task
@@ -196,14 +196,14 @@ If you wish to halt an entire task with for an error within the task script, the
 
 ```yml
 tasks:
-  - init: |
-      (
-        set -e # Tells bash to immediately exit on failure off a command
-        bundle install
-        yarn install --frozen-lockfile
-        bundle exec rake
-        bundle exec nanoc compile
-      )
+    - init: |
+          (
+            set -e # Tells bash to immediately exit on failure off a command
+            bundle install
+            yarn install --frozen-lockfile
+            bundle exec rake
+            bundle exec nanoc compile
+          )
 ```
 
 Gitpod starts all your `tasks` inside separate `bash` (`$SHELL`) shells. Gitpod can only assert the exit status of the shell process of a task. Normally `bash` or other shells don't halt on a failure of a command unless you explicitly ask it to. `bash` only inherits the last exit status of a script run with it before it's own `exit`. Hence Gitpod can't determine if all of your commands inside the `init` task succeeded. To have that effect, you can put `set -e;` on top of task shell-commands and wrap your whole task-script with `()` to configure that particular task shell to halt and immediately exit with an error code for a failure of any command. This can be specially helpful for prebuilds (i.e `init` tasks)

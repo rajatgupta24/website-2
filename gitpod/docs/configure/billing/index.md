@@ -66,9 +66,9 @@ All old seat-based or personal plans have been faded out. If you had one of thos
 
 There are a few built-in Gitpod features that can optimize your prebuild costs, such as:
 
-- **Skip prebuilds** every X commits and use [last successful prebuild](https://www.gitpod.io/docs/configure/projects/last-successful-prebuild)
+-   **Skip prebuilds** every X commits and use [last successful prebuild](https://www.gitpod.io/docs/configure/projects/last-successful-prebuild)
 
-- **Stop prebuilds** for all branches, PRs and etc. when on GitHub. See [this page](https://www.gitpod.io/docs/references/gitpod-yml/#github). (might not be necessary)
+-   **Stop prebuilds** for all branches, PRs and etc. when on GitHub. See [this page](https://www.gitpod.io/docs/references/gitpod-yml/#github). (might not be necessary)
 
 ### With prebuilds enabled, does every push to my repository cost me credits?
 

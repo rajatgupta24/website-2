@@ -391,17 +391,17 @@ The next step is to create an issuer. In this guide, we create a cluster issuer.
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
-  name: gitpod-issuer
+    name: gitpod-issuer
 spec:
-  acme:
-    email: $LETSENCRYPT_EMAIL
-    server: https://acme-v02.api.letsencrypt.org/directory
-    privateKeySecretRef:
-      name: issuer-account-key
-    solvers:
-      - dns01:
-          cloudDNS:
-            project: $PROJECT_NAME
+    acme:
+        email: $LETSENCRYPT_EMAIL
+        server: https://acme-v02.api.letsencrypt.org/directory
+        privateKeySecretRef:
+            name: issuer-account-key
+        solvers:
+            - dns01:
+                  cloudDNS:
+                      project: $PROJECT_NAME
 ```
 
 … and run:
@@ -420,20 +420,20 @@ If using `eksctl` and the cert-manager service account along with well-known pol
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
-  name: gitpod-issuer
+    name: gitpod-issuer
 spec:
-  acme:
-    server: https://acme-v02.api.letsencrypt.org/directory
-    email: $LETSENCRYPT_EMAIL
-    privateKeySecretRef:
-      name: letsencrypt
-    solvers:
-      - selector:
-          dnsZones:
-            - $DOMAIN_NAME
-        dns01:
-          route53:
-            region: us-east-1
+    acme:
+        server: https://acme-v02.api.letsencrypt.org/directory
+        email: $LETSENCRYPT_EMAIL
+        privateKeySecretRef:
+            name: letsencrypt
+        solvers:
+            - selector:
+                  dnsZones:
+                      - $DOMAIN_NAME
+              dns01:
+                  route53:
+                      region: us-east-1
 ```
 
 > ⚠️ In contrast to most AWS services, Route53 does _not_ support regional endpoints. When creating your ClusterIssuer
@@ -460,18 +460,18 @@ Then create a file named `issuer.yaml` containing the following content, expandi
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
-  name: gitpod-issuer
+    name: gitpod-issuer
 spec:
-  acme:
-    server: https://acme-v02.api.letsencrypt.org/directory
-    privateKeySecretRef:
-      name: issuer-account-key
-    solvers:
-      - dns01:
-          azureDNS:
-            subscriptionID: $AZURE_SUBSCRIPTION_ID
-            resourceGroupName: $RESOURCE_GROUP
-            hostedZoneName: $DOMAIN_NAME
+    acme:
+        server: https://acme-v02.api.letsencrypt.org/directory
+        privateKeySecretRef:
+            name: issuer-account-key
+        solvers:
+            - dns01:
+                  azureDNS:
+                      subscriptionID: $AZURE_SUBSCRIPTION_ID
+                      resourceGroupName: $RESOURCE_GROUP
+                      hostedZoneName: $DOMAIN_NAME
 ```
 
 Then apply the ClusterIssuer resource:

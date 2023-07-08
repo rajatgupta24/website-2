@@ -20,8 +20,8 @@ Access Tokens are secrets that allow you to interact with Gitpod through Gitpod 
 
 Each Access Token either has:
 
-- No Access.
-- Full Access to Resources and APIs which the token owner also has access to.
+-   No Access.
+-   Full Access to Resources and APIs which the token owner also has access to.
 
 By default, an Access Token has **No Access**. You need to explicitly select Full Access to succesfully authorize.
 
@@ -43,15 +43,15 @@ You can list your Access Tokens in your user Settings, or by going to [gitpod.io
 
 You can create an Access Token by navigating to [gitpod.io/tokens](https://gitpod.io/tokens) or through Settings > Access Tokens. Clicking **New Access Token** will prompt you to specify details of the token.
 
-- Your access tokens will automatically expire after the specified duration.
-- Once you create an Access Token, it will be shown to you **once**. Make sure you store it in a secure place, you will not be able to retrieve it again.
+-   Your access tokens will automatically expire after the specified duration.
+-   Once you create an Access Token, it will be shown to you **once**. Make sure you store it in a secure place, you will not be able to retrieve it again.
 
 ## Updating an Access Token
 
 Access Token can be updated. You can update the following properties on a token:
 
-- Name
-- Permission scopes
+-   Name
+-   Permission scopes
 
 When you update a token, the token secret remains unaffected and you can continue to use it, until it expires.
 
@@ -59,9 +59,9 @@ When you update a token, the token secret remains unaffected and you can continu
 
 Access Token can be regenerated. Regenerating a token will:
 
-- Create a new token secret, which you'll need to store in a secure place and replace your old one.
-- The new token will have a new expiration time.
-- The old token will no longer be valid and will receive Unathorized when interacting with APIs.
+-   Create a new token secret, which you'll need to store in a secure place and replace your old one.
+-   The new token will have a new expiration time.
+-   The old token will no longer be valid and will receive Unathorized when interacting with APIs.
 
 ## Deleting Access Tokens
 

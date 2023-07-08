@@ -4,10 +4,10 @@ date: Wednesday, 13 July 2022 09:00:00 UTC
 excerpt: For more secure and easier to use workspace access, you can now upload a public SSH key to Gitpod to access Gitpod workspaces using your own dedicated SSH key.
 image: header.jpg
 slug: ssh-key-upload
-tags: ["Engineering"]
+tags: ['Engineering']
 subtitle: For more secure and easier to use workspace access, you can now upload a public SSH key to Gitpod to access Gitpod workspaces using your own dedicated SSH key.
 teaserImage: header.jpg
-title: "Introducing workspace SSH support using your own private key(s)"
+title: 'Introducing workspace SSH support using your own private key(s)'
 ---
 
 <script context="module">
@@ -39,8 +39,8 @@ If you've been happily working away on Gitpod until now, you might be wondering 
 
 In addition to some of these more visual improvements, SSH key upload also will give our users more stable, performant and secure connections. Improvements to the SSH connection experience also enables Gitpod to build new workflows and features around the SSH protocol, such as:
 
-- Further reducing steps and friction when opening desktop editors like VS Code Desktop
-- Investigating a fully desktop-based workspace opening and managing experience in future
+-   Further reducing steps and friction when opening desktop editors like VS Code Desktop
+-   Investigating a fully desktop-based workspace opening and managing experience in future
 
 So, watch this space for future announcements!
 

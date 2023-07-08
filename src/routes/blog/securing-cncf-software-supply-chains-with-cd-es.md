@@ -3,7 +3,7 @@ author: burningion
 date: Tuesday, 15 May 2023 11:00:00 UTC
 excerpt: Cloud Development Environments offer an unprecedented opportunity to enhance the security of the software development lifecycle. They offer a single place to control access to secrets, to rotate leaked credentials, sign and verify commits, and offer the potential to scan and track every piece of software before it makes its way on to your production systems.
 slug: securing-cncf-software-supply-chains-with-cd-es
-tags: ["Engineering"]
+tags: ['Engineering']
 image: cncf.webp
 teaserImage: cncf.webp
 title: Securing CNCF Software Supply Chains with CDEs

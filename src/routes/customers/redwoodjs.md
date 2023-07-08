@@ -4,7 +4,7 @@ excerpt: RedwoodJS is the latest open source project of Tom Preston-Werner, the 
 slug: redwoodjs
 image: teaser.png
 date: Thursday, 3 Feburary 2022 04:00:00 UTC
-pageTitle: "RedwoodJS case study: Building a community by removing friction"
+pageTitle: 'RedwoodJS case study: Building a community by removing friction'
 pageDescription: RedwoodJS was founded by Tom Preston-Werner, the Founder and former CEO of GitHub. Gitpod removed the friction of contributing to RedwoodJS, growing the community.
 keywords: open-source, community, redwoodJS, OSS
 ---

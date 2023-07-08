@@ -12,11 +12,11 @@ description: Learn how you can use one Gitpod workspace per task to keep your de
 
 On any given day, you may be involved in tasks such as the following:
 
-- Implement a new feature
-- Fix a bug
-- Review a pull/merge request
-- Pair-program with a team member
-- Browse an open source project's source code
+-   Implement a new feature
+-   Fix a bug
+-   Review a pull/merge request
+-   Pair-program with a team member
+-   Browse an open source project's source code
 
 For each of these tasks, you start a clean, ephemeral Gitpod workspace. You can even start **multiple workspaces in parallel**. For example, while you're working on a feature, you can start a second workspace to review a production hotfix. When the review is complete, you close the browser tab of that workspace and continue to work on your feature. This works for any GitLab, GitHub or Bitbucket project.
 

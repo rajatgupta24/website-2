@@ -1,10 +1,10 @@
 ---
-title: "From in-house to Gitpod: unlocking a collaboration culture"
+title: 'From in-house to Gitpod: unlocking a collaboration culture'
 excerpt: Factorial embraced a collaboration culture by switching from their in-house dev environments to Gitpod. It saved each engineer 5 to 10 hours a month and freed the DevOps team to focus on production as they scaled from 45 developers to 120.
 slug: factorial
 image: teaser.png
 date: Thursday, 23 June 2022 06:00:00 UTC
-pageTitle: "Factorial case study: From in-house remote development to unlocking a collaboration culture"
+pageTitle: 'Factorial case study: From in-house remote development to unlocking a collaboration culture'
 pageDescription: From in-house remote development to unlocking a collaboration culture. Saving each engineer 5 to 10 hours a month. Freeing the DevOps team to focus on production as Factorial grows from 45 developers to 120.
 keywords: DevX, velocity, growth, onboarding, factorial
 ---

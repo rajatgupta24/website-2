@@ -20,12 +20,12 @@ Once enabled, Settings Sync polls the backend to ensure that your settings are s
 
 The following settings are synced via Settings Sync:
 
-- [VS Code preferences](https://code.visualstudio.com/docs/getstarted/settings)
-- [Keybindings](https://code.visualstudio.com/docs/getstarted/keybindings)
-- [Snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
-- [Tasks](https://code.visualstudio.com/Docs/editor/tasks#_user-level-tasks)
-- [Installed Extensions](https://code.visualstudio.com/docs/editor/extension-marketplace#_manage-extensions)
-- [Global State](https://code.visualstudio.com/docs/editor/settings-sync#_sync-user-global-state-between-machines)
+-   [VS Code preferences](https://code.visualstudio.com/docs/getstarted/settings)
+-   [Keybindings](https://code.visualstudio.com/docs/getstarted/keybindings)
+-   [Snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
+-   [Tasks](https://code.visualstudio.com/Docs/editor/tasks#_user-level-tasks)
+-   [Installed Extensions](https://code.visualstudio.com/docs/editor/extension-marketplace#_manage-extensions)
+-   [Global State](https://code.visualstudio.com/docs/editor/settings-sync#_sync-user-global-state-between-machines)
 
 ## Gitpod vs Microsoft Settings Sync
 

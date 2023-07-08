@@ -13,8 +13,8 @@ Welcome, Rustacean!
 
 Rust is a first-class language in Gitpod, and we believe that Gitpod is a great tool for Rust projects. Some of Gitpod's core developers frequently work with Rust code (in Gitpod), and several key components of Gitpod are written in Rust:
 
-- The fantastic language support is provided by the [rls](https://github.com/rust-lang/rls)
-- The blazing-fast workspace search is powered by [ripgrep](https://github.com/BurntSushi/ripgrep)
+-   The fantastic language support is provided by the [rls](https://github.com/rust-lang/rls)
+-   The blazing-fast workspace search is powered by [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 ## Rust Version
 
@@ -99,8 +99,8 @@ Better TOML adds syntax highlighting to your `Cargo.toml`.
 
 To cross-compile with MUSL in Gitpod, you can:
 
-- Run `rustup target add x86_64-unknown-linux-musl`, for example in your [.gitpod.Dockerfile](/docs/configure/workspaces/workspace-image)
-- Then, build with `cargo build --target x86_64-unknown-linux-musl`
+-   Run `rustup target add x86_64-unknown-linux-musl`, for example in your [.gitpod.Dockerfile](/docs/configure/workspaces/workspace-image)
+-   Then, build with `cargo build --target x86_64-unknown-linux-musl`
 
 To learn more, see [MUSL support for fully static binaries](https://doc.rust-lang.org/edition-guide/rust-2018/platform-and-target-support/musl-support-for-fully-static-binaries.html).
 
@@ -146,7 +146,7 @@ Next, add the following to your [.gitpod.yml](/docs/references/gitpod-yml) file:
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 ```
 
 Now that's out of the way, here is a video on how to configure the debug configuration
@@ -182,20 +182,20 @@ To start debugging your Rust application in Gitpod, please create a new director
 
 ```json
 {
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "gdb",
-      "request": "launch",
-      "name": "Debug Rust Code",
-      "preLaunchTask": "cargo",
-      "target": "${workspaceFolder}/target/debug/rust_debug",
-      "cwd": "${workspaceFolder}",
-      "valuesFormatting": "parseText"
-    }
-  ]
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "gdb",
+			"request": "launch",
+			"name": "Debug Rust Code",
+			"preLaunchTask": "cargo",
+			"target": "${workspaceFolder}/target/debug/rust_debug",
+			"cwd": "${workspaceFolder}",
+			"valuesFormatting": "parseText"
+		}
+	]
 }
 ```
 
@@ -203,14 +203,14 @@ Next create another file in the same `.theia/` directory called `tasks.json` wit
 
 ```json
 {
-  "tasks": [
-    {
-      "command": "cargo",
-      "args": ["build"],
-      "type": "process",
-      "label": "cargo"
-    }
-  ]
+	"tasks": [
+		{
+			"command": "cargo",
+			"args": ["build"],
+			"type": "process",
+			"label": "cargo"
+		}
+	]
 }
 ```
 
@@ -226,4 +226,4 @@ To see a basic repository with Rust debugging configured, please check out [gitp
 
 ## Further Reading
 
-- **_[Rocket-Example](/blog/docker-in-gitpod)_** For an example of how to setup a project for the [`Rocket`](https://rocket.rs/) web-development framework
+-   **_[Rocket-Example](/blog/docker-in-gitpod)_** For an example of how to setup a project for the [`Rocket`](https://rocket.rs/) web-development framework

@@ -25,7 +25,7 @@ Additionally create a file called [.gitpod.yml](/docs/references/gitpod-yml) and
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 ```
 
 Now commit both files into source control.
@@ -122,7 +122,7 @@ Additionally, your [.gitpod.yml](/docs/references/gitpod-yml) file should still 
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 ```
 
 ## VS Code Extensions

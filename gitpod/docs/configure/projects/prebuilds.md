@@ -22,18 +22,18 @@ In the example below, the `init` task installs npm packages into the node_module
 
 ```yml
 tasks:
-  - init: |
-      npm install
-  - command: |
-      npm start
+    - init: |
+          npm install
+    - command: |
+          npm start
 ```
 
 ## Enable prebuilds on your repository project
 
 Use the following steps to enable prebuilds on your repository:
 
-- [Create a project](/docs/configure/projects/prebuilds#projects-and-prebuilds) for the repository.
-- Define the prebuild steps in an init [task](https://www.gitpod.io/docs/configure/workspaces/tasks) in your [gitpod.yml](https://www.gitpod.io/docs/references/gitpod-yml).
+-   [Create a project](/docs/configure/projects/prebuilds#projects-and-prebuilds) for the repository.
+-   Define the prebuild steps in an init [task](https://www.gitpod.io/docs/configure/workspaces/tasks) in your [gitpod.yml](https://www.gitpod.io/docs/references/gitpod-yml).
 
 Since prebuilds are included in all our metered [pay-as-you-go](https://www.gitpod.io/docs/configure/billing) plans, configuring prebuild settings in your project should help with managing prebuild usage.
 
@@ -43,15 +43,15 @@ For prebuilds to run automatically, you also need a [project](/docs/configure#pr
 
 To create a new project:
 
-- Click on _New Project_ in the Projects page of one your organizations.
+-   Click on _New Project_ in the Projects page of one your organizations.
 <figure>
 <video onloadstart="this.playbackRate = 1.5;" controls playsinline autoplay loop muted class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="ARepl extension example" src="/images/docs/projects/prebuilds.webm" type="video/webm"></video>
     <figcaption>Create a new project in one of your organizations to enable prebuilds</figcaption>
 </figure>
 
-- If necessary, you will be prompted for additional authorization to install and configure the Gitpod GitHub app,
-  so that Gitpod can watch your repositories and trigger prebuilds.
-- Select the repository for your project.
+-   If necessary, you will be prompted for additional authorization to install and configure the Gitpod GitHub app,
+    so that Gitpod can watch your repositories and trigger prebuilds.
+-   Select the repository for your project.
 
 ### View prebuilds
 
@@ -117,8 +117,8 @@ By default, Gitpod prepares prebuilt workspaces for all changes on the default b
 
 Prebuilds are configured in your repository's [`.gitpod.yml`](/docs/references/gitpod-yml) file with the following start tasks:
 
-- `before`
-- `init`
+-   `before`
+-   `init`
 
 Note the absence of the `command` task. Since this task may potentially run indefinitely, e.g. if you start a dev server, Gitpod does not execute the `command` task during prebuilds.
 
@@ -138,21 +138,21 @@ Additionally, you can enable prebuilds for all branches (`branches`) and for pul
 
 ```yml
 github:
-  prebuilds:
-    # enable for the default branch (defaults to true)
-    master: true
-    # enable for all branches in this repo (defaults to false)
-    branches: false
-    # enable for pull requests coming from this repo (defaults to true)
-    pullRequests: true
-    # enable for pull requests coming from forks (defaults to false)
-    pullRequestsFromForks: false
-    # add a check to pull requests (defaults to true)
-    addCheck: true
-    # add a "Review in Gitpod" button as a comment to pull requests (defaults to false)
-    addComment: false
-    # add a "Review in Gitpod" button to the pull request's description (defaults to false)
-    addBadge: false
+    prebuilds:
+        # enable for the default branch (defaults to true)
+        master: true
+        # enable for all branches in this repo (defaults to false)
+        branches: false
+        # enable for pull requests coming from this repo (defaults to true)
+        pullRequests: true
+        # enable for pull requests coming from forks (defaults to false)
+        pullRequestsFromForks: false
+        # add a check to pull requests (defaults to true)
+        addCheck: true
+        # add a "Review in Gitpod" button as a comment to pull requests (defaults to false)
+        addComment: false
+        # add a "Review in Gitpod" button to the pull request's description (defaults to false)
+        addBadge: false
 ```
 
 #### Additional GitHub integration
@@ -168,16 +168,16 @@ This can be enabled with the following snippet:
 
 ```yml
 github:
-  prebuilds:
-    addCheck: prevent-merge-on-error
+    prebuilds:
+        addCheck: prevent-merge-on-error
 ```
 
 You can disable this behaviour in the `.gitpod.yml` file in your default branch:
 
 ```yml
 github:
-  prebuilds:
-    addCheck: false
+    prebuilds:
+        addCheck: false
 ```
 
 #### Comment
@@ -188,8 +188,8 @@ You can enable this behaviour in the `.gitpod.yml` file in your default branch:
 
 ```yml
 github:
-  prebuilds:
-    addComment: true
+    prebuilds:
+        addComment: true
 ```
 
 #### Badge
@@ -201,8 +201,8 @@ You can enable this behaviour in the `.gitpod.yml` file in your default branch:
 
 ```yml
 github:
-  prebuilds:
-    addBadge: true
+    prebuilds:
+        addBadge: true
 ```
 
 The `addComment` and `addBadge` behaviours are not mutually exclusive (i.e. enabling one does not disable the other).
@@ -214,9 +214,9 @@ It is not necessarily best practice to have user specific environment variables 
 
 ```yml
 tasks:
-  - init: |
-      eval $(command gp env -e)
-      echo "Hello ${MY_VAR}"
+    - init: |
+          eval $(command gp env -e)
+          echo "Hello ${MY_VAR}"
 ```
 
 After that, the available environment variables will be installed into the rest of you shell script and can be accessed normally.

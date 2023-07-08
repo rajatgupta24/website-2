@@ -20,7 +20,9 @@
     "generate:jb": "node ./generators/ide/jb-gen.js && npm run check-links $(gp url 3000)/docs/references/ides-and-editors",
     "check-links": "linkinator --concurrency 1000 --recurse --verbosity=error --skip 'https://(www.)?(notion.so|gitpod.io|github.com|linux.org|twitter.com|www.gitpodstatus.com|researchgate.net|news.ycombinator.com|discord.com|localhost|linkedin|android.com)' --skip '(png|jpg|svg|woff|js|css)$'",
     "cypress:open": "cypress open --browser firefox",
-    "test:e2e": "cypress run --headless --browser firefox"
+    "test:e2e": "cypress run --headless --browser firefox",
+    "format": "prettier --write .",
+		"check": "svelte-kit sync && prettier --check . && svelte-check"
   },
   "dependencies": {
     "@lottiefiles/lottie-player": "^1.6.3",

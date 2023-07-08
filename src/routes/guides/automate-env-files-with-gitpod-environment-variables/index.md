@@ -79,27 +79,27 @@ You can copy the following Gitpod Task directly into your `.gitpod.yml`. For mor
 
 ```yml
 tasks:
-  - name: Restore .env file
-    command: |
-      if [ -f .env ]; then
-        # If this workspace already has a .env, don't override it
-        # Local changes survive a workspace being opened and closed
-        # but they will not persist between separate workspaces for the same repo
-        echo "Found .env in workspace"
-      else
-        if [ -z "${DOTENV}" ]; then
-          # There is no $DOTENV from a previous workspace
-          # Default to the example .env
-          echo "Setting example .env"
-          cp .env.example .env
-        else
-          # After making changes to .env, run this line to persist it to $DOTENV
-          #   gp env DOTENV="$(base64 .env | tr -d '\n')"
-          #
-          # Environment variables set this way are shared between all your workspaces for this repo
-          # The lines below will read $DOTENV and print a .env file
-          echo "Restoring .env from Gitpod"
-          echo "${DOTENV}" | base64 -d > .env
-        fi
-      fi
+    - name: Restore .env file
+      command: |
+          if [ -f .env ]; then
+            # If this workspace already has a .env, don't override it
+            # Local changes survive a workspace being opened and closed
+            # but they will not persist between separate workspaces for the same repo
+            echo "Found .env in workspace"
+          else
+            if [ -z "${DOTENV}" ]; then
+              # There is no $DOTENV from a previous workspace
+              # Default to the example .env
+              echo "Setting example .env"
+              cp .env.example .env
+            else
+              # After making changes to .env, run this line to persist it to $DOTENV
+              #   gp env DOTENV="$(base64 .env | tr -d '\n')"
+              #
+              # Environment variables set this way are shared between all your workspaces for this repo
+              # The lines below will read $DOTENV and print a .env file
+              echo "Restoring .env from Gitpod"
+              echo "${DOTENV}" | base64 -d > .env
+            fi
+          fi
 ```

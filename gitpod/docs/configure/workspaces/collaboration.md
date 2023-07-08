@@ -23,13 +23,13 @@ You can create a snapshot URL of your workspace to share your workspace files wi
 
 There are a few important things to note about workspace snapshots:
 
-- **Snapshots behave like workspace restarts** - All workspace state, including files changed since the original workspace start are preserved in a snapshot. Any tasks or processes typically launched via a workspace start will not run for a workspace snapshot.
+-   **Snapshots behave like workspace restarts** - All workspace state, including files changed since the original workspace start are preserved in a snapshot. Any tasks or processes typically launched via a workspace start will not run for a workspace snapshot.
 
-- **Access to secret information** - Snapshotted workspaces do not grant access to Gitpod environment variables, Gitpod authentication or Git credentials within a snapshot. However, you should use caution that you did not store any secret or private information in any files of a workspace snapshot before generating a snapshot URL.
+-   **Access to secret information** - Snapshotted workspaces do not grant access to Gitpod environment variables, Gitpod authentication or Git credentials within a snapshot. However, you should use caution that you did not store any secret or private information in any files of a workspace snapshot before generating a snapshot URL.
 
-- **Deleting and managing snapshots** - If you want to remove any created snapshot URLs, deleting the workspace directly removes any created snapshot URLs associated with that workspace.
+-   **Deleting and managing snapshots** - If you want to remove any created snapshot URLs, deleting the workspace directly removes any created snapshot URLs associated with that workspace.
 
-- **Users must have repository access** - Each workspace snapshot creates a new unique URL. Access to a snapshot is based on the access rules on the repository the workspace is based on. This means snapshots based on private repositories can only be opened by those with access to the repository. Public repository snapshots can be accessed without authentication.
+-   **Users must have repository access** - Each workspace snapshot creates a new unique URL. Access to a snapshot is based on the access rules on the repository the workspace is based on. This means snapshots based on private repositories can only be opened by those with access to the repository. Public repository snapshots can be accessed without authentication.
 
 > **Note:** Caution should always be taken when sharing potentially sensitive information, including Gitpod workspace snapshots. If you are concerned you have accidentally shared sensitive information, we suggest you follow best practices such as immediately rotating credentials and adhere to your typical security response process.
 
@@ -93,6 +93,6 @@ This marks your workspace as shared. When you open it, you can copy & share its 
 
 With Gitpod you can also use the following third-party integrations for real-time collaboration:
 
-- [Code Together](https://www.codetogether.com/) - Works on VS Code Desktop, VS Code Browser, and via JetBrains or Eclipse.
-- [GitLive](https://git.live/) - Works on VS Code Desktop, VS Code Browser, and via JetBrains.
-- [Duckly](https://duckly.com/) - Works on VS Code Desktop and VS Code Browser.
+-   [Code Together](https://www.codetogether.com/) - Works on VS Code Desktop, VS Code Browser, and via JetBrains or Eclipse.
+-   [GitLive](https://git.live/) - Works on VS Code Desktop, VS Code Browser, and via JetBrains.
+-   [Duckly](https://duckly.com/) - Works on VS Code Desktop and VS Code Browser.

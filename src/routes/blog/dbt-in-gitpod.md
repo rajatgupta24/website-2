@@ -3,7 +3,7 @@ author: jakobhero
 date: Friday, 5 May 2023 11:00:00 UTC
 excerpt: Combine the rich feature set of your IDE with the ease of access of dbt Cloud by running dbt core in Gitpod
 slug: dbt-in-gitpod
-tags: ["Data", "Developer experience"]
+tags: ['Data', 'Developer experience']
 image: teaser.webp
 teaserImage: teaser.webp
 title: Enhance your Data Team's Productivity with dbt and Gitpod
@@ -59,15 +59,15 @@ After using the standard Python image, setting up one environment variable, and 
 
 ```yml title=".gitpod.yml"
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 
 # Each task is a different terminal
 tasks:
-  - name: connect
-    command: |
-      echo $DBT_SERVICE_ACCOUNT > $GITPOD_REPO_ROOT/profiles/service_account.json
-      dbt debug
-      dbt deps
+    - name: connect
+      command: |
+          echo $DBT_SERVICE_ACCOUNT > $GITPOD_REPO_ROOT/profiles/service_account.json
+          dbt debug
+          dbt deps
 ```
 
 Following the reference to the custom Docker image, the Gitpod environment variable `DBT_SERVICE_ACCOUNT` is dumped inside a JSON file in the profiles directory, which is necessary to successfully connect to BigQuery. The most convenient way of making the service account accessible inside of the workspace is using Gitpod’s user-specific [environment variables](https://www.gitpod.io/docs/configure/projects/environment-variables#user-specific-environment-variables).
@@ -76,16 +76,16 @@ The `dbt debug` command tests the connection with the database. When executing t
 
 ```yml title="profiles.yml"
 default:
-  target: dev
-  outputs:
-    dev:
-      type: bigquery
-      method: service-account
-      project: "{{ env_var('DBT_PROJECT') }}"
-      dataset: "{{ env_var('DBT_DEV_DATASET') }}"
-      threads: 4
-      keyfile: "{{ env_var('GITPOD_REPO_ROOT') }}/profiles/service_account.json"
-      location: "{{ env_var('DBT_LOCATION') }}"
+    target: dev
+    outputs:
+        dev:
+            type: bigquery
+            method: service-account
+            project: "{{ env_var('DBT_PROJECT') }}"
+            dataset: "{{ env_var('DBT_DEV_DATASET') }}"
+            threads: 4
+            keyfile: "{{ env_var('GITPOD_REPO_ROOT') }}/profiles/service_account.json"
+            location: "{{ env_var('DBT_LOCATION') }}"
 ```
 
 This file contains three more references to environment variables that have to be set by the user: `DBT_PROJECT`, `DBT_DEV_DATASET`, and `DBT_LOCATION`. This is the only step users of the repository have to do manually in order to launch a functional dbt dev environment once the configuration has been added to the repository.
@@ -101,16 +101,16 @@ Complementary to this degree of freedom, teams can standardize the tools availab
 ```yml title=".gitpod.yml"
 # These installations are installed for each workspace running in VS Code
 vscode:
-  extensions:
-    - ms-python.python
-    - mechatroner.rainbow-csv
-    - innoverio.vscode-dbt-power-user
-    - ms-toolsai.jupyter
-    - ms-toolsai.jupyter-keymap
-    - ms-toolsai.jupyter-renderers
-    - ms-toolsai.vscode-jupyter-cell-tags
-    - ms-toolsai.vscode-jupyter-slideshow
-    - samuelcolvin.jinjahtml
+    extensions:
+        - ms-python.python
+        - mechatroner.rainbow-csv
+        - innoverio.vscode-dbt-power-user
+        - ms-toolsai.jupyter
+        - ms-toolsai.jupyter-keymap
+        - ms-toolsai.jupyter-renderers
+        - ms-toolsai.vscode-jupyter-cell-tags
+        - ms-toolsai.vscode-jupyter-slideshow
+        - samuelcolvin.jinjahtml
 ```
 
 Out of the box, VS Code does not provide any extensions to work with dbt. Making the same extensions accessible to everyone in your team ensures that each team member can have easy access to dbt-specific functionality such as following the lineage of models, running tests, and querying the warehouse.

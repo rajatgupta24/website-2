@@ -1,37 +1,37 @@
-import type { RequestHandler } from "@sveltejs/kit";
-import { removeTrailingSlash } from "$lib/utils/helpers";
+import type { RequestHandler } from '@sveltejs/kit';
+import { removeTrailingSlash } from '$lib/utils/helpers';
 
 export const GET: RequestHandler = async () => {
-  const website = "https://www.gitpod.io";
-  const staticPages = Object.keys(
-    import.meta.glob("/src/routes/**/!(_)*.{svelte,md}", { eager: true })
-  )
-    .filter((page) => {
-      const filters = [
-        "/src/routes/index.svelte",
-        "_",
-        "404",
-        "slug]",
-        "title]",
-        "src/routes/docs/introduction/getting-started",
-        "extension-activation",
-        "unsubscribe",
-        "subscribe",
-        "stay-connected",
-        "extension-uninstall",
-      ];
-      return !filters.find((filter) => page.includes(filter));
-    })
-    .map((page) => {
-      return page
-        .replace("/src/routes", "https://www.gitpod.io")
-        .replace("/index.md", "/")
-        .replace(".md", "/")
-        .replace("/index.svelte", "/")
-        .replace(".svelte", "/");
-    });
+	const website = 'https://www.gitpod.io';
+	const staticPages = Object.keys(
+		import.meta.glob('/src/routes/**/!(_)*.{svelte,md}', { eager: true }),
+	)
+		.filter((page) => {
+			const filters = [
+				'/src/routes/index.svelte',
+				'_',
+				'404',
+				'slug]',
+				'title]',
+				'src/routes/docs/introduction/getting-started',
+				'extension-activation',
+				'unsubscribe',
+				'subscribe',
+				'stay-connected',
+				'extension-uninstall',
+			];
+			return !filters.find((filter) => page.includes(filter));
+		})
+		.map((page) => {
+			return page
+				.replace('/src/routes', 'https://www.gitpod.io')
+				.replace('/index.md', '/')
+				.replace('.md', '/')
+				.replace('/index.svelte', '/')
+				.replace('.svelte', '/');
+		});
 
-  const sitemap = (staticPages) => `<?xml version="1.0" encoding="UTF-8" ?>
+	const sitemap = (staticPages) => `<?xml version="1.0" encoding="UTF-8" ?>
 <urlset
   xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:news="https://www.google.com/schemas/sitemap-news/0.9"
@@ -42,18 +42,18 @@ export const GET: RequestHandler = async () => {
 >
 <url><loc>${removeTrailingSlash(website)}</loc></url>
 <url><loc>${removeTrailingSlash(
-    "https://www.gitpod.io/docs/introduction/getting-started"
-  )}</loc></url>
+		'https://www.gitpod.io/docs/introduction/getting-started',
+	)}</loc></url>
 ${staticPages
-  .map((page) => `<url><loc>${removeTrailingSlash(page)}</loc></url>`)
-  .join("")}
+	.map((page) => `<url><loc>${removeTrailingSlash(page)}</loc></url>`)
+	.join('')}
 
 </urlset>`;
-  return {
-    headers: {
-      "Cache-Control": "max-age=0, s-maxage=3600",
-      "Content-Type": "application/xml",
-    },
-    body: sitemap(staticPages),
-  };
+	return {
+		headers: {
+			'Cache-Control': 'max-age=0, s-maxage=3600',
+			'Content-Type': 'application/xml',
+		},
+		body: sitemap(staticPages),
+	};
 };

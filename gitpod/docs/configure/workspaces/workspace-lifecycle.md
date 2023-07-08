@@ -23,8 +23,8 @@ The state of the workspace is indicated by the color of the workspace indicator.
 
 > **Important:**
 >
-> - Only files in the `/workspace` directory are kept between state transitions.
-> - Any changes made to `/workspace` from a [custom Dockerfile](/docs/configure/workspaces/workspace-image#use-a-custom-dockerfile) will be overwritten/overlaid by a mount.
+> -   Only files in the `/workspace` directory are kept between state transitions.
+> -   Any changes made to `/workspace` from a [custom Dockerfile](/docs/configure/workspaces/workspace-image#use-a-custom-dockerfile) will be overwritten/overlaid by a mount.
 
 The following describes each workspace status in detail, including what can cause a workspace to transition from one status to another.
 
@@ -32,21 +32,21 @@ The following describes each workspace status in detail, including what can caus
 
 When you open a workspace, it will be in the "starting" state. This means that the workspace is being created and the initialization process is running.
 
-- Where a workspace is being provisioned and initialized.
-- If configured and available, a prebuild snapshot is used.
-- Otherwise, source control is downloaded into the workspace.
+-   Where a workspace is being provisioned and initialized.
+-   If configured and available, a prebuild snapshot is used.
+-   Otherwise, source control is downloaded into the workspace.
 
 ### Workspace Running
 
-- An active workspace is provisioned within Gitpod.
-- The workspace can be accessed by the user.
+-   An active workspace is provisioned within Gitpod.
+-   The workspace can be accessed by the user.
 
 ### Workspace Stopped
 
-- No provisioned workspace is running (e.g. ports and URLs are not accessible).
-- Only files and directories inside `/workspace` are preserved.
-- If the workspace is restarted, the URL is preserved.
-- A start is required before the workspace can be used.
+-   No provisioned workspace is running (e.g. ports and URLs are not accessible).
+-   Only files and directories inside `/workspace` are preserved.
+-   If the workspace is restarted, the URL is preserved.
+-   A start is required before the workspace can be used.
 
 ### Workspace Deleted
 

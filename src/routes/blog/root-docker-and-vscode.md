@@ -6,7 +6,7 @@ image: teaser.jpg
 slug: root-docker-and-vscode
 subtitle: New Release
 teaserImage: teaser.jpg
-tags: ["Gitpod updates"]
+tags: ['Gitpod updates']
 title: Root, Docker and VS Code
 ---
 
@@ -16,11 +16,11 @@ title: Root, Docker and VS Code
 
 The team has been focussing on shipping some major new features, which mark important milestones on our goal to **eliminate all friction around maintaining dev environments**.
 
-- [Root Access 💪](#root-access)
-- [Docker 🐳](#docker)
-- [VS Code and Other IDEs 🥂](#vs-code-and-other-ides)
-- [Connect to Self-managed GitLab ❤️](#connect-to-self-managed-gitlab)
-- [Next Steps ⏩](#next-steps)
+-   [Root Access 💪](#root-access)
+-   [Docker 🐳](#docker)
+-   [VS Code and Other IDEs 🥂](#vs-code-and-other-ides)
+-   [Connect to Self-managed GitLab ❤️](#connect-to-self-managed-gitlab)
+-   [Next Steps ⏩](#next-steps)
 
 ## Root Access 💪
 

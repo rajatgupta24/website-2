@@ -6,7 +6,7 @@ image: gitpod-for-startups.png
 slug: gitpod-for-startups
 subtitle:
 teaserImage: gitpod-for-startups.png
-tags: ["Company building", "Gitpod updates"]
+tags: ['Company building', 'Gitpod updates']
 title: Introducing Gitpod for Startups
 ---
 
@@ -16,9 +16,9 @@ title: Introducing Gitpod for Startups
 
 **TL;DR**
 
-- With “Gitpod for Startups”, we offer eligible companies a 50% discount for up to 2 years
-- Gitpod remains discounted, even as you scale your workload and your engineers
-- CDEs enable startups to build great things, faster
+-   With “Gitpod for Startups”, we offer eligible companies a 50% discount for up to 2 years
+-   Gitpod remains discounted, even as you scale your workload and your engineers
+-   CDEs enable startups to build great things, faster
 
 > When building great things, the last thing you need is unnecessary friction that slows you down and diverts your focus. We understand that, we’re in the same boat ⛵️.
 

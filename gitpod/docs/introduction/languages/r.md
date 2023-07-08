@@ -25,7 +25,7 @@ Next, create a Gitpod configuration file called [.gitpod.yml](/docs/references/g
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 ```
 
 Then commit and push both files to your repository. After that, every new Gitpod workspace created for your project will have R pre-installed.
@@ -39,8 +39,8 @@ To install the R extension to your repository, add the following to your [.gitpo
 
 ```yml
 vscode:
-  extensions:
-    - Ikuyadeu.r@1.2.1:z5vr1v1bfS++U/aHLSXQ6Q==
+    extensions:
+        - Ikuyadeu.r@1.2.1:z5vr1v1bfS++U/aHLSXQ6Q==
 ```
 
 Here is a minimal example of [R running in Gitpod](https://github.com/gitpod-io/Gitpod-R). You can try it here:

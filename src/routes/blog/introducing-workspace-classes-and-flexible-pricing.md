@@ -5,7 +5,7 @@ excerpt: Workspace classes give you access to workspaces with more computational
 slug: introducing-workspace-classes-and-flexible-pricing
 teaserImage: teaser.jpg
 image: teaser.jpg
-tags: ["Gitpod updates"]
+tags: ['Gitpod updates']
 title: Introducing workspace classes and flexible pricing
 ---
 

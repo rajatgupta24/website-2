@@ -22,9 +22,9 @@ Thinking about disaster recovery with Gitpod is essential for business continuit
 
 When evaluating different disaster recovery strategies, it is important to keep in mind the business impact of different strategies. This impact is often defined by these interconnected metrics:
 
-- **Recovery Time Objective (RTO):** this is the amount of time it takes to recover from a catastrophic failure. Applying this to Gitpod, this would be the time between a major outage that renders Gitpod unusable and the point at which Gitpod is restored and developers can develop again.
-- **Recovery Point Objective (RPO):** This is the maximum amount of data loss (measured by time) during an outage that is acceptable to an organisation.
-- **Acceptable Cost:** Different disaster recovery strategies come with different cost profiles. You need to know the acceptable cost level for your business to help choose the right strategy.
+-   **Recovery Time Objective (RTO):** this is the amount of time it takes to recover from a catastrophic failure. Applying this to Gitpod, this would be the time between a major outage that renders Gitpod unusable and the point at which Gitpod is restored and developers can develop again.
+-   **Recovery Point Objective (RPO):** This is the maximum amount of data loss (measured by time) during an outage that is acceptable to an organisation.
+-   **Acceptable Cost:** Different disaster recovery strategies come with different cost profiles. You need to know the acceptable cost level for your business to help choose the right strategy.
 
 The accepted value of each key metric will depend on your business’ risk appetite and acceptable cost levels. These metrics can be used to better understand and categorise the different disaster recovery options available with Gitpod.
 

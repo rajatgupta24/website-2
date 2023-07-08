@@ -4,7 +4,7 @@ date: Wed May 06 2020 16:00:00 GMT+0000 (UTC)
 excerpt: Today, GitHub announced the private beta of GitHub Codespaces, which provide container-based dev environments for GitHub projects.
 image: gh-cs-bg.jpg
 slug: github-codespaces
-tags: ["Company building", "Gitpod updates"]
+tags: ['Company building', 'Gitpod updates']
 subtitle: A Milestone for Automated Developer environments
 title: GitHub Codespaces, Welcome to the Party!
 ---
@@ -25,13 +25,13 @@ This is great news, because it really helps to explain why this is going to chan
 
 Describing developer environments in code has many benefits:
 
-- It eliminates onboarding friction: no matter if you are new to a project, need to go back to an old branch or just picking up development after a few weeks. Just go to your project and start coding immediately.
+-   It eliminates onboarding friction: no matter if you are new to a project, need to go back to an old branch or just picking up development after a few weeks. Just go to your project and start coding immediately.
 
-- Remote work becomes a breeze: now everyone can access source code more securely (no local copies) from any device, including Chromebooks and tablets.
+-   Remote work becomes a breeze: now everyone can access source code more securely (no local copies) from any device, including Chromebooks and tablets.
 
-- Everybody gets the same setup: this means that “works on my machine” situations are a problem of the past.
+-   Everybody gets the same setup: this means that “works on my machine” situations are a problem of the past.
 
-- With Gitpod, you can even take snapshots of any state of your dev environment and share exact clones of it.
+-   With Gitpod, you can even take snapshots of any state of your dev environment and share exact clones of it.
 
 It is our vision that **everybody can immediately start working in a fully set-up dev environment on any project, any branch, with any device, and at any time.**
 

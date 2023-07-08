@@ -26,10 +26,10 @@ Several components of Gitpod expose metrics using the [Prometheus exposition for
 
 Gitpod is all about Workspaces, so the information that you want to keep an eye on is:
 
-- How many workspaces are currently running.
-- Workspaces are starting.
-- Workspaces are starting in a reasonable time frame.
-- Running workspaces don't stop unexpectedly.
+-   How many workspaces are currently running.
+-   Workspaces are starting.
+-   Workspaces are starting in a reasonable time frame.
+-   Running workspaces don't stop unexpectedly.
 
 `ws-manager` is the component responsible for measuring and exposing such data, so you want to make sure that your Prometheus instance is scraping metrics from this specific component. Metrics are exposed through port `9500`, at the `/metrics` endpoint.
 

@@ -35,9 +35,9 @@ The default Gitpod workspace image default is [workspace-full](https://github.co
 
 Along with other languages and tools, this base image includes:
 
-- [Node.js](https://nodejs.org/en/) `v18.16.0` (`node -v`)
-- [Node Package Manager - npm](https://www.npmjs.com/) `9.5.1` (`npm -v`)
-- [Node Version Manager - nvm](https://nvm.sh) `0.39.0` (`nvm -v`)
+-   [Node.js](https://nodejs.org/en/) `v18.16.0` (`node -v`)
+-   [Node Package Manager - npm](https://www.npmjs.com/) `9.5.1` (`npm -v`)
+-   [Node Version Manager - nvm](https://nvm.sh) `0.39.0` (`nvm -v`)
 
 > **Note:** We discuss how to set up a [custom base image](/docs/introduction/languages/javascript#setting-up-a-custom-dockerfile) later in the guide.
 
@@ -67,7 +67,7 @@ touch .gitpod.Dockerfile
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 ```
 
 4. Update your `.gitpod.Dockerfile` to install your dependency versions
@@ -116,14 +116,14 @@ Start tasks are processes that are initiated on every workspace start. Depending
 
 ```yml
 tasks:
-  - init: npm install && npm run build
+    - init: npm install && npm run build
 ```
 
 **Example with yarn**
 
 ```yml
 tasks:
-  - init: yarn install && yarn build
+    - init: yarn install && yarn build
 ```
 
 2. **Optional:** Validate by stopping and starting (restart) your workspace
@@ -158,16 +158,16 @@ To run your application, you have two options:
 
 ```yml
 tasks:
-  - init: npm install && npm run build
-    command: npm run dev
+    - init: npm install && npm run build
+      command: npm run dev
 ```
 
 **Example with yarn**
 
 ```yml
 tasks:
-  - init: yarn install && yarn build
-    command: yarn start
+    - init: yarn install && yarn build
+      command: yarn start
 ```
 
 2. **Optional:** Validate by stopping and starting (restart) your workspace
@@ -188,7 +188,7 @@ If your project's `package.json` does not mention ESLint as a dependency then yo
 
 ```yml
 tasks:
-  - init: npm install && npm run build && npm install -g eslint
+    - init: npm install && npm run build && npm install -g eslint
 ```
 
 and then search for `eslint` in the extensions tab and then install it from there using the install button as shown in the screenshot.
@@ -204,18 +204,21 @@ Especially when it comes to Frontend Projects, the dev-server should be able to 
 Vite 3+ works with Gitpod out of the box. However, if you are using Vite 2 you should add the following config:
 
 ```js title="vite.config.js"
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-  server: {
-    hmr: process.env.GITPOD_WORKSPACE_URL
-      ? {
-          protocol: "wss",
-          clientPort: 443,
-          host: process.env.GITPOD_WORKSPACE_URL.replace("https://", "3000-"),
-        }
-      : true,
-  },
+	server: {
+		hmr: process.env.GITPOD_WORKSPACE_URL
+			? {
+					protocol: 'wss',
+					clientPort: 443,
+					host: process.env.GITPOD_WORKSPACE_URL.replace(
+						'https://',
+						'3000-',
+					),
+			  }
+			: true,
+	},
 });
 ```
 
@@ -225,26 +228,26 @@ In your `.gitpod.yml` file, you should export the workspace url for the port you
 
 ```yml title=".gitpod.yml"
 tasks:
-  - init: npm install
-    command: |
-      export HMR_HOST=`gp url 3000`
+    - init: npm install
+      command: |
+          export HMR_HOST=`gp url 3000`
 ```
 
 After the workspace URL with the given port is exported to the environment, it can be used in the `webpack.config.js` to determine the right port and hostname.
 
 ```js title="webpack.config.js"
 module.exports = {
-  devServer: {
-    client: {
-      webSocketURL: {
-        hostname: process.env.HMR_HOST
-          ? new URL(process.env.HMR_HOST).hostname
-          : "localhost",
-        port: process.env.HMR_HOST ? 443 : 3000,
-        protocol: "wss",
-      },
-    },
-  },
+	devServer: {
+		client: {
+			webSocketURL: {
+				hostname: process.env.HMR_HOST
+					? new URL(process.env.HMR_HOST).hostname
+					: 'localhost',
+				port: process.env.HMR_HOST ? 443 : 3000,
+				protocol: 'wss',
+			},
+		},
+	},
 };
 ```
 
@@ -282,8 +285,8 @@ Here are a few JavaScript/TypeScript example projects that are automated with Gi
 
 ## Recommended Reading
 
-- [Build Projects in a Gitpod Ephemeral Dev Environment — The Ultimate Guide](/guides/guide-ephemeral-dev-environment-on-gitpod)
-- [Sustainable Node.js development with only a browser](/blog/node-js-development).
-- [Developing a Nuxt.js app entirely in your browser](/blog/developing-nuxtjs-in-browser)
-- [Gitpodifying — The Ultimate Guide](/guides/gitpodify)
-- [Debugging Node.js applications in Theia](/blog/node-js-gitpod)
+-   [Build Projects in a Gitpod Ephemeral Dev Environment — The Ultimate Guide](/guides/guide-ephemeral-dev-environment-on-gitpod)
+-   [Sustainable Node.js development with only a browser](/blog/node-js-development).
+-   [Developing a Nuxt.js app entirely in your browser](/blog/developing-nuxtjs-in-browser)
+-   [Gitpodifying — The Ultimate Guide](/guides/gitpodify)
+-   [Debugging Node.js applications in Theia](/blog/node-js-gitpod)

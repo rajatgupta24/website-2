@@ -6,7 +6,7 @@ image: vscodeserver.jpg
 slug: vscode-server
 subtitle:
 teaserImage: vscodeserver.jpg
-tags: ["Gitpod updates"]
+tags: ['Gitpod updates']
 title: Thanks Microsoft for open-sourcing VS Code Server 👐
 ---
 
@@ -16,9 +16,9 @@ title: Thanks Microsoft for open-sourcing VS Code Server 👐
 
 **TL;DR**
 
-- After [Gitpod launched OpenVSCode Server](/blog/openvscode-server-launch) in September, Microsoft now open-sourced the server code powering VS Code remote development and GitHub Codespaces
-- Within a few days we switched Gitpod VS Code and OpenVSCode Server Insiders builds to the upstream implementation
-- Today, we release Gitpod VS Code and OpenVSCode Server with these changes
+-   After [Gitpod launched OpenVSCode Server](/blog/openvscode-server-launch) in September, Microsoft now open-sourced the server code powering VS Code remote development and GitHub Codespaces
+-   Within a few days we switched Gitpod VS Code and OpenVSCode Server Insiders builds to the upstream implementation
+-   Today, we release Gitpod VS Code and OpenVSCode Server with these changes
 
 <br>
 
@@ -50,8 +50,8 @@ Unfortunately, the changes from Microsoft don't give us a full standalone implem
 
 So OpenVSCode Server adds some much-needed, yet minimal changes on top of VS Code to:
 
-- enable the marketplace using [Open VSX](/blog/open-vsx)
-- enable HTTPS and WebSocket Secure (wss) by default
+-   enable the marketplace using [Open VSX](/blog/open-vsx)
+-   enable HTTPS and WebSocket Secure (wss) by default
 
 Try the new 1.62 OpenVSCode Server or the Insiders version and don’t forget to [leave feedback and file any GitHub issues](https://github.com/gitpod-io/openvscode-server) if you need!
 

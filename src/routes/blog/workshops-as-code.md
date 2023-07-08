@@ -6,7 +6,7 @@ image: teaser.png
 slug: workshops-as-code
 subtitle:
 teaserImage: teaser.png
-tags: ["Company building"]
+tags: ['Company building']
 title: Workshops as code
 ---
 
@@ -16,12 +16,12 @@ title: Workshops as code
 
 **TL;DR**
 
-- Running workshops is easier and more productive with Gitpod.
-- There is an entire class of problems that attendees and educators continue to put up with when they shouldn’t need to because these concerns can be removed through automation.
-- People attend workshops because they want to learn about what is being taught and what device they are using, or how the device configured should not matter.
-- Hosting a workshop on Gitpod is as simple as supplying a `Dockerfile` and then specifying the commands to execute in a Git repository hosted on either GitHub, GitLab or BitBucket.
-- DataStax have integrated their cloud-native database-as-a-service product offering with Gitpod.
-- Pulumi run their workshops with Gitpod, and we would love to work with you to integrate your workshop.
+-   Running workshops is easier and more productive with Gitpod.
+-   There is an entire class of problems that attendees and educators continue to put up with when they shouldn’t need to because these concerns can be removed through automation.
+-   People attend workshops because they want to learn about what is being taught and what device they are using, or how the device configured should not matter.
+-   Hosting a workshop on Gitpod is as simple as supplying a `Dockerfile` and then specifying the commands to execute in a Git repository hosted on either GitHub, GitLab or BitBucket.
+-   DataStax have integrated their cloud-native database-as-a-service product offering with Gitpod.
+-   Pulumi run their workshops with Gitpod, and we would love to work with you to integrate your workshop.
 
 Folks in technical education, I have a hot-tip for you - **Running workshops is easier and more productive with Gitpod**. That’s a bold statement, and by the end of this tale, I hope you’ll be nodding your head but until then, mash this button to launch the Nix Operating System in your browser:
 
@@ -38,10 +38,10 @@ Anyway, I was in complete shock when circa 50 people registered to attend the wo
 
 One of the biggest challenges of running a workshop is ensuring attendees **do all the prerequisite activities before turning up**. For the NixOS workshop at Compose the steps were:
 
-- Downloading upwards of 4Gb of software from the internet (ie. 200gb of data).
-- Downloading and installing Virtual Box
-- Downloading and installing the Virtual Box Extension Pack.
-- Creating a virtual machine.
+-   Downloading upwards of 4Gb of software from the internet (ie. 200gb of data).
+-   Downloading and installing Virtual Box
+-   Downloading and installing the Virtual Box Extension Pack.
+-   Creating a virtual machine.
 
 It’s important to remember that the reason people attend workshops is that they want to **learn about what is being taught**. People are willing to do prerequisite activities and put up with waiting for that half of the class that didn’t do the prerequisites to pass around that USB stick but already from the get go your workshop is off to a bad start and precious time is slipping.
 
@@ -79,7 +79,7 @@ However, if you want to take it to 11, maybe you’ll consider embedding Gitpod?
 
 > My mind is blown (🤯). Cédrick Lunven just showed me Gitpod with a full demo configured and ready to run. 2021 is a great time to be running workshops online!
 >
-> - Jonathan Ellis (co-founder and CTO of DataStax)
+> -   Jonathan Ellis (co-founder and CTO of DataStax)
 
 For the last couple of months, Gitpod has been working with DataStax who has integrated their cloud-native database-as-a-service product offering with Gitpod.
 

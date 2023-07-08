@@ -22,9 +22,9 @@ To ensure a port is always configured with a specific protocol you can update th
 
 ```yml
 ports:
-  - name: Frontend Application
-    port: 3000
-    protocol: https
+    - name: Frontend Application
+      port: 3000
+      protocol: https
 ```
 
 ## Dynamically updating port protocols with `gp`

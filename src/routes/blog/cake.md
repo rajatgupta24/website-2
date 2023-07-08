@@ -4,7 +4,7 @@ date: Friday, 3 September 2021 09:00:00 UTC
 excerpt: This is a story about a cake. Following a long-standing tradition in technology, we decided to send an edible Gitpod workspace to GitHub's San Francisco office.
 image: teaser.jpg
 slug: cake
-tags: ["Company building"]
+tags: ['Company building']
 subtitle:
 teaserImage: teaser.jpg
 title: Gitpod shipped GitHub a launch cake for Codespaces
@@ -21,9 +21,9 @@ _Photo Credit: [Rui Kowase](https://www.google.com/maps/contrib/1040886324711423
 
 I don't know if you have ever tried ordering a cake over the internet but let me tell you it's not the easiest thing in the world, especially when:
 
-- ☠️ We are in the middle of a pandemic.
-- 🎂 You don't know anything about cakes - at all.
-- 😱 Time-zones - Sunny Toowoomba in Queensland, Australia, is on the other side of the world to San Francisco.
+-   ☠️ We are in the middle of a pandemic.
+-   🎂 You don't know anything about cakes - at all.
+-   😱 Time-zones - Sunny Toowoomba in Queensland, Australia, is on the other side of the world to San Francisco.
 
 ![Credit: Geoffrey Huntley](../../../static/images/blog/cake/gitpod-x-codespaces.jpg)
 _Photo Credit: [Geoffrey Huntley](https://twitter.com/geoffreyhuntley)_
@@ -32,11 +32,11 @@ After checking with an insider at GitHub, we got confirmation that people in the
 
 "Bakers in San Francisco" was punched into Google Maps, and top-to-bottom, I called every single one. The responses were somewhat mixed:
 
-- 🦘 Wait, you are actually Australian and are calling from a McDonalds in Australia at 5am?
-- 🖨 We can print (😱) your logo on a cake, but that's it.
-- 💾 Please go to our website, we don't want to speak with you.
-- 🤷‍♀️ We aren't making custom cakes because we can't find any staff.
-- 🤫 I didn't tell you this, but our competitor might be able to help you out.
+-   🦘 Wait, you are actually Australian and are calling from a McDonalds in Australia at 5am?
+-   🖨 We can print (😱) your logo on a cake, but that's it.
+-   💾 Please go to our website, we don't want to speak with you.
+-   🤷‍♀️ We aren't making custom cakes because we can't find any staff.
+-   🤫 I didn't tell you this, but our competitor might be able to help you out.
 
 That last tip-off was the tasty butter...
 
@@ -48,8 +48,8 @@ _Photo Credit: [Camisha's Cakes](https://www.camishascakes.com/)_
 
 The baker of our cake was none other than Camisha Green of Camisha's Cakes. A professional, independent small business baker who is seriously talented...
 
-- 🌐 https://camishascakes.com
-- 📸 https://www.instagram.com/camishascakes/
+-   🌐 https://camishascakes.com
+-   📸 https://www.instagram.com/camishascakes/
 
 ![Credit: Camisha's Cakes](../../../static/images/blog/cake/camishagreen.jpg)
 
@@ -77,9 +77,9 @@ and I promptly replied with:
 >
 > Have a look at our website at [https://www.gitpod.io/](/) and you'll notice:
 >
-> - the background colour is white
-> - we accentuate primary using orange
-> - there are other colours that can be optionally used
+> -   the background colour is white
+> -   we accentuate primary using orange
+> -   there are other colours that can be optionally used
 >
 > The place where the cake is being sent to has a mascot called the Octocat - go check out Mona at https://octodex.github.com/
 
@@ -96,9 +96,9 @@ Truth be told, I was 🤬 'ing myself. To trust someone in a completely differen
 
 Whilst Gitpod is a fully distributed company, that [hires people from anywhere in the world](/careers) our origins are from Kiel, Germany thus a lot of our employees are German. After an unfair vote, German Chocolate was declared the winner, but it wasn't without some office debate as to _what German Chocolate tastes like_:
 
-- 🧔 "German Chocolate"? I only know of Swiss Chocolate.
-- 👩🏼 There are "German Chocolate" and "True Chocolate". It seems that they are implying something…
-- 👧🏼 We have a lot of cows up here. So they need to dump all the milk somewhere.
+-   🧔 "German Chocolate"? I only know of Swiss Chocolate.
+-   👩🏼 There are "German Chocolate" and "True Chocolate". It seems that they are implying something…
+-   👧🏼 We have a lot of cows up here. So they need to dump all the milk somewhere.
 
 ### Concept
 

@@ -5,7 +5,7 @@ excerpt: Learn about our ongoing journey of building and scaling our community a
 slug: what-we-learned-growing-a-community-from-500-5000
 teaserImage: teaser.png
 image: teaser.png
-tags: ["Company building"]
+tags: ['Company building']
 title: What we learned growing a community from 500 to 5000
 ---
 
@@ -55,16 +55,16 @@ A few months ago, we started our “_Community Experience 2.0_” project which 
 
 Just to highlight some of these changes:
 
-- We introduced [Optimus, a bot that helps level up this community experience](https://github.com/gitpod-io/optimus). To help reduce overwhelm, our new onboarding flow allows new users to pick and choose what channels they’d like to have access to. For example, some users are solely in our community to learn from others using the self-hosted version of Gitpod in which they have access only to the relevant channels.
+-   We introduced [Optimus, a bot that helps level up this community experience](https://github.com/gitpod-io/optimus). To help reduce overwhelm, our new onboarding flow allows new users to pick and choose what channels they’d like to have access to. For example, some users are solely in our community to learn from others using the self-hosted version of Gitpod in which they have access only to the relevant channels.
 
-![Onboarding experience on Discord](../../../../../static/images/blog/what-we-learned-growing-a-community-from-500-5000/Onboarding_Experience_on_Discord.png "Onboarding experience on Discord")
+![Onboarding experience on Discord](../../../../../static/images/blog/what-we-learned-growing-a-community-from-500-5000/Onboarding_Experience_on_Discord.png 'Onboarding experience on Discord')
 
-- In our busiest channel (`#questions`), we’ve enforced the use of [Discord Threads](https://support.discord.com/hc/en-us/articles/4403205878423-Threads-FAQ) to keep context in those threads and therefore reducing mental overload.
-- Within those threads, we have a suggestion system that fetches related GitHub issues, [documentation](https://gitpod.io/docs), and previous Discord thread conversations for whenever someone asks a question in our community.
+-   In our busiest channel (`#questions`), we’ve enforced the use of [Discord Threads](https://support.discord.com/hc/en-us/articles/4403205878423-Threads-FAQ) to keep context in those threads and therefore reducing mental overload.
+-   Within those threads, we have a suggestion system that fetches related GitHub issues, [documentation](https://gitpod.io/docs), and previous Discord thread conversations for whenever someone asks a question in our community.
 
-![Discord bot suggestions](../../../../../static/images/blog/what-we-learned-growing-a-community-from-500-5000/Discord_bot_suggestions.png "Discord bot suggestions")
+![Discord bot suggestions](../../../../../static/images/blog/what-we-learned-growing-a-community-from-500-5000/Discord_bot_suggestions.png 'Discord bot suggestions')
 
-- It’s important to us that the server is safe from any harm caused by bad actors. Optimus protects our community by filtering out bot accounts during the onboarding process! We have [WickBot](https://wickbot.com/) that prevents common bot spam too.
+-   It’s important to us that the server is safe from any harm caused by bad actors. Optimus protects our community by filtering out bot accounts during the onboarding process! We have [WickBot](https://wickbot.com/) that prevents common bot spam too.
 
 ### 3. Recognise your superfans - they are core to the community 🎯
 
@@ -72,7 +72,7 @@ Even in the early days, Gitpod had a group of core members who loved the product
 
 Last October, we launched the [Community Heroes program](https://www.gitpod.io/community/heroes) 🦸 This aimed to recognise the wonderful contributions of our superfans and gave them an opportunity to help us shape Gitpod even more by keeping them closer. Together with our Community Heroes, we want to push our mission of empowering developers to make software engineering collaborative and joyful again.
 
-[![Julien Lengrand on Twitter](../../../../../static/images/blog/what-we-learned-growing-a-community-from-500-5000/Julien_Lengrand-Lambert_on_Twitter.png "Julien Lengrand on Twitter")](https://twitter.com/jlengrand/status/1522865269986799616)
+[![Julien Lengrand on Twitter](../../../../../static/images/blog/what-we-learned-growing-a-community-from-500-5000/Julien_Lengrand-Lambert_on_Twitter.png 'Julien Lengrand on Twitter')](https://twitter.com/jlengrand/status/1522865269986799616)
 
 Our Heroes play a huge role in the success of Gitpod by shaping our community culture, supporting our growing user base and being the advocates for the future of ephemeral dev environments worldwide.
 

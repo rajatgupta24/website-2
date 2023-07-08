@@ -3,7 +3,7 @@ author: burningion
 date: Wed, 24 May 2023 17:00:00 UTC
 excerpt: GPT-4 has been a massive breakthrough for the power of Large Language Models (LLMs). Learn how to augment their abilities for cloud development with Gitpod.
 slug: building-cloud-dev-assistants-with-gpt-4-on-gitpod
-tags: ["Engineering"]
+tags: ['Engineering']
 image: header.webp
 teaserImage: teaser.webp
 title: Building Cloud Dev Assistants with GPT-4 and Pinecone on Gitpod
@@ -408,25 +408,25 @@ For that, our `.gitpod.yml` file can ensure we've got a running system:
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 vscode:
-  extensions:
-    - ms-python.isort
-    - ms-python.python
-    - charliermarsh.ruff
+    extensions:
+        - ms-python.isort
+        - ms-python.python
+        - charliermarsh.ruff
 
 tasks:
-  - name: OpenAI Chat Interface
-    command: pip install -r requirements.txt && python3 interactive-playground.py
-  - name: Temporal Dev Env
-    command: python -m venv env && source env/bin/activate && pip install -r src/requirements.txt && cd src/
-  - name: Temporal Dev Server
-    command: temporal server start-dev
+    - name: OpenAI Chat Interface
+      command: pip install -r requirements.txt && python3 interactive-playground.py
+    - name: Temporal Dev Env
+      command: python -m venv env && source env/bin/activate && pip install -r src/requirements.txt && cd src/
+    - name: Temporal Dev Server
+      command: temporal server start-dev
 
 ports:
-  - port: 8233
-    onOpen: open-preview
-    name: Temporal Frontend
+    - port: 8233
+      onOpen: open-preview
+      name: Temporal Frontend
 ```
 
 Not specified within this `.gitpod.yml`, is the enviornment variables we'll need to set before we can run our applicaton.
@@ -528,9 +528,9 @@ As written, the [Github repository](https://github.com/burningion/demo-gpt-4-tem
 
 For starters, here are a few ideas to pursue:
 
-- Scrape the documentation of all the libraries you use for development. Use these documents to build up a better query system, maybe even pinning documentation version numbers to the numbers in your `requirements.txt`.
-- Add a language model running locally on your computer to do the query. You can use Tailscale and add your home machine as a node, and then connect via a Gitpod workspace as an [ephemeral node](https://tailscale.com/kb/1111/ephemeral-nodes/).
-- Refine the feedback loop for augmented queries. Pick a token window size and determine a smart way to fit the right amount of context for interactive conversations. There's a [started file ](https://github.com/burningion/demo-gpt-4-temporal/blob/a8599650e224f2a4ee89298aba6ea7a4892fc8dc/ask-embeddings-loop.py) in the repo to bootstrap from.
-- Use [LoRA](https://replicate.com/blog/fine-tune-alpaca-with-lora) to fine tune your own language model, using Temporal's workflows to build your data pipeline.
+-   Scrape the documentation of all the libraries you use for development. Use these documents to build up a better query system, maybe even pinning documentation version numbers to the numbers in your `requirements.txt`.
+-   Add a language model running locally on your computer to do the query. You can use Tailscale and add your home machine as a node, and then connect via a Gitpod workspace as an [ephemeral node](https://tailscale.com/kb/1111/ephemeral-nodes/).
+-   Refine the feedback loop for augmented queries. Pick a token window size and determine a smart way to fit the right amount of context for interactive conversations. There's a [started file ](https://github.com/burningion/demo-gpt-4-temporal/blob/a8599650e224f2a4ee89298aba6ea7a4892fc8dc/ask-embeddings-loop.py) in the repo to bootstrap from.
+-   Use [LoRA](https://replicate.com/blog/fine-tune-alpaca-with-lora) to fine tune your own language model, using Temporal's workflows to build your data pipeline.
 
 I'm excited to see what you build, please don't hesitate to share with me on [Twitter](https://twitter.com/burningion).

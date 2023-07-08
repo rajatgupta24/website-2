@@ -34,23 +34,23 @@ RUN curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.gpg | sudo apt-key
 
 ```yml
 tasks:
-  - name: tailscaled
-    command: |
-      if [ -n "${TAILSCALE_STATE_MYPROJECT}" ]; then
-        # restore the tailscale state from gitpod user's env vars
-        sudo mkdir -p /var/lib/tailscale
-        echo "${TAILSCALE_STATE_MYPROJECT}" | sudo tee /var/lib/tailscale/tailscaled.state > /dev/null
-      fi
-      sudo tailscaled
-  - name: tailscale
-    command: |
-      if [ -n "${TAILSCALE_STATE_MYPROJECT}" ]; then
-        sudo -E tailscale up
-      else
-        sudo -E tailscale up --hostname "gitpod-${GITPOD_GIT_USER_NAME// /-}-$(echo ${GITPOD_WORKSPACE_CONTEXT} | jq -r .repository.name)"
-        # store the tailscale state into gitpod user
-        gp env TAILSCALE_STATE_MYPROJECT="$(sudo cat /var/lib/tailscale/tailscaled.state)"
-      fi
+    - name: tailscaled
+      command: |
+          if [ -n "${TAILSCALE_STATE_MYPROJECT}" ]; then
+            # restore the tailscale state from gitpod user's env vars
+            sudo mkdir -p /var/lib/tailscale
+            echo "${TAILSCALE_STATE_MYPROJECT}" | sudo tee /var/lib/tailscale/tailscaled.state > /dev/null
+          fi
+          sudo tailscaled
+    - name: tailscale
+      command: |
+          if [ -n "${TAILSCALE_STATE_MYPROJECT}" ]; then
+            sudo -E tailscale up
+          else
+            sudo -E tailscale up --hostname "gitpod-${GITPOD_GIT_USER_NAME// /-}-$(echo ${GITPOD_WORKSPACE_CONTEXT} | jq -r .repository.name)"
+            # store the tailscale state into gitpod user
+            gp env TAILSCALE_STATE_MYPROJECT="$(sudo cat /var/lib/tailscale/tailscaled.state)"
+          fi
 ```
 
 This configuration will register a Tailscale node based on the following name scheme: `gitpod-{user-name}-{repo-name}`. On first workspace start you will get asked to login through the terminal. When this was successful a Tailscale machine state will be stored in your Gitpod's account. On subsequent starts of workspaces on this project this machine state will be restored.

@@ -70,8 +70,8 @@ You can start building your project when, or even [before](/docs/configure/proje
 
 ```yml
 tasks:
-  - init: pip3 install -r requirements.txt
-    command: python3 main.py
+    - init: pip3 install -r requirements.txt
+      command: python3 main.py
 ```
 
 ## Linting
@@ -103,8 +103,8 @@ To install this extension for your repository, add the following to your [.gitpo
 
 ```yml
 vscode:
-  extensions:
-    - almenon.arepl
+    extensions:
+        - almenon.arepl
 ```
 
 ### Python Test Explorer
@@ -115,8 +115,8 @@ To add this to your repository add the following to your [.gitpod.yml](/docs/ref
 
 ```yml
 vscode:
-  extensions:
-    - littlefoxteam.vscode-python-test-adapter@0.3.16:tZ/6xOSSdKUaq6JCUVkD+A==
+    extensions:
+        - littlefoxteam.vscode-python-test-adapter@0.3.16:tZ/6xOSSdKUaq6JCUVkD+A==
 ```
 
 ## GUI Applications with wxPython
@@ -143,20 +143,20 @@ Here is a corresponding [.gitpod.yml](/docs/references/gitpod-yml) example:
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 
 # This will expose all necessary ports needed for your VNC image
 ports:
-  - port: 6080
-    onOpen: open-preview
-  - port: 5900
-    onOpen: ignore
-  - port: 35900
-    onOpen: ignore
+    - port: 6080
+      onOpen: open-preview
+    - port: 5900
+      onOpen: ignore
+    - port: 35900
+      onOpen: ignore
 
 # This will make it so that on workspace start it will run a file called `app.py`
 tasks:
-  - command: python3 app.py
+    - command: python3 app.py
 ```
 
 <br>
@@ -199,16 +199,16 @@ To start debugging your Python application in Gitpod, please create a new direct
 
 ```json
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Python: Current File",
-      "type": "python",
-      "request": "launch",
-      "program": "${file}",
-      "console": "internalConsole"
-    }
-  ]
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Python: Current File",
+			"type": "python",
+			"request": "launch",
+			"program": "${file}",
+			"console": "internalConsole"
+		}
+	]
 }
 ```
 
@@ -224,6 +224,6 @@ To see a basic repository with Python debugging enabled, please check out [gitpo
 
 ## Further Reading
 
-- **_[VS Code documentation for Python debugging](https://code.visualstudio.com/docs/python/debugging)_** All the information there should also apply to Gitpod as well.
-- **_[Troubleshooting Matplotlib/TK](https://github.com/gitpod-io/gitpod/issues/795)_** Here is how to troubleshoot Matplotlib/TK issues for Python GUI applications.
-- **_[Debugging Django](https://community.gitpod.io/t/django-debugging/381/6)_** This is how to debug Django applications in Gitpod.
+-   **_[VS Code documentation for Python debugging](https://code.visualstudio.com/docs/python/debugging)_** All the information there should also apply to Gitpod as well.
+-   **_[Troubleshooting Matplotlib/TK](https://github.com/gitpod-io/gitpod/issues/795)_** Here is how to troubleshoot Matplotlib/TK issues for Python GUI applications.
+-   **_[Debugging Django](https://community.gitpod.io/t/django-debugging/381/6)_** This is how to debug Django applications in Gitpod.

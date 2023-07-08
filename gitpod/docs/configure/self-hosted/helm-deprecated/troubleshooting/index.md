@@ -24,9 +24,9 @@ This section should solve all errors that might come up during installation of G
 
 1.  `ssh` onto the node, `mount | grep rootfs` and find the directory where your containers are stored. Common paths are:
 
-    - `/run/containerd/io.containerd.runtime.v1.linux/k8s.io`
-    - `/run/containerd/io.containerd.runtime.v1.linux/moby`
-    - `/run/containerd/io.containerd.runtime.v2.task/k8s.io`
+    -   `/run/containerd/io.containerd.runtime.v1.linux/k8s.io`
+    -   `/run/containerd/io.containerd.runtime.v1.linux/moby`
+    -   `/run/containerd/io.containerd.runtime.v2.task/k8s.io`
 
 2.  _Merge_ the following into your `values.custom.yaml`:
 
@@ -44,12 +44,12 @@ This section should solve all errors that might come up during installation of G
 
 ```yaml
 components:
-  wsDaemon:
-    containerRuntime:
-      containerd:
-        socket: /var/run/k3s/containerd/containerd.sock
-      nodeRoots:
-        - /var/run/k3s/containerd/io.containerd.runtime.v2.task/k8s.io
+    wsDaemon:
+        containerRuntime:
+            containerd:
+                socket: /var/run/k3s/containerd/containerd.sock
+            nodeRoots:
+                - /var/run/k3s/containerd/io.containerd.runtime.v2.task/k8s.io
 ```
 
 ## 2. `helm install` fails with: "minio access key is required, please add a value to your values.yaml"
@@ -82,8 +82,8 @@ Add the following to your `values.yaml` file to disable agent-smith:
 
 ```yaml
 components:
-  agentSmith:
-    disabled: true
+    agentSmith:
+        disabled: true
 ```
 
 ## 4. Workspaces stopping once container image downloaded
@@ -104,9 +104,9 @@ Add the following to your `values.yaml` file to use fuse-overlayfs:
 
 ```yaml
 components:
-  wsDaemon:
-    userNamespaces:
-      fsShift: fuse
+    wsDaemon:
+        userNamespaces:
+            fsShift: fuse
 ```
 
 ## 5. Create workspace results in `7 PERMISSION_DENIED: cannot resolve workspace image` error
@@ -123,10 +123,10 @@ Add the following to your `values.yaml` file to authorize the Docker registry:
 
 ```yaml
 components:
-  docker-registry:
-    authentication:
-      username: gitpod
-      password: gitpod
+    docker-registry:
+        authentication:
+            username: gitpod
+            password: gitpod
 ```
 
 > Replace these with your own values.

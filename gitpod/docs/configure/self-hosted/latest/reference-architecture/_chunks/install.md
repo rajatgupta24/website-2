@@ -125,22 +125,22 @@ Un-select the in-cluster container registry checkbox.
 
 Un-select the in-cluster MySQL checkbox.
 
-| Database                 |                                                                                                                        |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| In-cluster               | no                                                                                                                     |
-| Google Cloud SQL Proxy   | unchecked                                                                                                              |
-| Host                     | `${MYSQL_INSTANCE_NAME}.mysql.database.azure.com` <br/>(Replace `${MYSQL_INSTANCE_NAME}` with the Azure database name) |
-| Username                 | Value of `${MYSQL_GITPOD_USERNAME}@${MYSQL_INSTANCE_NAME}`                                                             |
-| Password                 | value of `${MYSQL_GITPOD_PASSWORD}`                                                                                    |
-| Password                 | Use default value (`3306`)                                                                                             |
+| Database               |                                                                                                                        |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| In-cluster             | no                                                                                                                     |
+| Google Cloud SQL Proxy | unchecked                                                                                                              |
+| Host                   | `${MYSQL_INSTANCE_NAME}.mysql.database.azure.com` <br/>(Replace `${MYSQL_INSTANCE_NAME}` with the Azure database name) |
+| Username               | Value of `${MYSQL_GITPOD_USERNAME}@${MYSQL_INSTANCE_NAME}`                                                             |
+| Password               | value of `${MYSQL_GITPOD_PASSWORD}`                                                                                    |
+| Password               | Use default value (`3306`)                                                                                             |
 
 Select **Azure** as the object storage provider.
 
-| Object storage   |                                                                                                      |
-| ---------------- | ---------------------------------------------------------------------------------------------------- |
-| Storage region   | value of `${LOCATION}`                                                                               |
-| Account name     | value of `${STORAGE_ACCOUNT_NAME}`                                                                   |
-| Access key       | value of `${STORAGE_ACCOUNT_KEY}`                                                                    |
+| Object storage |                                    |
+| -------------- | ---------------------------------- |
+| Storage region | value of `${LOCATION}`             |
+| Account name   | value of `${STORAGE_ACCOUNT_NAME}` |
+| Access key     | value of `${STORAGE_ACCOUNT_KEY}`  |
 
 Keep cert-manager selected for the TLS certificates options.
 
@@ -150,7 +150,6 @@ Keep cert-manager selected for the TLS certificates options.
 | cert-manager                | yes                     |
 | Issuer name                 | `gitpod-issuer`         |
 | Issuer type                 | Select “cluster issuer” |
-
 
 </div>
 

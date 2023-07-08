@@ -21,9 +21,9 @@ Gitpod by default ships with an in-cluster docker-registry. If you use that one 
 
 ```yaml
 docker-registry:
-  authentication:
-    username: gitpod
-    password: your-registry-password
+    authentication:
+        username: gitpod
+        password: your-registry-password
 ```
 
 Afterwards, a full redeploy is required (your DB and workspace state is kept in a PV):

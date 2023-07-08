@@ -7,7 +7,7 @@ slug: svens-new-role
 subtitle: Sven Efftinge is back at building product.
 teaserImage: teaser.jpg
 title: Sven's new role
-tags: ["Company building"]
+tags: ['Company building']
 ---
 
 <script context="module">

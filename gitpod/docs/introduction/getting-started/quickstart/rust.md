@@ -13,26 +13,26 @@ Learn how to set-up and understand the benefits of Gitpod **in less than 5 min**
 
 The following guide will:
 
-- Walk you through a real world example with an existing Gitpod config
-- Introduce you to prebuilds
-- Demonstrate the benefits of ephemeral developer environments
+-   Walk you through a real world example with an existing Gitpod config
+-   Introduce you to prebuilds
+-   Demonstrate the benefits of ephemeral developer environments
 
 For simplicity we use a GitHub template, but Gitpod works similarly with GitLab and Bitbucket.
 
 ## Step 1: Clone Git repository
 
-- Create a new repository based on the [Rust template](https://github.com/gitpod-io/template-rust-cli/generate).
-- Name it e.g. `my-rust-template`.
+-   Create a new repository based on the [Rust template](https://github.com/gitpod-io/template-rust-cli/generate).
+-   Name it e.g. `my-rust-template`.
 
 ## Step 2: Install Gitpod app
 
-- Install the [Gitpod App](https://github.com/apps/gitpod-io/installations/new).
+-   Install the [Gitpod App](https://github.com/apps/gitpod-io/installations/new).
 
-  Gitpod's GitHub app is similar to a CI server and will continuously prepare prebuilds for all your branches and pull requests - so you don't have to wait for Maven or NPM downloading the internet when you want to start coding.
+    Gitpod's GitHub app is similar to a CI server and will continuously prepare prebuilds for all your branches and pull requests - so you don't have to wait for Maven or NPM downloading the internet when you want to start coding.
 
 ## Step 3: First prebuild
 
-- Start your first workspace with a prebuild by prefixing **https://gitpod.io#prebuild/** to the URL of the repository.
+-   Start your first workspace with a prebuild by prefixing **https://gitpod.io#prebuild/** to the URL of the repository.
 
 The revised URL is: `https://gitpod.io/#prebuild/https://github.com/<github_username>/my-rust-template`
 
@@ -74,5 +74,5 @@ Try it out and open 3 workspaces on the same context (e.g. on main or on an issu
 
 You've successfully ran your first workspace and experienced first hand what we mean with ephemeral dev environments. This is just the first step on your journey towards being always ready to code. Helpful resources from here are:
 
-- [Getting started with your own project](/docs/configure)
-- [Git Integrations](/docs/integrations)
+-   [Getting started with your own project](/docs/configure)
+-   [Git Integrations](/docs/integrations)

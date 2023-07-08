@@ -38,12 +38,12 @@ You can also automate this in your [`.gitpod.yml`](/docs/references/gitpod-yml) 
 
 ```yml
 tasks:
-  - name: Start web server
-    init: python -m http.server 8000
+    - name: Start web server
+      init: python -m http.server 8000
 
 ports:
-  - port: 8000
-    onOpen: open-preview
+    - port: 8000
+      onOpen: open-preview
 ```
 
 ## Try It!

@@ -5,7 +5,7 @@ excerpt: After over one year of intensive work, we are proud to announce the pub
 image: gitpod-online-ide.png
 slug: gitpod-remote-developer-environment
 subtitle: One Click to Coding!
-tags: ["Gitpod updates"]
+tags: ['Gitpod updates']
 title: Gitpod - Remote Developer Environment
 url: https://medium.com/gitpod/gitpod-gitpod-online-ide-for-github-6296b907a886
 ---
@@ -84,23 +84,23 @@ You can use Gitpod with any GitHub repository. The login is done through GitHub 
 
 Why not try it now? If you don’t have a particular repository in mind, you can pick one of the below:
 
-- **JavaScript**:
-  [https://gitpod.io/#**https://github.com/ooade/NextSimpleStarter**](https://gitpod.io/#https://github.com/ooade/NextSimpleStarter)
+-   **JavaScript**:
+    [https://gitpod.io/#**https://github.com/ooade/NextSimpleStarter**](https://gitpod.io/#https://github.com/ooade/NextSimpleStarter)
 
-- **Go**:
-  [https://gitpod.io/#**https://github.com/demo-apps/go-gin-app**](https://gitpod.io/#https://github.com/demo-apps/go-gin-app)
+-   **Go**:
+    [https://gitpod.io/#**https://github.com/demo-apps/go-gin-app**](https://gitpod.io/#https://github.com/demo-apps/go-gin-app)
 
-- **Java**:
-  [https://gitpod.io/#**https://github.com/gitpod-io/spring-petclinic**](https://gitpod.io/#https://github.com/gitpod-io/spring-petclinic)
+-   **Java**:
+    [https://gitpod.io/#**https://github.com/gitpod-io/spring-petclinic**](https://gitpod.io/#https://github.com/gitpod-io/spring-petclinic)
 
-- **Ruby**:
-  [https://gitpod.io/#**https://github.com/gitpod-io/rails_sample_app**](https://gitpod.io/#https://github.com/gitpod-io/rails_sample_app)
+-   **Ruby**:
+    [https://gitpod.io/#**https://github.com/gitpod-io/rails_sample_app**](https://gitpod.io/#https://github.com/gitpod-io/rails_sample_app)
 
-- **Python**:
-  [https://gitpod.io/#**https://github.com/sibtc/django-beginners-guide**](https://gitpod.io/#https://github.com/sibtc/django-beginners-guide)
+-   **Python**:
+    [https://gitpod.io/#**https://github.com/sibtc/django-beginners-guide**](https://gitpod.io/#https://github.com/sibtc/django-beginners-guide)
 
-- **PHP**:
-  [https://gitpod.io/#**https://github.com/symfony/demo**](https://gitpod.io/#https://github.com/symfony/demo)
+-   **PHP**:
+    [https://gitpod.io/#**https://github.com/symfony/demo**](https://gitpod.io/#https://github.com/symfony/demo)
 
 ## **Where Are We Going From Here?**
 

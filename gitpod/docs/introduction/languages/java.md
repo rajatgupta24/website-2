@@ -35,10 +35,10 @@ The default Gitpod workspace image default is [workspace-full](https://github.co
 
 Along with other languages and tools, this base image includes:
 
-- [SDKMAN!](https://sdkman.io/) `v5.16.0` (`sdk version`)
-- [Java](https://www.java.com) `v11.0.16` (`java -version`)
-- [Gradle](https://gradle.org/) `v7.5.1` (`gradle -version`)
-- [Maven](https://maven.apache.org/) `v3.8.6` (`mvn -version`)
+-   [SDKMAN!](https://sdkman.io/) `v5.16.0` (`sdk version`)
+-   [Java](https://www.java.com) `v11.0.16` (`java -version`)
+-   [Gradle](https://gradle.org/) `v7.5.1` (`gradle -version`)
+-   [Maven](https://maven.apache.org/) `v3.8.6` (`mvn -version`)
 
 > **Note:** We discuss how to set up a [custom base image](/docs/introduction/languages/java#setting-up-a-custom-dockerfile) later in the guide.
 
@@ -50,18 +50,18 @@ For alternative versions to those provided in the Gitpod base image, with [SDKMA
 
 #### Updating Java version
 
-- `sdk list java` - to see available java versions
-- `sdk install java 18.0.1.fx-zulu` - to install a specific version
+-   `sdk list java` - to see available java versions
+-   `sdk install java 18.0.1.fx-zulu` - to install a specific version
 
 #### Updating Maven version
 
-- `sdk list maven` - to see available maven versions
-- `sdk install maven 3.8.6` - to install a specific version
+-   `sdk list maven` - to see available maven versions
+-   `sdk install maven 3.8.6` - to install a specific version
 
 #### Updating Gradle version
 
-- `sdk list gradle` - to see available gradle versions
-- `sdk install gradle 7.4.1` - to install a specific version
+-   `sdk list gradle` - to see available gradle versions
+-   `sdk install gradle 7.4.1` - to install a specific version
 
 ### Setting up a custom Dockerfile
 
@@ -85,7 +85,7 @@ touch .gitpod.Dockerfile
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 ```
 
 4. Update your `.gitpod.Dockerfile` to install your dependency versions
@@ -134,14 +134,14 @@ Start tasks are processes that are initiated on every workspace start. Depending
 
 ```yml
 tasks:
-  - init: gradle build
+    - init: gradle build
 ```
 
 **Example with Maven**
 
 ```yml
 tasks:
-  - init: mvn package
+    - init: mvn package
 ```
 
 2. **Optional:** Validate by stopping and starting (restart) your workspace
@@ -177,16 +177,16 @@ To run your application, you have two options:
 
 ```yml
 tasks:
-  - init: gradle build
-    command: gradle run
+    - init: gradle build
+      command: gradle run
 ```
 
 **Example with Maven**
 
 ```yml
 tasks:
-  - init: mvn package
-    command: mvn exec:java
+    - init: mvn package
+      command: mvn exec:java
 ```
 
 1. **Optional:** Validate by stopping and starting (restart) your workspace
@@ -221,8 +221,8 @@ For example, add the following to your `.gitpod.yml` to configure port `3000` to
 
 ```yml
 ports:
-  - port: 3000
-    onOpen: open-browser
+    - port: 3000
+      onOpen: open-browser
 ```
 
 See [configuring ports](/docs/configure/workspaces/ports) for more
@@ -270,8 +270,8 @@ To set default plugins to be installed for all users starting a workspace for th
 
 ```yml
 vscode:
-  extensions:
-    - vscjava.vscode-java-pack
+    extensions:
+        - vscjava.vscode-java-pack
 ```
 
 See [.gitpod.yml reference](/docs/references/gitpod-yml) for more.
@@ -282,8 +282,8 @@ Launch configurations can be shared by committing the `.vscode/launch.json` file
 
 ```yml
 vscode:
-  extensions:
-    - vscjava.vscode-java-pack
+    extensions:
+        - vscjava.vscode-java-pack
 ```
 
 See [Debugging in Visual Studio Code](https://code.visualstudio.com/docs/editor/debugging#_launch-configurations) and [VS Code Java Extensions](https://code.visualstudio.com/docs/java/extensions) for more.
@@ -307,9 +307,9 @@ To set default extensions to be installed for all users starting a workspace for
 
 ```yml
 jetbrains:
-  intellij:
-    plugins:
-      - com.intellij.lang.jsgraphql
+    intellij:
+        plugins:
+            - com.intellij.lang.jsgraphql
 ```
 
 See [.gitpod.yml reference](/docs/references/gitpod-yml) for more.
@@ -332,9 +332,9 @@ Gitpod currently has early support for improved indexing performance with JetBra
 
 ```yml
 jetbrains:
-  intellij:
-    prebuilds:
-      version: stable
+    intellij:
+        prebuilds:
+            version: stable
 ```
 
 ### Caching Maven dependencies

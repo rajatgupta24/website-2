@@ -57,19 +57,19 @@ Port opening behavior can only be set via the [`.gitpod.yml`](/docs/references/g
 
 The property `onOpen` configures port opening behaviors:
 
-- `notify` (default) - Show a notification for newly detected ports.
-- `open-preview` - Open the port URL in a preview within the editor or IDE.
-- `open-browser` - Open the port URL in a browser tab.
-- `ignore` - Ignore default behavior (notify).
+-   `notify` (default) - Show a notification for newly detected ports.
+-   `open-preview` - Open the port URL in a preview within the editor or IDE.
+-   `open-browser` - Open the port URL in a browser tab.
+-   `ignore` - Ignore default behavior (notify).
 
 **Example**: Open a browser tab for port 8080
 
 ```yml
 ports:
-  - name: Web App
-    description: The main application web server
-    port: 8080
-    onOpen: open-browser
+    - name: Web App
+      description: The main application web server
+      port: 8080
+      onOpen: open-browser
 ```
 
 ### Specify port names & descriptions
@@ -122,8 +122,8 @@ You can give ports a `name` and a `description` (both optional). These propertie
 
 The property `visibility` configures who can access a port:
 
-- `private` (default) - Only allow users with workspace access to access the port.
-- `public` - Allows everyone with the port URL to access the port.
+-   `private` (default) - Only allow users with workspace access to access the port.
+-   `public` - Allows everyone with the port URL to access the port.
 
 ### Configure port visibility
 
@@ -158,8 +158,8 @@ Ports won't be shown in VS Code's <Action>PORTS</Action> view or in the [Gitpod 
 
 ```yml
 ports:
-  - port: 3000-8999
-    onOpen: ignore
+    - port: 3000-8999
+      onOpen: ignore
 ```
 
 ## Ports ordering
@@ -212,24 +212,24 @@ Using [SSH command-line](/docs/references/ides-and-editors/command-line) access 
 
 If you have a port open in your local machine but you want to access it inside Gitpod via SSH, you could do the following:
 
-- [Copy the SSH command for a workspace](/docs/references/ides-and-editors/command-line#workspace-ssh-approaches).
-- Paste the SSH command on your **local machine terminal**.
-- Append `-N -R <port>:localhost:<port>` to the command and press enter, make sure to change the <port>.
-  - Assuming the port is `5000`, it would look like `-N -R 5000:localhost:5000`.
+-   [Copy the SSH command for a workspace](/docs/references/ides-and-editors/command-line#workspace-ssh-approaches).
+-   Paste the SSH command on your **local machine terminal**.
+-   Append `-N -R <port>:localhost:<port>` to the command and press enter, make sure to change the <port>.
+    -   Assuming the port is `5000`, it would look like `-N -R 5000:localhost:5000`.
 
 Now, from your Gitpod workspace, you can access it via `localhost:5000`.
 
 **Example Scenario:**
 
-- You start a HTTP file server on port 5000 **on your local machine**: `python3 -m http.server 5000`.
+-   You start a HTTP file server on port 5000 **on your local machine**: `python3 -m http.server 5000`.
 
-- Start reverse port forwarding from a different terminal **on your local machine** to access it **from your Gitpod workspace**:
+-   Start reverse port forwarding from a different terminal **on your local machine** to access it **from your Gitpod workspace**:
 
 ```bash
 ssh 'some-special-ws-id@gitpod.io' -N -R 5000:localhost:5000
 ```
 
-- Now run `curl -L http://localhost:9000` **inside your Gitpod workspace**, which will hit the port 5000 **on your local machine's** HTTP server.
+-   Now run `curl -L http://localhost:9000` **inside your Gitpod workspace**, which will hit the port 5000 **on your local machine's** HTTP server.
 
 ### Cross-Origin Resource Sharing (CORS)
 
@@ -255,9 +255,9 @@ Update the `ports` definition block in `.gitpod.yml` to add the `protocol`.
 
 ```yml
 ports:
-  - name: Frontend Application
-    port: 3000
-    protocol: https
+    - name: Frontend Application
+      port: 3000
+      protocol: https
 ```
 
 See [gitpod.yml](/docs/references/gitpod-yml) for more.
@@ -270,7 +270,7 @@ By default, ports are set as HTTP.
 
 For example:
 
-- `gp ports protocol 3000:https` will change port `3000` to use `https`.
-- `gp ports protocol 3000:http` will change port `3000` to use `http`.
+-   `gp ports protocol 3000:https` will change port `3000` to use `https`.
+-   `gp ports protocol 3000:http` will change port `3000` to use `http`.
 
 See [Gitpod CLI](/docs/references/gitpod-cli) for more.

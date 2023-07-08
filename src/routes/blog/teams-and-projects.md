@@ -6,7 +6,7 @@ image: teaser.jpg
 slug: teams-and-projects
 subtitle: Introducing Teams and Projects
 teaserImage: teaser.jpg
-tags: ["Gitpod updates"]
+tags: ['Gitpod updates']
 title: Introducing Teams & Projects
 ---
 
@@ -26,9 +26,9 @@ So, Gitpod provides your team with consistent, standardized and fully-automated 
 
 But before you and your team can get there, there have always been a few caveats, a few obstacles standing annoyingly between you and that frictionless dev experience:
 
-- It's complicated to describe your project's setup in the [.gitpod.yml](/docs/references/gitpod-yml/) syntax
-- It's complicated to enable [Prebuilds](/docs/configure/projects/prebuilds/) for your project—you never know if they're running, or when they fail, and you can't get the build logs anywhere
-- It's complicated to create a Team in Gitpod and to invite your team members
+-   It's complicated to describe your project's setup in the [.gitpod.yml](/docs/references/gitpod-yml/) syntax
+-   It's complicated to enable [Prebuilds](/docs/configure/projects/prebuilds/) for your project—you never know if they're running, or when they fail, and you can't get the build logs anywhere
+-   It's complicated to create a Team in Gitpod and to invite your team members
 
 **All this changes today.**
 
@@ -36,9 +36,9 @@ But before you and your team can get there, there have always been a few caveats
 
 Our goal with this latest update is to resolve the three pain points listed above, specifically by:
 
-- Providing a nicer experience for teams
-- Making it easier than ever to configure Gitpod for your project
-- Making Prebuilds a first-class feature that is easy to set up, easy to observe and easy to troubleshoot
+-   Providing a nicer experience for teams
+-   Making it easier than ever to configure Gitpod for your project
+-   Making Prebuilds a first-class feature that is easy to set up, easy to observe and easy to troubleshoot
 
 > ℹ️ Teams and Projects are currently in **Beta** and the UI is still evolving. Please [send feedback](https://github.com/gitpod-io/gitpod/issues/5095).
 

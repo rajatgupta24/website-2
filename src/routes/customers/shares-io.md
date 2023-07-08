@@ -4,7 +4,7 @@ excerpt: Gitpod helped engineers at Shares.io become more productive and focused
 slug: shares-io
 image: teaser.png
 date: Thursday, 3 February 2022 06:00:00 UTC
-pageTitle: "Shares.io case study: Scaling from 3 to 45 engineers"
+pageTitle: 'Shares.io case study: Scaling from 3 to 45 engineers'
 pageDescription: Scaling from 3 to 45 engineers in 5 months on the back of Gitpod. Cutting onboarding times to 10 minutes. Saving half a day per engineer / week.
 keywords: DevX, velocity, growth, onboarding, shares.io
 ---

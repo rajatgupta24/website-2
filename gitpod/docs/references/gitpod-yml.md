@@ -14,49 +14,49 @@ The `.gitpod.yml` file instructs Gitpod on how to prepare and build a project, s
 
 > For a more comprehensive configuration guide, see [configuring a project](/docs/configure/workspaces).
 
-- [.gitpod.yml](#.gitpod.yml)
-  - [`additionalRepositories`](#additionalrepositories)
-  - [`checkoutLocation`](#checkoutlocation)
-  - [`coreDump`](#coreDump)
-  - [`gitConfig`](#gitconfig)
-  - [`github`](#github)
-    - [`prebuilds.addBadge`](#prebuildsaddbadge)
-    - [`prebuilds.addCheck`](#prebuildsaddcheck)
-    - [`prebuilds.addComment`](#prebuildsaddcomment)
-    - [`prebuilds.addLabel`](#prebuildsaddlabel)
-    - [`prebuilds.branches`](#prebuildsbranches)
-    - [`prebuilds.master`](#prebuildsmaster)
-    - [`prebuilds.pullRequests`](#prebuildspullrequests)
-    - [`prebuilds.pullRequestsFromForks`](#prebuildspullrequestsfromforks)
-  - [`image`](#image)
-    - [`image.file`](#imagefile)
-    - [`image.context`](#imagecontext)
-  - [`jetbrains`](#jetbrains)
-    - [`jetbrains.plugins`](#jetbrainsplugins)
-    - [`jetbrains.[product]`](#jetbrainsproduct)
-    - [`jetbrains.[product].plugins`](#jetbrainsproductplugins)
-    - [`jetbrains.[product].prebuilds`](#jetbrainsproductprebuilds)
-    - [`jetbrains.[product].vmoptions`](#jetbrainsproductvmoptions)
-  - [`ports`](#ports)
-    - [`ports[n].name`](#portsnname)
-    - [`ports[n].description`](#portsndescription)
-    - [`ports[n].onOpen`](#portsnonopen)
-    - [`ports[n].port`](#portsnport)
-    - [`ports[n].visibility`](#portsnvisibility)
-    - [`ports[n].protocol`](#portsprotocol)
-  - [`tasks`](#tasks)
-    - [`tasks[n].before`](#tasksnbefore)
-    - [`tasks[n].command`](#tasksncommand)
-    - [`tasks[n].env`](#tasksnenv)
-    - [`tasks[n].init`](#tasksninit)
-    - [`tasks[n].name`](#tasksnname)
-    - [`tasks[n].openIn`](#tasksnopenin)
-    - [`tasks[n].openMode`](#tasksnopenmode)
-    - [`tasks[n].prebuild`](#tasksnprebuild)
-  - [`mainConfiguration`](#mainconfiguration)
-  - [`vscode`](#vscode)
-    - [`vscode.extensions`](#vscodeextensions)
-  - [`workspaceLocation`](#workspacelocation)
+-   [.gitpod.yml](#.gitpod.yml)
+    -   [`additionalRepositories`](#additionalrepositories)
+    -   [`checkoutLocation`](#checkoutlocation)
+    -   [`coreDump`](#coreDump)
+    -   [`gitConfig`](#gitconfig)
+    -   [`github`](#github)
+        -   [`prebuilds.addBadge`](#prebuildsaddbadge)
+        -   [`prebuilds.addCheck`](#prebuildsaddcheck)
+        -   [`prebuilds.addComment`](#prebuildsaddcomment)
+        -   [`prebuilds.addLabel`](#prebuildsaddlabel)
+        -   [`prebuilds.branches`](#prebuildsbranches)
+        -   [`prebuilds.master`](#prebuildsmaster)
+        -   [`prebuilds.pullRequests`](#prebuildspullrequests)
+        -   [`prebuilds.pullRequestsFromForks`](#prebuildspullrequestsfromforks)
+    -   [`image`](#image)
+        -   [`image.file`](#imagefile)
+        -   [`image.context`](#imagecontext)
+    -   [`jetbrains`](#jetbrains)
+        -   [`jetbrains.plugins`](#jetbrainsplugins)
+        -   [`jetbrains.[product]`](#jetbrainsproduct)
+        -   [`jetbrains.[product].plugins`](#jetbrainsproductplugins)
+        -   [`jetbrains.[product].prebuilds`](#jetbrainsproductprebuilds)
+        -   [`jetbrains.[product].vmoptions`](#jetbrainsproductvmoptions)
+    -   [`ports`](#ports)
+        -   [`ports[n].name`](#portsnname)
+        -   [`ports[n].description`](#portsndescription)
+        -   [`ports[n].onOpen`](#portsnonopen)
+        -   [`ports[n].port`](#portsnport)
+        -   [`ports[n].visibility`](#portsnvisibility)
+        -   [`ports[n].protocol`](#portsprotocol)
+    -   [`tasks`](#tasks)
+        -   [`tasks[n].before`](#tasksnbefore)
+        -   [`tasks[n].command`](#tasksncommand)
+        -   [`tasks[n].env`](#tasksnenv)
+        -   [`tasks[n].init`](#tasksninit)
+        -   [`tasks[n].name`](#tasksnname)
+        -   [`tasks[n].openIn`](#tasksnopenin)
+        -   [`tasks[n].openMode`](#tasksnopenmode)
+        -   [`tasks[n].prebuild`](#tasksnprebuild)
+    -   [`mainConfiguration`](#mainconfiguration)
+    -   [`vscode`](#vscode)
+        -   [`vscode.extensions`](#vscodeextensions)
+    -   [`workspaceLocation`](#workspacelocation)
 
 ## `additionalRepositories`
 
@@ -80,10 +80,10 @@ Defines additional source control repositories to clone and where the repository
 
 ```yml
 additionalRepositories:
-  - url: https://github.com/gitpod-io/demo-multi-repo-backend
-    # checkoutLocation is optional and relative to /workspaces.
-    # by default the location defaults to the repository name.
-    checkoutLocation: backend
+    - url: https://github.com/gitpod-io/demo-multi-repo-backend
+      # checkoutLocation is optional and relative to /workspaces.
+      # by default the location defaults to the repository name.
+      checkoutLocation: backend
 ```
 
 When the above configuration is defined then the following additional steps happen when Gitpod workspace is started:
@@ -101,30 +101,30 @@ If you need to run commands (such as package installation or compilation) on the
 ```yml
 # example .gitpod.yml from https://github.com/gitpod-io/demo-multi-repo-frontend
 additionalRepositories:
-  - url: https://github.com/gitpod-io/demo-multi-repo-backend
-    # checkoutLocation is optional and relative to /workspaces.
-    # by default the location defaults to the repository name.
-    checkoutLocation: backend
+    - url: https://github.com/gitpod-io/demo-multi-repo-backend
+      # checkoutLocation is optional and relative to /workspaces.
+      # by default the location defaults to the repository name.
+      checkoutLocation: backend
 
 tasks:
-  - name: backend
-    # change working directory as per configured in `checkoutLocation`
-    # which is configured above as `/workspaces/backend`
-    before: |
-      cd ../backend
-    init: |
-      echo npm install
-    command: |
-      echo npm run dev
+    - name: backend
+      # change working directory as per configured in `checkoutLocation`
+      # which is configured above as `/workspaces/backend`
+      before: |
+          cd ../backend
+      init: |
+          echo npm install
+      command: |
+          echo npm run dev
 
-    # changing of working directory is not required as these tasks will
-    # by default by executed in `/workspaces/demo-multi-repo-frontend`
-  - name: frontend
-    init: |
-      echo npm install
-      echo npm run build
-    command: |
-      echo npm run dev
+      # changing of working directory is not required as these tasks will
+      # by default by executed in `/workspaces/demo-multi-repo-frontend`
+    - name: frontend
+      init: |
+          echo npm install
+          echo npm run build
+      command: |
+          echo npm run dev
 ```
 
 ## `checkoutLocation`
@@ -144,7 +144,7 @@ In most cases, this is not needed. If you work on an older Go project, please se
 **Example**
 
 ```yml
-checkoutLocation: "go/src/github.com/demo-apps/go-gin-app"
+checkoutLocation: 'go/src/github.com/demo-apps/go-gin-app'
 ```
 
 ## `coreDump`
@@ -165,16 +165,16 @@ For most cases, setting the `coreDump` property is not required. However, it can
 
 ```yml
 coreDump:
-  enabled: true
+    enabled: true
 ```
 
 You can also set custom size values for the generated core files using the `softLimit` and `hardLimit` values (see example below). The setting `softLimit` configures the upper limit on the size of the core dump file that will be produced if a process receives a core dump signal, while `hardLimit` allows setting a hard limit to act as a ceiling for the soft limit.
 
 ```yml
 coreDump:
-  enabled: true
-  softLimit: <bytes>
-  hardLimit: <bytes>
+    enabled: true
+    softLimit: <bytes>
+    hardLimit: <bytes>
 ```
 
 For more details, please see the [Linux man page for `getrlimit`](https://man7.org/linux/man-pages/man2/getrlimit.2.html)
@@ -197,8 +197,8 @@ Please refer to https://git-scm.com/docs/git-config#_values for a list of accept
 
 ```yml
 gitConfig:
-  alias.st: status
-  core.autocrlf: input
+    alias.st: status
+    core.autocrlf: input
 ```
 
 ## `github`
@@ -217,14 +217,14 @@ Configure the [GitHub Gitpod](https://github.com/apps/gitpod-io) app. At this ti
 
 ```yml
 github:
-  prebuilds:
-    master: true
-    branches: true
-    pullRequests: true
-    pullRequestsFromForks: true
-    addCheck: false
-    addComment: false
-    addBadge: true
+    prebuilds:
+        master: true
+        branches: true
+        pullRequests: true
+        pullRequestsFromForks: true
+        addCheck: false
+        addComment: false
+        addBadge: true
 ```
 
 ### `prebuilds.addBadge`
@@ -351,15 +351,15 @@ _With a custom image_
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 ```
 
 _With an optional context_
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
-  context: ./docker-content
+    file: .gitpod.Dockerfile
+    context: ./docker-content
 ```
 
 ### `image.file`
@@ -424,10 +424,10 @@ Define the integration between Gitpod and a specific JetBrains IDE. Install plug
 
 Specify the 'product' with one of the following values:
 
-- `intellij`
-- `goland`
-- `pycharm`
-- `phpstorm`
+-   `intellij`
+-   `goland`
+-   `pycharm`
+-   `phpstorm`
 
 <div class="overflow-x-auto">
 
@@ -455,10 +455,10 @@ Define a list of plugins which should be installed for the given JetBrains IDE w
 
 ```yml
 jetbrains:
-  intellij:
-    plugins:
-      - zielu.gittoolbox
-      - izhangzhihao.rainbow.brackets
+    intellij:
+        plugins:
+            - zielu.gittoolbox
+            - izhangzhihao.rainbow.brackets
 ```
 
 ### `jetbrains.[product].prebuilds`
@@ -479,9 +479,9 @@ Define whether Gitpod enables prebuilds for a specific JetBrains IDE.
 
 ```yml
 jetbrains:
-  intellij:
-    prebuilds:
-      version: stable
+    intellij:
+        prebuilds:
+            version: stable
 ```
 
 The `version` is defined as follows:
@@ -512,8 +512,8 @@ Configure JVM options for a specific JetBrains IDE.
 
 ```yml
 jetbrains:
-  intellij:
-    vmoptions: "-Xmx4g"
+    intellij:
+        vmoptions: '-Xmx4g'
 ```
 
 ## `ports`
@@ -532,16 +532,16 @@ Configure how Gitpod treats various ports your application may listen on. You ca
 
 ```yml
 ports:
-  - name: Website
-    port: 3000
-    onOpen: open-preview
-  - name: VNC
-    description: full GUI Virtual Desktop
-    port: 6080
-    onOpen: open-browser
-  - name: Server
-    port: 10000
-    onOpen: ignore
+    - name: Website
+      port: 3000
+      onOpen: open-preview
+    - name: VNC
+      description: full GUI Virtual Desktop
+      port: 6080
+      onOpen: open-browser
+    - name: Server
+      port: 10000
+      onOpen: ignore
 ```
 
 ### `ports[n].name`
@@ -640,15 +640,15 @@ Define how Gitpod prepares & builds your project and how it can start the projec
 
 ```yml
 tasks:
-  - before: sh ./scripts/setup.sh
-    init: npm install
-    command: npm run dev
-  - name: Database
-    init: sh ./scripts/seed-database.sh
-    command: npm start-db
-    env:
-      DB_HOST: localhost:3306
-      DB_USER: readOnlyUser
+    - before: sh ./scripts/setup.sh
+      init: npm install
+      command: npm run dev
+    - name: Database
+      init: sh ./scripts/seed-database.sh
+      command: npm start-db
+      env:
+          DB_HOST: localhost:3306
+          DB_USER: readOnlyUser
 ```
 
 ### `tasks[n].before`
@@ -801,10 +801,10 @@ By default, extensions will use the latest available version unless you use a sp
 
 ```yml
 vscode:
-  extensions:
-    - svelte.svelte-vscode
-    - bradlc.vscode-tailwindcss@0.6.11
-    - https://example.com/abc/releases/extension-0.26.0.vsix
+    extensions:
+        - svelte.svelte-vscode
+        - bradlc.vscode-tailwindcss@0.6.11
+        - https://example.com/abc/releases/extension-0.26.0.vsix
 ```
 
 ## `workspaceLocation`
@@ -824,5 +824,5 @@ In most cases, this is not needed. If you work on an older Go project, please se
 **Example**
 
 ```yml
-workspaceLocation: "."
+workspaceLocation: '.'
 ```

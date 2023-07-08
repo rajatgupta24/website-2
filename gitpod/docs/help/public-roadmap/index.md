@@ -15,9 +15,9 @@ We are currently in a process of re-thinking how we can best communicate upcomin
 
 We still _love_ hearing what you think about Gitpod, as we build the future of [CDE](https://www.gitpod.io/cde)'s together—that has not changed! In the mean time, here are some ways that you can stay in touch:
 
-- To see what was recently released, see our [Changelog](https://gitpod.io/changelog).
-- For feedback and feature requests, see our repo on [GitHub](https://github.com/gitpod-io/gitpod/issues/new/choose).
-- To chat about Gitpod, join us in [Discord](https://gitpod.io/chat).
+-   To see what was recently released, see our [Changelog](https://gitpod.io/changelog).
+-   For feedback and feature requests, see our repo on [GitHub](https://github.com/gitpod-io/gitpod/issues/new/choose).
+-   To chat about Gitpod, join us in [Discord](https://gitpod.io/chat).
 
 **Why did we deprecate the public roadmap?**
 

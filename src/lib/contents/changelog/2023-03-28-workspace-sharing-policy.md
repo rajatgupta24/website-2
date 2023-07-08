@@ -14,9 +14,9 @@ To disable workspace sharing in your organization, go to [settings](https://gitp
 
 For more information see:
 
-- [Organizational Policies](/docs/configure/orgs/policies)
-- [Workspace Sharing Policy](/docs/configure/orgs/policies#workspace-sharing)
-- [Workspace Collaboration](/docs/configure/workspaces/collaboration)
+-   [Organizational Policies](/docs/configure/orgs/policies)
+-   [Workspace Sharing Policy](/docs/configure/orgs/policies#workspace-sharing)
+-   [Workspace Collaboration](/docs/configure/workspaces/collaboration)
 
 ## FAQs
 

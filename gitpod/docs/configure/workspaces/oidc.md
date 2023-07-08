@@ -41,11 +41,11 @@ Setting up OIDC Authentication generally involves three main steps:
 
 ## Provider specific guides
 
-- [AWS](/docs/integrations/aws)
+-   [AWS](/docs/integrations/aws)
 
 **Read more:**
 
-- [[Auth0 docs] OpenID Connect Protocol](https://auth0.com/docs/authenticate/protocols/openid-connect-protocol)
+-   [[Auth0 docs] OpenID Connect Protocol](https://auth0.com/docs/authenticate/protocols/openid-connect-protocol)
 
 ## Gitpod CLI integration
 
@@ -64,17 +64,17 @@ The output, when decoded, translates to a JSON object similar to the one below.
 
 ```json
 {
-  "aud": ["example.org"],
-  "auth_time": 1684777794,
-  "azp": "example.org",
-  "c_hash": "gc_vPbUNoCT0UmXDCdp1sw",
-  "email": "kumquat@gitpod.io",
-  "email_verified": true,
-  "exp": 1684781394,
-  "iat": 1684777794,
-  "iss": "https://api.gitpod.io/idp",
-  "name": "Kumquat The Third",
-  "sub": "https://github.com/gitpod-io/website/pull/1"
+	"aud": ["example.org"],
+	"auth_time": 1684777794,
+	"azp": "example.org",
+	"c_hash": "gc_vPbUNoCT0UmXDCdp1sw",
+	"email": "kumquat@gitpod.io",
+	"email_verified": true,
+	"exp": 1684781394,
+	"iat": 1684777794,
+	"iss": "https://api.gitpod.io/idp",
+	"name": "Kumquat The Third",
+	"sub": "https://github.com/gitpod-io/website/pull/1"
 }
 ```
 

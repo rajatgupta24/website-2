@@ -12,9 +12,9 @@ description: Learn how to start your first Gitpod workspace for free, set up a g
 
 In this guide we'll walk you through the basics to get up and running with Gitpod today.
 
-- [Step 1: Your first workspace](#step-1-your-first-workspace)
-- [Step 2: Customize Gitpod](#step-2-customize-gitpod)
-- [Step 3: Gitpodify a project](#step-3-gitpodify-a-project)
+-   [Step 1: Your first workspace](#step-1-your-first-workspace)
+-   [Step 2: Customize Gitpod](#step-2-customize-gitpod)
+-   [Step 3: Gitpodify a project](#step-3-gitpodify-a-project)
 
 ## Step 1: Your first workspace
 
@@ -64,7 +64,7 @@ See [User Settings](/docs/configure/user-settings) for more ways to customize Gi
 Gitpod uses a `.gitpod.yml` file located at the root of your repository to unlock all benefits. It defines the processes to start for your project (e.g. a database or webserver), installs the required tools, editor extensions or IDE plugins. To get started:
 
 1. Add a `.gitpod.yml` at the root of your repository.
-   - You can use `gp init` to quickly generate the `.gitpod.yml` file.
+    - You can use `gp init` to quickly generate the `.gitpod.yml` file.
 2. Use the `gp validate` command to validate your configuration is working.
 3. Commit and push to apply the configuration for all subsequent workspace starts.
 
@@ -79,19 +79,19 @@ image: gitpod/workspace-full
 
 # Commands that will run on workspace start
 tasks:
-  - name: Setup, Install & Build
-    before: yarn global add express
-    init: yarn install
-    command: yarn build
+    - name: Setup, Install & Build
+      before: yarn global add express
+      init: yarn install
+      command: yarn build
 
 # Ports to expose on workspace startup
 ports:
-  - port: 3000
-    onOpen: open-preview
-    name: Website
-    description: Website Preview
-    visibility: private
-    protocol: https
+    - port: 3000
+      onOpen: open-preview
+      name: Website
+      description: Website Preview
+      visibility: private
+      protocol: https
 ```
 
 **Caption:** An example project configured to install, build and run a `yarn` project with a webserver, exposed on port 3000. On start, the webserver preview is opened automatically.

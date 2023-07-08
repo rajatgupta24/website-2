@@ -4,7 +4,7 @@ date: Thursday, 22 Dec 2022 16:00:00 UTC
 excerpt: CDEs like Gitpod enable efficient container development on Apple M1. If you use an ARM-based device like an M1 or M2 Mac, you can move the workload of your applications to run in an x86-based Linux container in the cloud.
 slug: better-container-development-on-apple-m1-macbooks-with-gitpod
 teaserImage: teaser.webp
-tags: ["Engineering"]
+tags: ['Engineering']
 image: teaser.webp
 title: Better container development on Apple M1 Macbooks with Gitpod
 ---
@@ -19,9 +19,9 @@ title: Better container development on Apple M1 Macbooks with Gitpod
 
 **TL;DR**
 
-- Apple M1 and M2 are not compatible with a lot of old and specialized software
-- Existing workarounds like Rosetta or Docker Desktop aren’t optimized for all software written for x86-based hardware
-- Gitpod moves the workload to a Linux container in the cloud and creates a uniform developer experience for everyone on the team independent of their hardware
+-   Apple M1 and M2 are not compatible with a lot of old and specialized software
+-   Existing workarounds like Rosetta or Docker Desktop aren’t optimized for all software written for x86-based hardware
+-   Gitpod moves the workload to a Linux container in the cloud and creates a uniform developer experience for everyone on the team independent of their hardware
 
 Apple’s introduction of M1 system-on-a-chip (SoC) processors in late 2020 marked a shift away from traditional x86 processors, and a step towards an ARM architecture across their devices. The key benefits of the M1 are high performance, energy efficiency, and importantly, the same CPU architecture type of their iPad and iPhone devices. Starting at [a thousand dollars per machine](https://www.apple.com/macbook-air-m1/specs/), developers get computers with 3.5x improved CPU performance and 2x improved battery life over their old MacBooks running on Intel’s architecture.
 

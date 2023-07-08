@@ -6,7 +6,7 @@ image: teaser.png
 slug: journey-to-site-reliability-engineering-at-gitpod
 subtitle:
 teaserImage: teaser.png
-tags: ["Gitpod updates"]
+tags: ['Gitpod updates']
 title: Journey to Site Reliability Engineering at Gitpod
 ---
 
@@ -46,9 +46,9 @@ We want to change this mindset completely! Compute resource metrics may be good 
 
 As previously said, Workspaces are the core of Gitpod. We should be measuring metrics that tell us how our users are interacting with them:
 
-- How many workspaces are being created and how many fail during this process?
-- How many of those Workspaces start in an acceptable time frame?
-- After they start, do they remain working until the user chooses to stop them?
+-   How many workspaces are being created and how many fail during this process?
+-   How many of those Workspaces start in an acceptable time frame?
+-   After they start, do they remain working until the user chooses to stop them?
 
 Gitpod has a lot more features than just hosting Workspaces but, as a first step, _getting metrics and alerts around Workspace behavior will cover most of the complaints we had so far._
 
@@ -79,10 +79,10 @@ The SLOs, on the other hand, are a little bit more complicated. The SLO is a tar
 
 Now that we agreed that we won't aim for 100% availability, then what will be our target? Well, internally we do have an informal agreement that:
 
-- 95% of Workspaces should start in less than 2 mins
-- 50% of Workspaces should start in less than 15s
-- 99.8% of Workspaces should start successfully
-- 99.8% of Workspaces should remain working after they start
+-   95% of Workspaces should start in less than 2 mins
+-   50% of Workspaces should start in less than 15s
+-   99.8% of Workspaces should start successfully
+-   99.8% of Workspaces should remain working after they start
 
 To be honest, however, in our first interaction it is a little bit unreal to write those targets in stone already. As we already mentioned in this blog post, we still don't have that measurement very well established, so we don't know what is the reality that we live in right now. It could be that to achieve those targets, we will need to stop feature development completely just to manually keep everything stable, and this is not what we want!
 

@@ -37,9 +37,9 @@ The following config, for instance, will make sure that two terminals are opened
 
 ```yml
 tasks:
-  - command: echo 'left'
-  - command: echo 'right'
-    openMode: split-right
+    - command: echo 'left'
+    - command: echo 'right'
+      openMode: split-right
 ```
 
 ![Split Terminals](../../../../../static/images/docs/release-notes/2019-02-15/terminal-split.png)
@@ -68,8 +68,8 @@ This behavior can now be pre-configured so users are not bothered with annoying 
 
 ```yml
 ports:
-  - port: 8080
-    onOpen: open-preview
+    - port: 8080
+      onOpen: open-preview
 ```
 
 Check out [the docs](/docs/configure/workspaces/tasks) to learn more about pre-configuring things in Gitpod.
@@ -188,5 +188,5 @@ In addition to Markdown, Gitpod now also supports previewing AsciiDoc as you typ
 These are just the most noteworthy features we have been working on.
 For a more detailed list of bugfixes and enhancemenst see all the issues we've closed:
 
-- [Closed Issues in Gitpod](https://github.com/gitpod-io/gitpod/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+closed%3A%3E2018-11-01)
-- [Merged PRs in Theia](https://github.com/theia-ide/theia/pulls?utf8=%E2%9C%93&q=merged%3A%3E2018-11-01+merged%3A%3C2018-02-13+)
+-   [Closed Issues in Gitpod](https://github.com/gitpod-io/gitpod/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+closed%3A%3E2018-11-01)
+-   [Merged PRs in Theia](https://github.com/theia-ide/theia/pulls?utf8=%E2%9C%93&q=merged%3A%3E2018-11-01+merged%3A%3C2018-02-13+)

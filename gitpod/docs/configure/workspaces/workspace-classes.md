@@ -14,8 +14,8 @@ Workspace classes allow you to select the resources available to your workspaces
 
 On gitpod.io, the options are:
 
-- **Standard**: up to 4 cores, up to 8GB RAM, 30GB storage
-- **Large**: up to 8 cores, up to 16GB RAM, 50GB storage
+-   **Standard**: up to 4 cores, up to 8GB RAM, 30GB storage
+-   **Large**: up to 8 cores, up to 16GB RAM, 50GB storage
 
 You can override the default (Standard) workspace class in the [Gitpod project](/docs/configure/projects) settings for your repository.
 
@@ -32,8 +32,8 @@ You can select workspace class directly from [Gitpod Dashboard](https://gitpod.i
 
 ## Good to know
 
-- Large workspace classes use [credits](/docs/configure/billing#credits) at a faster rate. Standard workspaces use 10 credits per hour, whereas Large workspaces use 20 credits per hour.
-- [Prebuilds](/docs/configure/projects/prebuilds) currently use the same workspace class as regular workspaces.
+-   Large workspace classes use [credits](/docs/configure/billing#credits) at a faster rate. Standard workspaces use 10 credits per hour, whereas Large workspaces use 20 credits per hour.
+-   [Prebuilds](/docs/configure/projects/prebuilds) currently use the same workspace class as regular workspaces.
 
 ## FAQs
 

@@ -26,11 +26,11 @@ When incremental prebuilds are enabled for a project, and a new prebuild is bein
 
 1. Retrieve the commit history of the current commit to be built (up to 100 ancestor commits)
 2. For each ancestor commit, check if there exists a corresponding prebuild that can be used as a "base":
-   - A suitable "base prebuild" must have been successful (i.e. failed, canceled, or timed out prebuilds are not reused)
-   - It must be a recent, direct ancestor of the current commit (i.e. not a commit from a different unrelated branch)
-   - It must be based on the same project configuration as the current commit (for example, if the Docker image or the `init` tasks have recently been changed, older prebuilds are no longer relevant or useful and cannot be used as a "base")
+    - A suitable "base prebuild" must have been successful (i.e. failed, canceled, or timed out prebuilds are not reused)
+    - It must be a recent, direct ancestor of the current commit (i.e. not a commit from a different unrelated branch)
+    - It must be based on the same project configuration as the current commit (for example, if the Docker image or the `init` tasks have recently been changed, older prebuilds are no longer relevant or useful and cannot be used as a "base")
 3. If a suitable base prebuild is found, Gitpod will load it; update the checkout to the latest commit; and then re-run any `before`, `prebuild` and `init` task on top of it
-   - If no suitable base prebuild is found, Gitpod will build the new prebuild from scratch (i.e. a non-incremental prebuild)
+    - If no suitable base prebuild is found, Gitpod will build the new prebuild from scratch (i.e. a non-incremental prebuild)
 
 ## When are incremental prebuilds useful?
 
@@ -42,5 +42,5 @@ Incremental prebuilds can significantly speed up most of your prebuilds, especia
 
 Typically, enabling incremental prebuilds makes sense if:
 
-- Your project's build system benefits from incremental rebuilds (i.e. rebuilds are significantly faster than your initial build)
-- Your regular prebuilds take longer than 5 minutes (the longer they take, the bigger the potential speedup is)
+-   Your project's build system benefits from incremental rebuilds (i.e. rebuilds are significantly faster than your initial build)
+-   Your regular prebuilds take longer than 5 minutes (the longer they take, the bigger the potential speedup is)

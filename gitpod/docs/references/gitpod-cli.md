@@ -134,9 +134,9 @@ To notify a `gp sync-await <name>` call (see previous chapter), you can call `gp
 
 A common use case is the following where we have three terminals:
 
-- Terminal 1: A build process takes several minutes to complete. At the end, you call `gp sync-done build`.
-- Terminal 2: You use `gp sync-await build && npm run start-database` to wait for the build to complete before you start a database
-- Terminal 3: You use `gp sync-await build && npm run dev` to wait for the build to complete before you start the dev server.
+-   Terminal 1: A build process takes several minutes to complete. At the end, you call `gp sync-done build`.
+-   Terminal 2: You use `gp sync-await build && npm run start-database` to wait for the build to complete before you start a database
+-   Terminal 3: You use `gp sync-await build && npm run dev` to wait for the build to complete before you start the dev server.
 
 See [Start Tasks](/docs/configure/workspaces/tasks#wait-for-commands-to-complete) for a real-world example.
 
@@ -150,7 +150,7 @@ gp snapshot
 
 ## ssh
 
-`gp ssh` outputs a command you can copy/paste to another terminal to connect to your workspace via SSH.  The command requires that you have [uploaded a public key to Gitpod](https://www.gitpod.io/docs/configure/user-settings/ssh#upload-an-ssh-key-to-gitpod).
+`gp ssh` outputs a command you can copy/paste to another terminal to connect to your workspace via SSH. The command requires that you have [uploaded a public key to Gitpod](https://www.gitpod.io/docs/configure/user-settings/ssh#upload-an-ssh-key-to-gitpod).
 
 ## stop
 
@@ -347,9 +347,9 @@ Displays the current workspace's class info along with the used and available CP
 gp top
 ```
 
-- Use `gp top --json` to get the output in JSON format for programmatic use in (e.g. in shell scripts).
+-   Use `gp top --json` to get the output in JSON format for programmatic use in (e.g. in shell scripts).
 
-- Use `gp top --no-color` to disable colors for the output. It also respects the [`NO_COLOR`](https://no-color.org/) & `GP_NO_COLOR` environment variable.
+-   Use `gp top --no-color` to disable colors for the output. It also respects the [`NO_COLOR`](https://no-color.org/) & `GP_NO_COLOR` environment variable.
 
 ## docs
 

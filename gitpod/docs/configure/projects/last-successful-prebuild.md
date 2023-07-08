@@ -24,8 +24,8 @@ When enabled, new workspaces may start based on a prebuild that was built for an
 
 Thus, your new workspace will both:
 
-- _load quickly_: no waiting, even if a newer prebuild is still being computed (i.e. you'll never see the "Prebuild in Progress" screen again ⏩)
-- and it will be _ready quickly_: your IDE Terminal will run either no build at all (if none is needed), or just a quick incremental rebuild (faster than a full build ♻️)
+-   _load quickly_: no waiting, even if a newer prebuild is still being computed (i.e. you'll never see the "Prebuild in Progress" screen again ⏩)
+-   and it will be _ready quickly_: your IDE Terminal will run either no build at all (if none is needed), or just a quick incremental rebuild (faster than a full build ♻️)
 
 ## Skip Prebuilds
 
@@ -35,7 +35,7 @@ This is where the ability to skip prebuilds becomes helpful: For example, you co
 
 The ideal number depends on your project. For example:
 
-- If you push new commits to your repository very frequently, you may want a higher number (especially if your prebuilds also take a long time to build)
-- On the other hand, if your prebuilds finish quickly, and you typically don't push new commits very often, it may be fine to not skip any prebuild (i.e. `skip prebuilds = 0`)
+-   If you push new commits to your repository very frequently, you may want a higher number (especially if your prebuilds also take a long time to build)
+-   On the other hand, if your prebuilds finish quickly, and you typically don't push new commits very often, it may be fine to not skip any prebuild (i.e. `skip prebuilds = 0`)
 
 Please feel free to adjust and experiment with this value.

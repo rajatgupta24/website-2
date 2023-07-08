@@ -53,8 +53,8 @@ To add this extension to your repository add the following to your [.gitpod.yml]
 
 ```yml
 vscode:
-  extensions:
-    - octref.vetur@0.23.0:TEzauMObB6f3i2JqlvrOpA==
+    extensions:
+        - octref.vetur@0.23.0:TEzauMObB6f3i2JqlvrOpA==
 ```
 
 For projects that already have a [.gitpod.yml](/docs/references/gitpod-yml), you can skip the first part and just add the provided snippet.

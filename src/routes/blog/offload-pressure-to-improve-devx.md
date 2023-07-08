@@ -7,7 +7,7 @@ slug: offload-pressure-to-improve-devx
 subtitle:
 teaserImage: teaser.jpg
 title: DevX Digest 06 - Offload pressure to improve DevX
-tags: ["Developer experience"]
+tags: ['Developer experience']
 type: digest
 ---
 
@@ -30,18 +30,18 @@ _DevX Pod is available wherever you get your podcasts!_
 
 ### Key Takeaways
 
-- The inspiration behind building CodeSee came after the **first-hand frustration of not knowing what a system did**. Of course, the only people that knew anything about it had already left the company.
-  _“I just like, why do we not understand our code? I just kind of yelled it out in desperation. This happens all the time. It wasn't the first or the second or the third or the fourth time that it happened.” _
-  Understanding this system was critical for a feature she was working on to release. Unfortunately, in the end, the feature did not ship.
+-   The inspiration behind building CodeSee came after the **first-hand frustration of not knowing what a system did**. Of course, the only people that knew anything about it had already left the company.
+    _“I just like, why do we not understand our code? I just kind of yelled it out in desperation. This happens all the time. It wasn't the first or the second or the third or the fourth time that it happened.” _
+    Understanding this system was critical for a feature she was working on to release. Unfortunately, in the end, the feature did not ship.
 
-- Unlike other careers like architecture, where you have a blueprint of how everything fits together, **this is absent in tech.** Why is that? This results in frustration, mental fatigue and productivity losses.
-  As Shanea put it, _“We've treated code as like this big black box, right? We've built this entire industry around this black box. Is it happy? Is it not happy? Does it send us an alert? Can we poke the black box to give us the information that we want?”_
+-   Unlike other careers like architecture, where you have a blueprint of how everything fits together, **this is absent in tech.** Why is that? This results in frustration, mental fatigue and productivity losses.
+    As Shanea put it, _“We've treated code as like this big black box, right? We've built this entire industry around this black box. Is it happy? Is it not happy? Does it send us an alert? Can we poke the black box to give us the information that we want?”_
 
-- **Codebases are constantly changing and increasingly getting more complex.** Filling developers’ time and mental space with trying to understand all the changing dependencies can slowly eat away at your developer productivity. Our industry should double down and shift focus in helping developers and offloading the mental fatigue.
+-   **Codebases are constantly changing and increasingly getting more complex.** Filling developers’ time and mental space with trying to understand all the changing dependencies can slowly eat away at your developer productivity. Our industry should double down and shift focus in helping developers and offloading the mental fatigue.
 
-- **The concept of “continuous onboarding” and “continuous learning” came up a lot. **When we discuss onboarding, we usually say it’s a one-time, fixed-amount time event. Shanea argues it’s a continuous process that everyone goes through, no matter if they have been in the company for a long time or not. “_We have thought about onboarding as continuous onboarding and made our tool to provide, continuous understanding because that's what you're trying to do. Some team, some upstream team might've made a change. It's still an understanding that you need to have regardless of when you joined or not._”
+-   **The concept of “continuous onboarding” and “continuous learning” came up a lot. **When we discuss onboarding, we usually say it’s a one-time, fixed-amount time event. Shanea argues it’s a continuous process that everyone goes through, no matter if they have been in the company for a long time or not. “_We have thought about onboarding as continuous onboarding and made our tool to provide, continuous understanding because that's what you're trying to do. Some team, some upstream team might've made a change. It's still an understanding that you need to have regardless of when you joined or not._”
 
-- Shanea recommended [Code HS](https://codehs.com/) and [educative.io](https://www.educative.io/) as organisations taking developer experience (from an education POV) to another level. For example, Educative breaks down the barriers to learning and makes sure it’s a positive experience for those who learn differently.
+-   Shanea recommended [Code HS](https://codehs.com/) and [educative.io](https://www.educative.io/) as organisations taking developer experience (from an education POV) to another level. For example, Educative breaks down the barriers to learning and makes sure it’s a positive experience for those who learn differently.
 
 ### DevX Digest is community-driven
 

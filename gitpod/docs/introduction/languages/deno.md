@@ -28,7 +28,7 @@ And configure this Dockerfile in your [.gitpod.yml](/docs/references/gitpod-yml)
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 ```
 
 It'll run the latest Deno version and install the Bash completions.

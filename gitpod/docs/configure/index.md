@@ -18,32 +18,32 @@ description: Learn how to configure Gitpod workspaces and projects to customize 
 
 Workspaces can be created on their own, or as part of a [Project](/docs/configure/projects).
 
-- [Workspace Image](/docs/configure/workspaces/workspace-image)
-- [Tasks](/docs/configure/workspaces/tasks)
-- [Ports](/docs/configure/workspaces/ports)
-- [Collaboration](/docs/configure/workspaces/collaboration)
-- [Multi-repo](/docs/configure/workspaces/multi-repo)
-- [Workspace Classes](/docs/configure/workspaces/workspace-classes)
+-   [Workspace Image](/docs/configure/workspaces/workspace-image)
+-   [Tasks](/docs/configure/workspaces/tasks)
+-   [Ports](/docs/configure/workspaces/ports)
+-   [Collaboration](/docs/configure/workspaces/collaboration)
+-   [Multi-repo](/docs/configure/workspaces/multi-repo)
+-   [Workspace Classes](/docs/configure/workspaces/workspace-classes)
 
 ## User Settings
 
 [User settings](/docs/configure/user-settings) allow you to customize your own personal Gitpod experience.
 
-- [Browser Extension](/docs/configure/user-settings/browser-extension)
-- [Browser Settings](/docs/configure/user-settings/browser-settings)
-- [Browser Bookmarklet](/docs/configure/user-settings/browser-bookmarklet)
-- [Dotfiles](/docs/configure/user-settings/dotfiles)
-- [SSH](/docs/configure/user-settings/ssh)
-- [Access Tokens](/docs/configure/user-settings/access-tokens)
+-   [Browser Extension](/docs/configure/user-settings/browser-extension)
+-   [Browser Settings](/docs/configure/user-settings/browser-settings)
+-   [Browser Bookmarklet](/docs/configure/user-settings/browser-bookmarklet)
+-   [Dotfiles](/docs/configure/user-settings/dotfiles)
+-   [SSH](/docs/configure/user-settings/ssh)
+-   [Access Tokens](/docs/configure/user-settings/access-tokens)
 
 ## Projects
 
 [Projects](/docs/configure/projects) are the connection between Gitpod and one or more git repositories and allow you to manage [Prebuilds](/docs/configure/projects/prebuilds). Like Workspaces, Projects are always associated with an [Organization](/docs/configure/orgs).
 
-- [Prebuilds](/docs/configure/projects/prebuilds)
-- [Incremental Prebuilds](/docs/configure/projects/incremental-prebuilds)
-- [Last Successful Prebuild](/docs/configure/projects/last-successful-prebuild)
-- [Environment Variables](/docs/configure/projects/environment-variables)
+-   [Prebuilds](/docs/configure/projects/prebuilds)
+-   [Incremental Prebuilds](/docs/configure/projects/incremental-prebuilds)
+-   [Last Successful Prebuild](/docs/configure/projects/last-successful-prebuild)
+-   [Environment Variables](/docs/configure/projects/environment-variables)
 
 ## Organizations
 
@@ -51,11 +51,11 @@ Workspaces can be created on their own, or as part of a [Project](/docs/configur
 
 ## Authentication
 
-- [GitLab](/docs/configure/authentication/gitlab)
-- [GitHub](/docs/configure/authentication/github)
-- [BitBucket](/docs/configure/authentication/bitbucket)
-- [GitHub Enterprise](/docs/configure/authentication/github-enterprise)
-- [Bitbucket Server](/docs/configure/authentication/bitbucket-server)
+-   [GitLab](/docs/configure/authentication/gitlab)
+-   [GitHub](/docs/configure/authentication/github)
+-   [BitBucket](/docs/configure/authentication/bitbucket)
+-   [GitHub Enterprise](/docs/configure/authentication/github-enterprise)
+-   [Bitbucket Server](/docs/configure/authentication/bitbucket-server)
 
 ## FAQs
 

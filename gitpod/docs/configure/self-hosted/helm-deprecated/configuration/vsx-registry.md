@@ -23,8 +23,8 @@ To connect to private OpenVSX registry, perform the following steps:
 
     ```yaml
     components:
-      openVsxProxy:
-        vsxRegistryUrl: open-vsx.org
+        openVsxProxy:
+            vsxRegistryUrl: open-vsx.org
     ```
 
     Replace `open-vsx.org` with the domain your registry is available at.
@@ -33,4 +33,4 @@ To connect to private OpenVSX registry, perform the following steps:
 
 ## Additional resources
 
-- https://github.com/gitpod-io/gitpod/blob/cfb528c5daf5115b666ec7404bfe25d9fc9598d6/chart/values.yaml#L137
+-   https://github.com/gitpod-io/gitpod/blob/cfb528c5daf5115b666ec7404bfe25d9fc9598d6/chart/values.yaml#L137

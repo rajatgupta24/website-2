@@ -79,4 +79,4 @@ For a more in-depth walk-through of how do debug applications, please [refer to 
 
 ## Further Reading
 
-- <a class="no-nowrap" href="https://community.gitpod.io/t/gitpod-and-c/622">How to enable the `clang-tidy` linter in Gitpod</a>
+-   <a class="no-nowrap" href="https://community.gitpod.io/t/gitpod-and-c/622">How to enable the `clang-tidy` linter in Gitpod</a>

@@ -7,7 +7,7 @@ slug: devrel-link-devx
 subtitle:
 teaserImage: teaser.jpg
 title: DevX Digest 07 -  Is DevX the new DevRel?
-tags: ["Developer experience"]
+tags: ['Developer experience']
 type: digest
 ---
 
@@ -28,23 +28,23 @@ _DevX Pod is avaliable wherever you get your podcasts!_
 
 ### Key Takeaways
 
-- Kurt joins us with a very interesting perspective on developer experience. Prior to founding Forthright - a developer experience consultancy - Kurt has extensive experience in **developer relations working in advocacy** at various companies from AWS, GraphQL to Gatsby.
+-   Kurt joins us with a very interesting perspective on developer experience. Prior to founding Forthright - a developer experience consultancy - Kurt has extensive experience in **developer relations working in advocacy** at various companies from AWS, GraphQL to Gatsby.
 
-- Previous guests on DevXPod we’ve primarily discussed **developer experience in the context of in-product experience with the tools** itself. Kurt describes DevX as, _“an event or an occurrence within an ecosystem that leaves an impression on a developer.” _ This can include out-of-product experiences such as support, community, docs and content.
+-   Previous guests on DevXPod we’ve primarily discussed **developer experience in the context of in-product experience with the tools** itself. Kurt describes DevX as, _“an event or an occurrence within an ecosystem that leaves an impression on a developer.” _ This can include out-of-product experiences such as support, community, docs and content.
 
-- _“If I'm asking even another person for help and I have a bad experience, I tie that to the company. So we can't pin developer experience down to just ‘I build integrations.’”_ With this in mind, **it naturally makes sense that developer relations which is often the out-of-product experience falls naturally in making sure developer experience is positive.** Kurt wrote a fantastic article about this, check it out [here](https://theworst.dev/developer-experience)!
+-   _“If I'm asking even another person for help and I have a bad experience, I tie that to the company. So we can't pin developer experience down to just ‘I build integrations.’”_ With this in mind, **it naturally makes sense that developer relations which is often the out-of-product experience falls naturally in making sure developer experience is positive.** Kurt wrote a fantastic article about this, check it out [here](https://theworst.dev/developer-experience)!
 
-- To be effective in the growing developer experience space, Kurt recommends that **the best skills to hone aren’t engineering-specific skills but technical writing, empathy and the ability to prioritise.** _“I actually think the lack of specificity it's going to do us a significant amount of damage as companies try and understand DevX and build that out as they grow.”_ Although these roles are very fluid, we’re starting to see specialisation areas including community builders, docs educator, DevX engineering (_i.e. building pipelines and infrastructure_.)
+-   To be effective in the growing developer experience space, Kurt recommends that **the best skills to hone aren’t engineering-specific skills but technical writing, empathy and the ability to prioritise.** _“I actually think the lack of specificity it's going to do us a significant amount of damage as companies try and understand DevX and build that out as they grow.”_ Although these roles are very fluid, we’re starting to see specialisation areas including community builders, docs educator, DevX engineering (_i.e. building pipelines and infrastructure_.)
 
-- DevX is increasing in relevancy to everyone in tech. For example, Mike noted how many people have recently announced their new DevX jobs on Twitter. Kurt mentioned that he’s seen **a DevX role in the first 10 hires at start-ups.** Both of these showcase how important DevX is more than ever! _“2022 is the year of developer experience!”_
+-   DevX is increasing in relevancy to everyone in tech. For example, Mike noted how many people have recently announced their new DevX jobs on Twitter. Kurt mentioned that he’s seen **a DevX role in the first 10 hires at start-ups.** Both of these showcase how important DevX is more than ever! _“2022 is the year of developer experience!”_
 
-- Additionally, developer experience is important to bring more developers into tech. Our tools and product that we’re optimising for developer are opening the doors for more people, especially in a world that relies on software more than ever.
+-   Additionally, developer experience is important to bring more developers into tech. Our tools and product that we’re optimising for developer are opening the doors for more people, especially in a world that relies on software more than ever.
 
-- Not only does doubling down on developer experience benefit with accessibility and productivity, but it’s also in a company’s best interest as it’s seen as a competitive advantage for hires. Engineers are more likely to join a company with a better experience, in some cases that could be a determining factor.
+-   Not only does doubling down on developer experience benefit with accessibility and productivity, but it’s also in a company’s best interest as it’s seen as a competitive advantage for hires. Engineers are more likely to join a company with a better experience, in some cases that could be a determining factor.
 
-- When sharing some of the best developer experiences Kurt has seen, he reflected on the time he had built Bert CLI for PHP where he had the first taste of building to improve the lives of other developers. He also mentioned AWS Amplify as another DevX that folks should check out!
+-   When sharing some of the best developer experiences Kurt has seen, he reflected on the time he had built Bert CLI for PHP where he had the first taste of building to improve the lives of other developers. He also mentioned AWS Amplify as another DevX that folks should check out!
 
-- Moving onto the future, Kurt shared that he’s excited to see the explosion of a diverse set of roles in out-of-product developer experience including content creators, illustrators, community engineers with more defined career ladders.
+-   Moving onto the future, Kurt shared that he’s excited to see the explosion of a diverse set of roles in out-of-product developer experience including content creators, illustrators, community engineers with more defined career ladders.
 
 ### DevX Digest is community-driven
 

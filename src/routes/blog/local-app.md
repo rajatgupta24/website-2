@@ -5,7 +5,7 @@ excerpt: While Gitpod can seamlessly integrate into your workflow in the vast ma
 image: header-desktop.png
 slug: local-app
 subtitle:
-tags: ["Engineering"]
+tags: ['Engineering']
 teaserImage: header-desktop.png
 title: Gitpod Local Companion - localhost is going remote
 ---
@@ -26,8 +26,8 @@ As a preview release, not all of the features are implemented, most notably the 
 
 > 💡 **Notice:** A lot has improved on local-companion and the port-forwarding aspect since the publication of this blog post. You could also simply open a Gitpod workspace in [VS Code Desktop](https://www.gitpod.io/docs/references/ides-and-editors/vscode#open-a-workspace-in-vs-code-desktop) or any other supported local editor client and your ports would be automatically forwarded for you! See the below links to learn more:
 >
-> - https://www.gitpod.io/docs/references/ides-and-editors#supported-ideeditors
-> - https://www.gitpod.io/docs/configure/workspaces/ports#port-forwarding
+> -   https://www.gitpod.io/docs/references/ides-and-editors#supported-ideeditors
+> -   https://www.gitpod.io/docs/configure/workspaces/ports#port-forwarding
 
 ## See it in action
 
@@ -49,12 +49,12 @@ We love feedback here at Gitpod, so please give it a try and let us know what yo
 
 To get started, download the preview release of the _Gitpod Local Companion_ app for your platform (right click, 'Save (Link) As')
 
-- [Mac Intel Chip](https://gitpod.io/static/bin/gitpod-local-companion-darwin) - you will need to grant permission as it is not yet notarised. See <a class="no-nowrap" href="https://support.apple.com/en-au/HT202491">“open an app that hasn’t been notarised or is from an unidentified developer”</a> or click on the app in Finder while holding the Control key down and select 'Open' from the menu and then 'Open' in the prompt.
-- [Mac Apple Silicon](https://gitpod.io/static/bin/gitpod-local-companion-darwin-arm64)
-- [Linux 64 bit](https://gitpod.io/static/bin/gitpod-local-companion-linux)
-- [Linux ARM 64](https://gitpod.io/static/bin/gitpod-local-companion-linux-arm64)
-- [Windows 64 bit](https://gitpod.io/static/bin/gitpod-local-companion-windows.exe)
-- [Windows 32 bit](https://gitpod.io/static/bin/gitpod-local-companion-windows-386.exe)
+-   [Mac Intel Chip](https://gitpod.io/static/bin/gitpod-local-companion-darwin) - you will need to grant permission as it is not yet notarised. See <a class="no-nowrap" href="https://support.apple.com/en-au/HT202491">“open an app that hasn’t been notarised or is from an unidentified developer”</a> or click on the app in Finder while holding the Control key down and select 'Open' from the menu and then 'Open' in the prompt.
+-   [Mac Apple Silicon](https://gitpod.io/static/bin/gitpod-local-companion-darwin-arm64)
+-   [Linux 64 bit](https://gitpod.io/static/bin/gitpod-local-companion-linux)
+-   [Linux ARM 64](https://gitpod.io/static/bin/gitpod-local-companion-linux-arm64)
+-   [Windows 64 bit](https://gitpod.io/static/bin/gitpod-local-companion-windows.exe)
+-   [Windows 32 bit](https://gitpod.io/static/bin/gitpod-local-companion-windows-386.exe)
 
 Alternatively, in a terminal run the following:
 
@@ -124,9 +124,9 @@ You will be prompted to add the address to your known hosts file and you will be
 
 We have big plans for the _Gitpod Local Companion_ App! Future features **may** include:
 
-- 2-way tunnelling
-- Listing what workspaces are running
-- Listing what ports are currently tunneled and in which direction (workspace to/from local)
-- Starting/stopping port forwarding from the command line
-- Connecting a local VS Code instance to a workspace
-- SSH into a workspace from the command line in a simple, straight forward way
+-   2-way tunnelling
+-   Listing what workspaces are running
+-   Listing what ports are currently tunneled and in which direction (workspace to/from local)
+-   Starting/stopping port forwarding from the command line
+-   Connecting a local VS Code instance to a workspace
+-   SSH into a workspace from the command line in a simple, straight forward way

@@ -32,7 +32,7 @@ Run `gp init` on your terminal or manually create a file called `.gitpod.yml`
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 ```
 
 2. Create a file called `.gitpod.Dockerfile` and put the following content in it:
@@ -54,8 +54,8 @@ Now you can use `$SCM_TOKEN` environment variable after you commit and create a 
 
 At the [variables](https://gitpod.io/user/variables) page, create two variables[[1](https://gitpod.io/user/account)] called:
 
-- GIT_COMMITTER_EMAIL
-- GIT_AUTHOR_EMAIL
+-   GIT_COMMITTER_EMAIL
+-   GIT_AUTHOR_EMAIL
 
 and set the custom email address as the value and `*/*` as the scope.
 

@@ -4,7 +4,7 @@ date: Thursday, 30 Jun 2022 02:00:00 UTC
 excerpt: This story is about how Gitpod enabled an 18-year-old student from Dhaka with a broken laptop to continue developing software on an Android phone seamlessly
 slug: software-development-from-my-android-phone-at-datacenter-speeds
 teaserImage: teaser.png
-tags: ["Gitpod updates"]
+tags: ['Gitpod updates']
 image: teaser.png
 title: Software development from my Android phone at datacenter speeds
 ---
@@ -23,27 +23,27 @@ A few years ago, I got into software development while exploring the [Android-x8
 
 # Getting started with Gitpod on Android
 
-![My android phone with a bluetooth keyboard and mouse](../../../../../static/images/blog/software-development-from-my-android-phone-at-datacenter-speeds/20220412_004915681.jpg "This is how my setup used to look like!")
+![My android phone with a bluetooth keyboard and mouse](../../../../../static/images/blog/software-development-from-my-android-phone-at-datacenter-speeds/20220412_004915681.jpg 'This is how my setup used to look like!')
 
 Getting started with Gitpod on Android is quite easy. If you are interested in setting up Gitpod on Android, you can check out the [detailed guide](../guides/getting-started-with-gitpod-in-android).
 
 `youtube: Aepvv_OqRYU`
 
-- Step 1: Install [Kiwi](https://kiwibrowser.com/) browser 🥝
-- Step 2: Install the [Gitpod extension](https://chrome.google.com/webstore/detail/gitpod-online-ide/dodmmooeoklaejobgleioelladacbeki) in Kiwi browser 🍊
-- Step 3: Open a Git repository in Gitpod ⚡️
-- Step 4: Code, Develop, Ship it 🚀
+-   Step 1: Install [Kiwi](https://kiwibrowser.com/) browser 🥝
+-   Step 2: Install the [Gitpod extension](https://chrome.google.com/webstore/detail/gitpod-online-ide/dodmmooeoklaejobgleioelladacbeki) in Kiwi browser 🍊
+-   Step 3: Open a Git repository in Gitpod ⚡️
+-   Step 4: Code, Develop, Ship it 🚀
 
 # Things I built/maintained with Gitpod on my Android phone
 
 Here are some fun things I did:
 
-- [Optimus Discord Bot](https://github.com/supremegamers/optimus) - This hackathon project is now powering our Gitpod Community Discord server 🎉 I had started developing the first version of it for [https://aopc.dev/](https://aopc.dev/) discord server but the compile times were unbearable until I found Gitpod.
-- [GearLock](https://github.com/axonasif/gearlock) - Maintaining a bootable custom-recovery and package manager for Android-x86.
-- [Tuxdroid](https://github.com/tuxdroid-io/tuxdroid) - This script manages my Linux GUI and the terminal environment on my phone, and an interesting fact - I programmed it on my phone to use it for my phone 😆. I can run VS Code inside my phone with the help of this, which also enables me to connect to a Gitpod workspace via Remote-SSH and more!
-- [Bashbox](https://github.com/bashbox/bashbox) - A _bash compiler_ that helps me create modular and maintainable bash projects. I also used it for creating **Tuxdroid** above in a very short time!
-- [DarkMatter](https://github.com/supremegamers/darkmatter) - Maintaining a customized Android-x86 distro.
-- [multitux-gp](https://github.com/axonasif/multitux-gp) - Attempt to parse Gitpod `workspace-images` Dockerfiles and generate them for different distros. It's still a work in progress!
+-   [Optimus Discord Bot](https://github.com/supremegamers/optimus) - This hackathon project is now powering our Gitpod Community Discord server 🎉 I had started developing the first version of it for [https://aopc.dev/](https://aopc.dev/) discord server but the compile times were unbearable until I found Gitpod.
+-   [GearLock](https://github.com/axonasif/gearlock) - Maintaining a bootable custom-recovery and package manager for Android-x86.
+-   [Tuxdroid](https://github.com/tuxdroid-io/tuxdroid) - This script manages my Linux GUI and the terminal environment on my phone, and an interesting fact - I programmed it on my phone to use it for my phone 😆. I can run VS Code inside my phone with the help of this, which also enables me to connect to a Gitpod workspace via Remote-SSH and more!
+-   [Bashbox](https://github.com/bashbox/bashbox) - A _bash compiler_ that helps me create modular and maintainable bash projects. I also used it for creating **Tuxdroid** above in a very short time!
+-   [DarkMatter](https://github.com/supremegamers/darkmatter) - Maintaining a customized Android-x86 distro.
+-   [multitux-gp](https://github.com/axonasif/multitux-gp) - Attempt to parse Gitpod `workspace-images` Dockerfiles and generate them for different distros. It's still a work in progress!
 
 # How I got an Internship at Gitpod
 

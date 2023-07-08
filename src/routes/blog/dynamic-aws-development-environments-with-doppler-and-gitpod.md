@@ -3,7 +3,7 @@ author: burningion
 date: Tuesday, 28 Mar 2023 11:00:00 UTC
 excerpt: Provision limited, disposable access to AWS development environments with Gitpod and Doppler
 slug: dynamic-aws-development-environments-with-doppler-and-gitpod
-tags: ["Engineering", "Developer experience"]
+tags: ['Engineering', 'Developer experience']
 image: aws-dev-env-small.webp
 teaserImage: aws-dev-env.webp
 title: Dynamic AWS Development Environments with Doppler and Gitpod
@@ -57,19 +57,19 @@ Next, we’ll need to create a `doppler.yaml` in the root of our repository to l
 
 ```yml
 setup:
-  project: dynamic-secrets-gitpod
-  config: dev
+    project: dynamic-secrets-gitpod
+    config: dev
 ```
 
 With this, I can finally set my `.gitpod.yml`, so that I configure Doppler access, and then inject my disposable AWS credentials into my CDE. All together, my file looks like this:
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 
 tasks:
-  - init: pip install textual
-    command: doppler setup --no-interactive && doppler secrets substitute aws-creds > ~/.aws/credentials && doppler secrets substitute aws-conf > ~/.aws/configuration && python3 cli.py
+    - init: pip install textual
+      command: doppler setup --no-interactive && doppler secrets substitute aws-creds > ~/.aws/credentials && doppler secrets substitute aws-conf > ~/.aws/configuration && python3 cli.py
 ```
 
 Breaking down the configuration, we first specify our custom Dockerfile we saved, for Gitpod to build from. We then add a pip install for textual, a terminal application library I’m using for my repo, followed by the actual commands to authenticate with Doppler, and inject our credentials into the two new template files we’ve created, `aws-creds`, and `aws-conf`.

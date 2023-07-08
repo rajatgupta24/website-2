@@ -4,7 +4,7 @@ date: Tue, 21 Feb 2023 11:00:00
 excerpt: See how 1Password can be used to sign your commits on Gitpod with SSH keys and biometric confirmation
 image: teaser.webp
 slug: signing-git-commits-on-gitpod-with-1-password
-tags: ["Engineering"]
+tags: ['Engineering']
 teaserImage: teaser.webp
 title: Signing Commits on Gitpod with 1Password
 ---
@@ -65,9 +65,9 @@ Host *.gitpod.io
 
 These changes make sure of two things:
 
-- SSH authentication is being handled by 1Password's Agent
+-   SSH authentication is being handled by 1Password's Agent
 
-- Agent forwarding is enabled for \*.gitpod.io which means all Gitpod workspaces have access to the SSH auth socket. (If you’re using an instance of Gitpod dedicated, set it to a wildcard of your internally hosted domain.)
+-   Agent forwarding is enabled for \*.gitpod.io which means all Gitpod workspaces have access to the SSH auth socket. (If you’re using an instance of Gitpod dedicated, set it to a wildcard of your internally hosted domain.)
 
 Next, we'll need to generate an SSH Key. You can do this right within the [Gitpod SSH keys](https://gitpod.io/keys) page if you have the 1Password extension installed:
 
@@ -161,11 +161,11 @@ If you like, you can [fork my dotfiles](https://github.com/burningion/gitpod-dot
 
 ## References
 
-- Community office hours with 1Password:
+-   Community office hours with 1Password:
 
 `youtube: u2aCOtMqtc4`
 
-- SSH & Git - Get Started https://developer.1password.com/docs/ssh/get-started
-- 1Password Developer Documentation https://developer.1password.com/
+-   SSH & Git - Get Started https://developer.1password.com/docs/ssh/get-started
+-   1Password Developer Documentation https://developer.1password.com/
 
 If you have any questions about setting this up, drop by [Gitpod’s community Discord server](https://www.gitpod.io/chat) or [1Password’s Developer Slack Community](https://join.slack.com/t/1password-devs/shared_invite/zt-1halo11ps-6o9pEv96xZ3LtX_VE0fJQA). We would love to hear your feedback in the Community.

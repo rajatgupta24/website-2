@@ -25,14 +25,14 @@ All without leaving needing to leave your desktop.
 
 JetBrains Gateway is the underlying technology which enables the Gitpod integration. Support for JetBrains IDEs will be rolled out incrementally. The [JetBrains Gateway plugin](https://plugins.jetbrains.com/plugin/18438-gitpod-gateway) is a standalone feature, so its release cycle is independent individual JetBrains IDE support.
 
-- [IntelliJ](/docs/references/ides-and-editors/intellij)
-- [GoLand](/docs/references/ides-and-editors/goland)
-- [PhpStorm](/docs/references/ides-and-editors/phpstorm)
-- [PyCharm](/docs/references/ides-and-editors/pycharm)
-- [RubyMine](/docs/references/ides-and-editors/rubymine)
-- [WebStorm](/docs/references/ides-and-editors/webstorm)
-- [Rider](/docs/references/ides-and-editors/rider)
-- [CLion](/docs/references/ides-and-editors/clion)
+-   [IntelliJ](/docs/references/ides-and-editors/intellij)
+-   [GoLand](/docs/references/ides-and-editors/goland)
+-   [PhpStorm](/docs/references/ides-and-editors/phpstorm)
+-   [PyCharm](/docs/references/ides-and-editors/pycharm)
+-   [RubyMine](/docs/references/ides-and-editors/rubymine)
+-   [WebStorm](/docs/references/ides-and-editors/webstorm)
+-   [Rider](/docs/references/ides-and-editors/rider)
+-   [CLion](/docs/references/ides-and-editors/clion)
 
 ## Getting started
 
@@ -114,6 +114,6 @@ The following diagram details how the JetBrains Gateway client connects and comm
 
 ## Troubleshooting
 
-- [What should I do if JetBrains Gateway and Gitpod aren’t working?](/docs/help/troubleshooting#what-should-i-do-if-jetbrains-gateway-and-gitpod-arent-working)
-- [Gitpod logs in JetBrains Gateway](/docs/help/troubleshooting#gitpod-logs-in-jetbrains-gateway)
-- [Gitpod logs in JetBrains Client](/docs/help/troubleshooting#gitpod-logs-in-jetbrains-client)
+-   [What should I do if JetBrains Gateway and Gitpod aren’t working?](/docs/help/troubleshooting#what-should-i-do-if-jetbrains-gateway-and-gitpod-arent-working)
+-   [Gitpod logs in JetBrains Gateway](/docs/help/troubleshooting#gitpod-logs-in-jetbrains-gateway)
+-   [Gitpod logs in JetBrains Client](/docs/help/troubleshooting#gitpod-logs-in-jetbrains-client)

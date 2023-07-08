@@ -17,7 +17,7 @@ If you cannot find your issue here or in the documentation, please contact Gitpo
 
 These logs contain information about the workspace, the session, and the Visual Studio Code environment. They are useful for diagnosing connection issues and other unexpected behavior.
 
-- Open the Visual Studio Code Command Palette (<Keybind>CtrlCmd + Shift + P</Keybind>) and type **Export logs**, select **Gitpod: Export all logs** from the list to download a zip file containing all of the logs.
+-   Open the Visual Studio Code Command Palette (<Keybind>CtrlCmd + Shift + P</Keybind>) and type **Export logs**, select **Gitpod: Export all logs** from the list to download a zip file containing all of the logs.
 
 **Important:** The content of these logs should **NOT** be shared publicly as they could contain sensitive information about your workspace. Instead, send them to `troubleshooting@gitpod.io` along with a link to a corresponding GitHub issue if needed.
 
@@ -25,7 +25,7 @@ These logs contain information about the workspace, the session, and the Visual 
 
 These logs contain information about the workspace, the session, and the JetBrains Gateway. They are useful for diagnosing issues when connecting to a workspace, issues from Gateway Plugins and issues preventing the JetBrains Client to open.
 
-- Open the **Help** menu and select **Collect Logs and Diagnostic Data** option. After a few seconds, the file manager window will show up, revealing the location where the zip file containing all the logs has been saved.
+-   Open the **Help** menu and select **Collect Logs and Diagnostic Data** option. After a few seconds, the file manager window will show up, revealing the location where the zip file containing all the logs has been saved.
 
 **Important:** The content of these logs should **NOT** be shared publicly as they could contain sensitive information about your workspace. Instead, send them to `troubleshooting@gitpod.io` along with a link to a corresponding GitHub issue if needed.
 
@@ -35,7 +35,7 @@ These logs contain information about the workspace, the session, and the JetBrai
 
 These logs contain information about the workspace, the session, and the JetBrains IDE. They are useful for diagnosing connection issues, issues from IDE Plugins, and any unexpected behavior from the client and the server.
 
-- Open the **Help** menu and select **Collect Host and Client logs** option. After a few seconds, the file manager window will show up, revealing the location where the zip file containing all the logs has been saved.
+-   Open the **Help** menu and select **Collect Host and Client logs** option. After a few seconds, the file manager window will show up, revealing the location where the zip file containing all the logs has been saved.
 
 **Important:** The content of these logs should **NOT** be shared publicly as they could contain sensitive information about your workspace. Instead, send them to `troubleshooting@gitpod.io` along with a link to a corresponding GitHub issue if needed.
 
@@ -45,10 +45,10 @@ These logs contain information about the workspace, the session, and the JetBrai
 
 The ClearURLs browser extension for [Google Chrome](https://chrome.google.com/webstore/detail/clearurls/lckanjgmijmafbedllaakclkaicjfmnk?hl=en) and [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/clearurls/) inhibits Gitpod workspaces from initialising and the problem manifests with the following symptoms:
 
-- The dark theme doesn't load
-- The bottom left Gitpod button is missing
-- The VS Code Marketplace does not load
-- Settings Sync does not work
+-   The dark theme doesn't load
+-   The bottom left Gitpod button is missing
+-   The VS Code Marketplace does not load
+-   Settings Sync does not work
 
 This issue can be resolved by disabling "ETag filtering" in ClearURLs’ settings. An [issue has been created](https://gitlab.com/KevinRoebert/ClearUrls/-/issues/977) that requests to whitelist Gitpod by default and we would appreciate your upvotes on the issue.
 

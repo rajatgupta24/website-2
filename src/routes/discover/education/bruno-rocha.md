@@ -1,10 +1,10 @@
 ---
-title: "Teaching thousands of students using Gitpod."
-excerpt: "Bruno Rocha used Gitpod to teach students Python and Rust, reducing the amount of in-person support each student needed and allowing students to learn on any device. Bruno also hosted Python Week 2022 where he taught thousands of students using Gitpod."
+title: 'Teaching thousands of students using Gitpod.'
+excerpt: 'Bruno Rocha used Gitpod to teach students Python and Rust, reducing the amount of in-person support each student needed and allowing students to learn on any device. Bruno also hosted Python Week 2022 where he taught thousands of students using Gitpod.'
 slug: bruno-rocha
 image: teaser.png
 date: Friday, 17 June 2022 06:00:00 UTC
-pageTitle: "Bruno Rocha case study: Teaching python with Gitpod"
+pageTitle: 'Bruno Rocha case study: Teaching python with Gitpod'
 pageDescription: Teaching thousands of students using Gitpod. Saving 20 minutes every workshop. Learn how Bruno uses Gitpod to teach Python.
 keywords: education, python, rust, workshops, Bruno Rocha
 ---

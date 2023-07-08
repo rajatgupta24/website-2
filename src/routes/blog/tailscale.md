@@ -5,7 +5,7 @@ excerpt: Tailscale and Gitpod partner to enable secure and professional software
 image: header.jpg
 slug: tailscale
 subtitle:
-tags: ["Gitpod updates"]
+tags: ['Gitpod updates']
 teaserImage: header.jpg
 title: Tailscale x Gitpod
 ---
@@ -16,7 +16,7 @@ title: Tailscale x Gitpod
 
 **TL;DR**
 
-- Tailscale and Gitpod partner to enable secure, professional software development from anywhere
+-   Tailscale and Gitpod partner to enable secure, professional software development from anywhere
 
 > We mentioned this already a [couple of times](/blog/cloud-based-development-for-everyone): in retrospect **the second half of 2021 will mark the tipping point for remote, cloud-based development.**
 
@@ -38,11 +38,11 @@ To connect any new dev environment, spin up a workspace in Gitpod and authentica
 
 With Gitpod and Tailscale you can:
 
-- Securely access a cloud or on-prem resource, like a production database
-- Spin up a fleet of connected Gitpod workspaces
-- Share a staged resource with a colleague, as part of a review
-- Access a package registry
-- Complete a coding interview
+-   Securely access a cloud or on-prem resource, like a production database
+-   Spin up a fleet of connected Gitpod workspaces
+-   Share a staged resource with a colleague, as part of a review
+-   Access a package registry
+-   Complete a coding interview
 
 What Big Tech such as [Google, Facebook or Shopify](https://twitter.com/jmwind/status/1331364214582222854?s=20) has been doing for years is now accessible for the rest of the world: secure remote development in the cloud.
 

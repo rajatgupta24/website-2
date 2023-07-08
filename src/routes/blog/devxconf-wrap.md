@@ -6,7 +6,7 @@ image: teaser.png
 slug: devxconf-wrap
 subtitle:
 teaserImage: teaser.png
-tags: ["Company building"]
+tags: ['Company building']
 title: DevX Conf wrap & distributing USD 10k of open-source funding
 ---
 
@@ -28,9 +28,9 @@ First of all, we were amazed by the attention that was drawn by this topic. It w
 
 Here are just a few highlights of the event:
 
-- An interview with Erich Gamma, the lead developer of VS Code, about the [Evolution of DevX Conf](https://www.youtube.com/watch?v=JiBUDS9odA8&list=PL3TSF5whlprUTnpP9drAl-knNUnPqKrui&index=2&t=1277s)
-- A talk by Ellen Chisa, the co-founder of Dark Lang, who discussed the hypothesis that <a class="no-nowrap" href="https://www.youtube.com/watch?v=nPO4QL0Q85s&amp;list=PL3TSF5whlprUTnpP9drAl-knNUnPqKrui&amp;index=4&amp;t=17s">DevX isn’t good, because developers don’t want it to be</a>
-- A talk about <a class="no-nowrap" href="https://www.youtube.com/watch?v=0wRUU0ln9-0&amp;list=PL3TSF5whlprUTnpP9drAl-knNUnPqKrui&amp;index=4&amp;t=17s">being trapped in the open source supply chain</a> by Henry Zhu, the Steward of BabelJS
+-   An interview with Erich Gamma, the lead developer of VS Code, about the [Evolution of DevX Conf](https://www.youtube.com/watch?v=JiBUDS9odA8&list=PL3TSF5whlprUTnpP9drAl-knNUnPqKrui&index=2&t=1277s)
+-   A talk by Ellen Chisa, the co-founder of Dark Lang, who discussed the hypothesis that <a class="no-nowrap" href="https://www.youtube.com/watch?v=nPO4QL0Q85s&amp;list=PL3TSF5whlprUTnpP9drAl-knNUnPqKrui&amp;index=4&amp;t=17s">DevX isn’t good, because developers don’t want it to be</a>
+-   A talk about <a class="no-nowrap" href="https://www.youtube.com/watch?v=0wRUU0ln9-0&amp;list=PL3TSF5whlprUTnpP9drAl-knNUnPqKrui&amp;index=4&amp;t=17s">being trapped in the open source supply chain</a> by Henry Zhu, the Steward of BabelJS
 
 All talks are now available for watching via this [playlist on YouTube](https://www.youtube.com/playlist?list=PL3TSF5whlprUTnpP9drAl-knNUnPqKrui).
 
@@ -59,8 +59,8 @@ _Credit: [Sajjad Ahmadi](https://unsplash.com/photos/96m9K49qaPw)_
 
 As part of Gitpod's [Open-Source Sustainability Fund initiative](/blog/gitpod-open-source-sustainability-fund/) attendees of the DevX Conf <a class="no-nowrap" href="https://devxconf.org/opensource">were able to decide where $10,000 USD of funds</a> (the profits from DevX Conf plus an additional donation by Gitpod) were to be distributed. We thought long and hard about _what_ projects to include in the competition and pondered about:
 
-- **what exactly is digital infrastructure?**
-- **what tools are relied upon by developers every day that are built and maintained almost exclusively by unpaid volunteers?**.
+-   **what exactly is digital infrastructure?**
+-   **what tools are relied upon by developers every day that are built and maintained almost exclusively by unpaid volunteers?**.
 
 After some dialectical thinking, the answer became clear: projects built by unpaid volunteers in the category of [linters](<https://en.wikipedia.org/wiki/Lint_(software)>) and [language server protocol](https://langserver.org/) implementations.
 
@@ -112,10 +112,10 @@ Sending hand crafted emails (assuming an email address is publically available �
 
 If you are the steward of one of the above, open-source projects, then there's one simple, easy step you can do to enable Gitpod and other companies to provide financial support...
 
-- 1. Go sign up to [GitHub Sponsors](https://github.com/sponsors) or [Open Collective](https://www.opencollective.com)
-- 2. Publically document the process of how companies can support your project.
-- 3. Send an email to <a href="mailto:contact@gitpod.io?subject=Distribution of DevX Open-source Funding">contact@gitpod.io</a>.
-- 4. Nominate where funding should be directed (if you wish to divert the funds to a cause that helps improve diversity in open-source such as [Outreachy](https://www.outreachy.org/) that's possible!)
+-   1. Go sign up to [GitHub Sponsors](https://github.com/sponsors) or [Open Collective](https://www.opencollective.com)
+-   2. Publically document the process of how companies can support your project.
+-   3. Send an email to <a href="mailto:contact@gitpod.io?subject=Distribution of DevX Open-source Funding">contact@gitpod.io</a>.
+-   4. Nominate where funding should be directed (if you wish to divert the funds to a cause that helps improve diversity in open-source such as [Outreachy](https://www.outreachy.org/) that's possible!)
 
 ## Thanks
 

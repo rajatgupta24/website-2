@@ -7,7 +7,7 @@ slug: psychology-of-devx
 subtitle:
 teaserImage: teaser.png
 title: DevX Digest 03 - The Psychology of Developer Experience
-tags: ["Developer experience"]
+tags: ['Developer experience']
 type: digest
 ---
 
@@ -33,9 +33,9 @@ Think back to the last time you were bored. For example, you have spent so much 
 
 If onboarding is too hard, you can often hit that wall of frustration and spiralling anxiety that comes with it. So how do we solve this? Leveraging the feeling of familiarity is so important. 🎯
 
-- **Anchoring familiar onboarding** e.g. from the comfort of a CLI tool!
-- **Connecting the tool to an existing skill**
-- **Connecting to an existing workflow** e.g. adding to the toolchain
+-   **Anchoring familiar onboarding** e.g. from the comfort of a CLI tool!
+-   **Connecting the tool to an existing skill**
+-   **Connecting to an existing workflow** e.g. adding to the toolchain
 
 ### When something is too easy 🥱
 
@@ -59,9 +59,9 @@ Developers come from all walks of life, from vast backgrounds and experiences, m
 
 For instance, let’s take learning styles. Ellen highlighted that developers learn in different ways which contribute to their onboarding experience. Some developers...
 
-- Read the documentation 📖
-- Start with a blank canvas and learn by building 💻
-- Completely take apart an application and reverse it to fit their own needs 🛠
+-   Read the documentation 📖
+-   Start with a blank canvas and learn by building 💻
+-   Completely take apart an application and reverse it to fit their own needs 🛠
 
 In a similar sentiment, there’s a saying: _the more you know, the more you don’t know._
 

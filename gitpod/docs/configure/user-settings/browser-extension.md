@@ -20,8 +20,8 @@ prefixing for you - as simple as that.
 
 We provide the extension for:
 
-- [Chrome](https://chrome.google.com/webstore/detail/gitpod-online-ide/dodmmooeoklaejobgleioelladacbeki) - also works for Edge, Brave and other Chromium-based browsers.
-- [Firefox](https://addons.mozilla.org/firefox/addon/gitpod/)
+-   [Chrome](https://chrome.google.com/webstore/detail/gitpod-online-ide/dodmmooeoklaejobgleioelladacbeki) - also works for Edge, Brave and other Chromium-based browsers.
+-   [Firefox](https://addons.mozilla.org/firefox/addon/gitpod/)
 
 ## Access the extension settings
 

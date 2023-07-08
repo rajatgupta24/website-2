@@ -6,7 +6,7 @@ slug: gitpod-for-opensource
 subtitle:
 teaserImage: teaser.jpg
 image: teaser.jpg
-tags: ["Company building"]
+tags: ['Company building']
 title: Introducing Gitpod for Open Source
 ---
 
@@ -16,17 +16,17 @@ title: Introducing Gitpod for Open Source
 
 **TL;DR**
 
-- Today we are announcing our “[Gitpod for Open Source](/discover/opensource)” program.
-- Gitpod has formed a new team to support open source (ps [we are hiring](/careers)) and personalized support is now available to open source maintainers / communities.
-- complimentary [Gitpod Self-Hosted licenses](/self-hosted) are now available for projects that maintain their independence via running their own infrastructure (ie Haskell, Drupal, Rust). Apply via [this form](/discover/opensource).
-- Free and open source software projects aligned with [FOSSHost](https://fosshost.org/about) can request an account upgrade to a complimentary professional open source account via [this form](/discover/opensource).
-- Over 18,000 people in the GitHub ecosystem have been pre-qualified for complimentary professional open source accounts with unlimited hours. If you are in the short-list your account will be automatically upgraded either upon account creation or when you next start a workspace with your existing account. No action is required.
-  - If you had published a Visual Studio Code extension, Emacs or Vim plugin on GitHub before this blog post went live then you are likely on the shortlist.
-  - If your membership was public before this blog post went live on one of more of the following GitHub organizations then you are likely on the shortlist:
+-   Today we are announcing our “[Gitpod for Open Source](/discover/opensource)” program.
+-   Gitpod has formed a new team to support open source (ps [we are hiring](/careers)) and personalized support is now available to open source maintainers / communities.
+-   complimentary [Gitpod Self-Hosted licenses](/self-hosted) are now available for projects that maintain their independence via running their own infrastructure (ie Haskell, Drupal, Rust). Apply via [this form](/discover/opensource).
+-   Free and open source software projects aligned with [FOSSHost](https://fosshost.org/about) can request an account upgrade to a complimentary professional open source account via [this form](/discover/opensource).
+-   Over 18,000 people in the GitHub ecosystem have been pre-qualified for complimentary professional open source accounts with unlimited hours. If you are in the short-list your account will be automatically upgraded either upon account creation or when you next start a workspace with your existing account. No action is required.
+    -   If you had published a Visual Studio Code extension, Emacs or Vim plugin on GitHub before this blog post went live then you are likely on the shortlist.
+    -   If your membership was public before this blog post went live on one of more of the following GitHub organizations then you are likely on the shortlist:
 
 > alpinelinux, angular, apache, apple, archlinux, babel, caddyserver, cake-build, cakephp, centos, clojure, cncf, cockroachdb, curl, darktable-org, dart-lang, django, docker, dotnet, eclipse, elastic, elixir-lang, endeavouros-team, erlang, expressjs, facebook, flutter, fody, freebsd, fsprojects, ghc, gnome, golang, haproxy, hashicorp, haskell, homebrew, illumos, jaegertracing, jetbrains, julialang, jruby, k3s-io, kubernetes, laravel, libressl-portable, llvm, lua, maintainers, mathworks, microsoft, moby, mongodb, mono, mozilla, mysql, neovim, netbsd, nginx, nixos, nodejs, npm, obsproject, ohmyzsh, open-telemetry, openjdk, openresty, openssl, particular, perl, phoenixframework, php, pnpm, postgres, python, r-lib, rails, redhat-developer, redis, rethinkdb, rstudio, ruby, rust-lang, scala, serilog, sixlabors, sparklemotion, spring-projects, statiqdev, sveltejs, symfony, tailwindlabs, tc39, tmux, twbs, videolan, vim, vuejs, wolfssl, womenwhocode and xunit
 
-- Projects, communities and maintainers that use GitLab (or Bitbucket) or that are not in the above list can use [this form](/discover/opensource) to request an upgrade of your account to our complimentary professional open-source plan.
+-   Projects, communities and maintainers that use GitLab (or Bitbucket) or that are not in the above list can use [this form](/discover/opensource) to request an upgrade of your account to our complimentary professional open-source plan.
 
 Howdy folks,
 
@@ -58,11 +58,11 @@ That isn’t some dream. It’s actually possible today, and it's only going to 
 
 Gitpod is equally delightful for open source maintainers as well:
 
-- Code anywhere, on any device. No need for over powered laptops, a chrome book and even an iPad will work just fine.
-  Gitpod prebuilds developer environments whenever there's a commit to a repository or a pull-request is raised.
-- Gone are the days of typing “git clone” && “git pull” by hand. Open each pull–request you wish to review in a new browser tab or another desktop editor window and everything is restored, precompiled and ready to go.
-- With Gitpod, people can contribute to your project with a single click. Tedious environment setups, contributing guides and maintenance activities no longer exist. You'll receive more contributions and contributions are easier to review!
-- By using Gitpod, no packages or dependencies are downloaded to your devices which helps contain security incidents by inhibiting malicious actors pivoting towards completely compromising your workstation.
+-   Code anywhere, on any device. No need for over powered laptops, a chrome book and even an iPad will work just fine.
+    Gitpod prebuilds developer environments whenever there's a commit to a repository or a pull-request is raised.
+-   Gone are the days of typing “git clone” && “git pull” by hand. Open each pull–request you wish to review in a new browser tab or another desktop editor window and everything is restored, precompiled and ready to go.
+-   With Gitpod, people can contribute to your project with a single click. Tedious environment setups, contributing guides and maintenance activities no longer exist. You'll receive more contributions and contributions are easier to review!
+-   By using Gitpod, no packages or dependencies are downloaded to your devices which helps contain security incidents by inhibiting malicious actors pivoting towards completely compromising your workstation.
 
 > “With Gitpod, I can review any pull request in a full coding environment where I can edit, build, and test the contribution, by just prepending "http://gitpod.io#". Gitpod makes the pull-request review process so much nicer for me and I no longer have to do any local checkouts.”
 >
@@ -70,26 +70,26 @@ Gitpod is equally delightful for open source maintainers as well:
 
 # Benefits
 
-- People and projects who qualify for Gitpod’s Open Source program are provided with unlimited hours for usage on public repos. Contributors to an open-source project are provided with a generous free plan for up to 50h a month, including private repos.
-- complimentary [Gitpod Self-Hosted](/self-hosted) licenses are available for projects that maintain their independence via running their own infrastructure (ie Haskell, Drupal, Rust).
-- Personalized support is now available to open source maintainers / communities.
+-   People and projects who qualify for Gitpod’s Open Source program are provided with unlimited hours for usage on public repos. Contributors to an open-source project are provided with a generous free plan for up to 50h a month, including private repos.
+-   complimentary [Gitpod Self-Hosted](/self-hosted) licenses are available for projects that maintain their independence via running their own infrastructure (ie Haskell, Drupal, Rust).
+-   Personalized support is now available to open source maintainers / communities.
 
 # Who is eligible?
 
 To qualify for Gitpod’s Open Source program, you need to meet one of this criteria:
 
-- You are a maintainer, core contributor to a well-established free software or open-source project.
-- You regularly contribute to free software or open source communities in other ways (e.g. producing regular content like blog posts, videos, live streams, translations, or organizing meet-ups, conferences, hackathons, etc).
-- You are an author, core contributor of extensions for editors such as VS Code, VIM, Emacs, et al. or of developer tools such as build systems, programming languages, compilers, and editor tooling such as Language Server Protocol (LSP) implementations.
-- A significant part of your income (employment or via community support) is from maintaining or producing open source work.
+-   You are a maintainer, core contributor to a well-established free software or open-source project.
+-   You regularly contribute to free software or open source communities in other ways (e.g. producing regular content like blog posts, videos, live streams, translations, or organizing meet-ups, conferences, hackathons, etc).
+-   You are an author, core contributor of extensions for editors such as VS Code, VIM, Emacs, et al. or of developer tools such as build systems, programming languages, compilers, and editor tooling such as Language Server Protocol (LSP) implementations.
+-   A significant part of your income (employment or via community support) is from maintaining or producing open source work.
 
 ## How do I apply?
 
 Via [this form](/discover/opensource) but you might not need to. Over 18,000 people in the GitHub ecosystem have been pre-qualified for complimentary professional open source accounts with unlimited hours. If you are in the short-list your account will be automatically upgraded either upon account creation or when you next start a workspace. No action is required.
 
-- If you had published a Visual Studio Code extension, Emacs or Vim plugin on GitHub before this blog post went live then you are likely on the shortlist.
+-   If you had published a Visual Studio Code extension, Emacs or Vim plugin on GitHub before this blog post went live then you are likely on the shortlist.
 
-- If your membership was public before this blog post went live on one of more of the following GitHub organizations then you are likely on the shortlist:
+-   If your membership was public before this blog post went live on one of more of the following GitHub organizations then you are likely on the shortlist:
 
 > alpinelinux, angular, apache, apple, archlinux, babel, caddyserver, cake-build, cakephp, centos, clojure, cncf, cockroachdb, curl, darktable-org, dart-lang, django, docker, dotnet, eclipse, elastic, elixir-lang, endeavouros-team, erlang, expressjs, facebook, flutter, fody, freebsd, fsprojects, ghc, gnome, golang, haproxy, hashicorp, haskell, homebrew, illumos, jaegertracing, jetbrains, julialang, k3s-io, kubernetes, laravel, libressl-portable, llvm, lua, maintainers, mathworks, moby, mongodb, mono, mozilla, mysql, neovim, netbsd, nginx, nixos, nodejs, npm, obsproject, ohmyzsh, open-telemetry, openjdk, openresty, openssl, particular, perl, phoenixframework, php, pnpm, postgres, python, r-lib, rails, redhat-developer, redis, rethinkdb, rstudio, rust-lang, scala, serilog, sixlabors, sparklemotion, spring-projects, statiqdev, sveltejs, symfony, tailwindlabs, tc39, tmux, twbs, videolan, vim, vuejs, wolfssl, womenwhocode and xunit
 
@@ -109,10 +109,10 @@ https://github.com/gitpod-io/doom becomes https://gitpod.io#https://github.com/g
 
 ## Recommended Reading
 
-- [https://www.gitpod.io/screencasts/getting-started-with-gitpod](/screencasts/getting-started-with-gitpod)
-- [https://www.gitpod.io/docs/configure/projects/prebuilds](/docs/configure/projects/prebuilds)
-- [https://www.gitpod.io/docs/configure/user-settings/dotfiles](/docs/configure/user-settings/dotfiles)
-- [https://www.gitpod.io/docs/references/gitpod-yml](/docs/references/gitpod-yml)
+-   [https://www.gitpod.io/screencasts/getting-started-with-gitpod](/screencasts/getting-started-with-gitpod)
+-   [https://www.gitpod.io/docs/configure/projects/prebuilds](/docs/configure/projects/prebuilds)
+-   [https://www.gitpod.io/docs/configure/user-settings/dotfiles](/docs/configure/user-settings/dotfiles)
+-   [https://www.gitpod.io/docs/references/gitpod-yml](/docs/references/gitpod-yml)
 
 ## Anything else?
 

@@ -6,7 +6,7 @@ image: teaser.jpg
 slug: organizations
 teaserImage: teaser.jpg
 title: A Guide to Gitpod's New Approach to Organizations
-tags: ["Gitpod updates"]
+tags: ['Gitpod updates']
 ---
 
 Gitpod has recently made changes to its approach to organizations, billing, and cost attribution. In this blog post, we will explain the new changes and clarify how they affect organizations, billing, and cost attribution.

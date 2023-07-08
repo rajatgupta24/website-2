@@ -5,7 +5,7 @@ excerpt: Gitpod is based on the open-source Theia IDE Framework, which is highly
 image: node-js-gitpod.png
 slug: node-js-gitpod
 title: Debugging Node.js applications in Theia
-tags: ["Engineering"]
+tags: ['Engineering']
 url: https://medium.com/gitpod/debugging-node-js-applications-in-theia-76c94c76f0a1
 ---
 
@@ -71,11 +71,11 @@ Now, in the app, try navigating to the homepage. The debug session will pause on
 
 There are several ways to see variables’ values:
 
-- you can traverse current scopes and variables in the debug view;
+-   you can traverse current scopes and variables in the debug view;
 
-- you can hover over expressions in the editor to evaluate them with a current session;
+-   you can hover over expressions in the editor to evaluate them with a current session;
 
-- or you can use the debug console (REPL) to evaluate custom expressions.
+-   or you can use the debug console (REPL) to evaluate custom expressions.
 
 You can always double-click on any variable to modify its value.
 

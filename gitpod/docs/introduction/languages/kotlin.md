@@ -34,9 +34,9 @@ RUN brew install kotlin
 
 This extension provides Kotlin language support for Gitpod and other IDEs, with:
 
-- Syntax highlighting
-- Code snippets
-- Region code folding
+-   Syntax highlighting
+-   Code snippets
+-   Region code folding
 
 To get it, open Gitpod's **Extensions** panel (left vertical menu), then search for "Kotlin" and install the extension by Mathias Fröhlich for your project. Next, commit the [.gitpod.yml](/docs/references/gitpod-yml) file that was automatically created (or updated) by Gitpod.
 

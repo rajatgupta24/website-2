@@ -4,7 +4,7 @@ date: Wed, 6 April 2022 16:00:00 UTC
 excerpt: We at Gitpod believe in making developer experiences better, and we are super excited to introduce Gitpod Installer 🎉, which makes Gitpod installations a breeze!
 image: teaser.png
 slug: gitpod-installer
-tags: ["Engineering", "Gitpod updates"]
+tags: ['Engineering', 'Gitpod updates']
 subtitle:
 teaserImage: teaser.png
 title: Why we moved from Helm to Gitpod Installer
@@ -69,8 +69,8 @@ The Gitpod Installer sits horizontally across all teams at Gitpod and it was bui
 While developing the Gitpod Installer, we made the decision to be opinionated at times to build something that just works. This allows us to provide our experience of running Gitpod SaaS to owners of self-hosted implementations. Being opinionated provides stability and keeps everything on a standards track. It reaps immense benefits while troubleshooting when something goes wrong. We enforced these decisions as validation constraints for the Gitpod Installer at config and cluster levels. These are some of the decisions we took,
 
 1. There can be only one installation per cluster which is due to
-   - Fixed node affinities for services.
-   - Fixed NodePorts for daemonsets.
+    - Fixed node affinities for services.
+    - Fixed NodePorts for daemonsets.
 2. Fix replica counts for services.
 3. External helm dependencies are embedded, hence non-configurable. We chose to do this because it gives us confidence that Gitpod is always running against a dependency that we have validated (like a known MySQL/RabbitMQ version)
 4. Cert-manager is a required dependency for creating internal SSL certificates for components like the Docker registry as it eliminates manual cert renewal.

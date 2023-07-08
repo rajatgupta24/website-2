@@ -1,7 +1,7 @@
 ---
 section: self-hosted/latest
 subsection: installation-guides
-title: "Single-Cluster Reference Architecture"
+title: 'Single-Cluster Reference Architecture'
 ---
 
 <script context="module">

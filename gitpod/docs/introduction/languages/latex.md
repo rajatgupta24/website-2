@@ -28,7 +28,7 @@ Next, create a file called [.gitpod.yml](/docs/references/gitpod-yml) and add th
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 ```
 
 Now commit both files into source control, and push them to your GitHub or GitLab repository.
@@ -52,15 +52,15 @@ Next, modify your `.gitpod.yml` like so:
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 
 tasks:
-  - name: LaTeX auto-rebuild
-    command: >
-      while find . -name '*.tex' | xargs inotifywait -qqre modify .; do \
-        latexmk -pdf ; \
-      done
-  - name: Terminal
+    - name: LaTeX auto-rebuild
+      command: >
+          while find . -name '*.tex' | xargs inotifywait -qqre modify .; do \
+            latexmk -pdf ; \
+          done
+    - name: Terminal
 ```
 
 This will start a watcher process that automatically recompiles your `*.tex` files when they are changed. Note: The watcher process will start in a separate Terminal on every workspace start.
@@ -77,8 +77,8 @@ This will automatically append something like this to your `.gitpod.yml` file:
 
 ```yml
 vscode:
-  extensions:
-    - efoerster.texlab@1.10.0:/Vq+k9Ug/81LYWajjTgMpA==
+    extensions:
+        - efoerster.texlab@1.10.0:/Vq+k9Ug/81LYWajjTgMpA==
 ```
 
 (Note: You can also append these lines yourself if you don't want to download & re-upload the `*.vsix` file.)

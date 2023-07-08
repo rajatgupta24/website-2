@@ -6,7 +6,7 @@ image: workspace-snapshots.jpeg
 slug: workspace-snapshots
 subtitle: Code never lies
 title: Creating reproducibles for any programming language
-tags: ["Gitpod updates"]
+tags: ['Gitpod updates']
 url: https://medium.com/gitpod/code-never-lies-creating-reproducibles-for-any-programming-language-7946021a68f2
 ---
 
@@ -42,12 +42,12 @@ However, instead of laying out the steps in prose, an automated solution would b
 
 Before we are taking the snapshot, we want to make sure everything is in the state we want it to be. So the maintainers get pointed to the culprit immediately. For this example I made sure
 
-- the build ran through,
+-   the build ran through,
 
-- the right editors are opened
-  (I choose to open the two files mentioned in the issue in split mode),
+-   the right editors are opened
+    (I choose to open the two files mentioned in the issue in split mode),
 
-- the sample application is started automatically
+-   the sample application is started automatically
 
 Taking care of the first two items is easy. For the third, you need to add a **_.gitpod.yml_** to the root of the project containing the tasks you want to start.
 

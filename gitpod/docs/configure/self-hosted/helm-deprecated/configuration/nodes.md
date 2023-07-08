@@ -20,8 +20,8 @@ Configure the nodes (computers or virtual machines) that Kubernetes runs Gitpod'
 Gitpod schedules two kinds of workloads: the Gitpod installation itself (which we refer to as _meta_) and the workspaces. Ideally both types of workloads run on separate nodes to make makes scaling easier.
 Depending on your cluster size that may not be feasible though. Either way, you need two node labels in your cluster:
 
-- `gitpod.io/workload_meta=true` which marks the "meta" nodes and
-- `gitpod.io/workload_workspace=true ` which marks the workspace nodes.
+-   `gitpod.io/workload_meta=true` which marks the "meta" nodes and
+-   `gitpod.io/workload_workspace=true ` which marks the workspace nodes.
 
 If you want to "mix 'n match", i.e., don't separate the nodes, you can simply run:
 
@@ -39,15 +39,15 @@ To do this:
 1.  Merge the following into your `values.custom.yaml`:
     ```yaml
     components:
-      imageBuilder:
-        # The image builder deploys a Docker-in-Docker-daemon. By default that Docker daemon works in an empty-dir on the node.
-        # Depending on the types of node you operate that may cause image builds to fail or not perform well. We recommend you give the Docker daemon
-        # fast storage on the node, e.g. an SSD.
-        hostDindData: /mnt/disks/ssd0/docker
-      wsDaemon:
-        # Workspace data is stored on the nodes. This setting configures where on the node the workspace data lives.
-        # The faster this location is (in terms of IO) the faster workspaces will initialize.
-        hostWorkspaceArea: /mnt/disks/ssd0/workspaces
+        imageBuilder:
+            # The image builder deploys a Docker-in-Docker-daemon. By default that Docker daemon works in an empty-dir on the node.
+            # Depending on the types of node you operate that may cause image builds to fail or not perform well. We recommend you give the Docker daemon
+            # fast storage on the node, e.g. an SSD.
+            hostDindData: /mnt/disks/ssd0/docker
+        wsDaemon:
+            # Workspace data is stored on the nodes. This setting configures where on the node the workspace data lives.
+            # The faster this location is (in terms of IO) the faster workspaces will initialize.
+            hostWorkspaceArea: /mnt/disks/ssd0/workspaces
     ```
 2.  Do a `helm upgrade --install -f values.custom.yaml gitpod gitpod.io/gitpod --version=0.10.0` to apply the changes.
 

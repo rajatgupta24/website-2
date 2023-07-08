@@ -25,9 +25,9 @@ However, between April 11th and 22nd, Gitpod experienced a series of incidents r
 
 In this post, we’ll cover:
 
-- What happened: a complete timeline.
-- Contributing factors: the cause of the outage.
-- How we’ll do better
+-   What happened: a complete timeline.
+-   Contributing factors: the cause of the outage.
+-   How we’ll do better
 
 ## What happened: a complete timeline
 
@@ -53,8 +53,8 @@ In other words, short term, we decided to alleviate the IO bandwidth issues by u
 
 The deploy of `ws39a` did not go smoothly.
 
-- The new `c2d` machine type was not available in all zones that we typically use, so we had to deploy to a new region. However, the region lacked sufficient quota for CPU and storage, and when we tried to increase, GCP’s quota approval process was too slow, albeit within SLA.
-- Once we were able to deploy to GCP, we were unexpectedly rate limited by Let’s Encrypt! As a result, we could not provision TLS certificates for new sub-domains, which is why some clusters had old sub-domains. Why? A customer [requested TLS certs](https://letsencrypt.org/docs/challenge-types/#http-01-challenge), exhausting the limit for gitpod.io! [We eventually resolved the rate limiting issue](https://github.com/gitpod-io/gitpod/pull/9358). Additionally, we requested a limit increase from Let’s Encrypt.
+-   The new `c2d` machine type was not available in all zones that we typically use, so we had to deploy to a new region. However, the region lacked sufficient quota for CPU and storage, and when we tried to increase, GCP’s quota approval process was too slow, albeit within SLA.
+-   Once we were able to deploy to GCP, we were unexpectedly rate limited by Let’s Encrypt! As a result, we could not provision TLS certificates for new sub-domains, which is why some clusters had old sub-domains. Why? A customer [requested TLS certs](https://letsencrypt.org/docs/challenge-types/#http-01-challenge), exhausting the limit for gitpod.io! [We eventually resolved the rate limiting issue](https://github.com/gitpod-io/gitpod/pull/9358). Additionally, we requested a limit increase from Let’s Encrypt.
 
 The traffic shift from `ws38` to `ws39a` was completed by _21:29_, and [the incident was closed](https://www.gitpodstatus.com/incidents/jzgzzk008hqp). Additionally, we held onto `ws38`, just in-case we have to fall-back to it, again.
 
@@ -83,8 +83,8 @@ At this time, we had too many active clusters, and had to increase quotas (appro
 
 **_07:30 UTC_** - The APAC team handed off the new set of clusters to the EU team at 07:30. The EU team at this point pursued a couple things:
 
-- Clean-up workspaces stuck in a stopping state, so that users could start them again.
-- Fix the CPU limiter and build the IO limiter, to help return Gitpod to reliable performance.
+-   Clean-up workspaces stuck in a stopping state, so that users could start them again.
+-   Fix the CPU limiter and build the IO limiter, to help return Gitpod to reliable performance.
 
 While improving limiters, a problem was found with [workspace networking](https://github.com/gitpod-io/gitpod/pull/9294). Networking had been improved as part of the April 8th release to grant faster network speeds and more CPU to users. However, it was also causing workspaces to be sluggish in production! This was hard to identify and resolve [[1](https://github.com/gitpod-io/gitpod/pull/9270)] because of a lack in parity between our development and production environments (production has IP forwarding disabled, development has it enabled).
 
@@ -165,8 +165,8 @@ We split a 1TB disk to many smaller RAID0 disks. This was done to isolate IO for
 
 An enhancement to our CPU limiting feature included a bug which reduced its corresponding effectiveness. This allowed for too many noisy neighbors. Further, the effect a noisy neighbor could have was magnified by workspaces generally having more CPU available. This was due to a couple factors:
 
-- We upgraded to faster machine types, for the same cost, to provide better multi-core performance.
-- [We removed slirp4netns from workspace networking](https://www.gitpod.io/blog/workspace-networking#wait-whats-slirp4netns-and-why-do-we-need-this), freeing up [user-space](https://en.wikipedia.org/wiki/User_space_and_kernel_space) for customer workloads.
+-   We upgraded to faster machine types, for the same cost, to provide better multi-core performance.
+-   [We removed slirp4netns from workspace networking](https://www.gitpod.io/blog/workspace-networking#wait-whats-slirp4netns-and-why-do-we-need-this), freeing up [user-space](https://en.wikipedia.org/wiki/User_space_and_kernel_space) for customer workloads.
 
 Improvements to workspace networking unfortunately introduced a couple tricky defects. [[1](https://github.com/gitpod-io/gitpod/pull/9294)][[2](https://github.com/gitpod-io/gitpod/pull/9356)] These caused sluggish performance for network processes, including containerized workloads.
 

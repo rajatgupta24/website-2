@@ -33,10 +33,10 @@ Here is an example of what a `.gitpod.yml` with installed extensions may look li
 
 ```yml
 vscode:
-  extensions:
-    - svelte.svelte-vscode
-    - bradlc.vscode-tailwindcss@0.6.11
-    - https://example.com/abc/releases/extension-0.26.0.vsix
+    extensions:
+        - svelte.svelte-vscode
+        - bradlc.vscode-tailwindcss@0.6.11
+        - https://example.com/abc/releases/extension-0.26.0.vsix
 ```
 
 You can share the installed extensions with your organization by committing the `.gitpod.yml` change and pushing it to your Git repository.
@@ -64,11 +64,11 @@ You can only use extensions available on the [Open VSX](#open-vsx) registry with
 
 The following extensions are therefore not available in VS Code Browser:
 
-- [Microsoft Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
-- [Microsoft C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
-- [Microsoft .Net](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.vscode-dotnet-runtime)
-- [Microsoft C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
+-   [Microsoft Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
+-   [Microsoft C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
+-   [Microsoft .Net](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.vscode-dotnet-runtime)
+-   [Microsoft C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
+-   [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
 
 ## Install VS Code extensions from a VSIX file
 
@@ -76,9 +76,9 @@ It is possible to develop, install and test your own custom VS Code extensions i
 
 **Please note:**
 
-- You can install any private extensions using manual VSIX installation.
-- Installing a `.vsix` in Gitpod does not list that extension anywhere public.
-- Any `.vsix` referenced in the `.gitpod.yml` must be publicly accessible.
+-   You can install any private extensions using manual VSIX installation.
+-   Installing a `.vsix` in Gitpod does not list that extension anywhere public.
+-   Any `.vsix` referenced in the `.gitpod.yml` must be publicly accessible.
 
 ## Open VSX
 

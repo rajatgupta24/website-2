@@ -2,7 +2,7 @@
 author: JohannesLandgraf, akosyakov, loujaybee
 date: Thursday, 28 April 2022 11:00:00 UTC
 excerpt: Gitpod and JetBrains announce partnership and deep product integration to bring remote development to developers around the world
-tags: ["Company building"]
+tags: ['Company building']
 slug: gitpod-jetbrains
 teaserImage: teaser.jpg
 image: teaser.jpg
@@ -19,11 +19,11 @@ title: Gitpod x JetBrains join forces to solve 'works on my machine' problem
 
 **TL;DR**
 
-- [Gitpod and JetBrains announce partnership and deep product integration](https://blog.jetbrains.com/blog/2022/02/24/jetbrains_partners_with_gitpod/) to bring remote development to developers around the world
-- Starting today professional software engineers can work in reproducible developer environments provisioned by Gitpod using their favorite desktop IDE from JetBrains including IntelliJ IDEA, PyCharm, GoLand, and PhpStorm
-- Gitpod is the first 3rd party service that is natively integrated into JetBrains Gateway for a seamless remote development experience
-- Benefit from improved developer experience, security, and collaboration while keeping the local editing experience with all shortcuts, keybindings and themes
-- Skip the talking and [get started now](https://www.gitpod.io/docs/integrations/jetbrains-gateway)
+-   [Gitpod and JetBrains announce partnership and deep product integration](https://blog.jetbrains.com/blog/2022/02/24/jetbrains_partners_with_gitpod/) to bring remote development to developers around the world
+-   Starting today professional software engineers can work in reproducible developer environments provisioned by Gitpod using their favorite desktop IDE from JetBrains including IntelliJ IDEA, PyCharm, GoLand, and PhpStorm
+-   Gitpod is the first 3rd party service that is natively integrated into JetBrains Gateway for a seamless remote development experience
+-   Benefit from improved developer experience, security, and collaboration while keeping the local editing experience with all shortcuts, keybindings and themes
+-   Skip the talking and [get started now](https://www.gitpod.io/docs/integrations/jetbrains-gateway)
 
 Since we started the company, we never wanted to be in the IDE or editor business. In fact, we are quite allergic to people thinking Gitpod is an _online or web IDE_. Gitpod is an open-source orchestration and provisioning platform for automated developer environments.
 
@@ -51,17 +51,17 @@ In August last year, [we shipped a cake to GitHub for their Codespaces launch](h
 
 Take a step back and look at the benefits which led [companies such as Google, Facebook, LinkedIn and Shopify to move software development to the cloud](https://gitpod.notion.site/Gitpod-Adoption-Stage-1-Educate-ed7b95be23e244c388e46fa3596ff2f5) and form the basis of our [purpose](https://www.notion.so/gitpod/Gitpod-s-Direction-be35d064c0704fbda61c542b84e07ef6):
 
-- **Better developer experience**. Automated setup with cloud-based, remote developer environments connected with a developer’s editing experience of choice. This means developers no longer have to endure nerve-wracking set-up and maintenance of local developer environments. Start coding and get creative with one click - with the tools you are most productive with
+-   **Better developer experience**. Automated setup with cloud-based, remote developer environments connected with a developer’s editing experience of choice. This means developers no longer have to endure nerve-wracking set-up and maintenance of local developer environments. Start coding and get creative with one click - with the tools you are most productive with
 
-- **Efficient multi-track development**. Have multiple workspaces with different configurations open at once - one for your feature, one for reviewing a PR/MR, or one for a bug.
+-   **Efficient multi-track development**. Have multiple workspaces with different configurations open at once - one for your feature, one for reviewing a PR/MR, or one for a bug.
 
-- **Remove the ‘works on my machine’ discussion**. Always start from a clean state - the end of all "works on my machine" situations due to long-living stateful environments. Spin up a workspace, code, push your code, and forget about it. For your next task, you’ll use a fresh dev environment. Onboard new developers with one click.
+-   **Remove the ‘works on my machine’ discussion**. Always start from a clean state - the end of all "works on my machine" situations due to long-living stateful environments. Spin up a workspace, code, push your code, and forget about it. For your next task, you’ll use a fresh dev environment. Onboard new developers with one click.
 
-- **Securing our software supply chain**. No packages or dependencies are downloaded to users' devices. Developer environments run in the cloud and are short-lived, protecting your local machines and other company resources from malicious attacks through execution of arbitrary code.
+-   **Securing our software supply chain**. No packages or dependencies are downloaded to users' devices. Developer environments run in the cloud and are short-lived, protecting your local machines and other company resources from malicious attacks through execution of arbitrary code.
 
-- **Power of the cloud**. Don't bother upgrading your developer's machine, with cloud-based, remote development the data center becomes your computer.
+-   **Power of the cloud**. Don't bother upgrading your developer's machine, with cloud-based, remote development the data center becomes your computer.
 
-- **Bringing developer environments closer to production**. Gitpod provisions powerful Linux containers under the hood. Workloads running on production are for a large part similarly running in containers on Linux. One operating system for both development and production.
+-   **Bringing developer environments closer to production**. Gitpod provisions powerful Linux containers under the hood. Workloads running on production are for a large part similarly running in containers on Linux. One operating system for both development and production.
 
 ![02](../../../static/images/blog/gitpod-jetbrains/02.jpg)
 
@@ -78,10 +78,10 @@ If you are interested in setting up a new Spring Boot project using Gitpod and J
 
 To guide you and your team through the different adoption phases towards remote software development, other engineering organisations found the following resources helpful:
 
-- [Customer Stories](https://www.gitpod.io/customers)
-- [Gitpod Adoption Stage 1 - Educate](https://www.notion.so/gitpod/Gitpod-Adoption-Stage-1-Educate-ed7b95be23e244c388e46fa3596ff2f5)
-- [Gitpod Adoption Stage 2 - Configure](https://www.notion.so/gitpod/Gitpod-Adoption-Stage-2-Configure-a02f77be08df452a90cef00fb2d1edac)
-- [Gitpod Adoption Stage 3 - Develop](https://www.notion.so/gitpod/Gitpod-Adoption-Stage-3-Develop-1340c1a8740a42118a68dc005a45d701)
+-   [Customer Stories](https://www.gitpod.io/customers)
+-   [Gitpod Adoption Stage 1 - Educate](https://www.notion.so/gitpod/Gitpod-Adoption-Stage-1-Educate-ed7b95be23e244c388e46fa3596ff2f5)
+-   [Gitpod Adoption Stage 2 - Configure](https://www.notion.so/gitpod/Gitpod-Adoption-Stage-2-Configure-a02f77be08df452a90cef00fb2d1edac)
+-   [Gitpod Adoption Stage 3 - Develop](https://www.notion.so/gitpod/Gitpod-Adoption-Stage-3-Develop-1340c1a8740a42118a68dc005a45d701)
 
 And if you haven't done so join our active Discord community - we are here to help! [www.gitpod.io/chat](http://www.gitpod.io/chat)
 

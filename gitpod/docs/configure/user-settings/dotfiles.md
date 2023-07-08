@@ -20,14 +20,14 @@ To configure Gitpod to use your own dotfiles for all your workspaces, enter the 
 
 Gitpod will recognize and run one of the following install scripts from your dotfiles repository.
 
-- install.sh
-- install
-- bootstrap.sh
-- bootstrap
-- script/bootstrap
-- setup.sh
-- setup
-- script/setup
+-   install.sh
+-   install
+-   bootstrap.sh
+-   bootstrap
+-   script/bootstrap
+-   setup.sh
+-   setup
+-   script/setup
 
 Note: Your installation script will be terminated if it exceeds 120 seconds.
 
@@ -76,8 +76,8 @@ For convenience, you can create a file called `debug.sh` in your dotfiles reposi
 
 When you commit a custom script such as `install.sh` in your dotfiles repository, Gitpod will no longer auto symlink your dotfiles under `$HOME` for you. It is by design so that you can have full control of how your dotfiles gets installed. An example of setting up a symlinking step is described below:
 
-- Create a directory called `home_files` inside your dotfiles repository. You can place your .dotfiles in the `home_files` directory, that means you could put files like `.zshrc`, `.tmux.conf`, `.config/nvim/` and etc. in there.
-- In your [custom installation script](#custom-installation-script) (e.g. `install.sh`), use/append the below snippet:
+-   Create a directory called `home_files` inside your dotfiles repository. You can place your .dotfiles in the `home_files` directory, that means you could put files like `.zshrc`, `.tmux.conf`, `.config/nvim/` and etc. in there.
+-   In your [custom installation script](#custom-installation-script) (e.g. `install.sh`), use/append the below snippet:
 
 ```bash
 current_dir="$(cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)"

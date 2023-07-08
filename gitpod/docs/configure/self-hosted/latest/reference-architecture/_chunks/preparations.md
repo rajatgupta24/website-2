@@ -65,24 +65,24 @@ Now, you are prepared to create your Kubernetes cluster.
 
 To deploy Gitpod on [Amazon Elastic Kubernetes Service (Amazon EKS)](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html), you must have an Amazon account that has permissions to deploy EKS and the underlying component services, which can include:
 
-- VPCs
-- Subnets
-- Internet Gateways
-- EC2 Instances
-- Autoscaling Groups
-- Elastic Load Balancers
+-   VPCs
+-   Subnets
+-   Internet Gateways
+-   EC2 Instances
+-   Autoscaling Groups
+-   Elastic Load Balancers
 
 Specifically for Gitpod's use, you will also need permissions to create these additional components:
 
-- Route53 DNS Zone for the intended Gitpod domain name (for use with Let's Encrypt certificate generation)
-- RDS Instance running MySQL 5.7 for Gitpod's database
-- S3 Bucket: Hosting Gitpod's workspace images and object storage
-- AWS IAM Service account: To enable access to the S3 bucket
+-   Route53 DNS Zone for the intended Gitpod domain name (for use with Let's Encrypt certificate generation)
+-   RDS Instance running MySQL 5.7 for Gitpod's database
+-   S3 Bucket: Hosting Gitpod's workspace images and object storage
+-   AWS IAM Service account: To enable access to the S3 bucket
 
 This guide uses the following tools:
 
-- [AWS CLI](https://aws.amazon.com/cli/) for creating none EKS specific services
-- [EKS CLI `eksctl`](https://eksctl.io/) for creating the EKS cluster and nodegroups themselves
+-   [AWS CLI](https://aws.amazon.com/cli/) for creating none EKS specific services
+-   [EKS CLI `eksctl`](https://eksctl.io/) for creating the EKS cluster and nodegroups themselves
 
 Amazon has a brief run-through on how to [deploy a basic cluster](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html) using the `eksctl` tooling if you'd like to familiarize yourself before deploying the Gitpod reference architecture.
 
@@ -98,25 +98,25 @@ All commands that follow assume you have set an environment variable of `AWS_REG
 
 To deploy Gitpod on [Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes), you must have an Azure subscription and account with permission deploy AKS clusters and associated component services, including the following:
 
-- AKS Clusters
-- Virtual networks
-- MySQL Databases
-- Storage accounts
-- Azure Container Registries
-- Load balancers
-- Azure DNS managed domains (and rights to assign roles on managed zones)
-- Rights to make role assignments in Azure Active Directory
+-   AKS Clusters
+-   Virtual networks
+-   MySQL Databases
+-   Storage accounts
+-   Azure Container Registries
+-   Load balancers
+-   Azure DNS managed domains (and rights to assign roles on managed zones)
+-   Rights to make role assignments in Azure Active Directory
 
 This guide uses the Azure CLI to create resources for your Gitpod installation and requires active Azure credentials. Credentials can be fetched by one of the following options:
 
-- [Sign in interactively](https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli#sign-in-interactively)
-- [Sign in with a Service Principal](https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli#sign-in-with-a-service-principal) (recommended for production installations)
+-   [Sign in interactively](https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli#sign-in-interactively)
+-   [Sign in with a Service Principal](https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli#sign-in-with-a-service-principal) (recommended for production installations)
 
 **Tools**
 
 This guide uses the following tools:
 
-- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli)
+-   [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli)
 
 If `kubectl` is not present the Azure CLI can be used to install `kubectl`:
 

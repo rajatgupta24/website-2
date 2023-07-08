@@ -27,31 +27,31 @@ To install Gitpod in your Kubernetes cluster, follow these steps:
 
 1. Create a file `values.custom.yaml` with the following content (please replace the keys/secrets, for instance with `openssl rand -hex 20`):
 
-   ```yaml
-   docker-registry:
-     authentication:
-       username: gitpod
-       password: your-registry-password
-   rabbitmq:
-     auth:
-       username: your-rabbitmq-user
-       password: your-secret-rabbitmq-password
-   minio:
-     accessKey: your-random-access-key
-     secretKey: your-random-secret-key
-   ```
+    ```yaml
+    docker-registry:
+        authentication:
+            username: gitpod
+            password: your-registry-password
+    rabbitmq:
+        auth:
+            username: your-rabbitmq-user
+            password: your-secret-rabbitmq-password
+    minio:
+        accessKey: your-random-access-key
+        secretKey: your-random-secret-key
+    ```
 
-   You should replace the keys with 2 different random strings unique for your installation.
+    You should replace the keys with 2 different random strings unique for your installation.
 
 1. Run the following commands in your local terminal:
 
-   ```bash
-   helm repo add gitpod.io https://charts.gitpod.io
+    ```bash
+    helm repo add gitpod.io https://charts.gitpod.io
 
-   helm repo update
+    helm repo update
 
-   helm install -f values.custom.yaml gitpod gitpod.io/gitpod --version=0.10.0
-   ```
+    helm install -f values.custom.yaml gitpod gitpod.io/gitpod --version=0.10.0
+    ```
 
 1. Configure [domain and https](../configuration/ingress).
 
@@ -75,13 +75,13 @@ To install Gitpod in your Kubernetes cluster, follow these steps:
 
 By default, the Helm chart installs a working Gitpod installation in a lot of scenarios. Yet, there are certain things you might want to review when installing Gitpod for long term use and/or a bigger audience:
 
-- [**Database**](../configuration/database): Configure where Gitpod stores all internal runtime data.
-- [**Storage**](../configuration/storage): Configure where Gitpod persists workspace content.
-- [**Docker Registry**](../configuration/docker-registry): Configure where Gitpod stores workspace images.
+-   [**Database**](../configuration/database): Configure where Gitpod stores all internal runtime data.
+-   [**Storage**](../configuration/storage): Configure where Gitpod persists workspace content.
+-   [**Docker Registry**](../configuration/docker-registry): Configure where Gitpod stores workspace images.
 
 ## Customization
 
 Further customizations:
 
-- [**Kubernetes Nodes**](../configuration/nodes): Configure file system layout and the workspace's node associativity.
-- [**Workspaces**](../configuration/workspaces): Configure workspace sizing.
+-   [**Kubernetes Nodes**](../configuration/nodes): Configure file system layout and the workspace's node associativity.
+-   [**Workspaces**](../configuration/workspaces): Configure workspace sizing.

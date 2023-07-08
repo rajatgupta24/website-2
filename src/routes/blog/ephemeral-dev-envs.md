@@ -7,7 +7,7 @@ slug: ephemeral-dev-envs
 subtitle:
 teaserImage: teaser.jpg
 title: DevX Digest 02 - The rise of ephemeral developer environments ✨
-tags: ["Developer experience"]
+tags: ['Developer experience']
 type: digest
 ---
 
@@ -29,21 +29,21 @@ The reality for most developers is this: a local developer environment that is d
 
 Think about your current workflow when getting started to code. What do you need to do?
 
-- Clone source code
-- Install runtimes & dependencies
-- Ensure these are the correct versions
-- Set up any tooling
+-   Clone source code
+-   Install runtimes & dependencies
+-   Ensure these are the correct versions
+-   Set up any tooling
 
 And then you can finally start coding! 😅
 
 But in the familiar situation of reviewing a colleague's features and hotfixes for production, we are again going through a similar list of steps that we must do before we can even START the review.
 
-- Stash our current changes
-- Switch branches
-- Potentially install new runtimes or upgrade dependencies
-- And then, we can finally review the change. 😰
-- Once we're done with the review, we have to switch back to our branch to continue coding.
-- Ensure that we return to our previous state to continue working.
+-   Stash our current changes
+-   Switch branches
+-   Potentially install new runtimes or upgrade dependencies
+-   And then, we can finally review the change. 😰
+-   Once we're done with the review, we have to switch back to our branch to continue coding.
+-   Ensure that we return to our previous state to continue working.
 
 There is so much friction for developers when there shouldn't be. Ideally, all we really wanted to do is look at the code, run it and approve the PR. Ephemeral developer environments can do this, ensuring that you're always ready to code.
 

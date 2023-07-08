@@ -17,14 +17,14 @@ Start by creating a `.gitpod.yml` file in the root of your project and add the f
 
 ```yml
 tasks:
-  - init: npm install
-    command: npm run dev
+    - init: npm install
+      command: npm run dev
 
 ports:
-  - port: 5000
-    onOpen: open-preview
-  - port: 35729
-    onOpen: ignore
+    - port: 5000
+      onOpen: open-preview
+    - port: 35729
+      onOpen: ignore
 ```
 
 After committing and pushing this file to your repository, start a new Gitpod workspace. You'll see that Gitpod will automatically install the dependencies; start the dev server; and open a preview on the side for port `5000`.
@@ -35,26 +35,26 @@ After committing and pushing this file to your repository, start a new Gitpod wo
 
 In order to make live reload work we need to add a bit of configuration as specified below:
 
-- Setup an environment variable called `CLIENT_URL` in the `.gitpod.yml` config file as shown below please make sure that you set it up before the task which starts the dev server(which is `npm run dev` in this case):
+-   Setup an environment variable called `CLIENT_URL` in the `.gitpod.yml` config file as shown below please make sure that you set it up before the task which starts the dev server(which is `npm run dev` in this case):
 
-  ```bash
-  - init: npm install
-      command: |
-        export CLIENT_URL="$(gp url 35729)/livereload.js?snipver=1&port=443"
-        npm run dev
-  ```
+    ```bash
+    - init: npm install
+        command: |
+          export CLIENT_URL="$(gp url 35729)/livereload.js?snipver=1&port=443"
+          npm run dev
+    ```
 
-- Pass the value of `CLIENT_URL` environment variable to the `rollup-plugin-livereload` in `rollup-config.js` inside of the `plugins` array as shown:
-  ```js
-  plugins: [
-    !production &&
-      livereload({
-        watch: "public",
-        clientUrl: process.env.CLIENT_URL,
-      }),
-  ];
-  ```
-  This will set `CLIENT_URL` to the workspace url of port `35729` (default port for livereload in Gitpod).
+-   Pass the value of `CLIENT_URL` environment variable to the `rollup-plugin-livereload` in `rollup-config.js` inside of the `plugins` array as shown:
+    ```js
+    plugins: [
+    	!production &&
+    		livereload({
+    			watch: 'public',
+    			clientUrl: process.env.CLIENT_URL,
+    		}),
+    ];
+    ```
+    This will set `CLIENT_URL` to the workspace url of port `35729` (default port for livereload in Gitpod).
 
 ## Example Projects
 

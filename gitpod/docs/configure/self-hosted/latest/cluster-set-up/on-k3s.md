@@ -16,9 +16,9 @@ title: K3s Cluster for Gitpod Self-Hosted
 
 In this guide, we show you how to set up a Kubernetes cluster with [K3s](https://k3s.io/) that is ready to install Gitpod. In this example we expect to have at least 2 nodes with Ubuntu 20.04 (a single node setup would work as well, see hint below):
 
-- `node0`: main node where the Gitpod service pods will be deployed to
-- `node1`: worker node where the Gitpod workspace pods will be deployed to
-- optional: one or more additional worker nodes `node2` … `nodeN`
+-   `node0`: main node where the Gitpod service pods will be deployed to
+-   `node1`: worker node where the Gitpod workspace pods will be deployed to
+-   optional: one or more additional worker nodes `node2` … `nodeN`
 
 On each node, we [install K3s](https://rancher.com/docs/k3s/latest/en/installation/). We configure K3s by setting the following environment variables on the nodes.
 

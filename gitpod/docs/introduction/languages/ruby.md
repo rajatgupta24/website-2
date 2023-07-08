@@ -17,8 +17,8 @@ As of this writing, Gitpod comes with Ruby 3.1 pre-installed in the [gitpod/work
 
 To use a different Ruby version, you can [change the base image](https://www.gitpod.io/docs/configure/workspaces/workspace-image#configure-a-public-docker-image) to one of the following:
 
-- [gitpod/workspace-ruby-2](https://hub.docker.com/r/gitpod/workspace-ruby-2)
-- [gitpod/workspace-ruby-3.0](https://hub.docker.com/r/gitpod/workspace-ruby-3.0)
+-   [gitpod/workspace-ruby-2](https://hub.docker.com/r/gitpod/workspace-ruby-2)
+-   [gitpod/workspace-ruby-3.0](https://hub.docker.com/r/gitpod/workspace-ruby-3.0)
 
 These images are automatically updated every week with the latest ruby patch versions.
 
@@ -65,9 +65,9 @@ To add this extension to your repository, simply add these lines to your [.gitpo
 
 ```yml
 vscode:
-  extensions:
-    - connorshea.vscode-ruby-test-adapter@0.9.0
-    - hbenl.vscode-test-explorer@2.21.1
+    extensions:
+        - connorshea.vscode-ruby-test-adapter@0.9.0
+        - hbenl.vscode-test-explorer@2.21.1
 ```
 
 ## Ruby On Rails
@@ -86,7 +86,7 @@ Here's an example:
 
 ```yml
 tasks:
-  - before: bundle install
+    - before: bundle install
 ```
 
 For more information on tasks, refer to the Gitpod [docs on tasks](https://www.gitpod.io/docs/configure/workspaces/tasks).

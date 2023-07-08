@@ -66,24 +66,24 @@ The “Restore Tailscale daemon” task launches Tailscale and puts it in the ba
 
 ```yml
 tasks:
-  - name: Restore Tailscale daemon
-    command: |
-      if [ -n "${TS_STATE_TAILSCALE_EXAMPLE}" ]; then
-        # restore the tailscale state from gitpod user's env vars
-        sudo mkdir -p /var/lib/tailscale
-        echo "${TS_STATE_TAILSCALE_EXAMPLE}" | sudo tee /var/lib/tailscale/tailscaled.state > /dev/null
-      fi
-      sudo tailscaled
-  - name: Connect to Tailscale
-    command: |
-      if [ -n "${TS_STATE_TAILSCALE_EXAMPLE}" ]; then
-        sudo -E tailscale up
-      else
-        sudo -E tailscale up --hostname "gitpod-${GITPOD_GIT_USER_NAME// /-}-$(echo ${GITPOD_WORKSPACE_CONTEXT} | jq -r .repository.name)"
-        # store the tailscale state into gitpod user
-        gp env TS_STATE_TAILSCALE_EXAMPLE="$(sudo cat /var/lib/tailscale/tailscaled.state)"
-      fi
-      exit
+    - name: Restore Tailscale daemon
+      command: |
+          if [ -n "${TS_STATE_TAILSCALE_EXAMPLE}" ]; then
+            # restore the tailscale state from gitpod user's env vars
+            sudo mkdir -p /var/lib/tailscale
+            echo "${TS_STATE_TAILSCALE_EXAMPLE}" | sudo tee /var/lib/tailscale/tailscaled.state > /dev/null
+          fi
+          sudo tailscaled
+    - name: Connect to Tailscale
+      command: |
+          if [ -n "${TS_STATE_TAILSCALE_EXAMPLE}" ]; then
+            sudo -E tailscale up
+          else
+            sudo -E tailscale up --hostname "gitpod-${GITPOD_GIT_USER_NAME// /-}-$(echo ${GITPOD_WORKSPACE_CONTEXT} | jq -r .repository.name)"
+            # store the tailscale state into gitpod user
+            gp env TS_STATE_TAILSCALE_EXAMPLE="$(sudo cat /var/lib/tailscale/tailscaled.state)"
+          fi
+          exit
 ```
 
 ## 2. Open a workspace for each repository
@@ -123,18 +123,18 @@ In this example, this task looks for `backend-service` and sets an environment v
 - name: Start application
   init: npm install
   command: |
-    REPO_NAME=backend-service
-    API_IP=$(tailscale status | grep $REPO_NAME | cut -d " " -f 1)
-    if [ "${API_IP}" ]; then
-      echo "🐳 Connected to $REPO_NAME through Tailscale"
-      API_URL="http://$API_IP:5000/api" npm run dev
-    else
-      echo "🐳 Failed to connect to $REPO_NAME. Make sure a $REPO_NAME workspace is active and logged into Tailscale."
-      npm run dev
-    fi
+      REPO_NAME=backend-service
+      API_IP=$(tailscale status | grep $REPO_NAME | cut -d " " -f 1)
+      if [ "${API_IP}" ]; then
+        echo "🐳 Connected to $REPO_NAME through Tailscale"
+        API_URL="http://$API_IP:5000/api" npm run dev
+      else
+        echo "🐳 Failed to connect to $REPO_NAME. Make sure a $REPO_NAME workspace is active and logged into Tailscale."
+        npm run dev
+      fi
   env:
-    PORT: 3000
-    NODE_ENV: development
+      PORT: 3000
+      NODE_ENV: development
 ```
 
 To try this out, add this task to the tasks list in your `.gitpod.yml` file, commit it, and try it out with a new workspace. Your workspaces should be able to send requests to each other through their secure Tailscale IP addresses. Now you are fully set up for multi-repo development on Gitpod. ✨
@@ -144,43 +144,43 @@ To try this out, add this task to the tasks list in your `.gitpod.yml` file, com
 ```yml
 image: gitpod:workspace/full
 ports:
-  - port: 3000
-    onOpen: ignore
+    - port: 3000
+      onOpen: ignore
 tasks:
-  - name: Restore Tailscale daemon
-    command: |
-      if [ -n "${TS_STATE_TAILSCALE_EXAMPLE}" ]; then
-        # restore the tailscale state from gitpod user's env vars
-        sudo mkdir -p /var/lib/tailscale
-        echo "${TS_STATE_TAILSCALE_EXAMPLE}" | sudo tee /var/lib/tailscale/tailscaled.state > /dev/null
-      fi
-      sudo tailscaled
-  - name: Start application
-    init: |
-      eval $(gp env -e)
-      npm install
-    command: |
-      REPO_NAME=backend-service
-      API_IP=$(tailscale status | grep $REPO_NAME | cut -d " " -f 1)
-      if [ "${API_IP}" ]; then
-        echo "🐳 Connected to $REPO_NAME through Tailscale"
-        API_URL="http://$API_IP:5000/api" npm run dev
-      else
-        echo "🐳 Failed to connect to $REPO_NAME. Make sure a $REPO_NAME workspace is active and logged into Tailscale."
+    - name: Restore Tailscale daemon
+      command: |
+          if [ -n "${TS_STATE_TAILSCALE_EXAMPLE}" ]; then
+            # restore the tailscale state from gitpod user's env vars
+            sudo mkdir -p /var/lib/tailscale
+            echo "${TS_STATE_TAILSCALE_EXAMPLE}" | sudo tee /var/lib/tailscale/tailscaled.state > /dev/null
+          fi
+          sudo tailscaled
+    - name: Start application
+      init: |
+          eval $(gp env -e)
+          npm install
+      command: |
+          REPO_NAME=backend-service
+          API_IP=$(tailscale status | grep $REPO_NAME | cut -d " " -f 1)
+          if [ "${API_IP}" ]; then
+            echo "🐳 Connected to $REPO_NAME through Tailscale"
+            API_URL="http://$API_IP:5000/api" npm run dev
+          else
+            echo "🐳 Failed to connect to $REPO_NAME. Make sure a $REPO_NAME workspace is active and logged into Tailscale."
 
-        npm run dev
-      fi
-    env:
-      PORT: 3000
-      NODE_ENV: development
-  - name: Connect to Tailscale
-    command: |
-      if [ -n "${TS_STATE_TAILSCALE_EXAMPLE}" ]; then
-        sudo -E tailscale up
-      else
-        sudo -E tailscale up --hostname "gitpod-${GITPOD_GIT_USER_NAME// /-}-$(echo ${GITPOD_WORKSPACE_CONTEXT} | jq -r .repository.name)"
-        # store the tailscale state into gitpod user
-        gp env TS_STATE_TAILSCALE_EXAMPLE="$(sudo cat /var/lib/tailscale/tailscaled.state)"
-      fi
-      exit
+            npm run dev
+          fi
+      env:
+          PORT: 3000
+          NODE_ENV: development
+    - name: Connect to Tailscale
+      command: |
+          if [ -n "${TS_STATE_TAILSCALE_EXAMPLE}" ]; then
+            sudo -E tailscale up
+          else
+            sudo -E tailscale up --hostname "gitpod-${GITPOD_GIT_USER_NAME// /-}-$(echo ${GITPOD_WORKSPACE_CONTEXT} | jq -r .repository.name)"
+            # store the tailscale state into gitpod user
+            gp env TS_STATE_TAILSCALE_EXAMPLE="$(sudo cat /var/lib/tailscale/tailscaled.state)"
+          fi
+          exit
 ```

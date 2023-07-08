@@ -29,8 +29,8 @@ The client ID / Audience should be set to: `sts.amazonaws.com`
 
 **Read more:**
 
-- [[AWS docs] Creating IAM identity providers](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create.html)
-- [[AWS docs] Creating OpenID Connect (OIDC) identity providers](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc.html)
+-   [[AWS docs] Creating IAM identity providers](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create.html)
+-   [[AWS docs] Creating OpenID Connect (OIDC) identity providers](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc.html)
 
 ### Step 2: Create an AWS role with a trust policy
 
@@ -42,15 +42,15 @@ Now that your AWS account is setup to trust Gitpod, you need to create an AWS IA
 
 ```json
 {
-  "iss": "https://api.dev-internal.gitpod.cloud/idp",
-  "aud": ["sts.amazonaws.com"],
-  "azp": "sts.amazonaws.com",
-  "c_hash": "zSrbWN_X9Wx52-wxjgdX5w",
-  "exp": 1682344961,
-  "iat": 1682341361,
-  "auth_time": 1682341361,
-  "sub": "https://github.com/gitpod-io/gitpod",
-  "name": "kumquat"
+	"iss": "https://api.dev-internal.gitpod.cloud/idp",
+	"aud": ["sts.amazonaws.com"],
+	"azp": "sts.amazonaws.com",
+	"c_hash": "zSrbWN_X9Wx52-wxjgdX5w",
+	"exp": 1682344961,
+	"iat": 1682341361,
+	"auth_time": 1682341361,
+	"sub": "https://github.com/gitpod-io/gitpod",
+	"name": "kumquat"
 }
 ```
 
@@ -90,24 +90,24 @@ To adjust the IAM role trust policy to restrict which workspaces can assume the 
 
 ```json
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Federated": "arn:aws:iam::981241700645:oidc-provider/api.gitpod.io/idp"
-      },
-      "Action": "sts:AssumeRoleWithWebIdentity",
-      "Condition": {
-        "StringEquals": {
-          "api.gitpod.io/idp:aud": "sts.amazonaws.com"
-        },
-        "StringLike": {
-          "api.gitpod.io/idp:sub": "https://github.com/gitpod-io/*"
-        }
-      }
-    }
-  ]
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Principal": {
+				"Federated": "arn:aws:iam::981241700645:oidc-provider/api.gitpod.io/idp"
+			},
+			"Action": "sts:AssumeRoleWithWebIdentity",
+			"Condition": {
+				"StringEquals": {
+					"api.gitpod.io/idp:aud": "sts.amazonaws.com"
+				},
+				"StringLike": {
+					"api.gitpod.io/idp:sub": "https://github.com/gitpod-io/*"
+				}
+			}
+		}
+	]
 }
 ```
 
@@ -119,8 +119,8 @@ To adjust the IAM role trust policy to restrict which workspaces can assume the 
 
 **Read more:**
 
-- [[AWS docs] IAM and AWS STS condition context keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html)
-- [[AWS docs] IAM String condition operators](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition_operators.html#Conditions_String)
+-   [[AWS docs] IAM and AWS STS condition context keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html)
+-   [[AWS docs] IAM String condition operators](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition_operators.html#Conditions_String)
 
 ### Step 3: Assume the AWS role to retrieve the AWS credentials
 
@@ -133,9 +133,9 @@ The following code will login to AWS using OIDC and then fetch a secret dynamica
 
 ```yaml
 tasks:
-  - command: |
-      gp idp login aws --role-arn <your-iam-role-arn>
-      aws secretsmanager get-secret-value --secret-id database_connection_string --region us-east-1 | jq .SecretString
+    - command: |
+          gp idp login aws --role-arn <your-iam-role-arn>
+          aws secretsmanager get-secret-value --secret-id database_connection_string --region us-east-1 | jq .SecretString
 ```
 
   <figcaption>
@@ -145,7 +145,7 @@ tasks:
 
 Read more:
 
-- [[AWS docs] `assume-role-with-web-identity`](https://docs.aws.amazon.com/cli/latest/reference/sts/assume-role-with-web-identity.html)
+-   [[AWS docs] `assume-role-with-web-identity`](https://docs.aws.amazon.com/cli/latest/reference/sts/assume-role-with-web-identity.html)
 
 ### Troubleshooting
 

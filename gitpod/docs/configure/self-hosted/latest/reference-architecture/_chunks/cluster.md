@@ -247,10 +247,10 @@ For `eksctl`, configuring the cluster and the node groups cannot happen simultan
 
 The example `eksctl` config file includes services accounts that might not be relevant to a particular deployment, but are included for reference.
 
-- `cert-manager` provided for the required cert-manager tooling. If using DNS-01 challenges for Let's Encrypt with a Route53 zone, then enable the cert-manager `wellKnownPolicies` or ensure one exists with permissions to modify records in the zone
-- `aws-load-balancer-controller` enables ELB creation for LoadBalancer services and integration with AWS Application Load Balancers
-- `cluster-autoscaler` connects to the AWS autoscaler
-- `ebs-csi-controller-sa` enables provisioning of the EBS volumes for PVC storage
+-   `cert-manager` provided for the required cert-manager tooling. If using DNS-01 challenges for Let's Encrypt with a Route53 zone, then enable the cert-manager `wellKnownPolicies` or ensure one exists with permissions to modify records in the zone
+-   `aws-load-balancer-controller` enables ELB creation for LoadBalancer services and integration with AWS Application Load Balancers
+-   `cluster-autoscaler` connects to the AWS autoscaler
+-   `ebs-csi-controller-sa` enables provisioning of the EBS volumes for PVC storage
 
 Provided below is a complete `eksctl` configuration file that will deploy all the components required for an EKS installation to support Gitpod. All references to a `gitpod-cluster.yaml` file refer to this reference.
 
@@ -281,43 +281,43 @@ Refer to `eksctl`'s documentation on [AMI Family](https://eksctl.io/usage/custom
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 metadata:
-  name: gitpod
-  region: eu-west-1
-  version: "1.22"
-  # update tags to ensure all generated resources have atleast these tags applied
-  tags:
-    department: demo
-    project: gitpod
+    name: gitpod
+    region: eu-west-1
+    version: '1.22'
+    # update tags to ensure all generated resources have atleast these tags applied
+    tags:
+        department: demo
+        project: gitpod
 
 iam:
-  withOIDC: true
+    withOIDC: true
 
-  serviceAccounts:
-    - metadata:
-        name: aws-load-balancer-controller
-        namespace: kube-system
-      wellKnownPolicies:
-        awsLoadBalancerController: true
-    - metadata:
-        name: ebs-csi-controller-sa
-        namespace: kube-system
-      wellKnownPolicies:
-        ebsCSIController: true
-    - metadata:
-        name: cluster-autoscaler
-        namespace: kube-system
-      wellKnownPolicies:
-        autoScaler: true
-    - metadata:
-        name: cert-manager
-        namespace: cert-manager
-      wellKnownPolicies:
-        certManager: true
-    - metadata:
-        name: external-dns
-        namespace: external-dns
-      wellKnownPolicies:
-        externalDNS: true
+    serviceAccounts:
+        - metadata:
+              name: aws-load-balancer-controller
+              namespace: kube-system
+          wellKnownPolicies:
+              awsLoadBalancerController: true
+        - metadata:
+              name: ebs-csi-controller-sa
+              namespace: kube-system
+          wellKnownPolicies:
+              ebsCSIController: true
+        - metadata:
+              name: cluster-autoscaler
+              namespace: kube-system
+          wellKnownPolicies:
+              autoScaler: true
+        - metadata:
+              name: cert-manager
+              namespace: cert-manager
+          wellKnownPolicies:
+              certManager: true
+        - metadata:
+              name: external-dns
+              namespace: external-dns
+          wellKnownPolicies:
+              externalDNS: true
 
 # Uncomment and update for your region if you wish to use fewer availability zones
 # availabilityZones:
@@ -329,154 +329,154 @@ iam:
 # You can use an existing VPC by supplying private and/or public subnets. Please check
 # https://eksctl.io/usage/vpc-networking/#use-existing-vpc-other-custom-configuration
 vpc:
-  autoAllocateIPv6: false
-  nat:
-    # For production environments use HighlyAvailable, for an initial deployment Single adequate
-    # HighlyAvailable will consume 3 Elastic IPs so ensure your region has capacity before using
-    # https://eksctl.io/usage/vpc-networking/#nat-gateway
-    gateway: Single
+    autoAllocateIPv6: false
+    nat:
+        # For production environments use HighlyAvailable, for an initial deployment Single adequate
+        # HighlyAvailable will consume 3 Elastic IPs so ensure your region has capacity before using
+        # https://eksctl.io/usage/vpc-networking/#nat-gateway
+        gateway: Single
 
-  # Cluster endpoints and public access
-  # Private access ensures that nodes can communicate internally in case of NAT failure
-  # For customizing for your environment review https://eksctl.io/usage/vpc-cluster-access/
-  clusterEndpoints:
-    privateAccess: true
-    publicAccess: true
-  publicAccessCIDRs: ["0.0.0.0/0"]
+    # Cluster endpoints and public access
+    # Private access ensures that nodes can communicate internally in case of NAT failure
+    # For customizing for your environment review https://eksctl.io/usage/vpc-cluster-access/
+    clusterEndpoints:
+        privateAccess: true
+        publicAccess: true
+    publicAccessCIDRs: ['0.0.0.0/0']
 
 # Logging settings
 cloudWatch:
-  clusterLogging:
-    enableTypes: ["*"]
+    clusterLogging:
+        enableTypes: ['*']
 
 # Nodegroups / Compute settings
 managedNodeGroups:
-  - name: services
-    amiFamily: Ubuntu2004
-    spot: false
-    instanceTypes: ["m6i.xlarge"]
-    desiredCapacity: 2
-    minSize: 1
-    maxSize: 4
-    maxPodsPerNode: 110
-    disableIMDSv1: false
-    volumeSize: 300
-    volumeType: gp3
-    volumeIOPS: 6000
-    volumeThroughput: 500
-    ebsOptimized: true
-    privateNetworking: true
-    propagateASGTags: true
+    - name: services
+      amiFamily: Ubuntu2004
+      spot: false
+      instanceTypes: ['m6i.xlarge']
+      desiredCapacity: 2
+      minSize: 1
+      maxSize: 4
+      maxPodsPerNode: 110
+      disableIMDSv1: false
+      volumeSize: 300
+      volumeType: gp3
+      volumeIOPS: 6000
+      volumeThroughput: 500
+      ebsOptimized: true
+      privateNetworking: true
+      propagateASGTags: true
 
-    iam:
-      attachPolicyARNs:
-        - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
-        - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
-        - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
-        - arn:aws:iam::aws:policy/ElasticLoadBalancingFullAccess
-        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+      iam:
+          attachPolicyARNs:
+              - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+              - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+              - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+              - arn:aws:iam::aws:policy/ElasticLoadBalancingFullAccess
+              - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
 
-    tags:
-      k8s.io/cluster-autoscaler/enabled: "true"
-      # Important - If you change the name of your EKS cluster from the
-      # default cluster name ("gitpod"), update this tag to match
-      # your cluster (`k8s.io/cluster-autoscaler/<cluster-name>: "owned"`)
-      #
-      # For example: `k8s.io/cluster-autoscaler/gitpod-corp: "owned"`
-      k8s.io/cluster-autoscaler/gitpod: "owned"
+      tags:
+          k8s.io/cluster-autoscaler/enabled: 'true'
+          # Important - If you change the name of your EKS cluster from the
+          # default cluster name ("gitpod"), update this tag to match
+          # your cluster (`k8s.io/cluster-autoscaler/<cluster-name>: "owned"`)
+          #
+          # For example: `k8s.io/cluster-autoscaler/gitpod-corp: "owned"`
+          k8s.io/cluster-autoscaler/gitpod: 'owned'
 
-    labels:
-      gitpod.io/workload_meta: "true"
-      gitpod.io/workload_ide: "true"
-      gitpod.io/workload_workspace_services: "true"
+      labels:
+          gitpod.io/workload_meta: 'true'
+          gitpod.io/workload_ide: 'true'
+          gitpod.io/workload_workspace_services: 'true'
 
-    preBootstrapCommands:
-      - echo "export USE_MAX_PODS=false" >> /etc/profile.d/bootstrap.sh
-      - echo "export CONTAINER_RUNTIME=containerd" >> /etc/profile.d/bootstrap.sh
-      - sed -i '/^set -o errexit/a\\nsource /etc/profile.d/bootstrap.sh' /etc/eks/bootstrap.sh
+      preBootstrapCommands:
+          - echo "export USE_MAX_PODS=false" >> /etc/profile.d/bootstrap.sh
+          - echo "export CONTAINER_RUNTIME=containerd" >> /etc/profile.d/bootstrap.sh
+          - sed -i '/^set -o errexit/a\\nsource /etc/profile.d/bootstrap.sh' /etc/eks/bootstrap.sh
 
-  - name: regular-workspaces
-    amiFamily: Ubuntu2004
-    spot: false
-    instanceTypes: ["m6i.4xlarge"]
-    desiredCapacity: 2
-    minSize: 1
-    maxSize: 50
-    maxPodsPerNode: 110
-    disableIMDSv1: false
-    volumeSize: 512
-    volumeType: gp3
-    volumeIOPS: 6000
-    volumeThroughput: 500
-    ebsOptimized: true
-    privateNetworking: true
-    propagateASGTags: true
+    - name: regular-workspaces
+      amiFamily: Ubuntu2004
+      spot: false
+      instanceTypes: ['m6i.4xlarge']
+      desiredCapacity: 2
+      minSize: 1
+      maxSize: 50
+      maxPodsPerNode: 110
+      disableIMDSv1: false
+      volumeSize: 512
+      volumeType: gp3
+      volumeIOPS: 6000
+      volumeThroughput: 500
+      ebsOptimized: true
+      privateNetworking: true
+      propagateASGTags: true
 
-    iam:
-      attachPolicyARNs:
-        - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
-        - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
-        - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
-        - arn:aws:iam::aws:policy/ElasticLoadBalancingFullAccess
-        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+      iam:
+          attachPolicyARNs:
+              - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+              - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+              - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+              - arn:aws:iam::aws:policy/ElasticLoadBalancingFullAccess
+              - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
 
-    tags:
-      k8s.io/cluster-autoscaler/enabled: "true"
-      # Important - If you change the name of your EKS cluster from the
-      # default cluster name ("gitpod"), update the tag below to match
-      # your cluster (`k8s.io/cluster-autoscaler/<cluster-name>: "owned"`)
-      #
-      # For example: `k8s.io/cluster-autoscaler/gitpod-corp: "owned"`
-      k8s.io/cluster-autoscaler/gitpod: "owned"
+      tags:
+          k8s.io/cluster-autoscaler/enabled: 'true'
+          # Important - If you change the name of your EKS cluster from the
+          # default cluster name ("gitpod"), update the tag below to match
+          # your cluster (`k8s.io/cluster-autoscaler/<cluster-name>: "owned"`)
+          #
+          # For example: `k8s.io/cluster-autoscaler/gitpod-corp: "owned"`
+          k8s.io/cluster-autoscaler/gitpod: 'owned'
 
-    labels:
-      gitpod.io/workload_workspace_regular: "true"
+      labels:
+          gitpod.io/workload_workspace_regular: 'true'
 
-    preBootstrapCommands:
-      - echo "export USE_MAX_PODS=false" >> /etc/profile.d/bootstrap.sh
-      - echo "export CONTAINER_RUNTIME=containerd" >> /etc/profile.d/bootstrap.sh
-      - sed -i '/^set -o errexit/a\\nsource /etc/profile.d/bootstrap.sh' /etc/eks/bootstrap.sh
-  - name: headless-workspaces
-    amiFamily: Ubuntu2004
-    spot: false
-    instanceTypes: ["m6i.4xlarge"]
-    desiredCapacity: 2
-    minSize: 1
-    maxSize: 50
-    maxPodsPerNode: 110
-    disableIMDSv1: false
-    volumeSize: 512
-    volumeType: gp3
-    volumeIOPS: 6000
-    volumeThroughput: 500
-    ebsOptimized: true
-    privateNetworking: true
-    propagateASGTags: true
+      preBootstrapCommands:
+          - echo "export USE_MAX_PODS=false" >> /etc/profile.d/bootstrap.sh
+          - echo "export CONTAINER_RUNTIME=containerd" >> /etc/profile.d/bootstrap.sh
+          - sed -i '/^set -o errexit/a\\nsource /etc/profile.d/bootstrap.sh' /etc/eks/bootstrap.sh
+    - name: headless-workspaces
+      amiFamily: Ubuntu2004
+      spot: false
+      instanceTypes: ['m6i.4xlarge']
+      desiredCapacity: 2
+      minSize: 1
+      maxSize: 50
+      maxPodsPerNode: 110
+      disableIMDSv1: false
+      volumeSize: 512
+      volumeType: gp3
+      volumeIOPS: 6000
+      volumeThroughput: 500
+      ebsOptimized: true
+      privateNetworking: true
+      propagateASGTags: true
 
-    iam:
-      attachPolicyARNs:
-        - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
-        - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
-        - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
-        - arn:aws:iam::aws:policy/ElasticLoadBalancingFullAccess
-        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+      iam:
+          attachPolicyARNs:
+              - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+              - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+              - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+              - arn:aws:iam::aws:policy/ElasticLoadBalancingFullAccess
+              - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
 
-    tags:
-      k8s.io/cluster-autoscaler/enabled: "true"
-      # Important - If you change the name of your EKS cluster from the
-      # default cluster name ("gitpod"), update the tag below to match
-      # your cluster (`k8s.io/cluster-autoscaler/<cluster-name>: "owned"`)
-      #
-      # For example: `k8s.io/cluster-autoscaler/gitpod-corp: "owned"`
-      k8s.io/cluster-autoscaler/gitpod: "owned"
+      tags:
+          k8s.io/cluster-autoscaler/enabled: 'true'
+          # Important - If you change the name of your EKS cluster from the
+          # default cluster name ("gitpod"), update the tag below to match
+          # your cluster (`k8s.io/cluster-autoscaler/<cluster-name>: "owned"`)
+          #
+          # For example: `k8s.io/cluster-autoscaler/gitpod-corp: "owned"`
+          k8s.io/cluster-autoscaler/gitpod: 'owned'
 
-    labels:
-      gitpod.io/workload_workspace_headless: "true"
+      labels:
+          gitpod.io/workload_workspace_headless: 'true'
 
-    preBootstrapCommands:
-      - echo "export USE_MAX_PODS=false" >> /etc/profile.d/bootstrap.sh
-      - echo "export CONTAINER_RUNTIME=containerd" >> /etc/profile.d/bootstrap.sh
-      - sed -i '/^set -o errexit/a\\nsource /etc/profile.d/bootstrap.sh' /etc/eks/bootstrap.sh
+      preBootstrapCommands:
+          - echo "export USE_MAX_PODS=false" >> /etc/profile.d/bootstrap.sh
+          - echo "export CONTAINER_RUNTIME=containerd" >> /etc/profile.d/bootstrap.sh
+          - sed -i '/^set -o errexit/a\\nsource /etc/profile.d/bootstrap.sh' /etc/eks/bootstrap.sh
 ```
 
 To ensure there are enough IPs and networking policy enforcement is in place, this reference architecture uses Calico for networking. To enable Calico in an EKS installation it must be done after the control plane has been provisioned and before the nodegroups have been created.
@@ -587,7 +587,7 @@ Update your `gitpod-cluster.yaml` to add the `GroupId` from the previous command
 
 ```yaml
 securityGroups:
-  attachIDs: ["<Add your GroupId here, similar to: sg-04b9a5f403307efe5"]
+    attachIDs: ['<Add your GroupId here, similar to: sg-04b9a5f403307efe5']
 ```
 
 Store the `GroupID` for easier reuse when creating the RDS instance later in this guide:
@@ -704,11 +704,11 @@ In the future to delete this cluster any additional resources added to the VPC w
 
 The order resources to delete if created:
 
-- RDS First
-- RDS security group
-- Services Nodegroup
-- Services security group
-- eksctl delete cluster
+-   RDS First
+-   RDS security group
+-   Services Nodegroup
+-   Services security group
+-   eksctl delete cluster
 
 Full removal of these installed components would look something like this (commands are grouped for brevity):
 

@@ -4,7 +4,7 @@ excerpt: Quizlet started using Gitpod due to CPU compatibility issues. Six month
 slug: quizlet
 image: teaser.png
 date: Friday, 10 Feb 2023 06:00:00 UTC
-pageTitle: "Quizlet increased developer satisfaction by 45 percentage points using Gitpod"
+pageTitle: 'Quizlet increased developer satisfaction by 45 percentage points using Gitpod'
 pageDescription: Quizlet started using Gitpod due to CPU compatibility issues. Six months in, Quizlet improved internal developer satisfaction by 45 percentage points reporting reduced incidents with broken development environments and improved collaboration.
 keywords: CDE, cloud dev environment, DevX, velocity, growth, education, quizlet
 ---
@@ -87,9 +87,9 @@ New engineers at Quizlet had struggled with [compatibility issues after the ARM-
 
 Their key objectives:
 
-- **Reduce onboarding time to make new hires productive, faster**
-- **Reduce time to troubleshoot broken development environments**
-- **Increase security of development environments**
+-   **Reduce onboarding time to make new hires productive, faster**
+-   **Reduce time to troubleshoot broken development environments**
+-   **Increase security of development environments**
 
 Gitpod’s cloud development environments (CDEs) are high-powered, automated development environments in the cloud. With a single click, developers can spin up a perfectly configured workspace in a container in the cloud - independent of the device, operating system, or IDE they use.
 

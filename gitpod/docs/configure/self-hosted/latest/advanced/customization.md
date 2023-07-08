@@ -47,28 +47,28 @@ Any properties in `spec.env` are then applied. These should have a `name` and `v
 
 ```yaml
 customization:
-  - apiVersion: "*"
-    kind: "*"
-    metadata:
-      name: "*"
-      annotations:
-        appliedToAll: value
-        hello: world
-      labels:
-        appliedToAll: value
-        hello: world
-  - apiVersion: "apps/v1"
-    kind: "Deployment"
-    metadata:
-      name: "ws-manager"
-      annotations:
-        hello: ws-manager
-      labels:
-        hello: ws-manager
-    spec:
-      env:
-        - name: HELLO
-          value: world
+    - apiVersion: '*'
+      kind: '*'
+      metadata:
+          name: '*'
+          annotations:
+              appliedToAll: value
+              hello: world
+          labels:
+              appliedToAll: value
+              hello: world
+    - apiVersion: 'apps/v1'
+      kind: 'Deployment'
+      metadata:
+          name: 'ws-manager'
+          annotations:
+              hello: ws-manager
+          labels:
+              hello: ws-manager
+      spec:
+          env:
+              - name: HELLO
+                value: world
 ```
 
 This example would generate the following spec (these are simplified for readability reasons):
@@ -79,48 +79,48 @@ This example would generate the following spec (these are simplified for readabi
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  labels:
-    app: gitpod # system-value
-    component: ws-daemon # system-value
-    appliedToAll: value
-    hello: world
-  annotations:
-    appliedToAll: value
-    hello: world
-  name: ws-daemon
+    labels:
+        app: gitpod # system-value
+        component: ws-daemon # system-value
+        appliedToAll: value
+        hello: world
+    annotations:
+        appliedToAll: value
+        hello: world
+    name: ws-daemon
 ---
 # apps/v1/Deployment ws-manager
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    app: gitpod
-    component: ws-manager
-    appliedToAll: value
-    hello: ws-manager
-  annotations:
-    appliedToAll: value
-    hello: ws-manager
-  name: ws-manager
-spec:
-  template:
-    # The custom annotations/labels are inherited from the Deployment spec
-    metadata:
-      annotations:
-        appliedToAll: value
-        gitpod.io/checksum_config: xxxx
-        hello: ws-manager
-      labels:
+    labels:
         app: gitpod
         component: ws-manager
         appliedToAll: value
         hello: ws-manager
-      name: ws-manager
-    spec:
-      containers:
-        - env:
-            - name: HELLO
-              value: world
+    annotations:
+        appliedToAll: value
+        hello: ws-manager
+    name: ws-manager
+spec:
+    template:
+        # The custom annotations/labels are inherited from the Deployment spec
+        metadata:
+            annotations:
+                appliedToAll: value
+                gitpod.io/checksum_config: xxxx
+                hello: ws-manager
+            labels:
+                app: gitpod
+                component: ws-manager
+                appliedToAll: value
+                hello: ws-manager
+            name: ws-manager
+        spec:
+            containers:
+                - env:
+                      - name: HELLO
+                        value: world
 ```
 
 In the event of multiple matches, the final matching customization is applied. Therefore, it is a good idea to structure your customization from least to most specific.
@@ -134,16 +134,16 @@ This is an example configuration for working with [AWS Load Balancer Controllers
 ```yaml
 ---
 customization:
-  - apiVersion: "*"
-    kind: "Service"
-    metadata:
-      name: "proxy"
-      annotations:
-        service.beta.kubernetes.io/aws-load-balancer-scheme: "internet-facing"
-        service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: "instance"
-        service.beta.kubernetes.io/aws-load-balancer-subnets: "subnet-012e8ff1de0654321,subnet-0a6d28629bc123456"
-        alb.ingress.kubernetes.io/load-balancer-attributes: "idle_timeout.timeout_seconds=3600"
-        service.beta.kubernetes.io/aws-load-balancer-additional-resource-tags: "project=gitpod-docs,team=cs"
+    - apiVersion: '*'
+      kind: 'Service'
+      metadata:
+          name: 'proxy'
+          annotations:
+              service.beta.kubernetes.io/aws-load-balancer-scheme: 'internet-facing'
+              service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: 'instance'
+              service.beta.kubernetes.io/aws-load-balancer-subnets: 'subnet-012e8ff1de0654321,subnet-0a6d28629bc123456'
+              alb.ingress.kubernetes.io/load-balancer-attributes: 'idle_timeout.timeout_seconds=3600'
+              service.beta.kubernetes.io/aws-load-balancer-additional-resource-tags: 'project=gitpod-docs,team=cs'
 ```
 
 ## Limitations

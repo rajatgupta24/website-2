@@ -40,7 +40,7 @@ It is not possible to intercept <Keybind>Cmd + W</Keybind> directly in browsers 
 
 ### Recommended Solution
 
-- Use [Gitpod with VS Code Desktop](/docs/references/ides-and-editors/vscode) for the best keyboard experience.
+-   Use [Gitpod with VS Code Desktop](/docs/references/ides-and-editors/vscode) for the best keyboard experience.
 
 ### Alternative Solution
 

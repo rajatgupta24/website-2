@@ -44,12 +44,12 @@ The `.gitpod.yml` file prepares your dev environment by automating setup like de
 ```yml
 # Commands to start on workspace startup
 tasks:
-  - init: yarn install
-    command: yarn build
+    - init: yarn install
+      command: yarn build
 # Ports to expose on workspace startup
 ports:
-  - port: 8000
-    onOpen: open-preview
+    - port: 8000
+      onOpen: open-preview
 ```
 
 You can read more about `.gitpod.yml` in [docs: config gitpod file](https://www.gitpod.io/docs/references/gitpod-yml)
@@ -60,7 +60,7 @@ You can read more about `.gitpod.yml` in [docs: config gitpod file](https://www.
 
 1. Open your repo in a new Gitpod workspace. The simplest way is by appending the entire repo URL (including the protocol) to `gitpod.io/#`, e.g. `gitpod.io/#https://github.com/gitpod-io/gitpod`
 2. Create a `.gitpod.yml` in the root directory of your project, e.g. `touch .gitpod.yml`
-   > Tip: Instead of manually creating the `gitpod.yml`, type `gp init` in the terminal of your Gitpod workspace. (`gp` is a CLI for Gitpod included in all Gitpod workspaces)
+    > Tip: Instead of manually creating the `gitpod.yml`, type `gp init` in the terminal of your Gitpod workspace. (`gp` is a CLI for Gitpod included in all Gitpod workspaces)
 3. For Gitpod to detect configuration changes, push and commit your `gitpod.yml`.
 4. Now open your project in a new workspace by prefixing your repo URL with `gitpod.io/#{your-repository-url}` or using the Gitpod extension.
 
@@ -92,7 +92,7 @@ Suppose one of the premade workspace images doesn't fit your needs, or you want 
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 ```
 
 2. Next, create a `.gitpod.Dockerfile` file at the root of your project.
@@ -131,21 +131,21 @@ By default, Gitpod prepares prebuilt workspaces for all changes on the default b
 
 ```yml
 GitHub:
-  prebuilds:
-    # enable for the default branch
-    master: true
-    # enable for all branches in this repo
-    branches: true
-    # enable for pull requests coming from this repo
-    pullRequests: true
-    # enable for pull requests coming from forks
-    pullRequestsFromForks: true
-    # add a check to pull requests
-    addCheck: true
-    # add a "Review in Gitpod" button as a comment to pull requests
-    addComment: false
-    # add a "Review in Gitpod" button to the pull request's description
-    addBadge: false
+    prebuilds:
+        # enable for the default branch
+        master: true
+        # enable for all branches in this repo
+        branches: true
+        # enable for pull requests coming from this repo
+        pullRequests: true
+        # enable for pull requests coming from forks
+        pullRequestsFromForks: true
+        # add a check to pull requests
+        addCheck: true
+        # add a "Review in Gitpod" button as a comment to pull requests
+        addComment: false
+        # add a "Review in Gitpod" button to the pull request's description
+        addBadge: false
 ```
 
 > **Important:** Prebuilds only save the workspace directory. Any file changes made outside of `/workspace` file hierarchy from `init` tasks will be lost on workspace start when prebuilds are enabled.
@@ -168,9 +168,9 @@ The scope of each variable determines in what workspaces it will be available. S
 
 You can use a wildcard (denoted with a `*`) to match either the `owner` or `repo`, for example:
 
-- **Single organizations** - Setting `dropwizard/*` would make an environment variable available in all repositories owned by the organization dropwizard.
-- **Single repository** - `*/dropwizard` would make an environment variable available on all repositories called `dropwizard`; this is especially useful for forks.
-- **All organizations or repositories** - Using `*/*` would make an environment variable available in every repository for any organization for that given user.
+-   **Single organizations** - Setting `dropwizard/*` would make an environment variable available in all repositories owned by the organization dropwizard.
+-   **Single repository** - `*/dropwizard` would make an environment variable available on all repositories called `dropwizard`; this is especially useful for forks.
+-   **All organizations or repositories** - Using `*/*` would make an environment variable available in every repository for any organization for that given user.
 
 <figure class="flex flex-col items-center text-center">
   <img src="/images/guides/guide-ephemeral-dev-environment-on-gitpod/scope.png" alt="Scope of each variable determines in what workspaces it will be available" width="500" />
@@ -188,30 +188,30 @@ Here we would like to persist the `.bash_history` file under the `$HOME` directo
 
 Inside your workspace, Open the terminal & run the following steps:
 
-- Step 1: `mkdir -p /workspace/.persist`
-- Step 2: `cp $HOME/.bash_history /workspace/.persist`
-- Step 3: Add the following task inside `.gitpod.yml`:
+-   Step 1: `mkdir -p /workspace/.persist`
+-   Step 2: `cp $HOME/.bash_history /workspace/.persist`
+-   Step 3: Add the following task inside `.gitpod.yml`:
 
 ```yml
 tasks:
-  - name: Restore persist
-    before: |
-      cp /workspace/.persist/.bash_history $HOME;
-      # Copy more files as necessary below
-      exit;
+    - name: Restore persist
+      before: |
+          cp /workspace/.persist/.bash_history $HOME;
+          # Copy more files as necessary below
+          exit;
 ```
 
-- Step 4: [See it in action](https://www.gitpod.io/docs/config-gitpod-file#see-it-in-action)
+-   Step 4: [See it in action](https://www.gitpod.io/docs/config-gitpod-file#see-it-in-action)
 
 > **Note**: This is just a temporary solution. The issue for this is still open [Issue URL](https://github.com/gitpod-io/gitpod/issues/8716)
 
 # Recommended Reading
 
-- [Docs: Config Dotfiles](https://www.gitpod.io/docs/configure/user-settings/dotfiles)
-- [GitHub Repository: Bring your own Dotfiles to Gitpod | dotfiles on Gitpod](https://github.com/gitpod-io/demo-dotfiles-with-gitpod)
-- [GitHub Repository: AWS Single Sign-On (SSO) and Amazon Elastic Container Registry (ECR) with Gitpod](https://github.com/gitpod-io/demo-aws-with-gitpod)
-- [Guide: Gitpodifying — The Ultimate Guide](https://www.gitpod.io/guides/gitpodify)
-- [Blog: Personalize your Gitpod Workspace Environments](https://www.gitpod.io/blog/personalize-your-gitpod-workspace-environment)
+-   [Docs: Config Dotfiles](https://www.gitpod.io/docs/configure/user-settings/dotfiles)
+-   [GitHub Repository: Bring your own Dotfiles to Gitpod | dotfiles on Gitpod](https://github.com/gitpod-io/demo-dotfiles-with-gitpod)
+-   [GitHub Repository: AWS Single Sign-On (SSO) and Amazon Elastic Container Registry (ECR) with Gitpod](https://github.com/gitpod-io/demo-aws-with-gitpod)
+-   [Guide: Gitpodifying — The Ultimate Guide](https://www.gitpod.io/guides/gitpodify)
+-   [Blog: Personalize your Gitpod Workspace Environments](https://www.gitpod.io/blog/personalize-your-gitpod-workspace-environment)
 
 ---
 

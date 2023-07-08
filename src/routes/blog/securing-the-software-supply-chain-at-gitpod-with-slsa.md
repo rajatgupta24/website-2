@@ -5,7 +5,7 @@ excerpt: Gitpod takes a central position in the software development lifecycle. 
 image: teaser.png
 slug: securing-the-software-supply-chain-at-gitpod-with-slsa
 teaserImage: teaser.png
-tags: ["Gitpod updates"]
+tags: ['Gitpod updates']
 title: Securing Gitpod's Software Supply Chain with SLSA
 ---
 
@@ -36,9 +36,9 @@ A significant aspect of preventing software supply chain risks is to keep depend
 
 Go offers other features which improve our confidence in the integrity of those components:
 
-- Go locks builds by pinning specific versions specified inside the `go.mod` file. Malicious updates introduced as a new version won't affect `go build` automatically
-- Even if malicious updates get introduced in the same version as a re-upload, this wouldn't automatically affect Go builds containing hashes of all dependencies that contribute to a build specified in the `go.sum` file. An incomplete or incorrect file will cause an error - version content will always remain the same
-- Go modules are directly consumed through the version control system without an additional package repository that could get compromised.
+-   Go locks builds by pinning specific versions specified inside the `go.mod` file. Malicious updates introduced as a new version won't affect `go build` automatically
+-   Even if malicious updates get introduced in the same version as a re-upload, this wouldn't automatically affect Go builds containing hashes of all dependencies that contribute to a build specified in the `go.sum` file. An incomplete or incorrect file will cause an error - version content will always remain the same
+-   Go modules are directly consumed through the version control system without an additional package repository that could get compromised.
 
 If you want to read more about how Go mitigates supply chain attacks, you can read it [here](https://go.dev/blog/supply-chain).
 

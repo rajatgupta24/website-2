@@ -4,7 +4,7 @@ date: Tuesday, 28 Sep 2021 13:00:00 UTC
 excerpt: Run the latest VS Code on a remote machine accessed through a modern web browser - from any device, from anywhere.
 image: teaser2.jpg
 slug: openvscode-server-launch
-tags: ["Company building"]
+tags: ['Company building']
 subtitle:
 teaserImage: teaser2.jpg
 title: VS Code in the browser for everyone
@@ -21,8 +21,8 @@ title: VS Code in the browser for everyone
 
 **TL;DR**
 
-- Gitpod introduces open-source project [OpenVSCode Server](https://github.com/gitpod-io/openvscode-server/) that runs the latest VS Code on a remote machine accessed through a modern web browser.
-- The project is backed by GitLab, VMware, Uber, SAP, Sourcegraph, RStudio, SUSE and many others.
+-   Gitpod introduces open-source project [OpenVSCode Server](https://github.com/gitpod-io/openvscode-server/) that runs the latest VS Code on a remote machine accessed through a modern web browser.
+-   The project is backed by GitLab, VMware, Uber, SAP, Sourcegraph, RStudio, SUSE and many others.
 
 In retrospect the second half of 2021 will mark an important turning point for remote, cloud-based developer environments. After two years GitHub managed to ship Codespaces (& [received a cake 🎂](/blog/cake)). With JetBrains’ [remote development support](https://youtrack.jetbrains.com/issue/IDEA-226455#focus=Comments-27-5192116.0-0) developers will be able to choose between IDEs to access Gitpod's ephemeral, cloud-based developer environments later this year. For those who like the convenience of a browser, we have great news to share today.
 
@@ -50,10 +50,10 @@ The project has the following long-standing objectives:
 
 We shared and tested the project with several developers and asked them about the benefits of OpenVSCode Server. Below is a list of the most common responses:
 
-- **Use the power of the cloud** - dependencies, compilation, testing, large data sets can all be run on machines far more powerful than your laptop
-- **Remote access** - you can access those machines from any device such as iPads and Chromebooks via a web browser with the familiar VS Code experience
-- **Save battery & data** - as all CPU and RAM intensive tasks run on the remote machine you will preserve battery life and keep your data plan under control
-- **Keep your source secure** - you keep your dev environment centralized and secure, away from your local machine
+-   **Use the power of the cloud** - dependencies, compilation, testing, large data sets can all be run on machines far more powerful than your laptop
+-   **Remote access** - you can access those machines from any device such as iPads and Chromebooks via a web browser with the familiar VS Code experience
+-   **Save battery & data** - as all CPU and RAM intensive tasks run on the remote machine you will preserve battery life and keep your data plan under control
+-   **Keep your source secure** - you keep your dev environment centralized and secure, away from your local machine
 
 ## Getting started
 
@@ -73,8 +73,8 @@ A big thank you to all our engineers involved in making this happen, specificall
 
 Gitpod is all about removing friction from the developer experience by provisioning and orchestrating [automated, ephemeral developer environments](/blog/cloud-based-development-for-everyone#ephemeral-developer-environments) for you and your team. An IDE is just one building block of a working cloud based developer environment, in addition to the operating system, databases, compilers and all the other tools you need to be productive. At Gitpod we want to support the IDE or editor you like best, and providing VS Code through the web browser is just one possibility. Alternatively, you can access your Gitpod workspaces [through SSH](/blog/local-app), [local VS Code](/docs/references/ides-and-editors/vscode) and soon your favorite Jetbrains IDEs.
 
-- If you want one-click, fully automated developer environments that give yourself and your team an unparalleled productivity boost try [Gitpod](https://gitpod.io/workspaces/).
+-   If you want one-click, fully automated developer environments that give yourself and your team an unparalleled productivity boost try [Gitpod](https://gitpod.io/workspaces/).
 
-- If you have a machine somewhere which you would like to access with VS Code through a browser, check out [OpenVSCode Server](https://github.com/gitpod-io/openvscode-server/).
+-   If you have a machine somewhere which you would like to access with VS Code through a browser, check out [OpenVSCode Server](https://github.com/gitpod-io/openvscode-server/).
 
 <OpenvscodeLaunchPartners />

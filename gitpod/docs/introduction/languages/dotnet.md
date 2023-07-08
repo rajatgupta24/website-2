@@ -61,21 +61,21 @@ To add this extension to your repository, add the following to your [.gitpod.yml
 
 ```yml
 vscode:
-  extensions:
-    - muhammad-sammy.csharp
+    extensions:
+        - muhammad-sammy.csharp
 ```
 
 ### F#
 
 The [Ionide-fsharp](https://ionide.io/) extension gives F# developers the following features:
 
-- A Widget for your F# needs
-- Auto completion
-- Shows errors inline
-- Quickfix
-- Goto definition
-- Peek definition
-- And more...
+-   A Widget for your F# needs
+-   Auto completion
+-   Shows errors inline
+-   Quickfix
+-   Goto definition
+-   Peek definition
+-   And more...
 
 ![Ionide fsharp Example](../../../static/images/docs/Iondine_Example.png)
 
@@ -83,6 +83,6 @@ To add this extension to your repository, add the following to your [.gitpod.yml
 
 ```yml
 vscode:
-  extensions:
-    - Ionide.Ionide-fsharp@4.6.2:yBkAE6j7z7gJ5WEcyMjEOg==
+    extensions:
+        - Ionide.Ionide-fsharp@4.6.2:yBkAE6j7z7gJ5WEcyMjEOg==
 ```

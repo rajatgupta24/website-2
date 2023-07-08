@@ -4,7 +4,7 @@ date: Tuesday, 20 Oct 2021 13:00:00 UTC
 excerpt: Background story about the last four years improving the editing experience of Cloud IDEs.
 image: cover_cloudIDE.jpg
 slug: cloud-ide-history
-tags: ["Company building"]
+tags: ['Company building']
 subtitle:
 teaserImage: cover_cloudIDE.jpg
 title: From Theia to OpenVSCode Server - A history of Cloud IDEs
@@ -29,9 +29,9 @@ When we improved developer tooling for a San Francisco based client five years a
 
 To convince developers [to say goodbye to local development](/blog/i-said-goodbye-to-local-development-and-so-can-you), it is important to not reinvent the wheel but offer an editing experience that:
 
-- Is backed by a thriving community
-- Wins hearts and minds of developers
-- Works on modern web technology
+-   Is backed by a thriving community
+-   Wins hearts and minds of developers
+-   Works on modern web technology
 
 This is VS Code. The team around Erich Gamma [struck the right balance between an editor and a full-blown IDE](/blog/the-evolution-of-devx#vs-code-takes-over---why-is-that) building a lean but powerful product that today is the world's most popular editing experience and will continue to rise in popularity. \*\*I want to take this as an opportunity to thank the whole VS Code team for their hard work - me personally and also everybody at Gitpod is very grateful for what you are doing for the developer community. When we started working on the idea around Gitpod there was however a problem.
 

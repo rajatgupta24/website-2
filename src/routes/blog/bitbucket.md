@@ -6,7 +6,7 @@ image: teaser.jpg
 slug: bitbucket
 subtitle: Instant dev environments for all Bitbucket projects
 teaserImage: teaser.jpg
-tags: ["Gitpod updates"]
+tags: ['Gitpod updates']
 title: Gitpod for Bitbucket 🚀
 ---
 
@@ -32,21 +32,21 @@ For more convenience, you can also install Gitpod's browser extension (for [Chro
 
 Gitpod also supports other types of Bitbucket URLs, like:
 
-- Opening file URLs
+-   Opening file URLs
 
-  <p>Example: <a href="https://gitpod.io/#https://bitbucket.org/gitpod/spring-petclinic/src/master/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java" target="blank"><b style="font-weight:700;">https://gitpod.io/#</b>https://bitbucket.org/gitpod/spring-petclinic/../petclinic/PetClinicApplication.java</a></p>
+    <p>Example: <a href="https://gitpod.io/#https://bitbucket.org/gitpod/spring-petclinic/src/master/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java" target="blank"><b style="font-weight:700;">https://gitpod.io/#</b>https://bitbucket.org/gitpod/spring-petclinic/../petclinic/PetClinicApplication.java</a></p>
 
-- Opening branches
+-   Opening branches
 
-  <p>Example: <a href="https://gitpod.io/#https://bitbucket.org/gitpod/spring-petclinic/src/my-branch/" target="blank"><b style="font-weight:700;">https://gitpod.io/#</b>https://bitbucket.org/gitpod/spring-petclinic/src/my-branch/</a></p>
+    <p>Example: <a href="https://gitpod.io/#https://bitbucket.org/gitpod/spring-petclinic/src/my-branch/" target="blank"><b style="font-weight:700;">https://gitpod.io/#</b>https://bitbucket.org/gitpod/spring-petclinic/src/my-branch/</a></p>
 
-- Opening issues
+-   Opening issues
 
-  <p>Example: <a href="https://gitpod.io/#https://bitbucket.org/gitpod/spring-petclinic/issues/1/make-first-name-optional" target="blank"><b style="font-weight:700;">https://gitpod.io/#</b>https://bitbucket.org/gitpod/spring-petclinic/issues/1/make-first-name-optional</a></p>
+    <p>Example: <a href="https://gitpod.io/#https://bitbucket.org/gitpod/spring-petclinic/issues/1/make-first-name-optional" target="blank"><b style="font-weight:700;">https://gitpod.io/#</b>https://bitbucket.org/gitpod/spring-petclinic/issues/1/make-first-name-optional</a></p>
 
-- Opening pull requests
+-   Opening pull requests
 
-  <p>Example: <a href="https://gitpod.io/#https://bitbucket.org/gitpod/spring-petclinic/pull-requests/1/allow-omitting-first-name/diff" target="blank"><b style="font-weight:700;">https://gitpod.io/#</b>https://bitbucket.org/gitpod/spring-petclinic/pull-requests/1/allow-omitting-first-name/diff</a></p>
+    <p>Example: <a href="https://gitpod.io/#https://bitbucket.org/gitpod/spring-petclinic/pull-requests/1/allow-omitting-first-name/diff" target="blank"><b style="font-weight:700;">https://gitpod.io/#</b>https://bitbucket.org/gitpod/spring-petclinic/pull-requests/1/allow-omitting-first-name/diff</a></p>
 
 Depending on the context, your dev environment will be initialized differently.
 

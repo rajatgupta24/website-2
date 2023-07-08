@@ -1,11 +1,11 @@
 ---
 title: Building a learning platform on Gitpod
 # We can't do $ signs here because whatever parses this reads $1 as a keyword and injects <script type="module" in its place
-excerpt: "Building a learning platform on Gitpod that allows instructors to teach, evaluate, and grade code lessons. They have taught over 4000 students in 6 countries and have received over 15 million USD in educational grants."
+excerpt: 'Building a learning platform on Gitpod that allows instructors to teach, evaluate, and grade code lessons. They have taught over 4000 students in 6 countries and have received over 15 million USD in educational grants.'
 slug: 4geeks
 image: teaser.png
 date: Friday, 30 June 2022 06:00:00 UTC
-pageTitle: "4Geeks Academy case study: Building a learning platform on Gitpod"
+pageTitle: '4Geeks Academy case study: Building a learning platform on Gitpod'
 pageDescription: Building a learning platform on Gitpod that allows instructors to teach, evaluate, and grade code lessons. They have taught over 4000 students in 6 countries and have received over 15 million USD in educational grants.
 keywords: education, funding, workshops, 4Geeks
 ---

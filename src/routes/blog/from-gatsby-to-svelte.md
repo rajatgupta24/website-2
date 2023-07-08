@@ -6,7 +6,7 @@ image: teaser.png
 slug: from-gatsby-to-svelte
 subtitle:
 teaserImage: teaser.png
-tags: ["Engineering"]
+tags: ['Engineering']
 title: From Gatsby to Svelte in 3 weeks
 ---
 
@@ -16,10 +16,10 @@ title: From Gatsby to Svelte in 3 weeks
 
 **tl;dr:**
 
-- [Gitpod](/) recently announced new funding and a completely new brand ([read more](/blog/next-chapter-for-gitpod)) 🍊.
-- As part of that, we rebuilt the website from scratch, replacing React & Gatsby with [Svelte](https://svelte.dev) & [SvelteKit](https://kit.svelte.dev).
-- Look at the [source code on GitHub](https://github.com/gitpod-io/website) or start the website in a Gitpod developer environment by visiting <a class="no-nowrap" href="https://gitpod.io#https://github.com/gitpod-io/website" rel="nofollow">https://gitpod.io#https://github.com/gitpod-io/website</a>.
-- Listen to the Svelte Radio episode "[Migrating from Sapper to SvelteKit](https://share.transistor.fm/s/507ad528)" where I shared more details.
+-   [Gitpod](/) recently announced new funding and a completely new brand ([read more](/blog/next-chapter-for-gitpod)) 🍊.
+-   As part of that, we rebuilt the website from scratch, replacing React & Gatsby with [Svelte](https://svelte.dev) & [SvelteKit](https://kit.svelte.dev).
+-   Look at the [source code on GitHub](https://github.com/gitpod-io/website) or start the website in a Gitpod developer environment by visiting <a class="no-nowrap" href="https://gitpod.io#https://github.com/gitpod-io/website" rel="nofollow">https://gitpod.io#https://github.com/gitpod-io/website</a>.
+-   Listen to the Svelte Radio episode "[Migrating from Sapper to SvelteKit](https://share.transistor.fm/s/507ad528)" where I shared more details.
 
 ## What we had previously...
 

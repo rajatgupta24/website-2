@@ -45,9 +45,9 @@ cert-manager provides the Gitpod installation with certificates for internal com
 
 Following the cert-manager instructions, you will have an `Issuer` or `ClusterIssuer` with a configured `dns01` solver (most probably with a proper secret with credentials for your DNS provider) as well a `Certificate` with the following `dnsNames`:
 
-- `example.com`
-- `*.example.com`
-- `*.ws.example.com`
+-   `example.com`
+-   `*.example.com`
+-   `*.ws.example.com`
 
 _(replace `example.com` with your Gitpod domain)_
 
@@ -102,9 +102,9 @@ This git integration will also serve as the way that you and your users get auth
 
 > **Important:** Public (SaaS) Source Control Management Systems (SCMs) (i.e. [GitLab.com](http://Gitlab.com), [GitHub.com](http://github.com/) and [Bitbucket.org](http://Bitbucket.org)) are **not** integrated by default with a Self-Hosted Gitpod instance because OAuth apps are tied to domains. Therefore, these public SCMs need to be integrated manually with an OAuth application you specifically create for your domain. This is done similarly to how it is done for the private/self-hosted versions of each SCM. As such their respective guides also apply here:
 >
-> - Follow [these](/docs/configure/authentication/gitlab#registering-a-self-hosted-gitlab-installation) steps to integrate [`GitLab.com`](https://gitlab.com/) with your self-hosted Gitpod instance. You will need to enter `gitlab.com` as the `Provider Host Name` in the New Git Integration Modal.
-> - Follow [these](/docs/configure/authentication/github-enterprise) steps to integrate [`GitHub.com`](http://github.com) with your self-hosted Gitpod instance. You will need to enter `github.com` as the `Provider Host Name` in the New Git Integration Modal.
-> - Follow [these](/docs/configure/authentication/bitbucket-server) steps to integrate [`Bitbucket.org`](https://bitbucket.org/) with your self-hosted Gitpod instance. Select `Bitbucket` as the `Provider Type` in the New Git Integration Modal. For bitbucket.org this requires configuring an "OAuth consumer" on a "workspace". This is slightly different from the documented Bitbucket Server integration. See [gitpod PR #9894](https://github.com/gitpod-io/gitpod/pull/9894#pullrequestreview-969013833) for an example.
+> -   Follow [these](/docs/configure/authentication/gitlab#registering-a-self-hosted-gitlab-installation) steps to integrate [`GitLab.com`](https://gitlab.com/) with your self-hosted Gitpod instance. You will need to enter `gitlab.com` as the `Provider Host Name` in the New Git Integration Modal.
+> -   Follow [these](/docs/configure/authentication/github-enterprise) steps to integrate [`GitHub.com`](http://github.com) with your self-hosted Gitpod instance. You will need to enter `github.com` as the `Provider Host Name` in the New Git Integration Modal.
+> -   Follow [these](/docs/configure/authentication/bitbucket-server) steps to integrate [`Bitbucket.org`](https://bitbucket.org/) with your self-hosted Gitpod instance. Select `Bitbucket` as the `Provider Type` in the New Git Integration Modal. For bitbucket.org this requires configuring an "OAuth consumer" on a "workspace". This is slightly different from the documented Bitbucket Server integration. See [gitpod PR #9894](https://github.com/gitpod-io/gitpod/pull/9894#pullrequestreview-969013833) for an example.
 
 > **Note:** Your first workspace start can take a bit of time because the workspace image first needs to be built and then downloaded. Subsequent workspace starts should be much quicker.
 

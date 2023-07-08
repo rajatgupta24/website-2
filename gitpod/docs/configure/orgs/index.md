@@ -12,9 +12,9 @@ description: Organizations allow you to manage users, projects, prebuilds and po
 
 An organization can be used to represent a group of people collaborating together with Gitpod, such as an entire company or an open source collective. Through Gitpod organizations you can:
 
-- [Manage Organization Members](/docs/configure/orgs/members)
-- [Manage Projects](/docs/configure/projects) (and [Prebuild](/docs/configure/projects/prebuilds) configurations)
-- [Apply Organization Policies](/docs/configure/orgs/policies) (e.g. restrict workspace sharing)
+-   [Manage Organization Members](/docs/configure/orgs/members)
+-   [Manage Projects](/docs/configure/projects) (and [Prebuild](/docs/configure/projects/prebuilds) configurations)
+-   [Apply Organization Policies](/docs/configure/orgs/policies) (e.g. restrict workspace sharing)
 
 ## Create an organization
 

@@ -5,7 +5,7 @@ title: Gitpod x Qovery - Develop, Deploy and Run applications with Gitpod and Qo
 slug: qovery-and-gitpod
 excerpt: Gitpod, integrated into the Qovery console, will work on the developer experience, helping to have a complete cloud development environment for the developers anywhere in no time. In this blog we will learn how can we develop and run applications using Qovery and Gitpod.
 teaserImage: header.png
-tags: ["Gitpod updates"]
+tags: ['Gitpod updates']
 image: header.png
 ---
 
@@ -17,17 +17,17 @@ As a developer, how can you increase your velocity to ship? And how can you test
 
 That's where Gitpod and Qovery come to the rescue:
 
-- [Gitpod](https://www.gitpod.io/) will focus on the developer experience, ensuring that individual developers and teams are productive enough and can ship fast.
-- While [Qovery](https://www.qovery.com/) helps developers to be autonomous enough to ship in production and correctly manage their applications.
+-   [Gitpod](https://www.gitpod.io/) will focus on the developer experience, ensuring that individual developers and teams are productive enough and can ship fast.
+-   While [Qovery](https://www.qovery.com/) helps developers to be autonomous enough to ship in production and correctly manage their applications.
 
 In this blog we will learn how can we develop and run applications using Qovery and Gitpod:
 
-- [What is Gitpod](#what-is-gitpod)
-- [What is Qovery](#what-is-qovery)
-- [How Gitpod and Qovery Makes Sense Together](#how-gitpod-and-qovery-makes-sense-together)
-- [Make a Hotfix with Qovery and Gitpod](#make-a-hotfix-with-qovery-and-gitpod)
-- [Try a New Feature Before Pushing it to Production](#try-a-new-feature-before-pushing-it-to-production)
-- [Example Scenario - Sample application on Qovery x Gitpod](#example-scenario---sample-application-on-qovery-x-gitpod)
+-   [What is Gitpod](#what-is-gitpod)
+-   [What is Qovery](#what-is-qovery)
+-   [How Gitpod and Qovery Makes Sense Together](#how-gitpod-and-qovery-makes-sense-together)
+-   [Make a Hotfix with Qovery and Gitpod](#make-a-hotfix-with-qovery-and-gitpod)
+-   [Try a New Feature Before Pushing it to Production](#try-a-new-feature-before-pushing-it-to-production)
+-   [Example Scenario - Sample application on Qovery x Gitpod](#example-scenario---sample-application-on-qovery-x-gitpod)
 
 # What is Gitpod?
 
@@ -76,17 +76,17 @@ Here is the example:
 ```yml
 # Commands to start on workspace startup
 tasks:
-  - name: Setup & Build
-    before: yarn global add express
-    init: yarn install
-    command: yarn build
+    - name: Setup & Build
+      before: yarn global add express
+      init: yarn install
+      command: yarn build
 
 # Ports to expose on workspace startup
 ports:
-  - port: 3000
-    onOpen: open-preview
-    name: Website
-    description: Website Preview
+    - port: 3000
+      onOpen: open-preview
+      name: Website
+      description: Website Preview
 ```
 
 3. After committing and pushing from Gitpod on your necessary changes, Qovery will automatically re-deploy the new version without any downtime. You can even head to the deployment logs on the Qovery interface to see what happens in real-time such as the rebuild.

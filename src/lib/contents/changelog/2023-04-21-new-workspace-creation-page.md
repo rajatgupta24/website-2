@@ -14,8 +14,8 @@ customSlug: new-workspace-creation-page
 
 We’ve enabled the ability to select the organization, editor, and workspace class used when opening a workspace. Giving you the ability to:
 
-- Select which organization will be billed.
-- Change editor and scale resources per workspace.
-- Be certain about how many credits per hour will be consumed.
+-   Select which organization will be billed.
+-   Change editor and scale resources per workspace.
+-   Be certain about how many credits per hour will be consumed.
 
 We look forward to hearing your feedback! [github.com/gitpod-io/gitpod/issues/17215](https://github.com/gitpod-io/gitpod/issues/17215)

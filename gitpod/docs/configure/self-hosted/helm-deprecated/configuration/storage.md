@@ -19,10 +19,10 @@ By default Gitpod installs [MinIO](https://min.io/) as built-in bucket storage w
 
 For more complex use case we recommend configuring more permanent means of persistence by either:
 
-- Configure the contained MinIO-instance to serve as a [gateway](https://github.com/minio/minio/tree/master/docs/gateway) OR configure one of a [wide range of storage backends](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#types-of-persistent-volumes).
-- Bring your own storage bucket: Configure Gitpod to either connect to:
-  - your own installation of MinIO
-  - a Google Cloud Storage compatible storage solution
+-   Configure the contained MinIO-instance to serve as a [gateway](https://github.com/minio/minio/tree/master/docs/gateway) OR configure one of a [wide range of storage backends](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#types-of-persistent-volumes).
+-   Bring your own storage bucket: Configure Gitpod to either connect to:
+    -   your own installation of MinIO
+    -   a Google Cloud Storage compatible storage solution
 
 ## a) Configure custom MinIO instance
 
@@ -30,18 +30,18 @@ For more complex use case we recommend configuring more permanent means of persi
 
     ```yaml
     components:
-      contentService:
-        remoteStorage:
-          kind: minio
-          minio:
-            endpoint: your-minio-installation.somewhere-else.com:8080
-            accessKey: enterKeyHere
-            secretKey: superSecretKeyGoesHere
-            tmpdir: /tmp
+        contentService:
+            remoteStorage:
+                kind: minio
+                minio:
+                    endpoint: your-minio-installation.somewhere-else.com:8080
+                    accessKey: enterKeyHere
+                    secretKey: superSecretKeyGoesHere
+                    tmpdir: /tmp
 
     # Disable built-in minio instance
     minio:
-      enabled: false
+        enabled: false
     ```
 
 2.  Redeploy Gitpod using `helm upgrade --install -f values.custom.yaml gitpod gitpod.io/gitpod --version=0.10.0` to apply the changes
@@ -54,8 +54,8 @@ For more complex use case we recommend configuring more permanent means of persi
 2.  Create a file `values.custom.yaml` with this content:
     ```yaml
     minio:
-      accessKey: add-a-radom-access-key-here
-      secretKey: add-a-radom-secret-key-here
-      # insert custom config here
+        accessKey: add-a-radom-access-key-here
+        secretKey: add-a-radom-secret-key-here
+        # insert custom config here
     ```
 3.  Redeploy Gitpod using `helm upgrade --install -f values.custom.yaml gitpod gitpod.io/gitpod --version=0.10.0` to apply the changes

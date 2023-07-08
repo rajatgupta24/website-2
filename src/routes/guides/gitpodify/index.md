@@ -63,24 +63,24 @@ Do you wish Gitpod would do more for your project? Then please read on. 👇
 
 ## Table of contents
 
-- [Introducing Gitpod](#introducing-gitpod)
-- [Table of contents](#table-of-contents)
-- [Running init scripts](#running-init-scripts)
-- [Accelerating startup with prebuilt workspaces](#accelerating-startup-with-prebuilt-workspaces)
-- [Installing missing packages](#installing-missing-packages)
-- [Installing databases](#installing-databases)
-  - [PostgreSQL](#postgresql)
-  - [MySQL](#mysql)
-  - [Redis](#redis)
-  - [MongoDB](#mongodb)
-- [Getting a Virtual Desktop](#getting-a-virtual-desktop)
-- [Opening previews](#opening-previews)
-- [Solving common preview problems](#solving-common-preview-problems)
-  - [Invalid Host Header](#invalid-host-header)
-  - [CSP errors](#csp-errors)
-  - [Unreachable localhost URLs](#unreachable-localhost-urls)
-  - [No usable sandbox](#no-usable-sandbox)
-- [Setting env variables](#setting-env-variables)
+-   [Introducing Gitpod](#introducing-gitpod)
+-   [Table of contents](#table-of-contents)
+-   [Running init scripts](#running-init-scripts)
+-   [Accelerating startup with prebuilt workspaces](#accelerating-startup-with-prebuilt-workspaces)
+-   [Installing missing packages](#installing-missing-packages)
+-   [Installing databases](#installing-databases)
+    -   [PostgreSQL](#postgresql)
+    -   [MySQL](#mysql)
+    -   [Redis](#redis)
+    -   [MongoDB](#mongodb)
+-   [Getting a Virtual Desktop](#getting-a-virtual-desktop)
+-   [Opening previews](#opening-previews)
+-   [Solving common preview problems](#solving-common-preview-problems)
+    -   [Invalid Host Header](#invalid-host-header)
+    -   [CSP errors](#csp-errors)
+    -   [Unreachable localhost URLs](#unreachable-localhost-urls)
+    -   [No usable sandbox](#no-usable-sandbox)
+-   [Setting env variables](#setting-env-variables)
 
 ## Running init scripts
 
@@ -88,8 +88,8 @@ Adding a `.gitpod.yml` file at the root of your repository allows customizing Gi
 
 ```yml
 tasks:
-  - init: npm install
-    command: npm start
+    - init: npm install
+      command: npm start
 ```
 
 (Please note the single `-` symbol: `init` and `command` should run in the same Terminal, one after each other.)
@@ -98,9 +98,9 @@ To open multiple Terminals on startup, just add more `-` entries under `tasks`:
 
 ```yml
 tasks:
-  - init: npm install
-    command: npm run server
-  - command: npm run client
+    - init: npm install
+      command: npm run server
+    - command: npm run client
 ```
 
 <br>
@@ -113,12 +113,12 @@ In order to make a Terminal wait for another Terminal to finish some task (e.g. 
 
 ```yml
 tasks:
-  - init: |
-      npm install
-      gp sync-done installation
-    command: npm run server
-  - init: gp sync-await installation
-    command: npm run client
+    - init: |
+          npm install
+          gp sync-done installation
+      command: npm run server
+    - init: gp sync-await installation
+      command: npm run client
 ```
 
 To learn more about configuring Terminals, please visit [the docs](/docs/configure/workspaces/tasks).
@@ -133,17 +133,17 @@ Optionally, you can then customize the app's behavior for your project by editin
 
 ```yml
 github:
-  prebuilds:
-    # enable for the master/default branch (defaults to true)
-    master: true
-    # enable for all branches in this repo (defaults to false)
-    branches: false
-    # enable for pull requests coming from this repo (defaults to true)
-    pullRequests: true
-    # add a check to pull requests (defaults to true)
-    addCheck: true
-    # add a "Review in Gitpod" button as a comment to pull requests (defaults to false)
-    addComment: false
+    prebuilds:
+        # enable for the master/default branch (defaults to true)
+        master: true
+        # enable for all branches in this repo (defaults to false)
+        branches: false
+        # enable for pull requests coming from this repo (defaults to true)
+        pullRequests: true
+        # add a check to pull requests (defaults to true)
+        addCheck: true
+        # add a "Review in Gitpod" button as a comment to pull requests (defaults to false)
+        addComment: false
 ```
 
 To see all configuration options for the Gitpod app, please visit [the docs](/docs/configure/projects/prebuilds).
@@ -164,7 +164,7 @@ The solution is to write a small Dockerfile for your project. If a particular `t
 
 ```yml
 image:
-  file: .gitpod.dockerfile
+    file: .gitpod.dockerfile
 ```
 
 <br>
@@ -202,9 +202,9 @@ image: gitpod/workspace-postgres
 
 This will give you an auto-starting PostgreSQL server (it should auto-start every time you open a new Terminal), plus a few utility scripts that you can run in a Terminal or in a [`.gitpod.yml`](#running-init-scripts) command:
 
-- `pg_start`: start the PostgreSQL service
-- `pg_stop`: stop the PostgreSQL service
-- `pg_ctl status`: check if the PostgreSQL service is running
+-   `pg_start`: start the PostgreSQL service
+-   `pg_stop`: stop the PostgreSQL service
+-   `pg_ctl status`: check if the PostgreSQL service is running
 
 Once the PostgreSQL server is running, you can use the `psql` CLI as usual:
 
@@ -326,10 +326,10 @@ If you want to suppress these notifications, or pre-configure a specific behavio
 
 ```yml
 ports:
-  - port: 8080
-    onOpen: open-preview
-  - port: 9000-9999
-    onOpen: ignore
+    - port: 8080
+      onOpen: open-preview
+    - port: 9000-9999
+      onOpen: ignore
 ```
 
 <br>
@@ -338,8 +338,8 @@ Another way to open web previews is to run `gp preview <url>` in a Terminal or i
 
 ```yml
 tasks:
-  - command: python3 -m http.server 8080
-  - command: gp preview $(gp url 8080)
+    - command: python3 -m http.server 8080
+    - command: gp preview $(gp url 8080)
 ```
 
 <br>
@@ -352,9 +352,9 @@ If you'd like a task to run only when a given port becomes active, you can use `
 
 ```yml
 tasks:
-  - init: npm install
-    command: npm run server 3000
-  - command: gp ports await 3000 && gp preview $(gp url 3000)
+    - init: npm install
+      command: npm run server 3000
+    - command: gp ports await 3000 && gp preview $(gp url 3000)
 ```
 
 <br>
@@ -409,9 +409,9 @@ If you don't have direct access to the dev server configuration, e.g. when using
 
 ```yml
 tasks:
-  - before: export DANGEROUSLY_DISABLE_HOST_CHECK=true
-    init: yarn install
-    command: yarn start
+    - before: export DANGEROUSLY_DISABLE_HOST_CHECK=true
+      init: yarn install
+      command: yarn start
 ```
 
 ### CSP errors
@@ -447,10 +447,10 @@ Create a new file called `proxy.config.json`, that includes a proxy route like:
 
 ```json
 {
-  "/api": {
-    "target": "http://localhost:9000",
-    "secure": false
-  }
+	"/api": {
+		"target": "http://localhost:9000",
+		"secure": false
+	}
 }
 ```
 
@@ -479,7 +479,7 @@ In this case, you'll want to use Chrome's `--no-sandbox` and/or `--disable-setui
 
 ```js
 const browser = await puppeteer.launch({
-  args: ["--no-sandbox", "--disable-setuid-sandbox"],
+	args: ['--no-sandbox', '--disable-setuid-sandbox'],
 });
 ```
 
@@ -491,12 +491,12 @@ To ensure that a required env variable called `TOKEN` is defined, you can do som
 
 ```yml
 tasks:
-  - command: >
-      while [ -z "$TOKEN" ] ; do
-        printf "\n❗ The TOKEN environment variable is required. Please enter its value.\n" &&
-        read -s -p "TOKEN: " TOKEN ;
-      done ; gp env TOKEN=$TOKEN && printf "\nThanks\n"
-      # Now you can use $TOKEN
+    - command: >
+          while [ -z "$TOKEN" ] ; do
+            printf "\n❗ The TOKEN environment variable is required. Please enter its value.\n" &&
+            read -s -p "TOKEN: " TOKEN ;
+          done ; gp env TOKEN=$TOKEN && printf "\nThanks\n"
+          # Now you can use $TOKEN
 ```
 
 <br>
@@ -507,7 +507,7 @@ If you need to have these values inside a file, you can add something like this 
 
 ```yml
 tasks:
-  - command: echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+    - command: echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
 ```
 
 <br>

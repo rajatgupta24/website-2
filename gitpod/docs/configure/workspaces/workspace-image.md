@@ -52,7 +52,7 @@ This option provides you with the most flexibility. Start by adding the followin
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 ```
 
 Next, create a `.gitpod.Dockerfile` file at the root of your project. The syntax is the regular `Dockerfile` syntax as <a href="https://docs.docker.com/engine/reference/builder/" target="_blank">documented on docs.docker.com</a>.
@@ -214,9 +214,9 @@ Also see [docker-image-tags](#docker-image-tags) for more info.
 
 If you wish to do GUI application development in Gitpod and getting errors such as:
 
-- Unable to init server: Could not connect : Connection refused
-- No display server running
-- Xorg missing
-- `xdg-open` command not found
+-   Unable to init server: Could not connect : Connection refused
+-   No display server running
+-   Xorg missing
+-   `xdg-open` command not found
 
 Then you need to use the `gitpod/workspace-full-vnc` docker image. See [this page](https://github.com/gitpod-io/workspace-images/blob/axonasif/add_docs/chunks/tool-vnc/README.md#details) for more info.

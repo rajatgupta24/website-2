@@ -7,7 +7,7 @@ slug: when-code-reviews-lgtm
 subtitle: Say goodbye to shallow reviews!
 teaserImage: when-code-reviews-lgtm.jpeg
 title: When code reviews LGTM
-tags: ["Engineering"]
+tags: ['Engineering']
 url: https://hackernoon.com/when-code-reviews-lgtm-say-goodbye-to-shallow-reviews-a4e01b84ddef
 ---
 
@@ -43,9 +43,9 @@ I feel your pain, but you should not take that shortcut. It will fire back event
 
 [Gitpod](/) gives you a full developer environment with a single click for any pull request on GitHub. You don’t have to manually setup or even change anything on your local developer environment. Just click a button and you have the best of both worlds:
 
-- a full developer environment (similar to VS Code)
+-   a full developer environment (similar to VS Code)
 
-- a great code review experience (similar to GitHub)
+-   a great code review experience (similar to GitHub)
 
 ## Code Review in Gitpod
 

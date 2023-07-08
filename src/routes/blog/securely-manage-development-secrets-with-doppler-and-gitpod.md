@@ -5,7 +5,7 @@ excerpt: Making the management and rotation of developer secrets an easy, reprod
 image: header.webp
 slug: securely-manage-development-secrets-with-doppler-and-gitpod
 teaserImage: header.webp
-tags: ["Engineering", "Developer experience"]
+tags: ['Engineering', 'Developer experience']
 title: Securely Manage and Rotate Development Secrets with Doppler and Gitpod
 ---
 
@@ -69,10 +69,10 @@ authtoken: { { .NGROK_AUTH_TOKEN } }
 region: us
 version: 2
 tunnels:
-  fastapi-openid-connect:
-    proto: http
-    hostname: { { .NGROK_DOMAIN } }
-    addr: 127.0.0.1:8000
+    fastapi-openid-connect:
+        proto: http
+        hostname: { { .NGROK_DOMAIN } }
+        addr: 127.0.0.1:8000
 ```
 
 In my Doppler development environment, I’ve set the matching variables `NGROK_AUTH_TOKEN` and `NGROK_DOMAIN`. To inject these into my Gitpod workspace and run ngrok, I have the following line in my `.gitpod.yml`:
@@ -101,8 +101,8 @@ Once this is done, I can then set a project and environment with a `doppler.yaml
 
 ```yml
 setup:
-  project: fastapi-openid-connect-playground
-  config: dev
+    project: fastapi-openid-connect-playground
+    config: dev
 ```
 
 With this, I can then inject environment variables into a command named `MY_COMMAND` by:

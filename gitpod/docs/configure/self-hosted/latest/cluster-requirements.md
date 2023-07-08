@@ -32,17 +32,17 @@ Gitpod requires Kubernetes as an orchestration technology in order to spin works
 
 Gitpod Self-Hosted runs well on:
 
-- Amazon Elastic Kubernetes Service
-- Google Kubernetes Engine
-- Microsoft Azure Kubernetes Service
-- K3s
+-   Amazon Elastic Kubernetes Service
+-   Google Kubernetes Engine
+-   Microsoft Azure Kubernetes Service
+-   K3s
 
 ### Incompatible Kubernetes Distributions
 
 These platforms do not currently work with Gitpod Self-Hosted but we would like to support them in the future. Gitpod is an open-source project, maybe you could contribute the required changes to help get them working sooner?
 
-- [Red Hat® OpenShift®](https://github.com/gitpod-io/gitpod/issues/5409)
-- [Rancher Kubernetes Engine (RKE)](https://github.com/gitpod-io/gitpod/issues/5410)
+-   [Red Hat® OpenShift®](https://github.com/gitpod-io/gitpod/issues/5409)
+-   [Rancher Kubernetes Engine (RKE)](https://github.com/gitpod-io/gitpod/issues/5410)
 
 If you are considering purchasing a commercial license for Gitpod Self-Hosted and need one of the above platforms then please [contact us](/contact/sales) to start discussions about making support for them happen sooner.
 
@@ -50,11 +50,11 @@ If you are considering purchasing a commercial license for Gitpod Self-Hosted an
 
 Your Kubernetes cluster must have node(s) with the following labels applied to them:
 
-- `gitpod.io/workload_meta=true`
-- `gitpod.io/workload_ide=true`
-- `gitpod.io/workload_workspace_services=true`
-- `gitpod.io/workload_workspace_regular=true`
-- `gitpod.io/workload_workspace_headless=true`
+-   `gitpod.io/workload_meta=true`
+-   `gitpod.io/workload_ide=true`
+-   `gitpod.io/workload_workspace_services=true`
+-   `gitpod.io/workload_workspace_regular=true`
+-   `gitpod.io/workload_workspace_headless=true`
 
 It is recommended to have a minimum of two node pools, grouping the `meta` and `ide` nodes into one node pool and `workspace` related nodes into another. These two groups of workloads have different performance characteristics. Separating them into node pools after the fact is more difficult and incurs downtime.
 
@@ -62,10 +62,10 @@ It is recommended to have a minimum of two node pools, grouping the `meta` and `
 
 These are the components expected on each node:
 
-- Either Ubuntu 18.04 with ≥ v5.4 kernel or Ubuntu 20.04 with ≥ v5.4 kernel
-- Calico for the networking overlay and network policy
-- Containerd ≥ 1.5
-- At least 4 vCPU and 16GB of RAM
+-   Either Ubuntu 18.04 with ≥ v5.4 kernel or Ubuntu 20.04 with ≥ v5.4 kernel
+-   Calico for the networking overlay and network policy
+-   Containerd ≥ 1.5
+-   At least 4 vCPU and 16GB of RAM
 
 ## Kubernetes Privilege Requirements
 
@@ -77,9 +77,9 @@ Gitpod uses [`LoadBalancer` type services](https://kubernetes.io/docs/concepts/s
 
 All supported Kubernetes distributions provide load balancers that meet Gitpod's needs. For more information see the Kubernetes distribution documentation below:
 
-- [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/concepts/service-load-balancer)
-- Amazon Elastic Kubernetes Engine:
-  - Layer 4/7 (default): [Classic Load Balancer](https://aws.amazon.com/premiumsupport/knowledge-center/eks-kubernetes-services-cluster/)
-  - Layer 4 only: [Network Load Balancing](https://docs.aws.amazon.com/eks/latest/userguide/network-load-balancing.html)
-- [Microsoft Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/concepts-network)
-- [K3s](https://rancher.com/docs/k3s/latest/en/networking/#service-load-balancer)
+-   [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/concepts/service-load-balancer)
+-   Amazon Elastic Kubernetes Engine:
+    -   Layer 4/7 (default): [Classic Load Balancer](https://aws.amazon.com/premiumsupport/knowledge-center/eks-kubernetes-services-cluster/)
+    -   Layer 4 only: [Network Load Balancing](https://docs.aws.amazon.com/eks/latest/userguide/network-load-balancing.html)
+-   [Microsoft Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/concepts-network)
+-   [K3s](https://rancher.com/docs/k3s/latest/en/networking/#service-load-balancer)

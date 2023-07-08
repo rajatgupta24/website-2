@@ -67,8 +67,8 @@ For GitHub, GitLab seems to be the only real competitor and Azure DevOps is tryi
 In this post I covered the most important differences between Gitpod and Visual Studio Online. In a nutshell:
 on the IDE feature level there are not many differences, **but**
 
-- regarding how dev environments are provisioned, Gitpod’s approach is clearly leading the pack.
-- Self-hosting is not really supported by VSO and
-- Microsoft is growing a little too dominant in the developer world these days.
+-   regarding how dev environments are provisioned, Gitpod’s approach is clearly leading the pack.
+-   Self-hosting is not really supported by VSO and
+-   Microsoft is growing a little too dominant in the developer world these days.
 
 Please let us know if you have further questions.

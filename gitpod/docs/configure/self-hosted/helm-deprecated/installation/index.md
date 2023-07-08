@@ -13,4 +13,4 @@ title: Installing Gitpod Self-Hosted
 >
 > The content of this page assumes you are using Helm, which is now deprecated. Please use the [Installer](../latest) instead.
 
-- [Install Gitpod Self-Hosted on Kubernetes](./installation/on-kubernetes)
+-   [Install Gitpod Self-Hosted on Kubernetes](./installation/on-kubernetes)

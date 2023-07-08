@@ -51,7 +51,7 @@ Secondly, reference the above Dockerfile in your `.gitpod.yml` configuration fil
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 ```
 
 Now you can [See it in action on a new workspace](/docs/references/gitpod-yml#see-it-in-action)
@@ -76,11 +76,11 @@ Second, reference the above Dockerfile in a [.gitpod.yml](/docs/references/gitpo
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 
 vscode:
-  extensions:
-    - felixfbecker.php-debug
+    extensions:
+        - felixfbecker.php-debug
 ```
 
 Now you can [See it in action on a new workspace](/docs/references/gitpod-yml#see-it-in-action)
@@ -114,4 +114,4 @@ composer config --global github-oauth.github.com $(printf '%s\n' host=github.com
 
 ## Further Reading
 
-- <a class="no-nowrap" href="https://notes.etin.space/posts/gitpodifying-a-new-laravel-application">Gitpodifying a new Laravel Application</a> by Etin Obaseki
+-   <a class="no-nowrap" href="https://notes.etin.space/posts/gitpodifying-a-new-laravel-application">Gitpodifying a new Laravel Application</a> by Etin Obaseki

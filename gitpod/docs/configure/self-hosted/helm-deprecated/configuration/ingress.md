@@ -15,8 +15,8 @@ title: Configure the ingress to your Gitpod installation
 
 Configuring ingress into your Gitpod installation requires two things:
 
-- three DNS entries pointing at the IP of Gitpod's proxy service, and
-- HTTPS certificates.
+-   three DNS entries pointing at the IP of Gitpod's proxy service, and
+-   HTTPS certificates.
 
 ## 1. DNS Entries
 
@@ -44,8 +44,8 @@ Installing Gitpod on a subdomain works as well. For example:
     ```yaml
     hostname: your-domain.com
     components:
-      proxy:
-        loadBalancerIP: <your-IP>
+        proxy:
+            loadBalancerIP: <your-IP>
     ```
     Specifying the `loadBalancerIP` make sure it stays the same across all redeploys.
 

@@ -35,7 +35,7 @@ The default Gitpod workspace image default is [workspace-full](https://github.co
 
 This base image includes:
 
-- [Go](https://golang.org/) `v1.19.1` (`go version`)
+-   [Go](https://golang.org/) `v1.19.1` (`go version`)
 
 > **Note:** We discuss how to set up a [custom base image](/docs/introduction/languages/go#setting-up-a-custom-dockerfile) later in the guide.
 
@@ -65,7 +65,7 @@ touch .gitpod.Dockerfile
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 ```
 
 4. Update your `.gitpod.Dockerfile` to install your preferred [dependency versions](https://go.dev/project)
@@ -122,15 +122,15 @@ Also, don't forget to reference the above Dockerfile in your `.gitpod.yml` confi
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 
 tasks:
-  - init: dep ensure
+    - init: dep ensure
 
 vscode:
-  extensions:
-    - golang.go
-    - premparihar.gotestexplorer
+    extensions:
+        - golang.go
+        - premparihar.gotestexplorer
 ```
 
 ## Debugging your Go application in Gitpod
@@ -157,18 +157,18 @@ To start debugging your Go application in Gitpod, please create a new directory 
 
 ```json
 {
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Launch file",
-      "type": "go",
-      "request": "launch",
-      "mode": "debug",
-      "program": "${file}"
-    }
-  ]
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Launch file",
+			"type": "go",
+			"request": "launch",
+			"mode": "debug",
+			"program": "${file}"
+		}
+	]
 }
 ```
 
@@ -208,27 +208,27 @@ how we do that for the example <a href="https://github.com/gitpod-io/definitely-
 
 ```yml
 ---
-checkoutLocation: "src/github.com/demo-apps/go-gin-app"
-workspaceLocation: "."
+checkoutLocation: 'src/github.com/demo-apps/go-gin-app'
+workspaceLocation: '.'
 tasks:
-  - init: |
-      cd /workspace/src/github.com/demo-apps/go-gin-app &&
-      go get -v ./... &&
-      go build -o app
-    command: |
-      cd /workspace/src/github.com/demo-apps/go-gin-app &&
-      ./app
+    - init: |
+          cd /workspace/src/github.com/demo-apps/go-gin-app &&
+          go get -v ./... &&
+          go build -o app
+      command: |
+          cd /workspace/src/github.com/demo-apps/go-gin-app &&
+          ./app
 ```
 
 In more detail:
 
-- By default, Gitpod clones the repository into the directory `/workspace`, which becomes the
-  root directory for the workspace. With [`checkoutLocation`](/docs/references/gitpod-yml#checkoutlocation) and [`workspaceLocation`](/docs/references/gitpod-yml#workspacelocation) you can
-  change this behavior (the paths are taken relative to `/workspace`).
-- Gitpod preconfigures the `$GOPATH` environment variable to include the directory `/workspace/go`.
-- With `go get -v ./...` we retrieve the sources of the dependencies from GitHub.
-- To build the app, we run `go build -o app`.
-- Lastly, we start the application.
+-   By default, Gitpod clones the repository into the directory `/workspace`, which becomes the
+    root directory for the workspace. With [`checkoutLocation`](/docs/references/gitpod-yml#checkoutlocation) and [`workspaceLocation`](/docs/references/gitpod-yml#workspacelocation) you can
+    change this behavior (the paths are taken relative to `/workspace`).
+-   Gitpod preconfigures the `$GOPATH` environment variable to include the directory `/workspace/go`.
+-   With `go get -v ./...` we retrieve the sources of the dependencies from GitHub.
+-   To build the app, we run `go build -o app`.
+-   Lastly, we start the application.
 
 ## Example Repositories
 
@@ -243,6 +243,6 @@ Here are a few Go example projects that are already automated with Gitpod:
 
 ## Further Reading
 
-- [VS Code/Go Documentation](https://code.visualstudio.com/docs/languages/go) The stuff here also applies to Gitpod!
-- [JetBrains/GoLand Documentation](https://www.jetbrains.com/help/go) The stuff here also applies to Gitpod!
-- [VS Code/Go debugging](https://github.com/Microsoft/vscode-go/wiki/Debugging-Go-code-using-VS-Code) VS Code's Documentation on Go debugging
+-   [VS Code/Go Documentation](https://code.visualstudio.com/docs/languages/go) The stuff here also applies to Gitpod!
+-   [JetBrains/GoLand Documentation](https://www.jetbrains.com/help/go) The stuff here also applies to Gitpod!
+-   [VS Code/Go debugging](https://github.com/Microsoft/vscode-go/wiki/Debugging-Go-code-using-VS-Code) VS Code's Documentation on Go debugging

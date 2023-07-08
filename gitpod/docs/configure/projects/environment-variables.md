@@ -18,9 +18,9 @@ You can pass environment variables into your workspace and use them in your code
 
 Below are some environment variables which are set automatically by Gitpod and are guaranteed to exist:
 
-- `GITPOD_WORKSPACE_ID`: The Universally Unique Identifier (UUID) associated with the workspace.
-- `GITPOD_WORKSPACE_URL`: The unique URL of the workspace.
-- `GITPOD_REPO_ROOT`: Path to the directory where your git repository was cloned inside the workspace.
+-   `GITPOD_WORKSPACE_ID`: The Universally Unique Identifier (UUID) associated with the workspace.
+-   `GITPOD_WORKSPACE_URL`: The unique URL of the workspace.
+-   `GITPOD_REPO_ROOT`: Path to the directory where your git repository was cloned inside the workspace.
 
 > **Tip:** Try running **`env | grep GITPOD_`** on a workspace terminal to see all the Gitpod specific environment variables. These can be useful for scripting a dynamic workspace behavior.
 
@@ -119,14 +119,14 @@ Subsequently `*/*` makes that variable available in all of those workspace.
 
 Some example patterns (**for GitLab**) and results for the mentioned `owner/some-group/sub-group/repo` repository:
 
-- `*/**`: ✅
-- `*/*`: ❌ _(for GitLab)_
-- `owner/some-group/*/*`: ✅
-- `owner/some-group/*`: ❌
-- `owner/some-group/**`: ✅
-- `owner/**`: ✅
-- `owner/some-group/sub-group/repo`: ✅
-- `*/some-group/sub-group/repo`: ✅
+-   `*/**`: ✅
+-   `*/*`: ❌ _(for GitLab)_
+-   `owner/some-group/*/*`: ✅
+-   `owner/some-group/*`: ❌
+-   `owner/some-group/**`: ✅
+-   `owner/**`: ✅
+-   `owner/some-group/sub-group/repo`: ✅
+-   `*/some-group/sub-group/repo`: ✅
 
 > **Beware:** While the variable values are stored encrypted, they are available as plain text inside a workspace. Be careful when sharing your live workspace or when using `*/*` or `*/**` as repository pattern.
 
@@ -148,10 +148,10 @@ You can set environment variables for a Gitpod `task` terminal by setting the `e
 
 ```yml
 tasks:
-  - name: Example of setting an environment variable for a task terminal
-    env:
-      PRINT_ME: "Hello World!"
-    command: echo "$PRINT_ME"
+    - name: Example of setting an environment variable for a task terminal
+      env:
+          PRINT_ME: 'Hello World!'
+      command: echo "$PRINT_ME"
 ```
 
 Note: The values should be a static string or integer, you can't refer to an existing variable via `env` keyword.
@@ -160,27 +160,27 @@ Note: The values should be a static string or integer, you can't refer to an exi
 
 ```yml
 tasks:
-  - name: Example of starting yarn with a custom environment variable set
-    command: |
-      # Example for referring to the existing system variables
-      export API_URL="$HOSTNAME"
+    - name: Example of starting yarn with a custom environment variable set
+      command: |
+          # Example for referring to the existing system variables
+          export API_URL="$HOSTNAME"
 
-      # Print out the environment variable
-      echo "$API_URL"
+          # Print out the environment variable
+          echo "$API_URL"
 
-      yarn start
+          yarn start
 
-  - name: Example of updating PATH environment variable inside a task shell
-    command: |
-      # Download and install `fzf` binary to ~/.local/bin/
-      mkdir -p ~/.local/bin
-      curl -sL "https://github.com/junegunn/fzf/releases/download/0.35.1/fzf-0.35.1-linux_amd64.tar.gz" | tar -C ~/.local/bin -xpz
+    - name: Example of updating PATH environment variable inside a task shell
+      command: |
+          # Download and install `fzf` binary to ~/.local/bin/
+          mkdir -p ~/.local/bin
+          curl -sL "https://github.com/junegunn/fzf/releases/download/0.35.1/fzf-0.35.1-linux_amd64.tar.gz" | tar -C ~/.local/bin -xpz
 
-      # Update PATH variable
-      export PATH="$HOME/.local/bin:$PATH"
+          # Update PATH variable
+          export PATH="$HOME/.local/bin:$PATH"
 
-      # Now `fzf` can be called without full path from the task shell
-      ls / | fzf
+          # Now `fzf` can be called without full path from the task shell
+          ls / | fzf
 ```
 
 Note: You can use this method when you need to refer to other variables or want to use scripting to set them conditionally.

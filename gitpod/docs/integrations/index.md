@@ -10,5 +10,5 @@ description: Gitpod integrates with many tools and services to make your develop
 
 # Integrations
 
-- [Tailscale](/docs/integrations/tailscale)
-- [JetBrains Gateway](/docs/integrations/jetbrains-gateway)
+-   [Tailscale](/docs/integrations/tailscale)
+-   [JetBrains Gateway](/docs/integrations/jetbrains-gateway)

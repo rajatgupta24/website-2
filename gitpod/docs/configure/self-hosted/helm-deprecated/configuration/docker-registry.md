@@ -18,9 +18,9 @@ To this end, Gitpod requires a container registry where it can push the images i
 
 By default Gitpod ships with a built-in Docker registry. If you operate your own Docker registry (which we'd recommend in a production setting) you can use that one. You have the following options:
 
-- Integrated Docker registry: If not disabled, this Docker registry is installed in a Kubernetes Pod as a dependency of Gitpod’s Helm chart.
-  The Docker registry requires a Kubernetes PersistentVolume. This registry is not recommended to be used for production.
-- Own Docker registry: Gitpod can connect to your own Docker registry. Compared to its built-in counterpart this enables performance gains and access to otherwise private images.
+-   Integrated Docker registry: If not disabled, this Docker registry is installed in a Kubernetes Pod as a dependency of Gitpod’s Helm chart.
+    The Docker registry requires a Kubernetes PersistentVolume. This registry is not recommended to be used for production.
+-   Own Docker registry: Gitpod can connect to your own Docker registry. Compared to its built-in counterpart this enables performance gains and access to otherwise private images.
 
 This helm chart can either deploy its own registry (default but requires [HTTPS certs](./ingress)) or use an existing one.
 
@@ -32,20 +32,20 @@ To connect to an existing Docker registry, perform the following steps:
 
     ```yaml
     components:
-      imageBuilder:
-        registryCerts: []
-        registry:
-          # name must not end with a "/"
-          name: your.registry.com/gitpod
-          secretName: image-builder-registry-secret
-          path: secrets/registry-auth.json
+        imageBuilder:
+            registryCerts: []
+            registry:
+                # name must not end with a "/"
+                name: your.registry.com/gitpod
+                secretName: image-builder-registry-secret
+                path: secrets/registry-auth.json
 
-      workspace:
-        pullSecret:
-          secretName: image-builder-registry-secret
+        workspace:
+            pullSecret:
+                secretName: image-builder-registry-secret
 
     docker-registry:
-      enabled: false
+        enabled: false
     ```
 
     Replace `your.registry.com/gitpod` with the domain your registry is available at.
@@ -72,7 +72,7 @@ If that's not the case you might have a credential store/helper set up (e.g. on 
 
 Prerequisites:
 
-- `gcloud` [installed](https://cloud.google.com/sdk/docs/quickstart) and [authenticated](https://cloud.google.com/sdk/gcloud/reference/auth/login)
+-   `gcloud` [installed](https://cloud.google.com/sdk/docs/quickstart) and [authenticated](https://cloud.google.com/sdk/gcloud/reference/auth/login)
 
 How to use Google Cloud Registry as Docker registry for Gitpod:
 
@@ -94,11 +94,11 @@ How to use Google Cloud Registry as Docker registry for Gitpod:
 
     ```json
     {
-      "auths": {
-        "gcr.io": {
-          "auth": "<long-base64-string>"
-        }
-      }
+    	"auths": {
+    		"gcr.io": {
+    			"auth": "<long-base64-string>"
+    		}
+    	}
     }
     ```
 

@@ -5,7 +5,7 @@ title: Personalize your Gitpod Workspace Environments
 slug: personalize-your-gitpod-workspace-environment
 excerpt: With Gitpod, switching to remote development becomes frictionless 🚀 You Can personalize your Gitpod workspaces as you configure your IDE Settings & Custom dotfiles.
 teaserImage: header.png
-tags: ["Gitpod updates"]
+tags: ['Gitpod updates']
 image: header.png
 ---
 
@@ -28,9 +28,9 @@ In this article, we'll show you three features in Gitpod for personalisation:
 
 Gitpod currently supports various popular IDEs & Editors 🎉. You can edit code in Gitpod using:
 
-- [JetBrains IDE’s](https://www.gitpod.io/docs/references/ides-and-editors) via [JetBrains Gateway](https://www.gitpod.io/docs/integrations/jetbrains-gateway)
-- [VS Code in the browser](https://www.gitpod.io/docs/references/ides-and-editors/vscode-browser) and [VS Code on desktop](https://www.gitpod.io/docs/references/ides-and-editors/vscode)
-- [Command-line-based](https://www.gitpod.io/docs/references/ides-and-editors/command-line) editors such as Vim
+-   [JetBrains IDE’s](https://www.gitpod.io/docs/references/ides-and-editors) via [JetBrains Gateway](https://www.gitpod.io/docs/integrations/jetbrains-gateway)
+-   [VS Code in the browser](https://www.gitpod.io/docs/references/ides-and-editors/vscode-browser) and [VS Code on desktop](https://www.gitpod.io/docs/references/ides-and-editors/vscode)
+-   [Command-line-based](https://www.gitpod.io/docs/references/ides-and-editors/command-line) editors such as Vim
 
 <figure>
 <video controls playsinline autoplay loop muted class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="Updating Gitpod IDE preferences to {title}" src="/images/editors/select-jetbrains-ide.webm" type="video/webm"></video>
@@ -98,7 +98,7 @@ For VS Code in the browser Gitpod enables Settings Sync by default. Settings Syn
 2. Using the [Command Palette](https://code.visualstudio.com/api/ux-guidelines/command-palette) select: "Settings Sync: Enable signing in with Gitpod".
    With this your preferences will be stored in Gitpod’s server.
 3. Restart your VS Code Desktop application.
-   > **Important:** You must entirely close VS Code Desktop for changes to take effect.
+    > **Important:** You must entirely close VS Code Desktop for changes to take effect.
 4. Enable Settings Sync from the Manage gear menu at the bottom of the Activity Bar. Authenticate with Gitpod to enable settings sync.
 
 Read more in the [VS Code Setting Sync](https://www.gitpod.io/docs/references/ides-and-editors/settings-sync) documentation.

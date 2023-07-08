@@ -3,7 +3,7 @@ author: pawlean, michaelaring
 date: Thursday, 27 Apr 2023 14:00:00 UTC
 excerpt: Announcing "CDE Universe", the conference for Cloud Development Environments
 slug: cde-universe-2023
-tags: ["Developer experience"]
+tags: ['Developer experience']
 image: header.webp
 teaserImage: header.webp
 title: Why we're launching CDE Universe
@@ -31,14 +31,14 @@ Directionally, the speakers at CDE Universe come from these groups: (1) internal
 
 An excerpt of the speaker list:
 
-- **Kent Beck** is a pioneer of software design patterns and methodologies. [Read his blog post on CDEs](https://medium.com/@kentbeck_7670/cloud-development-environments-tame-complexity-by-reducing-state-4a154ea7959f).
-- **Misty de Méo** is a Staff Production Engineer at Shopify. [Read about Shopify's CDE approach](https://shopify.engineering/shopifys-cloud-development-journey).
-- **Sylvestor George** is part of the Remote Development Environments project at Slack. [Read about Slack's CDE approach](https://slack.engineering/remote-development-at-slack/).
-- **Pamela Vagata** was the AI tech lead at Stripe and is now a founding partner at Pebblebed. [Learn more about Pebblebed]().
-- **Soam Vasani** is part of the Dev Environments team at Stripe. [Read about Stripe's CDE approach](https://www.infoq.com/presentations/stripe-dev-env-infrastructure/).
-- **Shelby Carpenter** is a product marketeer at MongoDB. [Read about how MongoDB works with CDEs](https://www.mongodb.com/developer/products/atlas/streamlining-cloud-native-development-gitpod-atlas/).
-- **Matas Strukčinskas** is part of the Devpod team at Uber. [Read about Uber's CDE approach](https://www.uber.com/en-DE/blog/devpod-improving-developer-productivity-at-uber/).
-- **Johannes Landgraf** is the CEO & co-founder of Gitpod. [Read about Gitpod's vision for CDEs](/cde).
+-   **Kent Beck** is a pioneer of software design patterns and methodologies. [Read his blog post on CDEs](https://medium.com/@kentbeck_7670/cloud-development-environments-tame-complexity-by-reducing-state-4a154ea7959f).
+-   **Misty de Méo** is a Staff Production Engineer at Shopify. [Read about Shopify's CDE approach](https://shopify.engineering/shopifys-cloud-development-journey).
+-   **Sylvestor George** is part of the Remote Development Environments project at Slack. [Read about Slack's CDE approach](https://slack.engineering/remote-development-at-slack/).
+-   **Pamela Vagata** was the AI tech lead at Stripe and is now a founding partner at Pebblebed. [Learn more about Pebblebed]().
+-   **Soam Vasani** is part of the Dev Environments team at Stripe. [Read about Stripe's CDE approach](https://www.infoq.com/presentations/stripe-dev-env-infrastructure/).
+-   **Shelby Carpenter** is a product marketeer at MongoDB. [Read about how MongoDB works with CDEs](https://www.mongodb.com/developer/products/atlas/streamlining-cloud-native-development-gitpod-atlas/).
+-   **Matas Strukčinskas** is part of the Devpod team at Uber. [Read about Uber's CDE approach](https://www.uber.com/en-DE/blog/devpod-improving-developer-productivity-at-uber/).
+-   **Johannes Landgraf** is the CEO & co-founder of Gitpod. [Read about Gitpod's vision for CDEs](/cde).
 
 We’ll be announcing additional speakers over the coming days. The conference will be moderated by **Pauline Narvas**, Gitpod’s Head of Community.
 

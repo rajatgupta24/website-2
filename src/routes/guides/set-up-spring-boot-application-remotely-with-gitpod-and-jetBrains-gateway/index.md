@@ -15,9 +15,9 @@ image: teaser.jpg
 **Announcement 🚀** : Today, Gitpod and Jetbrains join forces to solve the _'works on my machine'_ problem. Bringing JetBrains' deep product integration with Gitpod's remote workspaces to developers around the world.<br><br>
 This gives developers the best of both worlds -
 
-- Reproducible developer environments provisioned by Gitpod
-- Favorite desktop IDE from Jetbrains - IntelliJ IDEA, PyCharm, GoLand, and PhpStorm
-  <br>
+-   Reproducible developer environments provisioned by Gitpod
+-   Favorite desktop IDE from Jetbrains - IntelliJ IDEA, PyCharm, GoLand, and PhpStorm
+    <br>
 
 You can read the full announcement on our blog [here](https://www.gitpod.io/blog/gitpod-jetbrains).
 
@@ -33,42 +33,42 @@ This guide will teach you to set up a Spring project using JetBrains Gateway and
 
 Gitpod JetBrains IDE integration is powered with JetBrains Gateway, a compact desktop app to connect to remote workspaces without installing an IDE.
 
-1. **Install [JetBrains Gateway](https://www.jetbrains.com/help/idea/remote-development-a.html#gateway)**
+1.  **Install [JetBrains Gateway](https://www.jetbrains.com/help/idea/remote-development-a.html#gateway)**
 
-2. **Install Gitpod Plugin in JetBrains Gateway :**
-   <br>
-   Gitpod provides a plugin that you can install in JetBrains Gateway to connect to and manage Gitpod workspaces.
+2.  **Install Gitpod Plugin in JetBrains Gateway :**
+    <br>
+    Gitpod provides a plugin that you can install in JetBrains Gateway to connect to and manage Gitpod workspaces.
 
-   - Open JetBrains Gateway `Preferences` from macOS application menu or `Settings` from `File` menu in Linux/Windows.
+    -   Open JetBrains Gateway `Preferences` from macOS application menu or `Settings` from `File` menu in Linux/Windows.
 
-   - Navigate to `Plugins` and search for Gitpod in the Marketplace to find and install the **Gitpod Gateway** plugin.
-   <figure>
-   <img src="https://user-images.githubusercontent.com/37153406/165688357-d9e223d6-a08f-4cbc-8440-5f7d1d4f812a.png" alt="Installing Gitpod plugin in JetBrains Gateway">
-   <figcaption style="text-align:center">Installing Gitpod Gateway plugin in JetBrains Gateway</figcaption>
-   </figure>
+    -   Navigate to `Plugins` and search for Gitpod in the Marketplace to find and install the **Gitpod Gateway** plugin.
+          <figure>
+          <img src="https://user-images.githubusercontent.com/37153406/165688357-d9e223d6-a08f-4cbc-8440-5f7d1d4f812a.png" alt="Installing Gitpod plugin in JetBrains Gateway">
+          <figcaption style="text-align:center">Installing Gitpod Gateway plugin in JetBrains Gateway</figcaption>
+          </figure>
 
-3. **Update your preferences on the Gitpod dashboard :**
-   <br>
+3.  **Update your preferences on the Gitpod dashboard :**
+    <br>
 
-   Select IntelliJ IDEA on the [Gitpod preferences](https://gitpod.io/preferences) page. It will set IntelliJ IDEA as your default desktop IDE for future workspaces. This will launch an IDE window connected to your Gitpod workspace. You can also choose to use other JetBrains IDEs such as GoLand, PyCharm or PhpStorm.
-      <figure>
-          <img src="https://user-images.githubusercontent.com/37153406/165688354-d4cc2eba-f7f6-4f2a-b54b-c545889a8131.png" alt="Gitpod Preferences">
-          <figcaption style="text-align:center">Gitpod Preferences</figcaption>
-      </figure>
+    Select IntelliJ IDEA on the [Gitpod preferences](https://gitpod.io/preferences) page. It will set IntelliJ IDEA as your default desktop IDE for future workspaces. This will launch an IDE window connected to your Gitpod workspace. You can also choose to use other JetBrains IDEs such as GoLand, PyCharm or PhpStorm.
+    <figure>
+    <img src="https://user-images.githubusercontent.com/37153406/165688354-d4cc2eba-f7f6-4f2a-b54b-c545889a8131.png" alt="Gitpod Preferences">
+    <figcaption style="text-align:center">Gitpod Preferences</figcaption>
+    </figure>
 
-4. **Connect to your workspace from JetBrains Gateway :**
-   <br>
+4.  **Connect to your workspace from JetBrains Gateway :**
+    <br>
 
-   Open JetBrains Gateway on your machine, and click `Connect to Gitpod` under the Gitpod section, connect to your workspace or create a new one from an existing repository.
-      <figure>
-          <img src="https://user-images.githubusercontent.com/37153406/165688355-7704fadb-c030-4a76-a387-510b91aaf87a.png" alt="Connect to Gitpod">
-          <figcaption style="text-align:center">Connect to Gitpod</figcaption>
-      </figure>
+    Open JetBrains Gateway on your machine, and click `Connect to Gitpod` under the Gitpod section, connect to your workspace or create a new one from an existing repository.
+    <figure>
+    <img src="https://user-images.githubusercontent.com/37153406/165688355-7704fadb-c030-4a76-a387-510b91aaf87a.png" alt="Connect to Gitpod">
+    <figcaption style="text-align:center">Connect to Gitpod</figcaption>
+    </figure>
 
-      <figure>
-          <img src="https://user-images.githubusercontent.com/37153406/165688360-78cb72a1-d867-4298-b767-8d28d81de1be.png" alt="Create a new workspace">
-          <figcaption style="text-align:center">Create a new workspace</figcaption>
-      </figure>
+        <figure>
+            <img src="https://user-images.githubusercontent.com/37153406/165688360-78cb72a1-d867-4298-b767-8d28d81de1be.png" alt="Create a new workspace">
+            <figcaption style="text-align:center">Create a new workspace</figcaption>
+        </figure>
 
 If you want to read about the whole process in detail, you can refer to our online [documentation](https://www.gitpod.io/docs/references/ides-and-editors/intellij) 📖.
 
@@ -87,16 +87,16 @@ You can create a new Gitpod workspace using JetBrains Gateway with our [Spring B
 
 1. Wait for the IDE to import the project and install the dependencies.
 2. Run your project by clicking on the `Run` button. IntelliJ IDEA starts your Spring application in the ‘Run window’.
-<figure>
-    <img src="https://user-images.githubusercontent.com/37153406/165688347-390cf9a7-11a5-4d4f-8506-e1962c0ec699.png" alt="Run app inside IntelliJ IDE">
-    <figcaption style="text-align:center">Run app inside IntelliJ IDE</figcaption>
-</figure>
+ <figure>
+     <img src="https://user-images.githubusercontent.com/37153406/165688347-390cf9a7-11a5-4d4f-8506-e1962c0ec699.png" alt="Run app inside IntelliJ IDE">
+     <figcaption style="text-align:center">Run app inside IntelliJ IDE</figcaption>
+ </figure>
 
 3. Once the Spring application starts, IntelliJ IDEA will prompt you for the availability of port 8080. Click on the port and select `Forward and open in browser` to launch the application in your web browser.
-<figure>
-    <img src="https://user-images.githubusercontent.com/37153406/165688350-fcc27164-8e8f-41a0-9fdc-7304f6e040c7.png" alt="Launch your app">
-    <figcaption style="text-align:center">Launch your app 🚀</figcaption>
-</figure>
+ <figure>
+     <img src="https://user-images.githubusercontent.com/37153406/165688350-fcc27164-8e8f-41a0-9fdc-7304f6e040c7.png" alt="Launch your app">
+     <figcaption style="text-align:center">Launch your app 🚀</figcaption>
+ </figure>
 
 4. You can use the IntelliJ IDEA integrated terminal to run shell commands on your Gitpod workspace as well.
 
@@ -114,7 +114,7 @@ Here is the `.gitpod.yml`, used in our template. It runs Gradle build when you o
 
 ```yml
 tasks:
-  - init: ./gradlew build
+    - init: ./gradlew build
 ```
 
 You can change the command to build your application or add more commands to run when your workspace starts. You can also add plugins to install in your IDEA instance automatically.

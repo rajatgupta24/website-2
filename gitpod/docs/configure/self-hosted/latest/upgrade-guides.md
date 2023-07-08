@@ -24,10 +24,10 @@ This release includes security fixes addressing information leakage in logs; see
 
 ### Breaking Changes
 
-- [Single Cluster Reference Architecture](https://www.gitpod.io/docs/configure/self-hosted/latest/reference-architecture/single-cluster-ref-arch) changes:
-  - Regular workspaces and headless workspaces are isolated to separate node pools to help avoid noisy neighbor issues between the two and guarantee maximum performance for workspaces
-  - Workspace Services (such as `ws-manager`) are deployed to the services nodepool to prevent potential service degradation from high `ws-daemon` memory use.
-  - We've increased the default node size to 16 core / 64 GB nodes. This is to allow for more workspaces per node, and avoid the scenario where there is just one workspace per node. We've also added [documentation](https://www.gitpod.io/docs/configure/self-hosted/latest/configuring-workspace-resources) to detail our recommendations around workspace resources.
+-   [Single Cluster Reference Architecture](https://www.gitpod.io/docs/configure/self-hosted/latest/reference-architecture/single-cluster-ref-arch) changes:
+    -   Regular workspaces and headless workspaces are isolated to separate node pools to help avoid noisy neighbor issues between the two and guarantee maximum performance for workspaces
+    -   Workspace Services (such as `ws-manager`) are deployed to the services nodepool to prevent potential service degradation from high `ws-daemon` memory use.
+    -   We've increased the default node size to 16 core / 64 GB nodes. This is to allow for more workspaces per node, and avoid the scenario where there is just one workspace per node. We've also added [documentation](https://www.gitpod.io/docs/configure/self-hosted/latest/configuring-workspace-resources) to detail our recommendations around workspace resources.
 
 ## 2022.08
 
@@ -56,20 +56,20 @@ We've moved the configuration of the default workspace image and the default bas
 
 ```yaml
 experimental:
-  webApp:
-    server:
-      defaultBaseImageRegistryWhitelist:
-        - <allowed registries>
-    workspaceDefaults:
-      workspaceImage: <path to your default workspace image>
+    webApp:
+        server:
+            defaultBaseImageRegistryWhitelist:
+                - <allowed registries>
+        workspaceDefaults:
+            workspaceImage: <path to your default workspace image>
 ```
 
 **After:**
 
 ```yaml
 workspace:
-  workspaceImage: <path to your default workspace image>
+    workspaceImage: <path to your default workspace image>
 containerRegistry:
-  privateBaseImageAllowList:
-    - <allowed registries>
+    privateBaseImageAllowList:
+        - <allowed registries>
 ```

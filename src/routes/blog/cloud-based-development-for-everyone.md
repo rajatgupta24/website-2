@@ -5,7 +5,7 @@ excerpt: By 2023 working with ephemeral cloud-based dev environments will be the
 image: teaser.jpg
 slug: cloud-based-development-for-everyone
 teaserImage: teaser.jpg
-tags: ["Gitpod updates"]
+tags: ['Gitpod updates']
 title: Cloud-based development for everyone
 subtitle:
 ---
@@ -16,8 +16,8 @@ subtitle:
 
 **TL;DR**
 
-- [Welcome to the party, GitHub Codespaces!](/blog/github-codespaces)
-- Gitpod is now free for public **and private** repositories!
+-   [Welcome to the party, GitHub Codespaces!](/blog/github-codespaces)
+-   Gitpod is now free for public **and private** repositories!
 
 At Gitpod, [we believe](https://www.notion.so/gitpod/Gitpod-s-Direction-be35d064c0704fbda61c542b84e07ef6) that
 
@@ -33,12 +33,12 @@ Developer environments, however, have not experienced this same adoption rate. T
 
 The question is not if but when ephemeral, container-based dev environments are becoming the norm. Based on conversations with users there are a couple of recurring reasons accelerating this:
 
-- **Multi-track development** (develop and review complicated features with ease)
-- **Local machine limits** (larger workloads, more data, more dependencies, more testing)
-- **Security** (no source code on laptops policies)
-- **Consistency** (end of all “works on my machine” problems)
-- **Onboarding** (shave off a few initial days of tedious workspace setups)
-- **Remote work** (fully distributed or hybrid companies)
+-   **Multi-track development** (develop and review complicated features with ease)
+-   **Local machine limits** (larger workloads, more data, more dependencies, more testing)
+-   **Security** (no source code on laptops policies)
+-   **Consistency** (end of all “works on my machine” problems)
+-   **Onboarding** (shave off a few initial days of tedious workspace setups)
+-   **Remote work** (fully distributed or hybrid companies)
 
 Google, Facebook and a few others have internally built solutions for these issues for a few years already. Gitpod and GitHub Codespaces bring container-based development in the cloud to the rest of the world.
 
@@ -48,9 +48,9 @@ Putting developer experience first means working in developer environments that 
 
 For your day-to-day workflow this means that your developer environments become:
 
-- **Task-based** - for each Git context you start them, you code, you push your code, and you forget about them. For your next task, you’ll use a fresh one.
-- **Prebuilt** - Gitpod continuously builds all your Git branches like a CI server. Whenever your code changes (i.e. when new commits are pushed to your repository), Gitpod will prebuild workspaces, i.e. run the init commands in your .gitpod.yml configuration file before you even start a workspace.
-- **Shareable** - similar to preview environments in CI/CD dev environments ephemeral dev environments become easily shareable with your colleagues via a URL.
+-   **Task-based** - for each Git context you start them, you code, you push your code, and you forget about them. For your next task, you’ll use a fresh one.
+-   **Prebuilt** - Gitpod continuously builds all your Git branches like a CI server. Whenever your code changes (i.e. when new commits are pushed to your repository), Gitpod will prebuild workspaces, i.e. run the init commands in your .gitpod.yml configuration file before you even start a workspace.
+-   **Shareable** - similar to preview environments in CI/CD dev environments ephemeral dev environments become easily shareable with your colleagues via a URL.
 
 In the screencast below, [@paulienuh](https://twitter.com/paulienuh) explains how that workflow has supercharged our development velocity while developing Gitpod in Gitpod.
 

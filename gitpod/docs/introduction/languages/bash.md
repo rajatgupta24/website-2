@@ -43,11 +43,11 @@ You should also install the shellcheck VS Code extension in Gitpod, by adding a 
 
 ```yml
 image:
-  file: .gitpod.Dockerfile
+    file: .gitpod.Dockerfile
 
 vscode:
-  extensions:
-    - timonwong.shellcheck@0.9.0:hsU/Rd39aqPYowTqL+DbXg==
+    extensions:
+        - timonwong.shellcheck@0.9.0:hsU/Rd39aqPYowTqL+DbXg==
 ```
 
 Not sure about ShellCheck? Try it in Gitpod!
@@ -71,8 +71,8 @@ Also the following in your
 
 ```yml
 vscode:
-  extensions:
-    - mads-hartmann.bash-ide-vscode@1.4.0:/qx+rdXE/fGTGWhelNf3aQ==
+    extensions:
+        - mads-hartmann.bash-ide-vscode@1.4.0:/qx+rdXE/fGTGWhelNf3aQ==
 ```
 
 Not sure about Bash IDE? Try it in Gitpod
@@ -81,7 +81,7 @@ Not sure about Bash IDE? Try it in Gitpod
 
 ## Further Reading
 
-- For more information about ShellCheck please see [shellcheck.net](https://shellcheck.net)
+-   For more information about ShellCheck please see [shellcheck.net](https://shellcheck.net)
 
 ## Known issues
 

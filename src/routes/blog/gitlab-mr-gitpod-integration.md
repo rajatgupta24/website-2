@@ -4,7 +4,7 @@ date: Mon Aug 30 2021 08:08:08 GMT+0000 (UTC)
 excerpt: GitLab now has a Gitpod button on MR pages
 image: gitlab-header.png
 slug: gitlab-mr-gitpod-integration
-tags: ["Gitpod updates"]
+tags: ['Gitpod updates']
 subtitle: Launch Gitpod workspace from GitLab MR pages with one click
 title: New Gitpod Button has landed on GitLab Merge Request Pages
 ---
@@ -37,6 +37,6 @@ Every release, GitLab selects a community contributor as a [most valuable person
 
 ## Further reading
 
-- [GitLab 14.2 release blog post](https://about.gitlab.com/releases/2021/08/22/gitlab-14-2-released/)
-- [Blog post “Native GitLab Integration”](/blog/gitlab-integration)
-- [GitLab docs about the Gitpod integration](https://docs.gitlab.com/ee/integration/gitpod.html)
+-   [GitLab 14.2 release blog post](https://about.gitlab.com/releases/2021/08/22/gitlab-14-2-released/)
+-   [Blog post “Native GitLab Integration”](/blog/gitlab-integration)
+-   [GitLab docs about the Gitpod integration](https://docs.gitlab.com/ee/integration/gitpod.html)

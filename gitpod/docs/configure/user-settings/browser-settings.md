@@ -12,16 +12,16 @@ description: Learn how to configure browser settings for an optimal Gitpod exper
 
 For the best experience when working with Gitpod, we recommend you whitelist the `.gitpod.io` domain in your browser for the following permissions:
 
-- Paste content from your clipboard to a Gitpod workspace
-- Pop-ups, to preview your dev server in a new tab
+-   Paste content from your clipboard to a Gitpod workspace
+-   Pop-ups, to preview your dev server in a new tab
 
 Each browser handles this slightly differently:
 
-- [Chrome](#chrome)
-- [Edge](#edge)
-- [Brave](#brave)
-- [Firefox](#firefox)
-- [Safari](#safari)
+-   [Chrome](#chrome)
+-   [Edge](#edge)
+-   [Brave](#brave)
+-   [Firefox](#firefox)
+-   [Safari](#safari)
 
 ## Chrome
 

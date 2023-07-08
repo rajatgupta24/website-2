@@ -16,12 +16,12 @@ title: Christmas Release 🎄
 Ho ho ho! Christmas came early!
 We’ve just released a bunch of exciting new features and I'm not talking about Gitpod Enterprise which was announced last week or the [GitLab support](/blog/gitlab-support) we've shipped the week before.
 
-- <span aria-hidden="true">🔓</span>[Try with Your Private Repositories For Free](#private-project-trial)
-- <span aria-hidden="true">🛠</span>[Get Your Projects Setup with an Assistant](#setup-assistant)
-- <span aria-hidden="true">🤗</span>[New, Cheaper Plans with More Features](#new-plans)
-- <span aria-hidden="true">🌓</span>[Light and Dark Theme](#light-theme)
-- <span aria-hidden="true">♻</span>[Automatic Garbage Collection](#garbage-collection)
-- <span aria-hidden="true">💬</span>[New Community Forum](#new-community-home)
+-   <span aria-hidden="true">🔓</span>[Try with Your Private Repositories For Free](#private-project-trial)
+-   <span aria-hidden="true">🛠</span>[Get Your Projects Setup with an Assistant](#setup-assistant)
+-   <span aria-hidden="true">🤗</span>[New, Cheaper Plans with More Features](#new-plans)
+-   <span aria-hidden="true">🌓</span>[Light and Dark Theme](#light-theme)
+-   <span aria-hidden="true">♻</span>[Automatic Garbage Collection](#garbage-collection)
+-   <span aria-hidden="true">💬</span>[New Community Forum](#new-community-home)
 
 ## 🔓 Private Project Trial
 

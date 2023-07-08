@@ -7,7 +7,7 @@ slug: building-devx-teams
 subtitle:
 teaserImage: header.jpg
 title: DevX Digest 04 - Building a Developer Experience team
-tags: ["Developer experience"]
+tags: ['Developer experience']
 type: digest
 ---
 
@@ -32,25 +32,25 @@ There were so many gems in the episode, we encourage you to listen to it! Howeve
 
 ### Our key take-home messages were:
 
-- Developer Experience is still a very new space, but clearly **a very hot topic!**
+-   Developer Experience is still a very new space, but clearly **a very hot topic!**
 
-- When we talk about developer experience, it **falls into two areas:** internal DevX (sometimes companies have a dedicated team to improving internal developer experience) or applying user experience to a developer product (e.g. Netlify)
+-   When we talk about developer experience, it **falls into two areas:** internal DevX (sometimes companies have a dedicated team to improving internal developer experience) or applying user experience to a developer product (e.g. Netlify)
 
-- **How do we measure the success of DevX? How can we get buy-in from leadership to invest in DevX?** There are no specific frameworks that can give you consistent data when it comes to tracking developer experience. This can make getting buy-in from stakeholders difficult, however, Cirpo shared that he thinks his main success in DAZN’s DevX team was the fact that they started small, showing the impact by the result of fewer complaints on using internal tooling (and the number of happy faces!) which led to gaining more trust and investment from leadership.
+-   **How do we measure the success of DevX? How can we get buy-in from leadership to invest in DevX?** There are no specific frameworks that can give you consistent data when it comes to tracking developer experience. This can make getting buy-in from stakeholders difficult, however, Cirpo shared that he thinks his main success in DAZN’s DevX team was the fact that they started small, showing the impact by the result of fewer complaints on using internal tooling (and the number of happy faces!) which led to gaining more trust and investment from leadership.
 
-- Although in the developer experience space there is a burning lens on tooling, it doesn’t end there. We discuss how it’s also all about **people, all about community and that empathy is important more than ever in DevX!**
+-   Although in the developer experience space there is a burning lens on tooling, it doesn’t end there. We discuss how it’s also all about **people, all about community and that empathy is important more than ever in DevX!**
 
-- “Tools got us into this, will tools get us out?” A great question by Lou. Technology is complicated nowadays. With the vast amount of tools we have at our disposal, it can be overwhelming trying to piece them all together so that they work seamlessly in our ecosystem. That glue itself is developer experience. **How can we productively use all these tools?**
+-   “Tools got us into this, will tools get us out?” A great question by Lou. Technology is complicated nowadays. With the vast amount of tools we have at our disposal, it can be overwhelming trying to piece them all together so that they work seamlessly in our ecosystem. That glue itself is developer experience. **How can we productively use all these tools?**
 
-- The DevX that made Cirpo mind explode was the first time he customised his terminal to be colourful. The reason this was mind blowing was because “back in the day”, it was black and white. Now with the infinite customisation opportunities, **developers can really feel like their toolkit works _for_ them.**
+-   The DevX that made Cirpo mind explode was the first time he customised his terminal to be colourful. The reason this was mind blowing was because “back in the day”, it was black and white. Now with the infinite customisation opportunities, **developers can really feel like their toolkit works _for_ them.**
 
-- Lou shared an integration that was built at DAZN. Something that he has wanted in every single tool since and that is **an integrated error map.** This error map helps devs understand what is going on when they hit an issue so they can unblock themselves quicker and stay in flow. This is exactly what developer experience is all about!
+-   Lou shared an integration that was built at DAZN. Something that he has wanted in every single tool since and that is **an integrated error map.** This error map helps devs understand what is going on when they hit an issue so they can unblock themselves quicker and stay in flow. This is exactly what developer experience is all about!
 
-- Even if you don’t have the time to integrate some StackOverFlow like solution into your product, Cirpo reminds us that **sometimes the most simple actions can have a big impact on DevX.** For instance, writing meaningful error suggestions could make someone’s experience trying to debug issues 100x better.
+-   Even if you don’t have the time to integrate some StackOverFlow like solution into your product, Cirpo reminds us that **sometimes the most simple actions can have a big impact on DevX.** For instance, writing meaningful error suggestions could make someone’s experience trying to debug issues 100x better.
 
-- The final parts of our fun conversation, we all shared our hopes and dreams of DevX. Cirpo’s answer was one that we needed to highlight. He hopes that in the future, we all move towards a more **360 degrees approach** in DevX. Not just this obsession with tools, but equally with people and community.
+-   The final parts of our fun conversation, we all shared our hopes and dreams of DevX. Cirpo’s answer was one that we needed to highlight. He hopes that in the future, we all move towards a more **360 degrees approach** in DevX. Not just this obsession with tools, but equally with people and community.
 
-- It was also mentioned that having more content like this to help educate and bring more folks into the DevX world is so needed. **Sharing is caring:** we can collectively improve developer’s daily experience by just sharing our learnings with each other.
+-   It was also mentioned that having more content like this to help educate and bring more folks into the DevX world is so needed. **Sharing is caring:** we can collectively improve developer’s daily experience by just sharing our learnings with each other.
 
 ### DevX Digest is community-driven 🤝
 

@@ -3,10 +3,10 @@ author: Siddhant-K-code, pawlean
 date: 19 June 2023 00:00:00 UTC
 excerpt: Sourcegraph Cody, a cutting-edge AI coding assistant, and Gitpod, come together to provide developers with a seamless and highly efficient coding experience. By integrating Sourcegraph Cody into Gitpod, developers can unlock many intelligent code completion features, advanced code search capabilities, and context-specific suggestions, all within their development environment.
 slug: boosting-developer-productivity-unleashing-the-power-of-sourcegraph-cody-in-gitpod
-tags: ["Engineering", "Developer experience"]
+tags: ['Engineering', 'Developer experience']
 image: teaser.webp
 teaserImage: teaser.webp
-title: "Boosting Developer Productivity: Unleashing the Power of Sourcegraph Cody in Gitpod"
+title: 'Boosting Developer Productivity: Unleashing the Power of Sourcegraph Cody in Gitpod'
 ---
 
 <script context="module">
@@ -21,25 +21,25 @@ Sourcegraph Cody is an open source LLM-enhanced AI coding assistant that leverag
 
 When Sourcegraph Cody is integrated with Gitpod, it unlocks a multitude of productivity-enhancing features for developers. Let's dive into some of the key benefits this integration offers:
 
-- **Seamless Code Navigation**: By integrating Cody with Gitpod, developers can effortlessly navigate their codebase without switching contexts. They can click on symbols, functions, or variables within their code, and Cody will provide instant information about definitions, references, and usages. This powerful navigation capability saves developers time and effort in understanding complex codebases and exploring unfamiliar code.
+-   **Seamless Code Navigation**: By integrating Cody with Gitpod, developers can effortlessly navigate their codebase without switching contexts. They can click on symbols, functions, or variables within their code, and Cody will provide instant information about definitions, references, and usages. This powerful navigation capability saves developers time and effort in understanding complex codebases and exploring unfamiliar code.
 
-- **Contextual Documentation and Examples**: Cody augments code navigation with contextual documentation and examples. When exploring code in Gitpod, developers can access rich documentation and code examples associated with specific symbols. This enables them to understand the purpose and usage of different components, accelerating the learning process and reducing the time spent on code comprehension.
+-   **Contextual Documentation and Examples**: Cody augments code navigation with contextual documentation and examples. When exploring code in Gitpod, developers can access rich documentation and code examples associated with specific symbols. This enables them to understand the purpose and usage of different components, accelerating the learning process and reducing the time spent on code comprehension.
 
-- **Smarter Code Search**: Searching for specific code snippets or references within a large codebase can be time-consuming. However, with Sourcegraph Cody integrated into Gitpod, developers can perform intelligent code searches with ease. Cody's search capabilities allow developers to find symbols, definitions, and references across the entire codebase. The integration also provides advanced filters and search operators to refine search queries, making it easier to locate relevant code snippets and patterns.
+-   **Smarter Code Search**: Searching for specific code snippets or references within a large codebase can be time-consuming. However, with Sourcegraph Cody integrated into Gitpod, developers can perform intelligent code searches with ease. Cody's search capabilities allow developers to find symbols, definitions, and references across the entire codebase. The integration also provides advanced filters and search operators to refine search queries, making it easier to locate relevant code snippets and patterns.
 
-- **Cross-Repository Code Insights**: Gitpod and Sourcegraph Cody integration enable developers to explore code not only within a single repository but also across multiple repositories. This means developers can gain valuable insights into shared libraries, dependencies, and other code components used in their projects. By analyzing code usage patterns and dependencies, developers can make informed decisions, refactor code, and ensure optimal code reuse.
+-   **Cross-Repository Code Insights**: Gitpod and Sourcegraph Cody integration enable developers to explore code not only within a single repository but also across multiple repositories. This means developers can gain valuable insights into shared libraries, dependencies, and other code components used in their projects. By analyzing code usage patterns and dependencies, developers can make informed decisions, refactor code, and ensure optimal code reuse.
 
-- **Enhanced Collaboration**: Collaboration is a crucial aspect of software development, especially in distributed teams. The integration of Sourcegraph Cody with Gitpod facilitates seamless collaboration by providing a consistent code understanding across team members. Developers can share code snippets with contextual information, making it easier for teammates to understand and contribute to ongoing projects. This collaboration-friendly environment fosters efficient knowledge sharing, ultimately enhancing team productivity.
+-   **Enhanced Collaboration**: Collaboration is a crucial aspect of software development, especially in distributed teams. The integration of Sourcegraph Cody with Gitpod facilitates seamless collaboration by providing a consistent code understanding across team members. Developers can share code snippets with contextual information, making it easier for teammates to understand and contribute to ongoing projects. This collaboration-friendly environment fosters efficient knowledge sharing, ultimately enhancing team productivity.
 
 ## How teams can improve onboarding with Cody
 
 Onboarding new developers can be a challenging process, especially when they need to familiarize themselves with complex codebases and various components of a project. But, Cody and Gitpod can significantly simplify and enhance the onboarding experience for new team members.
 
-- **Repository Context-based search**: Launch the Gitpod Cloud Development Environment ([CDE](/cde)) and ensure that the required codebase is accessible within your Gitpod workspace. With your configured project-specific `.gitpod.yml` file. Gitpod provides a pre-configured development environment with all the necessary dependencies and tools, making it easy to dive into the codebase. Cody provides you with the Context-based search (ie. responses would be based on Repository & not generalized to the whole internet)
-- **Providing Contextual Documentation**: When onboarding new developers, it's essential to provide them with comprehensive documentation about the project's features, services, and components. With Cody integrated into Gitpod, you can take advantage of its contextual documentation capabilities. Developers can simply click on a symbol or function within the codebase, and Cody will provide relevant documentation, examples, and usage patterns associated with that particular component. This allows new developers to quickly understand the purpose and usage of different features and components, reducing the learning curve.
-- **Exploring Codebase**: Onboarding involves getting familiar with the codebase and understanding how different services and components interact. With Cody in Gitpod, new developers can navigate the codebase seamlessly by clicking on symbols and exploring definitions, references, and usages. They can gain insights into how different parts of the codebase are connected, improving their understanding of the project's architecture.
-- **Learning Specific Features/Services/Components**: During onboarding, developers often need to understand specific features, services, or components in detail. Cody in Gitpod allows developers to focus on a particular feature or component by searching for relevant symbols or functions. By using Cody's search capabilities, developers can find code snippets, definitions, and references related to the specific feature they are trying to understand. This targeted exploration helps them grasp the intricacies of the codebase more effectively.
-- **Collaborate and Share Insights**: As you gain insights and knowledge about the specific feature, service, or component, you can share your findings with teammates. You can use Gitpod's collaboration feature to share your Gitpod workspace and can collaborate in the same workspace with your other teammates.
+-   **Repository Context-based search**: Launch the Gitpod Cloud Development Environment ([CDE](/cde)) and ensure that the required codebase is accessible within your Gitpod workspace. With your configured project-specific `.gitpod.yml` file. Gitpod provides a pre-configured development environment with all the necessary dependencies and tools, making it easy to dive into the codebase. Cody provides you with the Context-based search (ie. responses would be based on Repository & not generalized to the whole internet)
+-   **Providing Contextual Documentation**: When onboarding new developers, it's essential to provide them with comprehensive documentation about the project's features, services, and components. With Cody integrated into Gitpod, you can take advantage of its contextual documentation capabilities. Developers can simply click on a symbol or function within the codebase, and Cody will provide relevant documentation, examples, and usage patterns associated with that particular component. This allows new developers to quickly understand the purpose and usage of different features and components, reducing the learning curve.
+-   **Exploring Codebase**: Onboarding involves getting familiar with the codebase and understanding how different services and components interact. With Cody in Gitpod, new developers can navigate the codebase seamlessly by clicking on symbols and exploring definitions, references, and usages. They can gain insights into how different parts of the codebase are connected, improving their understanding of the project's architecture.
+-   **Learning Specific Features/Services/Components**: During onboarding, developers often need to understand specific features, services, or components in detail. Cody in Gitpod allows developers to focus on a particular feature or component by searching for relevant symbols or functions. By using Cody's search capabilities, developers can find code snippets, definitions, and references related to the specific feature they are trying to understand. This targeted exploration helps them grasp the intricacies of the codebase more effectively.
+-   **Collaborate and Share Insights**: As you gain insights and knowledge about the specific feature, service, or component, you can share your findings with teammates. You can use Gitpod's collaboration feature to share your Gitpod workspace and can collaborate in the same workspace with your other teammates.
 
 ## Get Started Now
 
@@ -135,7 +135,7 @@ If you have any questions about configuring and running your project, drop by [G
 
 ## Resources and Further Reading
 
-- [More about Sourcegraph Cody](https://about.sourcegraph.com/cody).
-- [More about Gitpod Dedicated](https://www.gitpod.io/dedicated) - Private Gitpod for teams
-- [More about Cody for Orgs](https://about.sourcegraph.com/cody#contact-form)
-- Gitpod guide: Configure your Projects for a seamless developer experience.
+-   [More about Sourcegraph Cody](https://about.sourcegraph.com/cody).
+-   [More about Gitpod Dedicated](https://www.gitpod.io/dedicated) - Private Gitpod for teams
+-   [More about Cody for Orgs](https://about.sourcegraph.com/cody#contact-form)
+-   Gitpod guide: Configure your Projects for a seamless developer experience.

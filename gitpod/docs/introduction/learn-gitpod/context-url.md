@@ -18,11 +18,11 @@ Regardless of the context, Gitpod performs the tasks configured in `.gitpod.yml`
 
 Gitpod is aware of the following contexts:
 
-- [Context URL](#Context-URL)
-  - [Repository Context](#repository-context)
-  - [Branch and Commit Contexts](#branch-and-commit-contexts)
-  - [Issue Context](#issue-context)
-  - [Pull/Merge Request Context](#pullmerge-request-context)
+-   [Context URL](#Context-URL)
+    -   [Repository Context](#repository-context)
+    -   [Branch and Commit Contexts](#branch-and-commit-contexts)
+    -   [Issue Context](#issue-context)
+    -   [Pull/Merge Request Context](#pullmerge-request-context)
 
 Please note, these contexts are supported for GitHub, GitLab, and Bitbucket. This also includes Self-Hosted installations of these git providers, where available.
 
@@ -78,8 +78,8 @@ gitpod.io/#https://github.com/gitpod-io/website/issues/470
 
 When Gitpod recognizes a pull or merge request context, it knows you most likely have one of two intentions:
 
-- As a reviewer, provide PR/MR feedback
-- As an author, process feedback and update the code
+-   As a reviewer, provide PR/MR feedback
+-   As an author, process feedback and update the code
 
 In either case, Gitpod automatically performs the following tasks for you:
 

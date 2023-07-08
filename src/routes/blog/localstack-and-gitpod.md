@@ -4,7 +4,7 @@ date: Thursday, 15 September 2022 11:00:00 UTC
 title: LocalStack x Gitpod - Run cloud applications with LocalStack and Gitpod
 slug: localstack-and-gitpod
 excerpt: Developing and running cloud applications is simplified with Gitpod and LocalStack ✨ Gitpod’s fully automated, ephemeral workspaces provide a great developer experience. LocalStack accelerates your dev and test feedback loop.
-tags: ["Gitpod updates"]
+tags: ['Gitpod updates']
 teaserImage: header.jpg
 image: header.jpg
 ---
@@ -22,11 +22,11 @@ LocalStack accelerates your dev and test feedback loop. It provides you with a f
 
 In this blog, we describe how you can leverage Gitpod and LocalStack to set up a cloud development workspace without requiring access to your production cloud - allowing you to get productive within seconds.
 
-- [What is LocalStack](#What-is-LocalStack?)
-- [What is Gitpod](#what-is-gitpod)
-- [How it works - the combined power of LocalStack and Gitpod](#How-it-works---the-combined-power-of-LocalStack-and-Gitpod)
-- [Example Scenario - Sample application on LocalStack x Gitpod](#example-scenario---sample-application-on-localstack-x-gitpod)
-- [Key Benefits](#key-benefits)
+-   [What is LocalStack](#What-is-LocalStack?)
+-   [What is Gitpod](#what-is-gitpod)
+-   [How it works - the combined power of LocalStack and Gitpod](#How-it-works---the-combined-power-of-LocalStack-and-Gitpod)
+-   [Example Scenario - Sample application on LocalStack x Gitpod](#example-scenario---sample-application-on-localstack-x-gitpod)
+-   [Key Benefits](#key-benefits)
 
 # What is LocalStack?
 
@@ -103,17 +103,17 @@ Congratulations 🎉 Now, you are ready to develop and run cloud applications us
 
 There are a number of key benefits of using Gitpod and LocalStack to develop cloud applications:
 
-- **Reproducibility:** The setup with the Gitpod workspace running LocalStack makes it extremely easy to create a reproducible environment with all application artifacts pre-configured, allowing team members to become productive within literally a few minutes.
-- **Collaboration:** You can also share running workspaces which makes it possible to quickly look at a workspace together with a (remote) colleague. You can read more about it in [Collaboration & Sharing of Workspaces doc](https://www.gitpod.io/docs/sharing-and-collaboration).
-- **Seamless transition into CI:** The application configuration can be taken 1:1 and directly transferred to a CI/CD pipeline that deploys the application and executes integration tests to ensure quality, as the business logic of the cloud app evolves over time.
-- **Cost savings:** Last but not least, it becomes very easy to run your applications in a sandbox environment, without ever talking to the real cloud, hence not incurring any costs for using any of the real cloud resources.
+-   **Reproducibility:** The setup with the Gitpod workspace running LocalStack makes it extremely easy to create a reproducible environment with all application artifacts pre-configured, allowing team members to become productive within literally a few minutes.
+-   **Collaboration:** You can also share running workspaces which makes it possible to quickly look at a workspace together with a (remote) colleague. You can read more about it in [Collaboration & Sharing of Workspaces doc](https://www.gitpod.io/docs/sharing-and-collaboration).
+-   **Seamless transition into CI:** The application configuration can be taken 1:1 and directly transferred to a CI/CD pipeline that deploys the application and executes integration tests to ensure quality, as the business logic of the cloud app evolves over time.
+-   **Cost savings:** Last but not least, it becomes very easy to run your applications in a sandbox environment, without ever talking to the real cloud, hence not incurring any costs for using any of the real cloud resources.
 
 If you have any questions about configuring and running your project, drop by Gitpod’s [community Discord server](https://gitpod.io/chat) or LocalStack [Slack Community](https://localstack-community.slack.com/). We would love to hear your feedback in the Community.
 
 ## Resources and Further Reading
 
-- [LocalStack Website](https://localstack.cloud)
-- [Gitpod Documentation](https://www.gitpod.io/docs)
-- [LocalStack GitHub](https://github.com/localstack/localstack)
-- [Gitpod x LocalStack Sample application GitHub Demo](https://github.com/whummer/localstack-gitpod-demo)
-- [DevX Pod - The inner feedback loop w/ Waldemar Hummer & Oleg Šelajev](https://devxpod.buzzsprout.com/1895030/11324216-the-inner-feedback-loop-w-waldemar-hummer-oleg-selajev)
+-   [LocalStack Website](https://localstack.cloud)
+-   [Gitpod Documentation](https://www.gitpod.io/docs)
+-   [LocalStack GitHub](https://github.com/localstack/localstack)
+-   [Gitpod x LocalStack Sample application GitHub Demo](https://github.com/whummer/localstack-gitpod-demo)
+-   [DevX Pod - The inner feedback loop w/ Waldemar Hummer & Oleg Šelajev](https://devxpod.buzzsprout.com/1895030/11324216-the-inner-feedback-loop-w-waldemar-hummer-oleg-selajev)

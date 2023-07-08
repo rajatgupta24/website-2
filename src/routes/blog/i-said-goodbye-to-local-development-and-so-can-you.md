@@ -6,7 +6,7 @@ image: teaser.jpg
 slug: i-said-goodbye-to-local-development-and-so-can-you
 subtitle:
 teaserImage: teaser.jpg
-tags: ["Engineering"]
+tags: ['Engineering']
 title: I said goodbye to local development and so can you
 ---
 
@@ -16,23 +16,23 @@ title: I said goodbye to local development and so can you
 
 **Key Takeaways**
 
-- Individual developer efficiency is hard to measure, but directly impacts a company’s bottom line and team morale.
-- Remote work requires developers to onboard in isolation, a process that was already challenging when teams were co-located.
-- Onboarding instructions are often outdated, as are automated onboarding scripts because only new hires run them.
-- www.gitpod.io provides automated, one-off developer environments you spin up in the cloud for each task. In seconds, repeatedly, and securely.
+-   Individual developer efficiency is hard to measure, but directly impacts a company’s bottom line and team morale.
+-   Remote work requires developers to onboard in isolation, a process that was already challenging when teams were co-located.
+-   Onboarding instructions are often outdated, as are automated onboarding scripts because only new hires run them.
+-   www.gitpod.io provides automated, one-off developer environments you spin up in the cloud for each task. In seconds, repeatedly, and securely.
 
 ## Table of contents
 
-- [What it’s like today](#what-its-like-today)
-  - [Open source project onboarding](#open-source-project-onboarding)
-- [Meet Alice and Bob](#meet-alice-and-bob)
-  - [Set up a new project](#set-up-a-new-project)
-  - [Develop a new feature](#develop-a-new-feature)
-  - [Switch context](#switch-context)
-  - [Set up a new computer](#set-up-a-new-computer)
-  - [Contribute to open source projects](#contribute-to-open-source-projects)
-- [What’s the catch?](#whats-the-catch)
-- [Conclusion](#conclusion)
+-   [What it’s like today](#what-its-like-today)
+    -   [Open source project onboarding](#open-source-project-onboarding)
+-   [Meet Alice and Bob](#meet-alice-and-bob)
+    -   [Set up a new project](#set-up-a-new-project)
+    -   [Develop a new feature](#develop-a-new-feature)
+    -   [Switch context](#switch-context)
+    -   [Set up a new computer](#set-up-a-new-computer)
+    -   [Contribute to open source projects](#contribute-to-open-source-projects)
+-   [What’s the catch?](#whats-the-catch)
+-   [Conclusion](#conclusion)
 
 ## What it’s like today
 
@@ -76,8 +76,8 @@ Alice creates a `.gitpod.yml` configuration file at the root of her project, the
 
 ```yml
 tasks:
-  - init: npm install
-    command: npm run dev
+    - init: npm install
+      command: npm run dev
 ```
 
 She also enables Gitpod [Prebuilds](/docs/configure/projects/prebuilds) - telling Gitpod to continuously create new developer environments as soon as her project’s source code changes! This significantly reduces the startup time when she or anyone who works on her project needs a developer environment.

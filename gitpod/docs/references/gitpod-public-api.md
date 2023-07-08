@@ -84,33 +84,33 @@ func ExampleListWorkspaces() {
 
 ```json
 {
-  "result": [
-    {
-      "workspaceId": "<WORKSPACE_ID>",
-      "ownerId": "<USER_ID>",
-      "context": {
-        "contextUrl": "https://github.com/gitpod-io/empty",
-        "git": {
-          "normalizedContextUrl": "https://github.com/gitpod-io/empty"
-        }
-      },
-      "description": "gitpod-io/empty ",
-      "status": {
-        "instance": {
-          "instanceId": "<INSTANCE_ID>",
-          "workspaceId": "<WORKSPACE_ID>",
-          "createdAt": "2022-12-19T08:36:47.254Z",
-          "status": {
-            "statusVersion": "<STATUS_VERSION>",
-            "phase": "PHASE_STOPPED",
-            "conditions": {},
-            "url": "https://<WORKSPACE_ID>.ws-us79.gitpod.io",
-            "admission": "ADMISSION_LEVEL_OWNER_ONLY"
-          }
-        }
-      }
-    }
-  ]
+	"result": [
+		{
+			"workspaceId": "<WORKSPACE_ID>",
+			"ownerId": "<USER_ID>",
+			"context": {
+				"contextUrl": "https://github.com/gitpod-io/empty",
+				"git": {
+					"normalizedContextUrl": "https://github.com/gitpod-io/empty"
+				}
+			},
+			"description": "gitpod-io/empty ",
+			"status": {
+				"instance": {
+					"instanceId": "<INSTANCE_ID>",
+					"workspaceId": "<WORKSPACE_ID>",
+					"createdAt": "2022-12-19T08:36:47.254Z",
+					"status": {
+						"statusVersion": "<STATUS_VERSION>",
+						"phase": "PHASE_STOPPED",
+						"conditions": {},
+						"url": "https://<WORKSPACE_ID>.ws-us79.gitpod.io",
+						"admission": "ADMISSION_LEVEL_OWNER_ONLY"
+					}
+				}
+			}
+		}
+	]
 }
 ```
 
@@ -186,33 +186,33 @@ func ExampleGetWorkspace() {
 
 ```json
 {
-  "result": {
-    "workspaceId": "<WORKSPACE_ID>",
-    "ownerId": "<USER_ID>",
-    "context": {
-      "contextUrl": "https://github.com/gitpod-io/empty",
-      "git": {
-        "normalizedContextUrl": "https://github.com/gitpod-io/empty"
-      }
-    },
-    "description": "gitpod-io/empty ",
-    "status": {
-      "instance": {
-        "instanceId": "<INSTANCE_ID>",
-        "workspaceId": "<WORKSPACE_ID>",
-        "createdAt": "2022-12-22T07:43:16.152Z",
-        "status": {
-          "statusVersion": "<STATUS_VERSION>",
-          "phase": "PHASE_RUNNING",
-          "conditions": {
-            "firstUserActivity": "2022-12-22T07:43:21.732Z"
-          },
-          "url": "https://<WORKSPACE_ID>.ws-us80.gitpod.io",
-          "admission": "ADMISSION_LEVEL_OWNER_ONLY"
-        }
-      }
-    }
-  }
+	"result": {
+		"workspaceId": "<WORKSPACE_ID>",
+		"ownerId": "<USER_ID>",
+		"context": {
+			"contextUrl": "https://github.com/gitpod-io/empty",
+			"git": {
+				"normalizedContextUrl": "https://github.com/gitpod-io/empty"
+			}
+		},
+		"description": "gitpod-io/empty ",
+		"status": {
+			"instance": {
+				"instanceId": "<INSTANCE_ID>",
+				"workspaceId": "<WORKSPACE_ID>",
+				"createdAt": "2022-12-22T07:43:16.152Z",
+				"status": {
+					"statusVersion": "<STATUS_VERSION>",
+					"phase": "PHASE_RUNNING",
+					"conditions": {
+						"firstUserActivity": "2022-12-22T07:43:21.732Z"
+					},
+					"url": "https://<WORKSPACE_ID>.ws-us80.gitpod.io",
+					"admission": "ADMISSION_LEVEL_OWNER_ONLY"
+				}
+			}
+		}
+	}
 }
 ```
 
@@ -388,21 +388,21 @@ curl 'https://api.gitpod.io/gitpod.experimental.v1.TeamsService/CreateTeam' \
 
 ```json
 {
-  "team": {
-    "id": "<TEAM_ID>",
-    "name": "<TEAM_NAME>",
-    "members": [
-      {
-        "userId": "<USER_ID>",
-        "role": "TEAM_ROLE_OWNER",
-        "memberSince": "2022-12-22T07:53:52.210Z",
-        "avatarUrl": "<USER_AVATAR_URL>",
-        "fullName": "<USER_FULL_NAME>",
-        "primaryEmail": "<USER_EMAIL>"
-      }
-    ],
-    "teamInvitation": { "id": "<TEAM_INVITATION_ID>" }
-  }
+	"team": {
+		"id": "<TEAM_ID>",
+		"name": "<TEAM_NAME>",
+		"members": [
+			{
+				"userId": "<USER_ID>",
+				"role": "TEAM_ROLE_OWNER",
+				"memberSince": "2022-12-22T07:53:52.210Z",
+				"avatarUrl": "<USER_AVATAR_URL>",
+				"fullName": "<USER_FULL_NAME>",
+				"primaryEmail": "<USER_EMAIL>"
+			}
+		],
+		"teamInvitation": { "id": "<TEAM_INVITATION_ID>" }
+	}
 }
 ```
 
@@ -476,29 +476,29 @@ func ExampleGetTeam() {
 
 ```json
 {
-  "team": {
-    "id": "<TEAM_ID>",
-    "name": "<TEAM_NAME>",
-    "members": [
-      {
-        "userId": "<USER_ID>",
-        "role": "TEAM_ROLE_MEMBER",
-        "memberSince": "2022-12-22T08:05:20.465Z",
-        "avatarUrl": "<USER_AVATAR_URL>",
-        "fullName": "<USER_FULL_NAME>'s Bot",
-        "primaryEmail": "<USER_EMAIL>"
-      },
-      {
-        "userId": "<USER_ID>",
-        "role": "TEAM_ROLE_OWNER",
-        "memberSince": "2022-12-22T07:53:52.210Z",
-        "avatarUrl": "<USER_AVATAR_URL>",
-        "fullName": "<USER_FULL_NAME>",
-        "primaryEmail": "<USER_EMAIL>"
-      }
-    ],
-    "teamInvitation": { "id": "<TEAM_INVITATION_ID>" }
-  }
+	"team": {
+		"id": "<TEAM_ID>",
+		"name": "<TEAM_NAME>",
+		"members": [
+			{
+				"userId": "<USER_ID>",
+				"role": "TEAM_ROLE_MEMBER",
+				"memberSince": "2022-12-22T08:05:20.465Z",
+				"avatarUrl": "<USER_AVATAR_URL>",
+				"fullName": "<USER_FULL_NAME>'s Bot",
+				"primaryEmail": "<USER_EMAIL>"
+			},
+			{
+				"userId": "<USER_ID>",
+				"role": "TEAM_ROLE_OWNER",
+				"memberSince": "2022-12-22T07:53:52.210Z",
+				"avatarUrl": "<USER_AVATAR_URL>",
+				"fullName": "<USER_FULL_NAME>",
+				"primaryEmail": "<USER_EMAIL>"
+			}
+		],
+		"teamInvitation": { "id": "<TEAM_INVITATION_ID>" }
+	}
 }
 ```
 
@@ -568,38 +568,38 @@ func ExampleListTeams() {
 
 ```json
 {
-  "teams": [
-    {
-      "id": "<TEAM_ID>",
-      "name": "<TEAM_NAME>",
-      "members": [
-        {
-          "userId": "<USER_ID>",
-          "role": "TEAM_ROLE_OWNER",
-          "memberSince": "2022-09-26T04:33:17.557Z",
-          "avatarUrl": "<USER_AVATAR_URL>",
-          "fullName": "<USER_FULL_NAME>",
-          "primaryEmail": "<USER_EMAIL>"
-        }
-      ],
-      "teamInvitation": { "id": "<TEAM_INVITATION_ID>" }
-    },
-    {
-      "id": "<TEAM_ID>",
-      "name": "<TEAM_NAME>",
-      "members": [
-        {
-          "userId": "<USER_ID>",
-          "role": "TEAM_ROLE_OWNER",
-          "memberSince": "2022-09-25T15:41:41.352Z",
-          "avatarUrl": "<USER_AVATAR_URL>",
-          "fullName": "<USER_FULL_NAME>",
-          "primaryEmail": "<USER_EMAIL>"
-        }
-      ],
-      "teamInvitation": { "id": "<TEAM_INVITATION_ID>" }
-    }
-  ]
+	"teams": [
+		{
+			"id": "<TEAM_ID>",
+			"name": "<TEAM_NAME>",
+			"members": [
+				{
+					"userId": "<USER_ID>",
+					"role": "TEAM_ROLE_OWNER",
+					"memberSince": "2022-09-26T04:33:17.557Z",
+					"avatarUrl": "<USER_AVATAR_URL>",
+					"fullName": "<USER_FULL_NAME>",
+					"primaryEmail": "<USER_EMAIL>"
+				}
+			],
+			"teamInvitation": { "id": "<TEAM_INVITATION_ID>" }
+		},
+		{
+			"id": "<TEAM_ID>",
+			"name": "<TEAM_NAME>",
+			"members": [
+				{
+					"userId": "<USER_ID>",
+					"role": "TEAM_ROLE_OWNER",
+					"memberSince": "2022-09-25T15:41:41.352Z",
+					"avatarUrl": "<USER_AVATAR_URL>",
+					"fullName": "<USER_FULL_NAME>",
+					"primaryEmail": "<USER_EMAIL>"
+				}
+			],
+			"teamInvitation": { "id": "<TEAM_INVITATION_ID>" }
+		}
+	]
 }
 ```
 
@@ -643,21 +643,21 @@ curl 'https://api.gitpod.io/gitpod.experimental.v1.TeamsService/JoinTeam' \
 
 ```json
 {
-  "team": {
-    "id": "<TEAM_ID>",
-    "name": "<TEAM_NAME>",
-    "members": [
-      {
-        "userId": "<USER_ID>",
-        "role": "TEAM_ROLE_OWNER",
-        "memberSince": "2022-12-22T07:53:52.210Z",
-        "avatarUrl": "<USER_AVATAR_URL>",
-        "fullName": "<USER_FULL_NAME>",
-        "primaryEmail": "<USER_EMAIL>"
-      }
-    ],
-    "teamInvitation": { "id": "<TEAM_INVITATION_ID>" }
-  }
+	"team": {
+		"id": "<TEAM_ID>",
+		"name": "<TEAM_NAME>",
+		"members": [
+			{
+				"userId": "<USER_ID>",
+				"role": "TEAM_ROLE_OWNER",
+				"memberSince": "2022-12-22T07:53:52.210Z",
+				"avatarUrl": "<USER_AVATAR_URL>",
+				"fullName": "<USER_FULL_NAME>",
+				"primaryEmail": "<USER_EMAIL>"
+			}
+		],
+		"teamInvitation": { "id": "<TEAM_INVITATION_ID>" }
+	}
 }
 ```
 
@@ -705,9 +705,9 @@ curl 'https://api.gitpod.io/gitpod.experimental.v1.TeamsService/ResetTeamInvitat
 
 ```json
 {
-  "teamInvitation": {
-    "id": "<TEAM_INVITATION_ID>"
-  }
+	"teamInvitation": {
+		"id": "<TEAM_INVITATION_ID>"
+	}
 }
 ```
 
@@ -752,10 +752,10 @@ curl 'https://api.gitpod.io/gitpod.experimental.v1.TeamsService/UpdateTeamMember
 
 ```json
 {
-  "teamMember": {
-    "userId": "<USER_ID>",
-    "role": "TEAM_ROLE_OWNER"
-  }
+	"teamMember": {
+		"userId": "<USER_ID>",
+		"role": "TEAM_ROLE_OWNER"
+	}
 }
 ```
 

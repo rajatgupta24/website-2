@@ -36,7 +36,7 @@ Registries can be added to the allowlist via the [config patch](/docs/configure/
 
 ```yaml
 containerRegistry:
-  privateBaseImageAllowList:
-    - <your_registry-url.com>
-    - <another_registry-url.com>
+    privateBaseImageAllowList:
+        - <your_registry-url.com>
+        - <another_registry-url.com>
 ```

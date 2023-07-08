@@ -3,11 +3,11 @@ author: jeanp413, akosyakov, loujaybee
 date: Friday, 22 July 2022 09:00:00 UTC
 excerpt: Understand how VS Code establishes SSH connections, the different approaches, and understand common gotchas setting up VS Code Desktop and Gitpod via SSH.
 image: header.jpg
-tags: ["Engineering", "Gitpod updates"]
+tags: ['Engineering', 'Gitpod updates']
 slug: vscode-desktop-ssh-updates
 subtitle: Establishing SSH Connections, common gotchas and more.
 teaserImage: header.jpg
-title: "VS Code Desktop and SSH explained"
+title: 'VS Code Desktop and SSH explained'
 ---
 
 <script context="module">
@@ -81,14 +81,14 @@ If you haven't set up an SSH key with Gitpod, you can go to [gitpod.io/keys](htt
 
 You must have at least one public key uploaded to Gitpod, and a matching private key locally on your device to avoid this prompt. VS Code Desktop will look to find private keys in the following named files within the `.ssh` directory listed under your home directory.
 
-- `id_dsa`
-- `id_dsa`
-- `id_ecdsa`
-- `id_rsa`
-- `id_ed25519`
-- `id_xmss`
-- `id_ecdsa_sk`
-- `id_ed25519_sk`
+-   `id_dsa`
+-   `id_dsa`
+-   `id_ecdsa`
+-   `id_rsa`
+-   `id_ed25519`
+-   `id_xmss`
+-   `id_ecdsa_sk`
+-   `id_ed25519_sk`
 
 ### SSH Gateway access using the owner token
 
@@ -136,8 +136,8 @@ _Caption: Accessing the owner token string manually from the Gitpod dashboard_
 
 If you're unsure which connection method you're using to connect (SSH Gateway or Local Companion), you can work it out from the host name shown in the bottom left of VS Code Desktop. The format of the host will indicate which connection method you are using.
 
-- **SSH Gateway** - `SSH: workspaceid.ssh.*.gitpod.io`
-- **Local Companion**: `workspaceid` (no domain)
+-   **SSH Gateway** - `SSH: workspaceid.ssh.*.gitpod.io`
+-   **Local Companion**: `workspaceid` (no domain)
 
 ![The SSH host information shown in the bottom left of VS Code Desktop](/images/editors/show-ssh-connection-vscode-dark-theme.png)
 ![The SSH host information shown in the bottom left of VS Code Desktop](/images/editors/show-ssh-connection-vscode-light-theme.png)

@@ -26,5 +26,5 @@ Currently, the default workspace image can only be set via the [config patch](/d
 
 ```yaml
 workspace:
-  workspaceImage: string
+    workspaceImage: string
 ```
