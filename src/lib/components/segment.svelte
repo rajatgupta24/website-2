@@ -58,6 +58,10 @@
 			authenticated: allowsAnalytics()
 				? !!Cookies.get('gitpod-user')
 				: undefined,
+			theme_preference: window.matchMedia('(prefers-color-scheme: dark)')
+				.matches
+				? 'dark'
+				: 'light',
 			theme: localStorage.getItem('theme'),
 		};
 	};
