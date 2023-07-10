@@ -1,21 +1,19 @@
-<script>
-	/**
-	 * Typescript is not supported in mdsvex layout files.
-	 * @see https://github.com/pngwn/MDsveX/issues/116
-	 */
-	import OpenGraph from '../open-graph.svelte';
-
-	import Share from '../share.svelte';
+<script lang="ts">
 	import MoreCustomersStories from './more-customers-stories.svelte';
+	import type { Customer } from '$content/customers';
+	import OpenGraph from '../open-graph.svelte';
+	import Share from '../share.svelte';
 
 	const baseUrl = 'https://www.gitpod.io/customers/';
-	export let slug;
-	export let title;
-	export let pageTitle;
-	export let pageDescription;
-	export let keywords;
-	export let image;
+
+	export let slug: string;
+	export let title: string;
+	export let pageTitle: string;
+	export let pageDescription: string;
+	export let keywords: string;
+	export let image: string;
 	export let norobots = false;
+	export let customers: Customer[];
 
 	const shareLinks = [
 		{
@@ -73,4 +71,4 @@
 	/>
 </div>
 
-<MoreCustomersStories />
+<MoreCustomersStories {customers} />

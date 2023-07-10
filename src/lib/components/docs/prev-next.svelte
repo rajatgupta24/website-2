@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { getMenuContext } from '$lib/contents/docs/menu';
-	const menuCtx = getMenuContext($page.url.pathname);
+	// Following line is needed to make the next & previous link work => to trigger the reactivity for $page.url.pathname
+	$: menuCtx = getMenuContext($page.url.pathname);
 </script>
 
 <div

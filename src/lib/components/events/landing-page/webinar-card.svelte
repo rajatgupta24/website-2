@@ -9,7 +9,7 @@
 	};
 </script>
 
-<a data-sveltekit-preload-data class="no-underline" href={webinar.href}>
+<a data-sveltekit-preload-data="hover" class="no-underline" href={webinar.href}>
 	<Card
 		size="small"
 		class="p-xx-small hover:shadow-normal transition-all duration-200 delay-[50ms] flex flex-col overflow-hidden w-full h-full max-w-sm"
@@ -28,7 +28,7 @@
 				</p>
 				<div>
 					<div
-						class="mt-micro  transition-all duration-200 delay-[50ms] inline-block py-2 px-6 text-btn-small leading-4 rounded-xl font-semibold whitespace-nowrap
+						class="mt-micro transition-all duration-200 delay-[50ms] inline-block py-2 px-6 text-btn-small leading-4 rounded-xl font-semibold whitespace-nowrap
               {webinar.isInPast
 							? 'text-black bg-sand-dark dark:bg-light-black dark:text-sand-dark'
 							: 'bg-primary text-important dark:text-black'}"

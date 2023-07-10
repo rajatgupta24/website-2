@@ -28,7 +28,7 @@
 					duration={screencast.duration}
 					class="text-xs inline-block px-3 py-0.5 font-bold rounded-lg shadow-light bg-sand-dark dark:bg-light-black whitespace-nowrap mb-micro"
 				/>
-				<p class="text-base max-w-xs ">{screencast.description}</p>
+				<p class="text-base max-w-xs">{screencast.description}</p>
 			</div>
 		</Card>
 	</a>

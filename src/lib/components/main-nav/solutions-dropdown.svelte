@@ -79,7 +79,6 @@
               items
               w-[342px]
             "
-					aria-selected={false}
 					on:click={() => (shown = false)}
 					{href}
 				>
@@ -100,7 +99,7 @@
 					class="h-36 2xl:h-44 w-72"
 				/>
 				<p
-					class="mt-4 2xl:mt-2 text-important font-bold text-small max-w-xl text-left transition-all duration-200 delay-[50ms] decoration-transparent group-focus:underline group-hover:underline"
+					class="mt-4 2xl:mt-2 text-important font-bold text-small max-w-xl text-left transition-all duration-200 delay-[50ms] group-focus:underline group-hover:underline"
 				>
 					Customer stories
 				</p>

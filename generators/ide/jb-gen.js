@@ -1,6 +1,8 @@
 //@ts-check
 // run yarn generate:jb to regenerate JB docs after editing jb-product.md
 
+// @TODO this is probably broken
+
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';

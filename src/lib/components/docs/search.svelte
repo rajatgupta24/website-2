@@ -73,12 +73,13 @@
 	<script
 		on:load={processDocSearchScriptLoadEvent}
 		bind:this={docSearchScript}
-		src="https://cdn.jsdelivr.net/npm/docsearch.js@{docSearchJSVersion}/dist/cdn/docsearch.min.js"></script>
+		src="https://cdn.jsdelivr.net/npm/docsearch.js@{docSearchJSVersion}/dist/cdn/docsearch.min.js"
+	></script>
 </svelte:head>
 
 <svelte:body on:keydown={handleBodyKeyDown} />
 
-<div class="items-center flex my-4 lg:my-0  lg:mb-8">
+<div class="items-center flex my-4 lg:my-0 lg:mb-8">
 	<div class="w-full sm:px-4">
 		<div
 			class={`w-full input-container relative ${
@@ -125,12 +126,16 @@
 		@apply rounded-xl;
 	}
 
-	:global(div
-			.algolia-autocomplete.algolia-autocomplete-left
-			.ds-dropdown-menu),
-	:global(div
-			.algolia-autocomplete.algolia-autocomplete-right
-			.ds-dropdown-menu) {
+	:global(
+			div
+				.algolia-autocomplete.algolia-autocomplete-left
+				.ds-dropdown-menu
+		),
+	:global(
+			div
+				.algolia-autocomplete.algolia-autocomplete-right
+				.ds-dropdown-menu
+		) {
 		left: 0 !important; /* DocSearch adds inline styles, !important helps us take control */
 		min-width: unset;
 		max-width: unset;

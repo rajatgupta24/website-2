@@ -10,7 +10,7 @@
 </script>
 
 <a
-	data-sveltekit-preload-data
+	data-sveltekit-preload-data="hover"
 	{href}
 	{rel}
 	{target}

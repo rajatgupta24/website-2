@@ -42,6 +42,7 @@
 		background: var(--brand-light);
 		white-space: break-spaces;
 		overflow-wrap: break-word;
+		color: initial; // reset color to inherit from parent (used in h2 code)
 	}
 
 	blockquote code {

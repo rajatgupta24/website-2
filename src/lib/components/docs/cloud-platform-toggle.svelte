@@ -44,6 +44,7 @@
 			{#each items as item}
 				{#if Object.keys($$slots).includes(item.slotName) && !item.hidden}
 					<li class="before:!hidden !m-0 !p-0">
+						<!-- svelte-ignore a11y-click-events-have-key-events -->
 						<span
 							class="rounded-t-2xl cursor-pointer px-4 py-2 hidden md:block {activeValue ===
 							item.value
@@ -52,6 +53,8 @@
 							on:click={clickHandler(item.value)}
 							>{item.title}</span
 						>
+
+						<!-- svelte-ignore a11y-click-events-have-key-events -->
 						<span
 							class="rounded-t-2xl cursor-pointer px-4 py-2 md:hidden block {activeValue ===
 							item.value

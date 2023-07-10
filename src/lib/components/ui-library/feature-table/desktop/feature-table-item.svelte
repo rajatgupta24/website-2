@@ -15,7 +15,7 @@
 
 {#if definition.list}
 	<div class="flex flex-col justify-start px-8">
-		<ul class="list-disc list-outside ">
+		<ul class="list-disc list-outside">
 			{#each definition.list as item}
 				<li class="">
 					{@html item}

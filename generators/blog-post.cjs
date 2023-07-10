@@ -58,7 +58,7 @@ module.exports = (plop) => {
 		actions: [
 			{
 				type: 'add',
-				path: '../src/routes/blog/{{dashCase title}}.md',
+				path: '../src/content/blog/{{dashCase title}}.md',
 				templateFile: './templates/blog-post/slug.md.hbs',
 			},
 			{

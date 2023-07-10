@@ -82,10 +82,8 @@
 		>
 	</div>
 	<div>
-		<pre
-			class="language-{lang} !m-0 !rounded-none ">
-        <code class="language-{lang}">
-      {@html code}
-    </code></pre>
+		<!-- don't format this or it'll make the codeblock weird -->
+		<!-- prettier-ignore -->
+		<pre class="language-{lang} !m-0 !rounded-none"><code class="language-{lang}">{@html code}</code></pre>
 	</div>
 </div>

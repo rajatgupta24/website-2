@@ -1,11 +1,6 @@
-<script context="module" lang="ts">
-	export const key = Symbol();
-</script>
-
 <script lang="ts">
-	import { getContext } from 'svelte';
-	import type { BannerData } from '$lib/types/banner';
 	import Banner from './base.svelte';
+	import { page } from '$app/stores';
 
 	/**
 	 * Each announcement must have a unique `storageKey` to ensure people who
@@ -13,16 +8,13 @@
 	 * For simplicity, the announcement `storageKey` is the date the announcement
 	 * was made, in the `yyyy-mm-dd` format.
 	 */
-	const bannerData: BannerData = getContext(key);
+	$: ({ display, endDate, startDate } = $page.data.bannerData);
 </script>
 
-<div
-	class:hidden={!bannerData?.display}
-	data-analytics={`{"position":"announcement"}`}
->
+<div class:hidden={!display} data-analytics={`{"position":"announcement"}`}>
 	<Banner
-		storageKey="announcement-{`${bannerData.startDate}${bannerData.endDate}`}"
-		display={bannerData.display}
+		storageKey="announcement-{`${startDate}${endDate}`}"
+		{display}
 		let:closeBanner
 		class="announcement-banner flex justify-between items-center px-4 py-2 w-full bg-sand-dark dark:bg-card shadow-sm text-xs sm:text-sm md:text-base border-b border-divider border-solid"
 		location="top"
@@ -32,7 +24,7 @@
 			A CDE hosted by you, managed by us |
 			<a
 				href="/dedicated"
-				data-sveltekit-preload-data
+				data-sveltekit-preload-data="hover"
 				on:click={closeBanner}
 				>Install & try now
 			</a>

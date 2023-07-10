@@ -30,7 +30,7 @@
 	</div>
 	<div class="lg:hidden flex items-center justify-start">
 		<img
-			class="dark:hidden w-48 "
+			class="dark:hidden w-48"
 			alt="kubecon logo"
 			src="/images/events/kubecon-logo.png"
 		/><img

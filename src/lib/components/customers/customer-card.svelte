@@ -21,7 +21,7 @@
 
 <Card size="small" class=" overflow-hidden max-w-xs sm:max-w-sm min-w-fit">
 	<div
-		class="h-60 bg-cover bg-center "
+		class="h-60 bg-cover bg-center"
 		style="background-image: url({image})"
 	/>
 	<div

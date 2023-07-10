@@ -8,10 +8,6 @@ title: __productTitle__
   Edit this file instead and run `yarn generate:jb`to apply.
 -->
 
-<script context="module">
-  export const prerender = true;
-</script>
-
 <!-- prettier-ignore -->
 # __productFullyQualifiedTitle__
 

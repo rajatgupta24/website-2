@@ -1,8 +1,9 @@
 <script lang="ts">
 	import PostPreview from '../blog/post-preview.svelte';
-
 	import SectionCommon from '../section-common.svelte';
-	export let customers: any;
+	import type { Customer } from '$content/customers';
+
+	export let customers: Customer[];
 	export let title: string;
 	export let text: string = '';
 	export let id: string = '';
@@ -16,7 +17,7 @@
 		slot="content"
 		class="grid justify-center gap-xx-small mx-auto mt-small {clazz}"
 	>
-		{#each customers as { title, excerpt, image, slug, availability }}
+		{#each customers as { title, excerpt, image, slug }}
 			<PostPreview
 				post={{
 					title,
@@ -24,8 +25,10 @@
 					slug,
 					image,
 					teaserImage: image,
+					author: '',
+					date: '',
+					headings: [],
 				}}
-				availability={!(availability === 'soon')}
 				headlineOrder="h3"
 				type="education"
 				isMostRecent={true}

@@ -9,3 +9,4 @@ stars-cache.json
 package.json
 package-lock.json
 _redirects
+*.hbs

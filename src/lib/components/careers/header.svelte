@@ -4,7 +4,7 @@
 
 <section class="w-full mt-medium lg:mt-xx-large flex flex-col items-center">
 	<header
-		class="mb-small  flex flex-col items-center w-full max-w-6xl text-center"
+		class="mb-small flex flex-col items-center w-full max-w-6xl text-center"
 	>
 		<h1 class="h1 max-w-3xl">
 			Help us remove all friction from the developer experience.

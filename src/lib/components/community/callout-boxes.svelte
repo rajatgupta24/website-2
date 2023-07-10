@@ -1,21 +1,18 @@
 <script lang="ts">
 	import FeatureBoxes from '$lib/components/vs/feature-boxes.svelte';
-	import Section from '$lib/components/section.svelte';
-	import FeatureBox from '$lib/components/feature-box.svelte';
-	import { page } from '$app/stores';
-	import type { BlogPost } from '$lib/types/blog-post';
 	import PostPreview from '$lib/components/blog/post-preview.svelte';
+	import FeatureBox from '$lib/components/feature-box.svelte';
+	import Section from '$lib/components/section.svelte';
+	import type { BlogPost } from '$lib/types/blog';
 
-	const post = $page.stuff.posts.find(
-		(p: BlogPost) =>
-			p.slug === 'what-we-learned-growing-a-community-from-500-5000',
-	);
+	export let post: BlogPost;
 </script>
 
 <Section>
 	<h2 class="text-center h2 !mb-x-small md:!mb-medium">
 		Learn more about our community
 	</h2>
+
 	<FeatureBoxes>
 		<FeatureBox
 			feature={{
@@ -75,6 +72,7 @@
 			}}
 		/>
 	</FeatureBoxes>
+
 	<div class="flex mt-x-small lg:mt-x-small max-w-7xl mx-auto justify-center">
 		<PostPreview
 			textWidth="max-w-2xl"

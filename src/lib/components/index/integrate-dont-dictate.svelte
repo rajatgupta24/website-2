@@ -17,7 +17,7 @@
 		<div
 			class="flex flex-wrap items-center mx-auto justify-evenly mb-6 ml-6 mr-6"
 		>
-			<div class="grid grid-rows-2 grid-flow-col gap-x-small">
+			<div class="grid grid-rows-2 grid-flow-col">
 				<!-- Git Provider options -->
 				<div
 					class="mt-4 text-left items-left bg-sand-light dark:bg-black py-micro pl-xx-small text-p-small rounded-2xl border border-transparent w-72 sm:w-80"

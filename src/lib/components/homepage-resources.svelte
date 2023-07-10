@@ -10,7 +10,7 @@
 
 <Section>
 	<div class="row">
-		<h3 class="text-center text-3xl sm:text-5xl	font-bold">
+		<h3 class="text-center text-3xl sm:text-5xl font-bold">
 			Gitpod makes teams productive
 		</h3>
 		<p

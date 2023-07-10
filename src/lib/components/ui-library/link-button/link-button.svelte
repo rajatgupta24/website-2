@@ -11,7 +11,7 @@
 	export let href: string;
 	export let textAlign: 'left' | 'center' = 'center';
 
-	const isPrefetchable = href.startsWith('https://') ? undefined : true;
+	const isPrefetchable = href.startsWith('https://') ? 'off' : 'hover';
 
 	const classMap = {
 		primary:
@@ -37,7 +37,6 @@
 <a
 	use:forwardEvents
 	{href}
-	{disabled}
 	class:disabled
 	class="
     transition-all

@@ -1,7 +1,3 @@
-<script context="module">
-	export const prerender = true;
-</script>
-
 <div
 	class="flex flex-wrap justify-center max-w-6xl mx-auto flex-col text-center pt-small md:pt-x-large"
 >

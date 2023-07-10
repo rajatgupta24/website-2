@@ -1,9 +1,4 @@
-<script lang="ts" context="module">
-	export const key = Symbol();
-</script>
-
 <script lang="ts">
-	import { getContext } from 'svelte';
 	import Octocat from '../svgs/octocat.svelte';
 
 	const numberFormatter = Intl.NumberFormat('en-US', {
@@ -11,8 +6,11 @@
 		maximumFractionDigits: 1,
 		unitDisplay: 'long',
 	});
-	const stars: number = getContext(key);
+
+	const stars = __GITHUB_STARS__;
+
 	let starsFormatted: string;
+
 	if (stars) {
 		starsFormatted = numberFormatter.format(stars).toLocaleLowerCase();
 	} else {

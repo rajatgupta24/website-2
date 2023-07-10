@@ -3,7 +3,7 @@
 
 	export let navItem: any;
 	const { href, highlight, label, isExternal } = navItem;
-	const isPrefecthable = isExternal ? undefined : true;
+	const isPrefecthable = isExternal ? 'off' : 'hover';
 
 	$: isActivePage =
 		$page.url.pathname === '/'

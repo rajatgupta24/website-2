@@ -23,7 +23,7 @@
 			</p>
 			<div class="flex flex-wrap gap-4 justify-start">
 				<LinkButton
-					data-sveltekit-preload-data
+					data-sveltekit-preload-data="hover"
 					href="/security/thanks"
 					variant="cta">View contributors</LinkButton
 				>

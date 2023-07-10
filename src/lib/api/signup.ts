@@ -8,7 +8,6 @@ const signupTypeToSheetTitle = {
 };
 
 export const signup = async (body: SignupData) => {
-	console.log(body);
 	const isSavedInSheet = await saveToSpreadsheet({
 		sheetTitle: signupTypeToSheetTitle[body.type],
 		data: [body.email],

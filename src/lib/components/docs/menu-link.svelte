@@ -21,6 +21,6 @@
 		? 'color: var(--brand-ripe); border-color: currentColor; font-weight: 600'
 		: ''}
 	{href}
-	data-sveltekit-preload-data
+	data-sveltekit-preload-data="hover"
 	{...$$props}><slot /></a
 >

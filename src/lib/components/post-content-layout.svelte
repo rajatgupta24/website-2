@@ -13,8 +13,14 @@
 	export let baseUrl: string;
 	export let imagesDirectoryName: string;
 
-	const { date, author, slug, title, image, teaserImage, excerpt, tags } =
-		$$restProps;
+	export let date: string = '';
+	export let author: string = '';
+	export let slug: string = '';
+	export let title: string;
+	export let image: string;
+	export let teaserImage: string;
+	export let excerpt: string;
+	export let tags: string[] = [];
 
 	let dateDisplay = new Date(Date.parse(date)).toLocaleDateString(undefined, {
 		year: 'numeric',
@@ -31,7 +37,7 @@
 	);
 
 	const hasATwitterProfile = (author: string) =>
-		!!authors[author].socialProfiles.twitter;
+		!!authors[author]?.socialProfiles.twitter;
 
 	const writers = author.split(', ');
 
@@ -41,7 +47,7 @@
 				acc +
 				(hasATwitterProfile(current)
 					? `@${current}`
-					: authors[current].name) +
+					: authors[current]?.name) +
 				', ',
 			'',
 		);
@@ -120,7 +126,7 @@
 					<div class="flex mb-macro items-center gap-macro">
 						{#each tags as tag}
 							<a
-								data-sveltekit-preload-data
+								data-sveltekit-preload-data="hover"
 								href="/blog?{new URLSearchParams({
 									tag,
 								}).toString()}"

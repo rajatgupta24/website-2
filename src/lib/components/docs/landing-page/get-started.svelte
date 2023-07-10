@@ -29,7 +29,7 @@
 		<div class="flex flex-wrap gap-4 justify-start">
 			{#each getStartedItems as getStartedItem}
 				<LinkButton
-					data-sveltekit-preload-data
+					data-sveltekit-preload-data="hover"
 					href={getStartedItem.href}
 					variant="cta">{getStartedItem.label}</LinkButton
 				>

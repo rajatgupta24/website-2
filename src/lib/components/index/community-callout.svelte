@@ -1,5 +1,4 @@
 <script lang="ts">
-	export const prerender = true;
 	import Section from '$lib/components/section.svelte';
 	import LinkButton from '$lib/components/ui-library/link-button/link-button.svelte';
 </script>

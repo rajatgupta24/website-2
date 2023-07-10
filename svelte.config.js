@@ -3,7 +3,6 @@ import { mdsvex } from 'mdsvex';
 import headings from 'remark-autolink-headings';
 import remarkExternalLinks from 'remark-external-links';
 import slug from 'remark-slug';
-import preprocess from 'svelte-preprocess';
 import remarkSetImagePath from './src/lib/utils/remark-set-image-path.js';
 import remarkEmbedVideo from './src/lib/utils/remark-embed-video.js';
 import remarkLinkWithImageAsOnlyChild from './src/lib/utils/remark-link-with-image-as-only-child.js';
@@ -15,48 +14,52 @@ import { highlightCode } from './src/lib/utils/highlight.js';
 import { mdsvexGlobalComponents } from './src/lib/utils/mdsvex-global-components.js';
 import { h } from 'hastscript';
 import { visit } from 'unist-util-visit';
-
-/** @type {Partial<import('vite').ServerOptions>} */
+import getHeadings from './src/lib/utils/get-headings.js';
+import { vitePreprocess } from '@sveltejs/kit/vite';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte', '.md'],
-	compilerOptions: {
-		hydratable: true,
-	},
+
 	kit: {
-		browser: {
-			hydrate: true,
-			router: true,
-		},
-		trailingSlash: 'never',
 		adapter: adapterNetlify({
 			edge: false,
 			split: false,
 		}),
-		files: {
-			assets: 'static',
-			hooks: 'src/hooks',
-			lib: 'src/lib',
-			routes: 'src/routes',
-			template: 'src/app.html',
+
+		// Temporary workaround for https://github.com/sveltejs/kit/issues/8026#issuecomment-1605293431 in dev mode
+		csrf: {
+			checkOrigin: process.env.NODE_ENV === 'development' ? false : true,
 		},
 
 		prerender: {
 			crawl: true,
-			enabled: true,
-			onError: 'fail', //once the netlify-endpoint for requesting the images isn't needed anymore this can be "fail" again
-			entries: ['*'],
+			handleMissingId: 'warn',
+			handleHttpError: (details) => {
+				// Handle docs trying to prerender relative links that it can't
+				if (
+					details.status == 404 &&
+					details.path.startsWith('/docs') &&
+					details.referenceType == 'linked'
+				) {
+					console.warn(`PRERENDER ignored route ${details.path}`);
+					return;
+				}
+
+				throw new Error(
+					`${details.status} ${details.path} from ${details.referrer}`,
+				);
+			},
+		},
+
+		alias: {
+			$content: 'src/content',
 		},
 	},
 
 	// options passed to svelte.preprocess (https://svelte.dev/docs#svelte_preprocess)
 	preprocess: [
-		preprocess({
-			postcss: true,
-			scss: true,
-			preserve: ['ld+json'],
-		}),
+		vitePreprocess(),
 		mdsvexGlobalComponents({
 			dir: `$lib/components`,
 			list: [['CodeFence', 'code-fence.svelte']],
@@ -66,13 +69,6 @@ const config = {
 			extensions: ['.md'],
 			highlight: {
 				highlighter: highlightCode,
-			},
-			layout: {
-				blog: './src/lib/components/blog/blog-content-layout.svelte',
-				docs: './src/lib/components/docs/docs-content-layout.svelte',
-				guides: './src/lib/components/guides/guides-content-layout.svelte',
-				customers:
-					'./src/lib/components/customers/customers-content-layout.svelte',
 			},
 			rehypePlugins: [
 				[
@@ -118,6 +114,7 @@ const config = {
 				remarkSetImagePath,
 				remarkLinkWithImageAsOnlyChild,
 				remarkHeadingsPermaLinks,
+				getHeadings,
 				[
 					remarkEmbedVideo,
 					{

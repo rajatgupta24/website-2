@@ -2,11 +2,12 @@
 	import { isAnExternalLink } from '$lib/utils/helpers';
 	import { authorSocialMediaLinks } from '$lib/contents/authors';
 
-	import type { BlogPost } from '$lib/types/blog-post';
+	import type { BlogPost } from '$lib/types/blog';
 	import Avatars from '$lib/components/ui-library/avatars';
+	import type { Guide } from '$content/guides';
 	import Pill from '../pill.svelte';
 
-	export let post: BlogPost;
+	export let post: BlogPost | Guide;
 	export let isMostRecent: boolean = false;
 	export let type: 'blog' | 'guides' | 'customers' | 'education';
 	export let layout: 'row' | 'column' = 'column';
@@ -16,21 +17,24 @@
 	export let badge: string = '';
 	export let textWidth: string = '';
 
-	const generateURL = (post: BlogPost) => {
-		if (post && post.href) return post.href;
-		if (type === 'education') return `/discover/education/${post.slug}`;
-		return `/${type}/${post.slug}`;
+	const generateURL = (href?: string, slug?: string) => {
+		if (href) return href;
+		if (type === 'education') return `/discover/education/${slug}`;
+		return `/${type}/${slug}`;
 	};
 
-	$: href = generateURL(post);
+	$: href = generateURL(post['href'], post.slug);
+
 	$: target =
-		post && post.href && isAnExternalLink(post.href) ? '_blank' : undefined;
+		post && post['href'] && isAnExternalLink(post['href'])
+			? '_blank'
+			: undefined;
 </script>
 
 <a
 	{href}
 	{target}
-	data-sveltekit-preload-data
+	data-sveltekit-preload-data="hover"
 	class:pointer-events-none={!availability}
 	tabindex={!availability && -1}
 	class="flex flex-col max-w-sm lg:max-w-none text-left group {!isMostRecent
@@ -53,7 +57,7 @@
 					? ''
 					: 'lg:rounded-l-xl aspect-square lg:rounded-tr-none lg:w-60 lg:h-full'}"
 				style={`background-image: url(${
-					post.isNotAnActualPost
+					post['isNotAnActualPost']
 						? post.image
 						: `/images/${type}/${post.slug}/${post.image}`
 				});`}
@@ -88,13 +92,13 @@
 			<div class:mt-micro={!availability}>
 				{#if headlineOrder === 'h3'}
 					<h3
-						class="text-h4 text-important transition-all duration-200 delay-[50ms] decoration-transparent group-focus:underline group-hover:underline"
+						class="text-h4 text-important transition-all duration-200 delay-[50ms] group-focus:underline group-hover:underline"
 					>
 						{post.title}
 					</h3>
 				{:else}
 					<h2
-						class="text-h4 text-important transition-all duration-200 delay-[50ms] decoration-transparent group-focus:underline group-hover:underline"
+						class="text-h4 text-important transition-all duration-200 delay-[50ms] group-focus:underline group-hover:underline"
 					>
 						{post.title}
 					</h2>

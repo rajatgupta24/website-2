@@ -1,20 +1,13 @@
 <script lang="ts">
-	import { docsMeta } from '$lib/stores/docs-meta';
-	import type { DocsMeta } from '$lib/types/docs-meta';
-	import { onMount } from 'svelte';
+	import type { MarkdownHeading } from '$content/types';
 	import SubNavItem from './sub-nav-item.svelte';
+	import { onMount } from 'svelte';
+
+	export let headings: MarkdownHeading[];
 
 	let scroll: number;
 	let active: string;
 	let h2: string;
-
-	//check for markdown headers in docsMeta
-	function checkHeaders(obj: DocsMeta) {
-		if (obj.headings.length > 0) {
-			return true;
-		}
-		return false;
-	}
 
 	function onScroll() {
 		const navbarHeight =
@@ -55,7 +48,8 @@
 				active = anchor.parentElement
 					.getAttribute('href')
 					.split('#')[1];
-				h2 = $docsMeta.headings.find((heading) => {
+
+				h2 = headings.find((heading) => {
 					if (heading.children.length > 0) {
 						return JSON.stringify(heading.children).includes(
 							active,
@@ -78,7 +72,8 @@
 </script>
 
 <svelte:window bind:scrollY={scroll} />
-{#if checkHeaders($docsMeta)}
+
+{#if headings.length}
 	<div
 		class="on-this-page max-h-[calc(100vh-6rem)] pb-[100px] overflow-auto text-sm"
 	>
@@ -89,7 +84,7 @@
 			</div>
 		</div>
 		<ul class="space-y-2">
-			{#each $docsMeta.headings as heading}
+			{#each headings as heading}
 				<li class="leading-6">
 					<a
 						id={heading.slug}

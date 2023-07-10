@@ -156,6 +156,7 @@
 			>
 				{#each items as item}
 					{#if Object.keys($$slots).includes(item.slotName)}
+						<!-- svelte-ignore a11y-click-events-have-key-events -->
 						<li
 							class="before:!hidden !m-0 !p-0"
 							role="tab"
@@ -171,16 +172,20 @@
 								item.value
 									? 'bg-white dark:bg-card'
 									: 'bg-sand-dark dark:bg-light-black'} transition-all duration-200"
-								>{item.title}</span
 							>
+								{item.title}
+							</span>
+
+							<!-- svelte-ignore a11y-click-events-have-key-events -->
 							<span
 								class="rounded-t-2xl cursor-pointer px-4 py-2 md:hidden block {activeValue ===
 								item.value
 									? 'bg-white dark:bg-card'
 									: 'bg-sand-dark dark:bg-light-black'} transition-all duration-200"
 								on:click={changeTab(item.value)}
-								>{item.mobileTitle}</span
 							>
+								{item.mobileTitle}
+							</span>
 						</li>
 					{/if}
 				{/each}
@@ -197,7 +202,6 @@
 				: { hidden: false, 'aria-hidden': 'false', tabindex: 0 }}
 			aria-labelledby={ariaIds?.tab?.vscodebrowser}
 			id={getUnusedId('vscodebrowser', 'tabpanel')}
-			role="tabpanel"
 		>
 			<slot name="vscodebrowser" />
 		</article>
@@ -212,7 +216,6 @@
 				: { hidden: false, 'aria-hidden': 'false', tabindex: 0 }}
 			aria-labelledby={ariaIds?.tab?.vscodedesktop}
 			id={getUnusedId('vscodedesktop', 'tabpanel')}
-			role="tabpanel"
 		>
 			<slot name="vscodedesktop" />
 		</article>
@@ -227,7 +230,6 @@
 				: { hidden: false, 'aria-hidden': 'false', tabindex: 0 }}
 			aria-labelledby={ariaIds?.tab?.jetbrains}
 			id={getUnusedId('jetbrains', 'tabpanel')}
-			role="tabpanel"
 		>
 			<slot name="jetbrains" />
 		</article>
@@ -242,7 +244,6 @@
 				: { hidden: false, 'aria-hidden': 'false', tabindex: 0 }}
 			aria-labelledby={ariaIds?.tab?.commandline}
 			id={getUnusedId('commandline', 'tabpanel')}
-			role="tabpanel"
 		>
 			<slot name="commandline" />
 		</article>

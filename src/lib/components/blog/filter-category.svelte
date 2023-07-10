@@ -1,28 +1,28 @@
 <script lang="ts">
-	import type { tagType } from '$lib/types/blog';
+	import type { BlogTag } from '$lib/types/blog';
 	import Button from '$lib/components/ui-library/button/button.svelte';
-	export let selected: tagType;
+	export let selected: BlogTag;
 	let className = '';
 	export { className as class };
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 
-	let options: tagType[] = [
+	let options: BlogTag[] = [
 		'Company building',
 		'Engineering',
 		'Gitpod updates',
 		'Developer experience',
 	];
 
-	const clickHandler = (value: tagType) => {
+	const clickHandler = (value: BlogTag) => {
 		if (value === selected) {
-			goto(`/blog`, { keepfocus: true, noscroll: true });
+			goto(`/blog`, { keepFocus: true, noScroll: true });
 			selected = '';
 			return;
 		}
 		let query = new URLSearchParams($page.url.searchParams.toString());
 		query.set('tag', value);
-		goto(`?${query.toString()}`, { keepfocus: true, noscroll: true });
+		goto(`?${query.toString()}`, { keepFocus: true, noScroll: true });
 		selected = value;
 	};
 </script>

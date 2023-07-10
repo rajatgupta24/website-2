@@ -76,7 +76,6 @@
             border-transparent
             w-[342px]
             "
-					aria-selected={false}
 					on:click={() => (shown = false)}
 					{href}
 				>

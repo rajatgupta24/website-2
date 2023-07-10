@@ -1,6 +1,6 @@
 import { visit } from 'unist-util-visit';
 
-const imagesRelativeUrlPattern = '../static/images/';
+const imagesRelativeUrlPattern = '/images/';
 
 const visitor = (node) => {
 	if (
@@ -8,7 +8,7 @@ const visitor = (node) => {
 		node.url.indexOf(imagesRelativeUrlPattern) > 0
 	) {
 		node.url = node.url.substring(
-			node.url.indexOf(imagesRelativeUrlPattern) + '../static'.length,
+			node.url.indexOf(imagesRelativeUrlPattern) + ''.length,
 		);
 	}
 };

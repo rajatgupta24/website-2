@@ -50,7 +50,7 @@
 
 		<p>
 			👐 We live by our <a
-				data-sveltekit-preload-data
+				data-sveltekit-preload-data="hover"
 				href="https://www.gitpod.io/blog/gitpod-core-values"
 				>core values</a
 			>. They represent who we are and are a benchmark for how we serve

@@ -11,7 +11,7 @@
 		class="feature-box shadow-normal py-small px-xx-small sm:p-small lg:p-16 max-w-7xl mx-auto"
 	>
 		<div
-			class="md:grid md:grid-cols-2 justify-center items-center lg:gap-32 md:gap-small "
+			class="md:grid md:grid-cols-2 justify-center items-center lg:gap-32 md:gap-small"
 		>
 			<div class="mt-x-small md:my-0 flex-wrap">
 				<div class="text-large">

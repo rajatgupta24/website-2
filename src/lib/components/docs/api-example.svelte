@@ -28,10 +28,6 @@
 	let activeValue = 1;
 
 	const clickHandler = (tabValue: number) => () => (activeValue = tabValue);
-
-	export let id = 'api-example';
-
-	export let open = false;
 </script>
 
 <div class="text-lg"><b>Method Example:</b></div>
@@ -39,6 +35,7 @@
 	<ul class="flex flex-wrap !pl-0 !mb-0">
 		{#each items as item}
 			{#if Object.keys($$slots).includes(item.slotName) && !item.hidden}
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<li class="before:!hidden !m-0 !p-0">
 					<span
 						class="rounded-t-2xl cursor-pointer px-4 py-2 hidden md:block {activeValue ===
@@ -47,6 +44,7 @@
 							: 'bg-sand-dark dark:bg-light-black'} transition-all duration-200"
 						on:click={clickHandler(item.value)}>{item.title}</span
 					>
+
 					<span
 						class="rounded-t-2xl cursor-pointer px-4 py-2 md:hidden block {activeValue ===
 						item.value

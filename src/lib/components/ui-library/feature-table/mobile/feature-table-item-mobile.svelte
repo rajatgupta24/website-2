@@ -8,7 +8,7 @@
 
 {#if definition.list}
 	<div class="flex flex-col justify-center px-8">
-		<div class="font-bold  mb-2">{definition.term}</div>
+		<div class="font-bold mb-2">{definition.term}</div>
 		<ul class="list-disc list-outside text-left">
 			{#each definition.list as item}
 				<li>
@@ -19,7 +19,7 @@
 	</div>
 {:else}
 	<div class="flex items-center flex-col justify-center">
-		<div class="font-bold  mb-2">
+		<div class="font-bold mb-2">
 			<div class="flex items-start">
 				{#if definition.type === 'tooltip'}
 					<QaTooltip

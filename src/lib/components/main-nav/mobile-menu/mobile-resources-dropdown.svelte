@@ -52,7 +52,7 @@
 
 	<div class="nav-items-docs border-none flex flex-col text-lg">
 		<p
-			class="py-macro border-none -mx-micro px-micro no-underline text-lg text-important font-bold bg-sand-light  dark:bg-dark-grey"
+			class="py-macro border-none -mx-micro px-micro no-underline text-lg text-important font-bold bg-sand-light dark:bg-dark-grey"
 		>
 			Discover
 		</p>

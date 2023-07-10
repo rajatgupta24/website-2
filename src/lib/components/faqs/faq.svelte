@@ -141,7 +141,7 @@
 </details>
 
 <style lang="postcss">
-	details:global(a) {
+	details :global(a) {
 		@apply font-semibold;
 	}
 
