@@ -734,7 +734,7 @@ export const pricingFAQ: FAQ = {
 		{
 			title: 'Can I create an organization plan?',
 			content:
-				'<p> Sure, if you would like to manage subscriptions for a whole organization on a single invoice, you can create a <a href="https://gitpod.io/orgs/">organization plan.</a> </p> <p> In case you need more information on how to setup an organization subscription, visit <a href="/docs/configure/orgs">gitpod.io/docs/configure/orgs</a> </p>',
+				'<p> Sure, if you would like to manage subscriptions for a whole organization on a single invoice, you can create a <a href="https://gitpod.io/orgs/new">organization plan.</a> </p> <p> In case you need more information on how to setup an organization subscription, visit <a href="/docs/configure/orgs">gitpod.io/docs/configure/orgs</a> </p>',
 		},
 		{
 			title: 'Can I change my subscription at any time?',
@@ -759,7 +759,7 @@ export const pricingFAQ: FAQ = {
 		{
 			title: 'Still have more questions?',
 			content:
-				'<p> We are happy to answer them, please <a href="/contact/support">Get in Touch</a></p>',
+				'<p> We are happy to answer them, please <a href="/contact/support">Get in touch</a></p>',
 		},
 	],
 };
