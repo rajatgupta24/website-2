@@ -331,30 +331,32 @@ export const featureCards: {
 	pill?: { text: string; variant: 'pink' | 'orange' | 'gray' | 'violet' };
 }[] = [
 	{
-		pill: {
-			text: 'Early access',
-			variant: 'pink',
-		},
 		card: {
-			title: 'Dedicated',
-			text: 'Dedicated is a single-tenant deployment of Gitpod CDEs within your cloud perimeter. This is great for organizations who require maximum control of their cloud resources and data storage and would like to connect to their internal systems. ',
+			title: 'Gitpod Cloud',
+			text: 'Hosted by us, managed by us. Cloud requires zero set-up and is great for teams who want to get started right away.',
 			icon: {
-				src: '/svg/icons/secure.svg',
+				src: '/svg/icons/cloud.svg',
 				alt: 'Cloud Icon',
 			},
-			// link: {
-			//   href: "/dedicated",
-			//   text: "Request early access",
-			// },
+			link: {
+				href: 'https://gitpod.io/login',
+				text: 'Start for free',
+				btnSize: 'large',
+			},
 		},
 	},
 	{
 		card: {
-			title: 'SaaS',
-			text: 'Gitpod.io is a cloud-based, fully managed software-as-a-service deployment option of Gitpod CDEs. This is great for teams who are ready to get started right away.',
+			title: 'Gitpod Dedicated',
+			text: 'Hosted by you, managed by us. Dedicated is great for organizations who require maximum control of their cloud resources and data storage.',
 			icon: {
-				src: '/svg/icons/cloud.svg',
+				src: '/svg/icons/secure.svg',
 				alt: 'Cloud Icon',
+			},
+			link: {
+				href: '/dedicated',
+				text: 'More on Gitpod Dedicated',
+				btnSize: 'large',
 			},
 		},
 	},

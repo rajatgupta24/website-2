@@ -32,33 +32,29 @@ export const featureCards: {
 }[] = [
 	{
 		card: {
-			title: 'SaaS',
-			text: 'Use Gitpod CDEs in our secure cloud with minimal setup time and effort. Scales with your usage.',
+			title: 'Gitpod Cloud',
+			text: 'Hosted by us, managed by us. Cloud requires zero set-up and is great for teams who want to get started right away.',
 			icon: {
 				src: '/svg/icons/cloud.svg',
 				alt: 'Cloud Icon',
 			},
 			link: {
-				href: '/contact/get-demo',
-				text: 'Get a demo',
+				href: 'https://gitpod.io/login',
+				text: 'Start for free',
 			},
 		},
 	},
 	{
-		pill: {
-			text: 'Early access',
-			variant: 'pink',
-		},
 		card: {
-			title: 'Dedicated',
-			text: 'Maximize security. Run a private instance of Gitpod managed by us in your cloud or ours.',
+			title: 'Gitpod Dedicated',
+			text: 'Hosted by you, managed by us. Dedicated is great for organizations who require maximum control of their cloud resources and data storage.',
 			icon: {
 				src: '/svg/icons/secure.svg',
 				alt: 'Cloud Icon',
 			},
 			link: {
 				href: '/dedicated',
-				text: 'Request early access',
+				text: 'More on Gitpod Dedicated',
 			},
 		},
 	},

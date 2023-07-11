@@ -17,7 +17,6 @@
 	import SectionCommon from '$lib/components/section-common.svelte';
 	import { featureCards } from '$lib/contents/enterprise';
 	import CardSmall from '$lib/components/card/card-small.svelte';
-	import Pill from '$lib/components/pill.svelte';
 	import opensourceSvelte from '$lib/components/svgs/opensource.svelte';
 	import Testimonials from '$lib/components/index/testimonials.svelte';
 </script>
@@ -107,23 +106,16 @@
 <!-- svelte-ignore missing-declaration -->
 <SectionCommon title="Your cloud or our cloud">
 	<div
-		class="flex flex-wrap justify-center mt-small max-w-5xl mx-auto"
+		class="flex flex-wrap justify-center gap-4 mt-small max-w-5xl mx-auto"
 		slot="content"
 	>
 		{#each featureCards as card}
 			<CardSmall
 				class="m-macro px-xx-small relative"
 				card={card.card}
-				titleClassNames="h5"
-			>
-				{#if card.pill}
-					<Pill
-						class="absolute right-x-small -top-2"
-						variant={card.pill.variant}
-						text={card.pill.text}
-					/>
-				{/if}
-			</CardSmall>
+				titleClassNames="!text-[28px] !leading-10"
+				textAlign="left"
+			/>
 		{/each}
 	</div>
 </SectionCommon>

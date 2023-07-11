@@ -57,14 +57,14 @@
 />
 <SectionCommon title="Your cloud or ours">
 	<div
-		class="flex flex-wrap justify-center mt-small max-w-5xl mx-auto"
+		class="flex flex-wrap justify-center gap-4 mt-small max-w-5xl mx-auto"
 		slot="content"
 	>
 		{#each featureCards as card}
 			<Card
 				class="m-macro relative !w-[368px]"
 				card={card.card}
-				titleClassNames="h5"
+				titleClassNames="!text-[28px] !leading-10"
 				textAlign="left"
 			/>
 		{/each}
