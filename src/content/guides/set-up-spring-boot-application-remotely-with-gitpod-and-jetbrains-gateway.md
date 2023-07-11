@@ -3,6 +3,7 @@ author: nancy-chauhan, helenjoscott
 date: Thursday, 28 April 2022 11:00:00 UTC
 title: Set up a Spring Boot Remote Development Environment With JetBrains Gateway and Gitpod
 excerpt: Setting up your first Spring project using JetBrains Gateway and Gitpod.
+subtitle: Setting up your first Spring project using JetBrains Gateway and Gitpod.
 teaserImage: header.jpg
 image: teaser.jpg
 ---
