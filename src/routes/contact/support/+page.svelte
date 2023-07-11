@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { Form } from '$lib/types/form';
 	import type { Email } from '$lib/api/api';
-	import validator from 'validator';
 	import OpenGraph from '$lib/components/open-graph.svelte';
 	import SubmissionSuccess from '$lib/components/submission-success.svelte';
 	import { onMount, tick } from 'svelte';
@@ -14,15 +13,10 @@
 	import Card from '$lib/components/ui-library/card';
 	import { scrollToElement } from '$lib/utils/helpers';
 	import { page } from '$app/stores';
-	import {
-		dedicatedCloudPlatforms,
-		noOfEngineers as noOfEngineersArray,
-	} from '$lib/contents/contact';
-	import Select from '$lib/components/ui-library/select/select.svelte';
 	import InputsHalf from '$lib/components/contact/inputs-half.svelte';
+	import { goto } from '$app/navigation';
 
 	const enterpriseSubject = 'Enterprise';
-
 	const otherSubject = 'Other';
 	const subjects = [
 		'Question',
@@ -39,32 +33,15 @@
 		const match = subjects.find(
 			(s) => s.toLowerCase() === subject?.toLowerCase(),
 		);
-
 		if (match) {
 			formData.selectedSubject.value = match;
 			formData.selectedSubject.valid = true;
 		}
 	});
 
-	let isCloudPlatformsSelectShown = false;
-
-	let cloudInfrastructure = {
-		el: null,
-		valid: false,
-		value: '',
-	};
-
-	let noOfEngineers = {
-		el: null,
-		valid: false,
-		value: '',
-	};
-
-	let company = {
-		el: null,
-		valid: false,
-		value: '',
-	};
+	$: if (formData.selectedSubject.value == enterpriseSubject) {
+		goto('/contact/sales?subject=enterprise');
+	}
 
 	let sectionStart: HTMLElement;
 	let isSubmissionInProgress: boolean = false;
@@ -92,21 +69,6 @@
 		},
 	};
 
-	$: if (formData.selectedSubject.value == enterpriseSubject) {
-		isCloudPlatformsSelectShown = true;
-		formData.cloudInfrastructure = cloudInfrastructure;
-		formData.noOfEngineers = noOfEngineers;
-		formData.company = company;
-	} else {
-		isCloudPlatformsSelectShown = false;
-		delete formData.cloudInfrastructure;
-		delete formData.noOfEngineers;
-		delete formData.company;
-	}
-
-	$: isSelfHostedSelected =
-		isCloudPlatformsSelectShown && formData.cloudInfrastructure;
-
 	let isFormDirty = false;
 	let isEmailSent = false;
 
@@ -130,18 +92,6 @@
 			subject: formData.selectedSubject.value,
 			full_name: formData.name.value,
 			email: formData.email.value,
-			infrastructure:
-				formData.selectedSubject.value == enterpriseSubject
-					? formData.cloudInfrastructure.value
-					: undefined,
-			company_engineers:
-				formData.selectedSubject.value == enterpriseSubject
-					? formData.noOfEngineers.value
-					: undefined,
-			company:
-				formData.selectedSubject.value == enterpriseSubject
-					? formData.company.value
-					: undefined,
 			message: formData.message.value,
 		});
 
@@ -155,24 +105,7 @@
 				'  (from ' +
 				formData.email.value +
 				')',
-			message: `
-          ${
-				isCloudPlatformsSelectShown
-					? `Cloud Infrastructure: ${formData.cloudInfrastructure.value}`
-					: ''
-			}
-          ${
-				isCloudPlatformsSelectShown
-					? `Company: ${formData.company.value}`
-					: ''
-			}
-          Message: ${formData.message.value}
-          ${
-				isCloudPlatformsSelectShown
-					? `Total number of engineers: ${formData.noOfEngineers.value}`
-					: ''
-			}
-      `,
+			message: `Message: ${formData.message.value}`,
 		};
 
 		try {
@@ -312,78 +245,6 @@
 								/>
 							</div>
 						</InputsHalf>
-						{#if isSelfHostedSelected}
-							<InputsHalf>
-								<div
-									class:error={isFormDirty &&
-										!formData.selectedSubject.valid}
-								>
-									<Select
-										hasError={isFormDirty &&
-											!formData.cloudInfrastructure.valid}
-										name="cloudInfrastructure"
-										bind:value={formData.cloudInfrastructure
-											.value}
-										on:change={(e) => {
-											formData.cloudInfrastructure.valid =
-												formData.cloudInfrastructure
-													.value &&
-												// @ts-ignore
-												e.target.validity.valid;
-										}}
-										options={dedicatedCloudPlatforms}
-										placeholder="Cloud infrastructure*"
-										class="max-w-md"
-									/>
-								</div>
-								<div
-									class:error={isFormDirty &&
-										!formData.selectedSubject.valid}
-								>
-									<Select
-										placeholder="Total number of engineers"
-										hasError={isFormDirty &&
-											!formData.noOfEngineers.valid}
-										name="noOfEngineers"
-										bind:value={formData.noOfEngineers
-											.value}
-										bind:element={formData.noOfEngineers.el}
-										on:change={() => {
-											formData.noOfEngineers.valid =
-												formData.noOfEngineers.value &&
-												formData.noOfEngineers.el.checkValidity();
-										}}
-										options={noOfEngineersArray}
-										class="max-w-md"
-									/>
-								</div>
-							</InputsHalf>
-							<InputsHalf>
-								<div
-									class:error={isFormDirty &&
-										!formData.company.valid}
-								>
-									<Input
-										label="Company website*"
-										hasError={isFormDirty &&
-											!formData.company.valid}
-										id="company"
-										name="company"
-										bind:value={formData.company.value}
-										bind:element={formData.company.el}
-										on:change={() => {
-											formData.company.valid =
-												validator.isURL(
-													formData.company.value,
-												) &&
-												formData.company.el.checkValidity();
-										}}
-										type="text"
-										autocomplete="organization"
-									/>
-								</div>
-							</InputsHalf>
-						{/if}
 						<div>
 							<Textarea
 								id="message"
