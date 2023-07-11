@@ -49,7 +49,7 @@ export const dataStax: Brand = {
 export const amazon: Brand = {
 	alt: 'Amazon',
 	logo: Amazon,
-	transform: 'scale(0.9) translateY(5px)',
+	transform: 'scale(0.9)',
 };
 
 export const shares: Brand = {
