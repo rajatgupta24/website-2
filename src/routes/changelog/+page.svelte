@@ -20,14 +20,11 @@
 <OpenGraph
 	data={{
 		description:
-			'A sum-up of Gitpod’s latest product improvements, feature releases and community contributions.',
+			"A sum-up of Gitpod's latest product improvements, feature releases and community contributions.",
 		title: 'Gitpod Changelog - Latest releases and product updates',
 		type: 'website',
 		keywords:
-			'updates, product, changes, features, releases, bugs, fixes, version, updates, improvements',
-		// Update this each monthly release and enter the changelog URL into https://cards-dev.twitter.com/validator to force twitter to refresh it
-		image: 'images/changelog/timeouts.webp',
-		imageTwitter: 'images/changelog/timeouts.webp',
+			'changelog, gitpod, news, updates, product, changes, features, releases, bugs, fixes, version, updates, improvements',
 	}}
 />
 
