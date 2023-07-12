@@ -160,13 +160,13 @@
 						{#if imagesDirectoryName === 'blog'}
 							<SubscribeRssFeed href="/blog/rss.xml" />
 							<RequestChanges
-								href={`https://github.com/gitpod-io/website/edit/main/src/routes/blog/${slug}.md`}
+								href={`https://github.com/gitpod-io/website/edit/main/src/content/blog/${slug}.md`}
 							/>
 						{/if}
 					</div>
 					{#if imagesDirectoryName === 'guides'}
 						<RequestChanges
-							href={`https://github.com/gitpod-io/website/edit/main/src/routes/guides/${slug}/index.md`}
+							href={`https://github.com/gitpod-io/website/edit/main/src/content/guides/${slug}.md`}
 						/>
 					{/if}
 				</div>
