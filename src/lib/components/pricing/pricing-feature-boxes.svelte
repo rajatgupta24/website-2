@@ -1,15 +1,15 @@
 <script lang="ts">
-	import type { Pricing } from '$lib/types/pricing';
-	import PricingBox from './pricing-box.svelte';
+	import type { FeatureList } from '$lib/types/pricing';
+	import PricingFeatureBox from './pricing-feature-box.svelte';
 
-	let pricingPlans: Pricing[];
-	let dedicatedPricingPlans: Pricing[];
-	export let plan = pricingPlans || dedicatedPricingPlans;
+	let cloudFeatures: FeatureList[];
+	let dedicatedFeatures: FeatureList[];
+	export let featuresLists = cloudFeatures || dedicatedFeatures;
 </script>
 
 <div class="flex justify-center">
-	{#each plan as pricing}
-		<PricingBox {pricing} />
+	{#each featuresLists as featuresList}
+		<PricingFeatureBox {featuresList} />
 	{/each}
 </div>
 
