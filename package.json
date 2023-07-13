@@ -1,28 +1,34 @@
 {
   "name": "gitpod-website",
-  "description": "Gitpod.io Website",
   "version": "2.0.0",
   "private": true,
-  "type": "module",
+  "description": "Gitpod.io Website",
   "keywords": [
-    "svelte"
+    "svelte",
+    "tailwindcss",
+    "gitpod",
+    "website"
   ],
+  "type": "module",
   "scripts": {
-    "dev": "vite dev --host 0.0.0.0",
     "build": "vite build",
-    "deploy": "npm run build",
-    "start": "vite preview",
-    "validate": "svelte-kit sync && svelte-check",
-    "prepare": "husky install",
-    "generate:blog": "plop --plopfile ./generators/index.cjs blog-post",
-    "generate:adr": "adr new",
-    "generate:changelog": "node ./scripts/generate-changelog.js",
-    "generate:jb": "node ./generators/ide/jb-gen.js && npm run check-links $(gp url 3000)/docs/references/ides-and-editors",
+    "check": "svelte-kit sync && prettier --check . && svelte-check",
     "check-links": "linkinator --concurrency 1000 --recurse --verbosity=error --skip 'https://(www.)?(notion.so|gitpod.io|github.com|linux.org|twitter.com|www.gitpodstatus.com|researchgate.net|news.ycombinator.com|discord.com|localhost|linkedin|android.com)' --skip '(png|jpg|svg|woff|js|css)$'",
     "cypress:open": "cypress open --browser chrome",
-    "test:e2e": "cypress run --headless --browser chrome",
+    "deploy": "npm run build",
+    "dev": "vite dev --host 0.0.0.0",
     "format": "prettier --write .",
-    "check": "svelte-kit sync && prettier --check . && svelte-check"
+    "generate:adr": "adr new",
+    "generate:blog": "plop --plopfile ./generators/index.cjs blog-post",
+    "generate:changelog": "node ./scripts/generate-changelog.js",
+    "generate:jb": "node ./generators/ide/jb-gen.js && npm run check-links $(gp url 3000)/docs/references/ides-and-editors",
+    "prepare": "husky install",
+    "start": "vite preview",
+    "test:e2e": "cypress run --headless --browser chrome",
+    "validate": "svelte-kit sync && svelte-check"
+  },
+  "lint-staged": {
+    "*.{cjs,js,ts,css,scss,md,svelte}": "prettier --write"
   },
   "dependencies": {
     "@lottiefiles/lottie-player": "^1.6.3",
@@ -87,11 +93,8 @@
     "unist-util-visit": "^4.1.0",
     "vite": "^4.4.2"
   },
-  "lint-staged": {
-    "*.{cjs,js,ts,css,scss,md,svelte}": "prettier --write"
-  },
   "engines": {
-    "npm": ">=8.19.0",
-    "node": ">=16.14.0"
+    "node": ">=16.14.0",
+    "npm": ">=8.19.0"
   }
 }
