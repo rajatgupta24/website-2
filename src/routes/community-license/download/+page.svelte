@@ -22,7 +22,7 @@
 		<LinkButton
 			variant="primary"
 			size="large"
-			href="/contact/sales?subject=Dedicated%20self-serve"
+			href="/contact/sales?subject=enterprise"
 			slot="content"
 			class="mt-x-small">Sign up</LinkButton
 		>

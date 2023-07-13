@@ -4,7 +4,7 @@
 </script>
 
 <div
-	class="flex flex-col flex-wrap justify-center md:flex-row !mb-x-large md:!mb-0 space-y-3 md:space-y-0 max-w-[1104px] gap-x-4 gap-y-4 mx-auto mt-medium"
+	class="flex flex-col flex-wrap justify-center md:flex-row !mb-x-large md:!mb-0 space-y-3 md:space-y-0 max-w-[1104px] gap-x-4 gap-y-4 mx-auto mt-x-small md:mt-small"
 >
 	<Card
 		size="medium"

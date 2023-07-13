@@ -10,6 +10,7 @@
 	import SectionCommon from '$lib/components/section-common.svelte';
 	import { dedicatedCards } from '$lib/contents/enterprise';
 	import CardSmall from '$lib/components/card/card-small.svelte';
+	import Hero from '$lib/components/dedicated/hero-text.svelte';
 </script>
 
 <OpenGraph
@@ -68,5 +69,8 @@
 </Section>
 
 <div class="mb-x-large md:mb-xxx-large" id="dedicated-request-access">
+	<div class="max-w-2xl mx-auto justify-center">
+		<Hero />
+	</div>
 	<DedicatedCalloutCards />
 </div>
