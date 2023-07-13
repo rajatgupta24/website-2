@@ -11,7 +11,6 @@
 		title,
 		features,
 		price,
-		priceDuration,
 		btnHref,
 		btnText,
 		spiced,
@@ -31,7 +30,7 @@
 		? 'sm:w-full max-w-[368px]'
 		: 'md:max-w-[720px] max-w-xs'} gap-small {spiced
 		? 'pt-xx-small'
-		: 'pt-x-small'} p-x-small flex-col justify-between items-start bg-card mt-0 mx-macro mb-micro lg:mb-0 text-center transition-all duration-200"
+		: 'pt-x-small'} p-x-small flex-col justify-between items-start bg-card mt-0 mx-macro mb-micro md:mb-x-small text-center transition-all duration-200"
 	brandShadow={spiced}
 	stroked={true}
 >
@@ -39,23 +38,14 @@
 		<!-- {#if spiced}
       <MostPopular class="mb-macro" />
     {/if} -->
-		<p class="text-important text-xl mb-macro font-bold">
+		<p class="text-grey mb-micro font-bold">
 			{@html `${prependedPrice ? prependedPrice : ''} ${
 				showCurrency ? (isEurope() ? '€' : '$') : ''
 			}${price || ''}`}
 		</p>
-		<h2
-			class="text-important text-5xl leading-[4rem] font-bold flex items-stretch"
-		>
-			{title}
-			{#if priceDuration}
-				<span class="text-grey text-base font-normal ml-2 self-center"
-					>/{priceDuration}</span
-				>
-			{/if}
-		</h2>
+		<h2 class="h4 !mb-1">{title}</h2>
 		{#if description}
-			<p class="text-base font-normal mb-x-small">{description}</p>{/if}
+			<p class="font-bold mb-x-small">{description}</p>{/if}
 
 		{#if features}
 			<FeaturesList class="!mt-0" {features} />

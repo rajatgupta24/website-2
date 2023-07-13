@@ -2,54 +2,32 @@
 	import PricingBoxes from './pricing-boxes.svelte';
 	import type { Pricing } from '$lib/types/pricing';
 	import Header from '../header.svelte';
-	import { page } from '$app/stores';
-	import EnterprirseCalloutCard from './enterprirse-callout-card.svelte';
-	import { onMount } from 'svelte';
-	import Toggle from '$lib/components/toggle.svelte';
-	let checked: boolean = false;
-	const handleChange = () => {
-		checked = !checked;
-	};
-	export let pricingPlans: Pricing[] = [];
-	export let dedicatedPricingPlans: Pricing[] = [];
+	import LinkButton from '../ui-library/link-button/link-button.svelte';
+	import { isEurope } from '$lib/utils/helpers';
 
-	// if page URL is /pricing#dedicated or /pricing?plan=dedicated, show dedicated pricing plans and make checked true
-	onMount(() => {
-		if ($page.url.searchParams.get('plan') === 'dedicated') {
-			checked = true;
-		}
-		if ($page.url.href.endsWith('dedicated')) {
-			checked = true;
-		}
-	});
+	export let pricingPlans: Pricing[] = [];
 </script>
 
 <Header
 	class="md:!mb-x-small !mb-micro"
-	title="Plans and pricing"
+	title="Predictable, usage-based pricing"
+	text="Plans for small teams and large enterprises."
 	fullWidth={true}
 />
 <div class="text-center !mt-8">
-	<Toggle
-		labelLeft="Gitpod Cloud"
-		labelRight="Gitpod Dedicated"
-		on:change={handleChange}
-		{checked}
-		id="cloud-dedicated-toggle"
-	/>
+	<LinkButton
+		variant="primary"
+		size="large"
+		href="https://gitpod.io/login"
+		data-analytics={`{"context":"pricing"}`}
+		>Start with 50h/month for free</LinkButton
+	>
 </div>
-
-{#if !checked}
-	<div class="mt-small">
-		{#if pricingPlans.length > 0}
-			<PricingBoxes plan={pricingPlans} />
-		{/if}
-	</div>
-	<EnterprirseCalloutCard />
-{:else}
-	<div class="mt-small">
-		{#if dedicatedPricingPlans.length > 0}
-			<PricingBoxes plan={dedicatedPricingPlans} />
-		{/if}
-	</div>
-{/if}
+<div class="mt-small">
+	{#if pricingPlans.length > 0}
+		<PricingBoxes {pricingPlans} />
+		<p class="mt-micro text-center">
+			1 credit = {isEurope() ? '€' : '$'}0.036. All prices excluding VAT
+		</p>
+	{/if}
+</div>

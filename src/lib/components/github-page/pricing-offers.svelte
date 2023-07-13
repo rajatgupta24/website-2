@@ -12,7 +12,7 @@
 		<div><slot name="description" /></div>
 	</div>
 
-	<PricingBoxes plan={pricingPlans} />
+	<PricingBoxes {pricingPlans} />
 </div>
 
 <style lang="postcss">
