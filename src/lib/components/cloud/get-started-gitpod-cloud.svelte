@@ -32,7 +32,7 @@
 					target="_blank"
 					variant="primary"
 					size="medium"
-					href="https://gitpod.io/login">Launch workspsace</LinkButton
+					href="https://gitpod.io/login">Launch workspace</LinkButton
 				>
 				<LinkButton
 					variant="gray"
