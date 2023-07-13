@@ -29,10 +29,6 @@ export const worksOnAnyMachineFeature: Feature = {
 	paragraph:
 		'No more compatibility issues. Developers can work with the same tools, libraries, and dependencies, regardless of operating system, with a single click.',
 	previewComponent: Workspaces,
-	moreButton: {
-		text: 'Improve collaboration',
-		href: '/solutions/developers',
-	},
 };
 
 export const collaborationFeature: Feature = {
