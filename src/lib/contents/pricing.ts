@@ -82,7 +82,7 @@ export const dedicatedFeatures: FeatureList[] = [
 		features: [
 			`<div class='block'><b>Enhanced security:</b> single-tenant installations ensure source code, dependencies and dev environments remain private and protected</div>`,
 			`<div class='block'><b>Access private resources:</b> run within your VPC to access resources that aren’t exposed to the internet</div>`,
-			`<div class='block'><b>Air gapped support:</b> protected from unauthorized data transfers, malware infiltration and external network connections</div>`,
+			`<div class='block'><b>Support for air gapped networks:</b> protected from unauthorized data transfers, malware infiltration and external network connections</div>`,
 			`<div class='block'><b>Built for enterprise:</b> SSO, custom SLAs and dedicated support experts to help scale your team</div>`,
 		],
 		btnText: 'Talk to sales',
