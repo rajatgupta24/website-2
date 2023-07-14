@@ -774,7 +774,7 @@ export const pricingFAQ: FAQ = {
 		{
 			title: 'Can I change my subscription at any time?',
 			content:
-				'<p> Yes, you can upgrade or downgrade whenever you want on <a href="https://gitpod.io/subscription/">gitpod.io/subscription</a >. Your billing cycle starts with the creation date of your subscription. After 30 days it will automatically renew itself. </p> <p> If you choose to upgrade, the pricing difference will be added to your next month’s invoice. If you choose to downgrade, you’ll be credited on your next month’s invoice </p>',
+				'<p> Yes, you can upgrade or downgrade whenever you want on <a href="https://gitpod.io/billing/">gitpod.io/billing</a >. Your billing cycle starts with the creation date of your subscription. After 30 days it will automatically renew itself. </p> <p> If you choose to upgrade, the pricing difference will be added to your next month’s invoice. If you choose to downgrade, you’ll be credited on your next month’s invoice </p>',
 		},
 		{
 			title: 'What if I decide to cancel?',
