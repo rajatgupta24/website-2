@@ -20,9 +20,10 @@
 <OpenGraph
 	data={{
 		description:
-			'Gitpod is always free for 50h/month. Upgrade to unlock more hours and features. SaaS and Self-Hosted. Talk to an expert.',
-		title: 'Plans and Pricing - Gitpod',
-		keywords: 'Pricing Gitpod, costs, free, saas, fees, self-hosted',
+			'Gitpod is free for 50h/month. Upgrade to unlock more features with Cloud - hosted and managed by us or Dedicated - hosted by you and managed by us.',
+		title: 'Plans and pricing - Gitpod',
+		keywords:
+			'Pricing, Gitpod, costs, free, Cloud, SaaS, Dedicated, self-hosted, secure developer environment, cloud development environment, cde',
 	}}
 />
 <PlansAndPricing {pricingPlans} {dedicatedPricingPlans} />
