@@ -75,7 +75,7 @@
 			>Learn more about CDEs</LinkButton
 		>
 		<LinkButton variant="gray" size="large" href="https://gitpod.io/login"
-			>Try now</LinkButton
+			>Start for free</LinkButton
 		>
 	</div>
 </Section>

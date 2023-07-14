@@ -44,7 +44,7 @@
 	<GetStartedSmall />
 	<p class="mt-6 md:mb-24 max-w-full mx-auto text-center text-base">
 		Do you still have questions? Please <a href="/contact/sales"
-			>Contact sales</a
+			>Talk to sales</a
 		>.
 	</p>
 </div>
