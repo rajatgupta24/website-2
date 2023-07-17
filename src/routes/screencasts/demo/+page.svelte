@@ -17,9 +17,8 @@
 	<div slot="custom">
 		<h2 class="h5 mt-micro mb-2">Gitpod Demo</h2>
 		<p class="max-w-xl">
-			See how Gitpod launches a ready-to-code project built on five
-			containers using a Node app, .NET app, a Python app as well as Redis
-			and Postgres databases with a simple click.
+			See how Gitpod launches a ready-to-code project on JetBrains with a
+			simple click.
 		</p>
 
 		<div class="flex flex-row my-xx-small items-center space-x-2">
