@@ -1,7 +1,7 @@
 ---
 author: gtsiolis
 date: Tuesday, 18 Jul 2023 15:00:00 UTC
-excerpt: Some of the great things about remote work at Gitpod is that team members are empowered to live and work where they are most fulfilled. In essence, how we work is more important than where we work, and just as important as the work we are doing.
+excerpt: One of the great things about remote work at Gitpod is that team members are empowered to live and work where they are most fulfilled. In essence, how we work is more important than where we work, and just as important as the work we are doing.
 tags: ['Company building']
 image: teaser.webp
 teaserImage: teaser.webp
