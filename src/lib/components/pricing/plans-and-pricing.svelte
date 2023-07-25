@@ -4,7 +4,8 @@
 	import Header from '../header.svelte';
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
-	import EnterprirseCalloutCard from './enterprirse-callout-card.svelte';
+	import EnterprirseCalloutCard from './enterprise-callout-card.svelte';
+	import DedicatedCalloutCard from './dedicated-callout-card.svelte';
 	import { onMount } from 'svelte';
 	import Toggle from '$lib/components/toggle.svelte';
 	let checked: boolean = false;
@@ -57,4 +58,5 @@
 			<PricingBoxes plan={dedicatedPricingPlans} />
 		{/if}
 	</div>
+	<DedicatedCalloutCard />
 {/if}
