@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { getFeatureFlag } from '$lib/utils/feature-flag-provider';
-	import { getFeatureFlagValue } from '$lib/contents/pricing';
+	import { dedicatedPricingSalesCtaFeatureFlagStatus } from '$lib/utils/feature-flag-provider';
 	import { trackEvent } from '$lib/components/segment.svelte';
 	import PricingBoxes from './pricing-boxes.svelte';
 	import type { Pricing } from '$lib/types/pricing';
@@ -24,7 +23,6 @@
 	};
 	export let pricingPlans: Pricing[] = [];
 	export let dedicatedPricingPlans: Pricing[] = [];
-	let dedicatedPricingCtaFlagValue = null;
 
 	// if page URL is /pricing?plan=dedicated, show dedicated pricing plans and make checked true
 	onMount(async () => {
@@ -32,7 +30,7 @@
 			checked = true;
 		}
 		await trackEvent('component_loaded', {
-			experiments_variant: getFeatureFlagValue()
+			experiments_variant: dedicatedPricingSalesCtaFeatureFlagStatus
 				? 'dedicated_pricing_cta_talk_to_sales_loaded'
 				: 'dedicated_pricing_cta_contact_sales_loaded',
 		});

@@ -8,15 +8,7 @@ import type {
 } from '../components/ui-library/feature-table/feature-table';
 import type { FAQ } from '../types/faq';
 import githubMarkSvelte from '$lib/components/svgs/github-mark.svelte';
-import { getFeatureFlag } from '$lib/utils/feature-flag-provider';
-export let dedicatedPricingCtaFlagValue = null;
-export const getFeatureFlagValue = async () => {
-	getFeatureFlag('dedicatedPricingSalesCta', false, async (val) => {
-		dedicatedPricingCtaFlagValue = val;
-		return await dedicatedPricingCtaFlagValue;
-	});
-	return dedicatedPricingCtaFlagValue;
-};
+import { dedicatedPricingSalesCtaFeatureFlagStatus } from '$lib/utils/feature-flag-provider';
 
 export const pricingPlans: Pricing[] = [
 	{
@@ -60,11 +52,15 @@ export const dedicatedPricingPlans: Pricing[] = [
 			'access to private networking',
 			'SSO, custom SLAs and dedicated support',
 		],
-		btnText: `${getFeatureFlagValue() ? 'Talk to sales' : 'Contact sales'}`,
+		btnText: `${
+			dedicatedPricingSalesCtaFeatureFlagStatus
+				? 'Talk to sales'
+				: 'Contact sales'
+		}`,
 		btnHref: '/contact/sales',
 		trackingName: 'dedicated',
 		experimentName: `${
-			getFeatureFlagValue()
+			dedicatedPricingSalesCtaFeatureFlagStatus
 				? 'dedicated_pricing_cta_talk_to_sales_clicked'
 				: 'dedicated_pricing_cta_contact_sales_clicked'
 		}`,
