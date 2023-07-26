@@ -21,23 +21,20 @@
 	import { page } from '$app/stores';
 	import Unleashing from '$lib/components/contact/unleashing.svelte';
 	import InputsHalf from '$lib/components/contact/inputs-half.svelte';
-	import { goto } from '$app/navigation';
 
 	const enterpriseSubject = 'Enterprise';
-	const otherSubject = 'Other';
-	const demoSubject = 'Get a demo';
 	const dedicatedSubject = 'Dedicated self-serve';
+	const otherSubject = 'Other';
 
 	/**Example Usecase:
 	 * /contact/sales?subject=enterprise
-	 * /contact/sales?subject=Get%20a%20demo
+	 * /contact/sales?subject=Dedicated%20self-serve
 	 * ...
 	 */
 
 	const subjects = [
 		enterpriseSubject,
 		dedicatedSubject,
-		demoSubject,
 		'Reselling',
 		otherSubject,
 	];
@@ -115,10 +112,6 @@
 	} else {
 		isCloudPlatformsSelectShown = false;
 		delete formData.cloudInfrastructure;
-	}
-
-	$: if (formData.selectedSubject.value == demoSubject) {
-		goto('/contact/get-demo');
 	}
 
 	let isFormDirty = false;
@@ -246,32 +239,6 @@
 						class="max-w-[45rem] m-auto"
 					>
 						<div class="space-y-8">
-							<div
-								class:error={isFormDirty &&
-									!formData.selectedSubject.valid}
-							>
-								<fieldset class="flex">
-									<Select
-										placeholder="Please choose a subject"
-										hasError={isFormDirty &&
-											!formData.selectedSubject.valid}
-										bind:value={formData.selectedSubject
-											.value}
-										bind:element={formData.selectedSubject
-											.el}
-										on:change={() => {
-											formData.selectedSubject.valid =
-												formData.selectedSubject
-													.value &&
-												formData.selectedSubject.el
-													.validity.valid;
-										}}
-										name="subject"
-										options={subjects}
-										class="max-w-md"
-									/>
-								</fieldset>
-							</div>
 							<InputsHalf>
 								<div>
 									<Input
