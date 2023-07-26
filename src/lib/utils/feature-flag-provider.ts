@@ -7,7 +7,7 @@ const configCatClient = configcat.getClient(
 	configcat.PollingMode.LazyLoad,
 	{
 		cacheTimeToLiveSeconds: 3 * 60, // => 3 minutes
-		requestTimeoutMs: 2000,
+		requestTimeoutMs: 2500,
 		logger: configcat.createConsoleLogger(configcat.LogLevel.Error),
 	},
 );
