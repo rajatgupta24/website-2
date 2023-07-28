@@ -205,7 +205,7 @@
 />
 
 {#if isEmailSent}
-	<div bind:this={sectionStart} data-analytics={`{"dnt":true}`}>
+	<div bind:this={sectionStart}>
 		<Header
 			title="Thanks for contacting Gitpod!"
 			text="We'll get back to you shortly."
@@ -232,7 +232,7 @@
 			style="flex: 0 0 65%;"
 		>
 			<Section id="form" style="padding: 0; margin: 0">
-				<div bind:this={sectionStart} data-analytics={`{"dnt":true}`}>
+				<div bind:this={sectionStart}>
 					<form
 						on:submit|preventDefault={handleSubmit}
 						novalidate
