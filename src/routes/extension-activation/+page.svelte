@@ -35,12 +35,12 @@
 		class="transition-all duration-200 delay-[50ms] flex shadow-light dark:shadow-none items-center py-3 px-8 font-semibold whitespace-nowrap bg-none text-black bg-sand-dark dark:bg-light-black dark:text-sand-dark hover:bg-sand-dark-hover focus:bg-sand-dark-hover hover:dark:bg-light-black-hover focus:dark:bg-light-black-hover text-p-medium leading-[1.25] min-w-[10rem] rounded-2xl text-center"
 	>
 		<svg
-			width="35"
+			width="36"
 			height="28"
-			viewBox="0 0 35 28"
+			viewBox="0 0 40 28"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
-			class="mr-2"
+			class="mr-1 -translate-y-0.5"
 		>
 			<g id="Google_Cloud_Logo 1" clip-path="url(#clip0_10443_26774)">
 				<g id="Group">
@@ -170,7 +170,7 @@
 </div>
 <img
 	src="/images/extension-activation/extension-screenshot-dark.webp"
-	class="mx-auto w-full md:w-3/4 mt-small mb-x-large md:mb-xxx-large shadow-highlight"
+	class="mx-auto w-full md:w-3/4 mt-small mb-x-large md:mb-xxx-large shadow-highlight rounded-3xl"
 	alt="Gitpod Extension activation on GitHub"
 />
 <h2 class="text-center -mb-14 md:-mb-28">Next step</h2>
