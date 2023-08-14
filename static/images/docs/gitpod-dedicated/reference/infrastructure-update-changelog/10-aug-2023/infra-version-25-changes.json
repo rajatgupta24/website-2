@@ -1434,5 +1434,29 @@
         }
       ]
     }
+  },
+  {
+    "type": "Resource",
+    "resourceChange": {
+      "action": "Modify",
+      "logicalResourceId": "imagebuilderpolicy",
+      "physicalResourceId": "arn:aws:iam::877922613839:policy/ImageBuilder",
+      "resourceType": "AWS::IAM::ManagedPolicy",
+      "replacement": "False",
+      "scope": [
+        "Properties"
+      ],
+      "details": [
+        {
+          "target": {
+            "attribute": "Properties",
+            "name": "PolicyDocument",
+            "requiresRecreation": "Never"
+          },
+          "evaluation": "Static",
+          "changeSource": "DirectModification"
+        }
+      ]
+    }
   }
 ]

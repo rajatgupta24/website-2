@@ -8,7 +8,7 @@ title: Infrastructure Update Changelog - Gitpod Dedicated docs
 > ℹ️ This is a changelog detailing the changes that go into Infrastructure updates. More information on these updates can be found in [Deployment and Updates](/docs/gitpod-dedicated/background/deployment-updates). A guide on how to apply them can be found in [Updating the Gitpod Dedicated Infrastructure](/docs/gitpod-dedicated/guides/updating-gitpod-dedicated-infrastructure).
 
 <details>
-    <summary class="text-body text-large"><b>Infrastructure Update v23</b> (released 10 August, 2023 )</summary>
+    <summary class="text-body text-large"><b>Infrastructure Update v25</b> (released 14 August, 2023 )</summary>
 
 <div class="ml-2 md:ml-4">
 
@@ -40,25 +40,7 @@ The change set being generated as part of this CF change is expected to include 
 
 ### Changes to Gitpod CF template
 
-<details>
-    <summary class='text-p-medium'>json</summary>
-<div class='ml-4'>
-    <a href='/images/docs/gitpod-dedicated/reference/infrastructure-update-changelog/10-aug-2023/infra-version-23-changes.json' download>infra-version-23-changes.json</a>
-</div>
-</details>
-
-<details>
-    <summary class='text-p-medium mt-4'>Screenshots</summary>
-<div class='ml-4'>
-
-![Changes in Gitpod CF Template - 10 Aug 2023](/images/docs/gitpod-dedicated/reference/infrastructure-update-changelog/10-aug-2023/change-1.webp)
-
-![Changes in Gitpod CF Template - 10 Aug 2023](/images/docs/gitpod-dedicated/reference/infrastructure-update-changelog/10-aug-2023/change-2.webp)
-
-![Changes in Gitpod CF Template - 10 Aug 2023](/images/docs/gitpod-dedicated/reference/infrastructure-update-changelog/10-aug-2023/change-3.webp)
-
-</div>
-</details>
+<a href='/images/docs/gitpod-dedicated/reference/infrastructure-update-changelog/10-aug-2023/infra-version-25-changes.json' download>infra-version-25-changes.json</a>
 
 </div>
 
