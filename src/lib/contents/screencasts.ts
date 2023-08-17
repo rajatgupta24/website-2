@@ -45,7 +45,7 @@ export const screencasts: Screencast[] = [
 		tile: 'screencast-1.jpg',
 		youtubeId: 'ij1msCffQZA',
 		relatedDocs: [
-			{ path: '/docs/', title: 'Introduction to Gitpod' },
+			{ path: '/docs', title: 'Introduction to Gitpod' },
 			{
 				path: '/docs/introduction/getting-started',
 				title: 'Getting started',
