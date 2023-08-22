@@ -51,7 +51,7 @@
 
 <Hero />
 <AnimatedLogos />
-<Titles />
+<Titles cardContainsLinks={true} />
 <ChooseProject />
 <div id="choose-project-observer-target-bottom">
 	<SectionScreenshot />
