@@ -256,7 +256,7 @@ Please see [Using Custom Domains](/docs/gitpod-dedicated/guides/using-custom-dom
 
 </details>
 
-<!-- <details class="ml-4">
+<details class="ml-4">
 
 <summary class="text-body text-p-medium my-micro">When using certificates signed by a custom or private Certificate Authority</summary>
 
@@ -264,7 +264,7 @@ Please see [Using a Custom or Private CA](/docs/gitpod-dedicated/guides/using-cu
 
 -   `ARN of the Custom CA certificate` that is stored in secrets manager
 
-</details> -->
+</details>
 
 2. **Receive Two CloudFormation templates:** You will need to execute two CloudFormation templates to install the infrastructure and subsequently Gitpod Dedicated. The `infrastructure-creation-role-template.json` (downloadable below) is used to create an IAM role that is assumed during the execution of the subsequent `<customer>-gitpod-template.json` CloudFormation template (shared with you by your Gitpod Account manager). The `<customer>-gitpod-template.json` CloudFormation template installs the infrastructure for Gitpod Dedicated.
 

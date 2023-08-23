@@ -284,10 +284,10 @@ export const MENU: MenuEntry[] = [
 			'Using Custom Domains',
 			'gitpod-dedicated/guides/using-custom-domains',
 		),
-		// M(
-		// 	'Using a Custom or Private CA',
-		// 	'gitpod-dedicated/guides/using-custom-or-private-CA',
-		// ),
+		M(
+			'Using a Custom or Private CA',
+			'gitpod-dedicated/guides/using-custom-or-private-CA',
+		),
 		M(
 			'Using Private VPC Resolvers',
 			'gitpod-dedicated/guides/using-private-vpc-resolvers',
