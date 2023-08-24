@@ -36,7 +36,7 @@ Create a new AWS account following the steps in [the AWS documentation](https://
 
 ## 2. Execute two CloudFormation templates in the new account to bootstrap the infrastructure and install Gitpod Dedicated
 
-> ℹ️ Feel free to notify your Gitpod account manager if you require a preview of the CloudFormation template in order to better understand what will be deployed in your account. If necessary, share it with other team’s in your company that need to review it. Please see [AWS IAM permission requirements](/docs/gitpod-dedicated/reference/AWS-IAM-permission-requirements) for information on the permissions needed.
+> ℹ️ Feel free to notify your Gitpod account manager if you require a preview of the CloudFormation template in order to better understand what will be deployed in your account. If necessary, share it with other team’s in your company that need to review it. Please see [AWS IAM permission requirements](/docs/gitpod-dedicated/reference/aws-iam-permission-requirements) for information on the permissions needed.
 
 The process for creating the necessary infrastructure in the customer’s account and installing Gitpod Dedicated onto it is as follows:
 
@@ -260,7 +260,7 @@ Please see [Using Custom Domains](/docs/gitpod-dedicated/guides/using-custom-dom
 
 <summary class="text-body text-p-medium my-micro">When using certificates signed by a custom or private Certificate Authority</summary>
 
-Please see [Using a Custom or Private CA](/docs/gitpod-dedicated/guides/using-custom-or-private-CA) for more information about using custom domains. In addition to the above, the following information is required:
+Please see [Using a Custom or Private CA](/docs/gitpod-dedicated/guides/using-custom-or-private-ca) for more information about using custom domains. In addition to the above, the following information is required:
 
 -   `ARN of the Custom CA certificate` that is stored in secrets manager
 
@@ -290,7 +290,7 @@ Please see [Using a Custom or Private CA](/docs/gitpod-dedicated/guides/using-cu
 > 💾 Download this template by clicking on it:
 >
 > <div class="mt-2">
-> <a href='/images/docs/gitpod-dedicated/reference/AWS-IAM-permission-requirements/infrastructure-creation-role-template.json' download>infrastructure-creation-role-template.json</a>
+> <a href='/images/docs/gitpod-dedicated/reference/aws-iam-permission-requirements/infrastructure-creation-role-template.json' download>infrastructure-creation-role-template.json</a>
 > </div>
 
 <details class="ml-8">
