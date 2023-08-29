@@ -23,7 +23,7 @@
 		<p class="flex-2 px-4 md:px-2 font-normal">
 			Gartner: 60% of cloud workloads will be built using CDEs |
 			<a
-				href="/blog/gartner-cde-insight"
+				href="/blog/gartner-2023-cde-hypecycle"
 				data-sveltekit-preload-data="hover"
 				on:click={closeBanner}
 				>Read blog post

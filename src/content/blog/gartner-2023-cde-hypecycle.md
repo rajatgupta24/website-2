@@ -24,9 +24,9 @@ Software runs today's world, and all companies, regardless of size or sector, re
 
 In a high interest rate environment, removing friction and maximizing engineers' productivity is crucial. However, many engineering teams still rely on inconsistent and manual development environments, wasting valuable time on inefficient tools that hinder creativity, collaboration, and productivity. Cloud Development Environments (CDEs) address these issues and are becoming a critical tool for platform teams.
 
-<img src="/images/blog/gartner-cde-insight/cde-definition.webp" alt="Cloud Development Environment - CDE Definiton" class="hidden md:block my-4 w-11/12"/>
+<img src="/images/blog/gartner-2023-cde-hypecycle/cde-definition.webp" alt="Cloud Development Environment - CDE Definiton" class="hidden md:block my-4 w-11/12"/>
 
-<img src="/images/blog/gartner-cde-insight/cde-definition-mobile.webp" alt="Cloud Development Environment - CDE Definiton" class="block md:hidden my-3"/>
+<img src="/images/blog/gartner-2023-cde-hypecycle/cde-definition-mobile.webp" alt="Cloud Development Environment - CDE Definiton" class="block md:hidden my-3"/>
 
 Gartner forecasts that, by 2026, CDEs will be used to build and deploy 60% of cloud workloads, labeling them as crucial for enabling widespread cloud usage in their [2023 Emerging Technologies Hype Cycle](https://www.gartner.com/en/newsroom/press-releases/2023-08-16-gartner-places-generative-ai-on-the-peak-of-inflated-expectations-on-the-2023-hype-cycle-for-emerging-technologies). Redmonk, a leading developer tools analyst firm, coined 2023 as "[The Year of the Cloud Development Environment](https://redmonk.com/jgovernor/2022/12/01/the-year-of-the-cloud-development-environment/)". Additionally, Gergely Orosz, author of 'The Pragmatic Engineer', the #1 technology newsletter on Substack, conducted an [extensive analysis of CDEs in June 2023](https://newsletter.pragmaticengineer.com/p/cloud-development-environments) examining their implementation and adoption at Uber, Pipedrive, and Slack. At Gitpod, we organized '[CDE Universe](https://cdeuniverse.com/)' in San Francisco in June, featuring discussions from Stripe, Slack, Uber, Shopify, and others.
 
@@ -63,9 +63,9 @@ In the current economy, where every organization aims to maximize efficiency wit
 
 Cloud Development Environments (CDEs) are designed to enhance the developer experience, modularity, and control in modern engineering organizations. Their four principles - on-demand, consistent, extensible, and equitable - shape this promise.
 
-<img src="/images/blog/gartner-cde-insight/cde-principles.webp" alt="Cloud Development Environment - CDE Principles" class="hidden md:block my-4 w-11/12"/>
+<img src="/images/blog/gartner-2023-cde-hypecycle/cde-principles.webp" alt="Cloud Development Environment - CDE Principles" class="hidden md:block my-4 w-11/12"/>
 
-<img src="/images/blog/gartner-cde-insight/cde-principles-mobile.webp" alt="Cloud Development Environment - CDE Principles" class="block md:hidden my-3"/>
+<img src="/images/blog/gartner-2023-cde-hypecycle/cde-principles-mobile.webp" alt="Cloud Development Environment - CDE Principles" class="block md:hidden my-3"/>
 
 -   **On-demand**: CDEs are as accessible as using Google Docs, available instantly when inspiration strikes. Developers can run the most expansive development workflows in multiple environments for the same codebase simultaneously without conflict, thanks to the cloud's scalability and elasticity.
 
