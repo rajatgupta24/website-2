@@ -245,7 +245,6 @@ export const MENU: MenuEntry[] = [
 			'references/ides-and-editors/browser-terminal',
 			false,
 			[],
-			'beta',
 		),
 		M('FAQs', 'references/ides-and-editors/faqs', false, []),
 	]),
