@@ -1,7 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { getVisitorId } from '../segment.svelte';
 
-	onMount(() => {
+	let visitorId = null;
+
+	onMount(async () => {
+		await getVisitorId().then((id) => {
+			visitorId = id;
+		});
+
 		const script = document.createElement('script');
 		script.setAttribute(
 			'src',
@@ -22,7 +29,7 @@
 
 <div
 	class="calendly-inline-widget"
-	data-url={calendlyUrl}
+	data-url={calendlyUrl + '&utm_source=' + visitorId}
 	style="min-width:250px;height:780px;"
 />
 

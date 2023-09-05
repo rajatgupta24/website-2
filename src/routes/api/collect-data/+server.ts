@@ -1,7 +1,7 @@
 import { json as json$1 } from '@sveltejs/kit';
 import type { RequestHandler } from '@sveltejs/kit';
 import fetch from 'node-fetch';
-import { generateHash } from '$lib/utils/analytics';
+import { getCookielessId } from '$lib/utils/analytics';
 import type { AnalyticsPayload, PageProps } from '$lib/types/analytics';
 import { SEGMENT_KEY } from '$env/static/private';
 import { dev } from '$app/environment';
@@ -32,9 +32,7 @@ export const POST: RequestHandler = async ({ request }) => {
 	}
 	const agent = request.headers.get('user-agent') || '';
 
-	const toHashString = ip + agent;
-
-	const hash = await generateHash(toHashString);
+	const hash = await getCookielessId(ip, agent);
 
 	const maskIp = (ip: string) => {
 		const octets = ip.split('.');

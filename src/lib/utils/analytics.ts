@@ -11,3 +11,7 @@ export const generateHash = async (value: string) => {
 	const hash = crypto.createHash('sha512').update(value).digest('hex');
 	return hash;
 };
+
+export const getCookielessId = async (ip: string, ua: string) => {
+	return await generateHash(ip + ua);
+};

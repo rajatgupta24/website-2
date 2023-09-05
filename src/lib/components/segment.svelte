@@ -39,6 +39,28 @@
 		return cookieId;
 	};
 
+	// This function checks if the user has opted in to analytics before
+	// fetching or setting the cookie ID.
+
+	export const getVisitorId = async () => {
+		try {
+			if (allowsAnalytics()) {
+				return getOrSetCookieId();
+			}
+
+			// This function calls the API to get the cookieless ID, and returns it as a JSON string.
+			// It is used in the calendly url page to get the cookieless ID of the user.
+
+			const response = await fetch('/api/get-cookieless-id', {
+				method: 'GET',
+			});
+			const data = await response.json();
+			return (await data.cookielessId) as string;
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
 	const getPageProps = (): PageProps => {
 		return {
 			path: window.location.pathname,
