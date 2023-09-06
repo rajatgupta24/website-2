@@ -332,7 +332,7 @@ Both of these templates will be provided by your Gitpod Account Manager via dire
 
 2. Then, execute `gitpod-instance` template also by navigating to the link shared by your Gitpod Account Manager in the same AWS account. This will create the infrastructure that Gitpod Dedicated requires.
 
-> ℹ️ During the “configure stack options” step, select the role created by the first CloudFormation template (`GitpodSetupAndInitialEKSUserAdmin`) as the role used for permissions. Depending on timing, you may need to manually select the role using its ARN. Again, select the “roll back all the stack resources” option.
+> ⚠️ During the “configure stack options” step, select the role created by the first CloudFormation template (`GitpodSetupAndInitialEKSUserAdmin`) as the role used for permissions. Depending on timing, you may need to manually select the role using its ARN. Again, select the “roll back all the stack resources” option.
 
 <div style="display: flex; justify-content: center;">
   <img src="/images/docs/gitpod-dedicated/guides/getting-started/iam-perms-configs.webp" alt="IAM Permissions" style="width: 80%;">
