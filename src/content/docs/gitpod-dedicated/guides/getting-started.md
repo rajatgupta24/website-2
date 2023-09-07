@@ -582,10 +582,10 @@ Integrate it with your SCM as per the steps shown in the UI or below. You can no
 **A.** Please contact your Gitpod account manager for assistance. There is some flexibility to the CIDR range used internally by Gitpod.
 
 **Q.** Why two templates?  
-**A.** The `infrastructure-creation-role-template.json` CloudFormation template is used to create a role with the minimum permissions required to install and update Gitpod Dedicated. This role and its policies are used to install the second Cloudformation template.
+**A.** The `gitpod-role` CloudFormation template is used to create a role with the minimum permissions required to install and update Gitpod Dedicated. This role and its policies are used to install the second Cloudformation template.
 
-**Q.** Can the stack created by `infrastructure-creation-role-template.json` be deleted after executing the `<company>-gitpod-template.json`?  
-**A.** No, the stack created by `infrastructure-creation-role-template.json` should be maintained. The role created is also used when updates are provided to the `<company>-gitpod-template.jsonn` template. For more details on infrastructure updates, please see [Deployment and Updates](/docs/gitpod-dedicated/background/deployment-updates).
+**Q.** Can the stack created by `gitpod-role` be deleted after executing the `<company>-gitpod-template.json`?
+**A.** No, the stack created by `gitpod-role` should be maintained. The role created is also used when updates are provided to the `<company>-gitpod-template.json` template. For more details on infrastructure updates, please see [Deployment and Updates](/docs/gitpod-dedicated/background/deployment-updates).
 
 **Q.** What happens if my Cloudformation stack fails to install?  
 **A.** If the stack fails to install, you should delete the stack and try again. There are a few resources that need to be cleaned up manually before you attempt another installation. See [Deleting your Gitpod installation](/docs/gitpod-dedicated/guides/deleting-your-gitpod-installation) for details.

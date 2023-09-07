@@ -15,7 +15,7 @@ See [Deployment and Updates](/docs/gitpod-dedicated/background/deployment-update
 1. Receive the updated CloudFormation templates from your Gitpod Account Manager. Note that you may receive either one
    or two templates depending on the updates required.
 2. If you receive two templates, apply them in this order:
-    - **First**, update the stack for the infrastructure creation role (`infrastructure-creation-role-template.json`).
+    - **First**, update the stack for the infrastructure creation role (`gitpod-role`).
         - Important: When updating this stack, **do not select any role** under permissions.
     - **Then**, update the stack for the Gitpod Infrastructure.
         - Important: When updating this stack, **select the `GitpodSetupAndInitialEKSUserAdmin` role** under
