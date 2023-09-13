@@ -19,14 +19,21 @@
 		class="announcement-banner flex justify-between items-center px-4 py-2 w-full bg-sand-dark dark:bg-card shadow-sm text-xs sm:text-sm md:text-base border-b border-divider border-solid"
 		location="top"
 	>
-		<span class="flex-1 text-right">📈</span>
-		<p class="flex-2 px-4 md:px-2 font-normal">
+		<p
+			class="sm:flex sm:flex-row text-left sm:text-center font-normal w-[95%] justify-center sm:gap-1"
+		>
+			<img
+				src="/images/team/skateboard.png"
+				alt="Skateboard"
+				class="hidden sm:flex sm:w-7"
+			/>
 			Gartner: 60% of cloud workloads will be built using CDEs |
 			<a
 				href="/blog/gartner-2023-cde-hypecycle"
 				data-sveltekit-preload-data="hover"
 				on:click={closeBanner}
-				>Read blog post
+			>
+				Read blog post
 			</a>
 		</p>
 		<div class="flex-1 flex justify-end">
