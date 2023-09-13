@@ -20,10 +20,10 @@
 		location="top"
 	>
 		<p
-			class="sm:flex sm:flex-row text-left sm:text-center font-normal w-[95%] justify-center sm:gap-1"
+			class="sm:flex sm:flex-row text-left sm:text-center font-normal w-[95%] justify-center sm:gap-1 items-center"
 		>
 			<img
-				src="/images/team/skateboard.png"
+				src="/images/team/students.png"
 				alt="Skateboard"
 				class="hidden sm:flex sm:w-7"
 			/>
