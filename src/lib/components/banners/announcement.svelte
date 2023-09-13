@@ -20,13 +20,8 @@
 		location="top"
 	>
 		<p
-			class="sm:flex sm:flex-row text-left sm:text-center font-normal w-[95%] justify-center sm:gap-1 items-center"
+			class="sm:flex sm:flex-row text-left sm:text-center font-normal w-full justify-center sm:gap-1 items-center"
 		>
-			<img
-				src="/images/team/students.png"
-				alt="Skateboard"
-				class="hidden sm:flex sm:w-7"
-			/>
 			Gartner: 60% of cloud workloads will be built using CDEs |
 			<a
 				href="/blog/gartner-2023-cde-hypecycle"
