@@ -6,7 +6,7 @@
 </script>
 
 <MoreArticles
-	title="Towards a maintainer economy"
-	text="Gitpod supports the high achievers that our digital society is built upon."
+	title="Acknowledging and supporting the maintainers"
+	text="It wouldn’t have been possible to create Gitpod without all the amazing open-source work it's built upon. See examples below!"
 	{posts}
 />

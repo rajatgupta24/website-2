@@ -62,18 +62,27 @@ export const features: Feature[] = [
 	{
 		title: 'Onboard contributors in seconds',
 		paragraph:
-			"Often the problem with building a community of contributors is the project setup friction. With Gitpod, people can contribute to your project with a single click. Tedious environment setups, contributing guides and maintenance activities no longer exist. You'll receive more contributions and contributions are easier to review!",
+			'With Gitpod, contributing to your project becomes seamless. Forget tedious setups and guides; now, a single click is all it takes.',
 		previewComponent: Workspaces,
 	},
 	{
-		...multiTrackDevelopmentFeature,
+		...codeAnywhereFeature,
 		paragraph:
-			"You can have multiple workspaces running at the same time. Start your day by opening each new pull-request in seperate side by side workspaces. Thanks to <a href='https://www.youtube.com/watch?v=DwkoOz1GSVg'>pre-builds</a> contributions are already compiled and ready to go.",
+			'A Chromebook or even an iPad will work just fine. Anyone can contribute, no matter their hardware.',
+	},
+	{
+		title: 'Collaboration made easy',
+		paragraph:
+			'Easily share dev environment configurations, changes to configurations, or real-time projects for easier collaboration.',
+		lottie: {
+			src: '/lottie/share_workspace.json',
+			id: 'share-workspace',
+		},
 	},
 	{
 		title: 'Accept contributions safely',
 		paragraph:
-			"With Gitpod, no packages or dependencies are downloaded to your devices which <a href='https://ghuntley.com/sudo-rm-rf/'>contains security incidents</a> and inhibits malicious actors pivoting towards completely compromising your workstation.",
+			'Source code is centrally and safely stored in the cloud, never locally, inhibiting malicious actors from infiltrating your workstations.',
 		terminal: {
 			source: linuxSource,
 			dark: true,
@@ -81,11 +90,6 @@ export const features: Feature[] = [
 			narrow: true,
 			skipToEnd: true,
 		},
-	},
-	{
-		...codeAnywhereFeature,
-		paragraph:
-			"No need for over powered laptops, a chrome book and <a href='https://ghuntley.com/anywhere'>even an iPad</a> will work just fine. Everyone can contribute even if they don't have access to powerful (expensive) computers.",
 	},
 ];
 
@@ -96,17 +100,8 @@ export const programBenefits: Card[] = [
 			alt: 'Gitpod',
 		},
 		transform: 'scale(.95)',
-		title: 'Gitpod for free',
-		text: 'Maintainers get 2500 credits each month for use on public repos. This is equivalent to 250 hours of Standard workspace usage.',
-	},
-	{
-		icon: {
-			src: '/svg/icons/heart.svg',
-			alt: 'Special treats',
-		},
-		transform: 'scale(0.8)',
-		title: 'Special treats',
-		text: "If your open-source software appears in our bill of materials then Gitpod would like to unconditionally <a href='https://github.com/moby/buildkit/issues/2525'>shout you some beers</a> <a href='/blog/devxconf-wrap'>or more</a> as our way of saying thank-you.",
+		title: 'Free Gitpod Cloud',
+		text: 'Maintainers get 2,500 credits per month for use on public repos. This is equivalent to 250 hours of Standard workspace usage.',
 	},
 	{
 		icon: {
@@ -114,8 +109,8 @@ export const programBenefits: Card[] = [
 			alt: 'Personal onboarding',
 			transform: 'scale(.85)',
 		},
-		title: 'Personal onboarding',
-		text: "We are here to help you with getting started and can provide ongoing support for maintaining the <a href='/docs/references/gitpod-yml'>.gitpod.yml</a> if you want.",
+		title: 'Onboarding support',
+		text: 'One of our community engineers will be happy to help you get the most out of using CDEs for your open-source projects.',
 	},
 ];
 
@@ -198,12 +193,12 @@ export const cards: Card[] = [
 ];
 
 export const exploreContents: ExploreSection = {
-	title: 'Apply Now',
+	title: 'Get started',
 	description:
-		'Spend less time reviewing pull-requests, onboarding contributors and more time on building great things.',
-	note: 'Upgrade your account to our complimentary Open Source plan.',
+		'Spend less time reviewing pull-requests or onboarding contributors, and more time building great things. ',
 	link: {
-		text: 'Apply Now',
+		text: 'Apply now',
 		href: 'https://bit.ly/gitpod-for-opensource-application-form',
 	},
+	secondaryLinkExist: false,
 };

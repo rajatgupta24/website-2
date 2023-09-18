@@ -17,6 +17,7 @@
 	import CardSmall from '$lib/components/card/card-small.svelte';
 	import Header from '$lib/components/header.svelte';
 	import Quotes from '$lib/components/quotes.svelte';
+	import ButtonsWrapper from '$lib/components/buttons-wrapper.svelte';
 	import LinkButton from '$lib/components/ui-library/link-button';
 	import { quotes } from '$lib/contents/opensource';
 	import type { PageData } from './$types';
@@ -27,44 +28,47 @@
 <OpenGraph
 	data={{
 		description:
-			'Spend less time reviewing pull-requests, on-boarding contributors and more time on building great things. Upgrade your account to our complimentary Open Source plan.',
-		title: 'Gitpod for Open Source',
+			"Gitpod's Open Source Program provides 2,500 credits to open source project maintainers. Spend less time reviewing pull requests and onboarding contributors with CDEs.",
+		title: 'Gitpod CDE Open Source Program',
 	}}
 />
 
 <Header
-	title="Gitpod for Open Source"
-	text="Spend less time reviewing pull-requests, on-boarding contributors and more time on building great things. <strong>Upgrade your account to our complimentary Open Source plan.</strong>"
-	textClassNames="text-large max-w-4xl mx-auto"
+	title="CDE Open Source Program"
+	text="Gitpod's Open Source Program provides Gitpod Cloud users with 2,500 credits per month of free CDE usage."
+	textClassNames="text-large max-w-5xl mx-auto"
 	fullWidth={true}
 >
 	<div slot="content">
-		<LinkButton
-			variant="primary"
-			size="large"
-			href="https://docs.google.com/forms/d/1TE0YGgnUpHxQIH-2Sibn4LldB2ZLlhc_nQo90bJya3w/viewform?edit_requested=true"
-			class="mt-x-small mb-medium">Apply now</LinkButton
-		>
+		<ButtonsWrapper class="mt-micro md:mt-x-small mb-medium justify-center">
+			<LinkButton
+				variant="primary"
+				size="large"
+				href="https://bit.ly/gitpod-for-opensource-application-form"
+				>Apply now</LinkButton
+			>
+			<LinkButton variant="cta" size="large" href="/cloud"
+				>Learn more about Gitpod Cloud</LinkButton
+			>
+		</ButtonsWrapper>
 		<Quotes {quotes} />
 	</div>
 </Header>
 
 <SectionFeatures
-	title="Be always ready-to-code"
-	text="Spin up fresh cloud development environments for each task, in the cloud, in
-  seconds."
+	title="Always ready-to-code"
+	text="CDEs are on-demand and pre-configured with all tools, libraries and dependencies you need."
 	{features}
 />
 
 <ProgramBenefits cards={programBenefits} />
 
 <Eligibility
-	text="To qualify for Gitpod’s Opensource program, need to meet one of these criteria: (If it is approved, we will send you an email)"
+	text="To qualify for Gitpod’s startup program, meet one of these criteria:"
 	list={[
-		'You are a maintainer, core contributor to a well-established free software or open-source project.',
-		'You regularly contribute to free software or open source communities in other ways (e.g. producing regular content like blog posts, videos, live streams, translations, or organizing meet-ups, conferences, hackathons, etc).',
-		'You are an author, core contributor of extensions for editors such as VS Code, VIM, Emacs, et al. or of developer tools such as build systems, programming languages, compilers, and editor tooling such as Language Server Protocol (LSP) implementations.',
-		'A significant part of your income (employment or via community support) is from maintaining or producing open source work.',
+		'You are a maintainer, core contributor to a well-established open-source project.',
+		'You are an author, core contributor of extensions for editors such as VS Code, VIM, eMacs, et al. or of developer tools such as build systems, programming languages, compilers, and editor tooling such as Language Server Protocol (LSP) implementations.',
+		'A significant part of your income is from maintaining or producing open-source work.',
 	]}
 	link={{
 		href: 'https://docs.google.com/forms/d/1TE0YGgnUpHxQIH-2Sibn4LldB2ZLlhc_nQo90bJya3w/viewform?edit_requested=true',
@@ -76,8 +80,8 @@
 <Faqs />
 
 <SectionCommon
-	title="Open source is in our&nbsp;DNA"
-	text="Gitpod is open-source and so are all the tools we develop and contribute to."
+	title="Open source is in our DNA"
+	text="Gitpod is open source and so are all the tools we develop and contribute to."
 >
 	<div
 		class="flex flex-wrap justify-center mt-small max-w-5xl mx-auto"

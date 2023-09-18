@@ -20,6 +20,7 @@
 			href: '/contact/get-demo',
 		},
 		useKumquatIllustration = false,
+		secondaryLinkExist = true,
 	} = contents;
 </script>
 
@@ -49,15 +50,17 @@
 					target={link.href.startsWith('http') ? '_blank' : null}
 					>{link.text}</LinkButton
 				>
-				{#if secondaryLink}
-					<LinkButton
-						variant="cta"
-						size="large"
-						href={secondaryLink.href}
-						target={secondaryLink.href.startsWith('http')
-							? '_blank'
-							: null}>{secondaryLink.text}</LinkButton
-					>
+				{#if secondaryLinkExist}
+					{#if secondaryLink}
+						<LinkButton
+							variant="cta"
+							size="large"
+							href={secondaryLink.href}
+							target={secondaryLink.href.startsWith('http')
+								? '_blank'
+								: null}>{secondaryLink.text}</LinkButton
+						>
+					{/if}
 				{/if}
 			</ButtonsWrapper>
 		</div>

@@ -9,5 +9,6 @@ export type ExploreSection = {
 	note?: string;
 	link?: Link;
 	secondaryLink?: Link;
+	secondaryLinkExist?: boolean = true;
 	useKumquatIllustration?: boolean;
 };
