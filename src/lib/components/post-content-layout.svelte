@@ -135,7 +135,7 @@
 						{/each}
 					</div>
 				{/if}
-				<header>
+				<header class="mb-2">
 					<h1>{title}</h1>
 					<p>
 						<span

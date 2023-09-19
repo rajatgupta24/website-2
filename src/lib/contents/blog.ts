@@ -1,6 +1,9 @@
 import type { Quote } from '$lib/types/quote';
 import type { Brand } from '$lib/types/brand';
 import githubMarkSvelte from '$lib/components/svgs/github-mark.svelte';
+import redwoodjsSvelte from '$lib/components/svgs/customers/redwoodjs.svelte';
+import prismaSvelte from '$lib/components/svgs/opensource/prisma.svelte';
+import prometheusSvelte from '$lib/components/svgs/opensource/prometheus.svelte';
 
 export const quotes: Quote[] = [
 	{
@@ -73,6 +76,42 @@ export const jetbrains_quotes: Quote[] = [
 		companyLogo: {
 			src: '/svg/blog/gitpod.svg',
 			alt: 'Gitpod',
+		},
+	},
+];
+
+export const linuxfoundation_quotes: Quote[] = [
+	{
+		text: 'Gitpod totally changed the development velocity for RedwoodJS—it removed any issues related to configurations of dev environments and made it incredibly easy to contribute. Reviewing pull requests is delightful because they are prebuilt and ready for review!',
+		author: 'Tom Preston-Werner',
+		jobTitle: 'Co-founder of GitHub',
+		companyLogo: redwoodjsSvelte,
+		img: {
+			src: '/images/opensource/mojombo.jpg',
+			square: true,
+			alt: '',
+		},
+	},
+	{
+		text: "I'm using Gitpod almost daily when trying out new technologies, working on OSS PRs/repros or when giving demos. Welcome to the promised land of cloud development environments.",
+		author: 'Johannes Schickling',
+		jobTitle: 'Co-founder of Prisma',
+		companyLogo: prismaSvelte,
+		img: {
+			src: '/images/opensource/schickling.jpg',
+			square: true,
+			alt: '',
+		},
+	},
+	{
+		text: `Gitpod has been invaluable for increasing my productivity in the Prometheus pull request review process. Instead of having to check and build the (untrusted!) submitted code locally, I can simply jump into a pre-built Gitpod workspace and start testing, debugging, and modifying the proposed code changes immediately in a secure, cloud-based development environment. This saves me time and frustration and really streamlines the review process`,
+		author: 'Julius Volz',
+		jobTitle: 'Co-founder of Prometheus',
+		companyLogo: prometheusSvelte,
+		img: {
+			src: '/images/opensource/juliusv.jpg',
+			square: true,
+			alt: '',
 		},
 	},
 ];
