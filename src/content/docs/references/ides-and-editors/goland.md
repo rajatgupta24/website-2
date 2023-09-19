@@ -88,7 +88,7 @@ You can install a plugin only for **your current workspace** following these ste
     <figcaption>Install a plugin on {title} backend</figcaption>
 </figure>
 
-#### Preconfigure for repository
+### Configure plugins for repository
 
 > JetBrains plugin support is currently in [Beta](/docs/help/public-roadmap/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
 
@@ -109,9 +109,32 @@ You can find the **pluginId** on the [JetBrains Marketplace](https://plugins.jet
 -   Select the **Versions** tab.
 -   Click any version to copy the **pluginId** (short name such as `org.rust.lang`) of the plugin you want to install.
 
-#### Install for your user
+### Configure custom plugin repositories
 
-It is not yet possible to install plugins on **{title} backend** for your user to share across all your Gitpod workspaces.
+If you are using custom repositories, you can directly specify the URL of your custom repository or the identifier of your custom plugin. For example:
+
+```yml
+jetbrains:
+    goland:
+        plugins:
+            - http://my-custom-repository
+            - my-custom-plugin
+```
+
+For detailed guidelines on setting up and using custom plugin repositories, please refer to [JetBrains' documentation on custom plugin repositories](https://plugins.jetbrains.com/docs/intellij/custom-plugin-repository.html).
+
+### Install plugins from a workspace image
+
+Within your Dockerfile for the workspace image, copy the plugin archive (.zip file) to one of the following directories:
+
+-   `/home/gitpod/.gitpod/jetbrains/plugins` - This location installs plugins to all JetBrains products (IntelliJ IDEA, GoLang, etc).
+-   `/home/gitpod/.gitpod/jetbrains/goland/plugins` - This location will install plugins only to the given IDE, e.g. {title}.
+
+> **Note**: Before starting the {title} backend, Gitpod will read the locations specified above and install plugins.
+
+### Install plugins per a user
+
+To install plugins solely your user only profile, use the same approach as described in [install from a workspace image](#install-plugins-from-a-workspace-image). However, store your IDE Plugins in [.dotfiles](/docs/configure/user-settings/dotfiles#dotfiles) instead of the workspace image.
 
 ## Configure JVM options
 

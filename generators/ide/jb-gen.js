@@ -131,7 +131,7 @@ for (const [id, parameters] of products) {
 	fs.writeFileSync(
 		path.join(
 			__dirname,
-			`../../gitpod/docs/references/ides-and-editors/${id}.md`,
+			`../../src/content/docs/references/ides-and-editors/${id}.md`,
 		),
 		content,
 		'utf-8',
