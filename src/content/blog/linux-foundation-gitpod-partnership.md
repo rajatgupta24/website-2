@@ -13,7 +13,9 @@ title: 'Linux Foundation & Gitpod partner to offer 250 free hours of Cloud Devel
 	import { linuxfoundation_quotes } from '$lib/contents/blog';
 </script>
 
-**TL;DR;** Ready, set, code. Linux Foundation partners with Gitpod to provide 250 hours a month of Gitpod Cloud usage for free via Gitpod’s Open Source Program. [Apply here](/discover/opensource).
+**TL;DR:** Ready, set, code. Linux Foundation partners with Gitpod to provide 250 hours a month of Gitpod Cloud usage for free via Gitpod’s Open Source Program. [Apply here](/discover/opensource).
+
+<br/>
 
 We’re excited to announce that Gitpod is teaming up with the Linux Foundation as one of their flagship partners in launching the [**Linux Foundation Open Source Partner Program**](https://www.linuxfoundation.org/projects/partnerships). Gitpod is joining five other companies to provide Linux Foundation maintainers access to best-in-class developer tooling for their Linux Foundation project work.
 
