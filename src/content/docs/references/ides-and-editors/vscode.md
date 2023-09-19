@@ -112,11 +112,9 @@ _The open workspace button shown on a stopped workspace page_
 
 ## VS Code settings sync
 
-You can optionally enable Settings Sync with Gitpod to keep your extensions, themes and settings up-to-date with VS Code Browser and Desktop. See [VS Code settings sync](settings-sync) for more
+For enabling Setting Sync in VS Code Desktop please refer to the [official VS Code Settings Sync documentation](https://code.visualstudio.com/docs/editor/settings-sync)
 
-![Enable Settings Sync with Gitpod](/images/editors/enable-signin-with-gitpod-light-theme.png)
-![Enable Settings Sync with Gitpod](/images/editors/enable-signin-with-gitpod-dark-theme.png)
-_Enable Settings Sync with Gitpod_
+> **Notice:** Syncing between VS Code Browser and VS Code Desktop is not supported.
 
 ## Managing VS Code extensions
 

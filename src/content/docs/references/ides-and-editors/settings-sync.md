@@ -28,7 +28,7 @@ The following settings are synced via Settings Sync:
 
 ## Gitpod vs Microsoft Settings Sync
 
-By default, most desktop VS Code installations are configured to sync settings via a GitHub or a Microsoft account. These settings are synced to Microsoft's servers and are inaccessible to third-parties, including Gitpod. Due to this limitation of access to settings stored in Microsoft servers, Gitpod implements its own VS Code settings sync server. Gitpod **Settings Sync is enabled by default for VS Code in the browser, but must be configured for desktop**.
+By default, most desktop VS Code installations are configured to sync settings via a GitHub or a Microsoft account. These settings are synced to Microsoft's servers and are inaccessible to third-parties, including Gitpod. Due to this limitation of access to settings stored in Microsoft servers, Gitpod implements its own VS Code settings sync server. Gitpod **Settings Sync is enabled by default for VS Code in the browser**.
 
 ### Enabling Settings Sync in VS Code Browser
 
@@ -36,56 +36,9 @@ VS Code in the browser with Gitpod has Settings Sync enabled by default, syncing
 
 ### Enabling Settings Sync in VS Code Desktop
 
-> **Notice:** As of version 1.81, Settings Sync in VS Code is experiencing issues, due to [an unanticipated change in the upstream VS Code API](https://github.com/microsoft/vscode/pull/187006). Whilst the issue is resolved, we recommend using an earlier version of VS Code, such as [1.80.2](https://code.visualstudio.com/updates/v1_80). For updates or feedback, see this issue: [#18573](https://github.com/gitpod-io/gitpod/issues/18573).
+For enabling setting sync in VS Code Desktop please refer to the [official VS Code Settings Sync documentation](https://code.visualstudio.com/docs/editor/settings-sync)
 
-1. Install and enable the [Gitpod extension](https://marketplace.visualstudio.com/items?itemName=gitpod.gitpod-desktop).
-
-**Note:** If you open VS Code Desktop directly from Gitpod, the Gitpod extension is automatically installed for you.
-
-<figure>
-<img class="shadow-medium rounded-xl max-w-md mt-x-small" alt="The Gitpod VS Code Desktop plugin" src="/images/editors/gitpod-extension.png">
-    <figcaption>The Gitpod VS Code Desktop plugin</figcaption>
-</figure>
-
-2. Using the [Command Palette](https://code.visualstudio.com/api/ux-guidelines/command-palette) select: "Settings Sync: Enable signing in with Gitpod".
-
-![Enable Settings Sync with Gitpod](/images/editors/enable-signin-with-gitpod-light-theme.png)
-![Enable Settings Sync with Gitpod](/images/editors/enable-signin-with-gitpod-dark-theme.png)
-_Enable Settings Sync with Gitpod_
-
-3. Restart your VS Code Desktop application.
-
-<figure>
-<img class="shadow-medium rounded-xl max-w-md mt-x-small" alt="Prompt to restart VS Code Desktop" src="/images/editors/restart-vscode.png">
-    <figcaption>Prompt to restart VS Code Desktop</figcaption>
-</figure>
-
-> **Important:** You must entirely close VS Code Desktop for changes to take effect.
-
-4. Enable settings sync from the Manage gear menu at the bottom of the Activity Bar.
-
-You must authenticate with Gitpod to enable settings sync.
-
-<figure>
-<img class="shadow-medium rounded-xl max-w-md mt-x-small" alt="Enable settings sync from the Manage gear menu" src="/images/editors/enable-settings-sync.png">
-    <figcaption>Enable settings sync from the Manage gear menu</figcaption>
-</figure>
-
-You will be prompted which settings to sync, and to authenticate via Gitpod.
-
-<figure>
-<img class="shadow-medium rounded-xl max-w-md mt-x-small" alt="Sign into Gitpod to enable VS Code settings sync" src="/images/editors/signin-and-turnon.png">
-    <figcaption>Sign into Gitpod to enable VS Code settings sync</figcaption>
-</figure>
-
-5. Resolve any settings conflicts
-
-Settings in VS Code Desktop might differ from your remote settings, follow the instructions in VS Code to resolve any conflicts with the preferences files.
-
-<figure>
-<img class="shadow-medium rounded-xl max-w-md mt-x-small" alt="Merge or replace VS Code Settings" src="/images/editors/resolve-merge-conflicts.png">
-    <figcaption>Merge or replace VS Code Settings</figcaption>
-</figure>
+> **Notice:** Syncing between VS Code Browser and VS Code Desktop is not supported.
 
 ## FAQs
 
