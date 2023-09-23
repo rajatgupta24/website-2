@@ -169,7 +169,7 @@ Ports are ordered according to their definition in `.gitpod.yml`. Any undefined 
 
 There are two types of port forwarding: local and remote.
 
-Local port forwarding allows you to forward a port running in your Gitpod workspace to access via your localhost hostname. Remote port forwarding exposes a locally running process to use in your workspace. Remote port forwarding is not currently supported.
+Local port forwarding allows you to access a port running in your Gitpod workspace from your localhost hostname. Remote port forwarding exposes a locally running process to use in your workspace. Remote port forwarding is not currently supported.
 
 ### Local port forwarding
 
@@ -203,9 +203,11 @@ Local port forwarding allows you to forward a port running in your Gitpod worksp
 
 Using [SSH command-line](/docs/references/ides-and-editors/command-line) access to your workspace, ports can also be forwarded manually using tools such as the OpenSSH remote login client.
 
-**Example:** Forwarding port `3000` to `localhost:3000`
+**Example:** Forwarding local port `3000` to port `localhost:3000` in the workspace.
 
 `ssh -L 3000:localhost:3000 <workspace-ssh-connection>`
+
+**Note:** You can use `gp ssh` command to get `workspace-ssh-connection` address.
 
 ### Local reverse port forwarding via SSH
 
