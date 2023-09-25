@@ -8,7 +8,58 @@ title: Infrastructure Update Changelog - Gitpod Dedicated docs
 > ℹ️ This is a changelog detailing the changes that go into Infrastructure updates. More information on these updates can be found in [Deployment and Updates](/docs/gitpod-dedicated/background/deployment-updates). A guide on how to apply them can be found in [Updating the Gitpod Dedicated Infrastructure](/docs/gitpod-dedicated/guides/updating-gitpod-dedicated-infrastructure).
 
 <details>
-    <summary class="text-body text-large"><b>Infrastructure Update v25</b> (released 14 August, 2023 )</summary>
+    <summary class="text-body text-large mt-8"><b>Infrastructure Update v37</b> (released 26 September, 2023 )</summary>
+
+<div class="ml-2 md:ml-4">
+
+> ❗️ This update impacts running workspaces and should not be done during working hours. **You can expect a downtime of 4 minutes** after the CloudFormation Change Set is applied as new nodes are spun up.
+
+### How to update
+
+-   We have improved the template distribution process starting with this release. We now distribute templates as S3 URLs, which are readable only from the cell AWS account. This paves the way for a much more simplified upgrade process moving forward, so stay tuned!
+
+-   Your Gitpod Account Manager will provide you with two updated CloudFormation templates in the form of S3 URLs(one for the infrastructure template role and one for Gitpod itself) that both need to be applied as change sets.
+
+-   Follow the process laid out on [Updating the Gitpod Dedicated Infrastructure](/docs/gitpod-dedicated/guides/updating-gitpod-dedicated-infrastructure)
+
+### Changelog
+
+-   Support for in-place AMI updates for all clusters
+-   Improved cell lambda image update workflow, triggered by new Gitpod Dedicated releases. This equips a faster rollout of cell Lambda code changes. This **does not** change the permission scope of the lambdas.
+-   Automated changeset creation process, thereby simplifying future infrastructure upgrades. After this upgrade you will be able to preview all the changes automatically in the stack's `Changesets` section
+-   Dynamic autoscaler configurations enabling fine tuning of cluster scaling capacity to optimally accommodate varying workloads. You can talk to your Gitpod Account manager to get this configured
+-   Export of historical logs, thereby enhancing the ease of debugging issues that customers encounter
+-   Various bug fixes
+
+### Expected CloudFormation Change Set
+
+The change set being generated as part of this CF change is expected to include the following changes:
+
+#### Changes to Gitpod Role CF template
+
+![Changes in Gitpod CF Role Template - 26 Sep 2023](/images/docs/gitpod-dedicated/reference/infrastructure-update-changelog/26-sep-2023/role-template-update-v37.png)
+
+&nbsp;
+
+<a href='/images/docs/gitpod-dedicated/reference/infrastructure-update-changelog/26-sep-2023/role-template-v37.json' download>Changeset in JSON format</a>
+
+#### Changes to Gitpod Instance CF template
+
+![Changes in Gitpod CF Instance Template - 1 - 26 Sep 2023](/images/docs/gitpod-dedicated/reference/infrastructure-update-changelog/26-sep-2023/infra-template-v37-1.png)
+![Changes in Gitpod CF Instance Template - 2 - 26 Sep 2023](/images/docs/gitpod-dedicated/reference/infrastructure-update-changelog/26-sep-2023/infra-template-v37-2.png)
+![Changes in Gitpod CF Instance Template - 3 - 26 Sep 2023](/images/docs/gitpod-dedicated/reference/infrastructure-update-changelog/26-sep-2023/infra-template-v37-3.png)
+![Changes in Gitpod CF Instance Template - 4 - 26 Sep 2023](/images/docs/gitpod-dedicated/reference/infrastructure-update-changelog/26-sep-2023/infra-template-v37-4.png)
+
+&nbsp;
+
+<a href='/images/docs/gitpod-dedicated/reference/infrastructure-update-changelog/26-sep-2023/infra-template-v37.json' download>Changeset in JSON format</a>
+
+</div>
+
+</details>
+
+<details>
+    <summary class="text-body text-large mt-8"><b>Infrastructure Update v25</b> (released 14 August, 2023 )</summary>
 
 <div class="ml-2 md:ml-4">
 
