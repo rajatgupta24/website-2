@@ -25,3 +25,11 @@ Workspace sharing is enabled by default. Through this policy, Organization Owner
 -   Prevents workspaces within an Organization from sharing access to a running workspace.
 -   Members can stop sharing a workspace at any time, regardless of the Organizational Policy.
 -   Any currently shared workspaces will not have sharing access removed.
+
+## Default Workspace Image
+
+[Setting a default image](https://gitpod.io/settings) for your Organization (instead of relying on the default `workspace-full` image) is useful when you want to create a default workspace experience for your Organization members without adding a `.gitpod.yml` to every repository. The Organization workspace image setting is a default and can still be overwritten by updating the repository `.gitpod.yml` file.
+
+> **Note:** The user must have the **Organization Owner** role to update the Organization default workspace image. All Organization members can view this setting only.
+
+See [Workspace Image](/docs/configure/workspaces/workspace-image#workspace-image) for more.

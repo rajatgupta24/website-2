@@ -10,7 +10,7 @@ An organization can be used to represent a group of people collaborating togethe
 
 -   [Manage Organization Members](/docs/configure/orgs/members)
 -   [Manage Projects](/docs/configure/projects) (and [Prebuild](/docs/configure/projects/prebuilds) configurations)
--   [Apply Organization Policies](/docs/configure/orgs/policies) (e.g. restrict workspace sharing)
+-   [Apply Organization Policies](/docs/configure/orgs/policies) (e.g. restrict workspace sharing, specify default [workspace image](/docs/configure/workspaces/workspace-image#workspace-image))
 
 `youtube: 4orj31EUsuY`
 
