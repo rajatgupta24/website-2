@@ -125,12 +125,14 @@ To adjust the IAM role trust policy to restrict which workspaces can assume the 
 You can either call the AWS CLI `assume-role` command manually, or use the helper command within the `gp` CLI, `gp idp aws login` which will automatically update your AWS CLI credentials file.
 The following code will login to AWS using OIDC and then fetch a secret dynamically from AWS Secrets Manager for use in your application.
 
+The token expiry can be customized using `--duration-seconds=<token-expiry-in-seconds>`, this configuration option exactly matches the [`--duration-seconds`](https://docs.aws.amazon.com/cli/latest/reference/sts/assume-role-with-web-identity.html) configuration option offered by AWS CLI. The default is `3600` seconds. Note, to use a longer expiry your AWS Administrator must allow for longer sessions.
+
 <figure>
 
 ```yaml
 tasks:
     - command: |
-          gp idp login aws --role-arn <your-iam-role-arn>
+          gp idp login aws --role-arn <your-iam-role-arn> [--duration-seconds=<expiry-in-seconds>]
           aws secretsmanager get-secret-value --secret-id database_connection_string --region us-east-1 | jq .SecretString
 ```
 
