@@ -33,3 +33,8 @@ Workspace sharing is enabled by default. Through this policy, Organization Owner
 > **Note:** The user must have the **Organization Owner** role to update the Organization default workspace image. All Organization members can view this setting only.
 
 See [Workspace Image](/docs/configure/workspaces/workspace-image#workspace-image) for more.
+
+
+### Workspace Image Authentication
+
+Authentication for the images is based on what the Gitpod installation can access. For Gitpod Cloud users, only public images are currently supported. For Gitpod Dedicated, the authentication is inherited from the installation. For instance, if you are using [ECR private registry](/docs/gitpod-dedicated/guides/use-private-ecr-repos-for-workspace-images#using-private-ecr-repositories-for-workspace-images) support that will work with the Organization setting.
