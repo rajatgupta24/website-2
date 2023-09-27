@@ -173,5 +173,5 @@
 	class="mx-auto w-full md:w-3/4 mt-small mb-x-large md:mb-xxx-large shadow-highlight rounded-3xl"
 	alt="Gitpod Extension activation on GitHub"
 />
-<h2 class="text-center -mb-14 md:-mb-28">Next step</h2>
+<h2 class="text-center -mb-8 lg:-mb-28">Next step</h2>
 <Feature {feature} />
