@@ -113,6 +113,56 @@ Once committed and pushed, Gitpod will automatically build this Dockerfile when 
 
 See also [Gero's blog post](/blog/docker-in-gitpod) running through an example.
 
+### What is available at build time
+
+**Available:**
+
+-   Git repository at CWD.
+
+    Note: [additionalRepositories](/docs/configure/workspaces/multi-repo#cloning-additional-repositories) from the multi-repos feature will not be available in this context.
+
+    > For example, you can copy your repository inside the image and execute a script:
+    >
+    > ```dockerfile
+    > FROM gitpod/workspace-full
+    >
+    > # At first copy the repository files to ${TARGET_DIR}
+    > ARG TARGET_DIR="/tmp/work"
+    > COPY --chown gitpod:gitpod . "${TARGET_DIR}"
+    >
+    > # Let's suppose there is a bash script in our repository, we can try to execute it
+    > RUN cd "${TARGET_DIR}" && bash ./scripts/compile.sh
+    > ```
+
+**Not available:**
+
+-   [Gitpod environment variables](/docs/configure/projects/environment-variables), not available due to security reasons.
+
+    > If you want to access Gitpod environment variables when building images using the Docker daemon running in your workspace. Here's what you could do:
+    >
+    > -   Prepare a custom dockerfile (`.gitpod.Dockerfile`), example contents:
+    >
+    > ```dockerfile
+    > FROM gitpod/workspace-full
+    >
+    > # Lets suppose DOWNLOAD_URL is saved as a Gitpod environment variable that is visible (not hidden to the workspace)
+    > RUN curl -L "${DOWNLOAD_URL}" -o "${HOME}/payload.tar"
+    > ```
+    >
+    > -   Build an image using the Docker daemon running in your workspace like so: `docker build --build-arg DOWNLOAD_URL -f .gitpod.Dockerfile .`
+    > -   Push the image to your dockerhub account and change it's visibility to private.
+    > -   Use the image from your `.gitpod.yml`:
+    >
+    > ```yml
+    > image: registry.hub.docker.com/your_username/image
+    > ```
+    >
+    > -   Setup [private docker image support](#use-a-private-docker-image) on Gitpod to use it.
+
+-   [Persistent `/workspace` directory mount](/docs/configure/workspaces/workspace-lifecycle#workspace-statuses)
+-   [`/ide` layer](/docs/references/ides-and-editors)
+-   [Gitpod CLI](/docs/references/gitpod-cli)
+
 ### Custom base image
 
 While it is recommended to extend one of the <a href="https://hub.docker.com/u/gitpod/" target="_blank">Gitpod-provided base images</a> for custom Dockerfiles to ensure the image has the required dependencies for a workspace, it is possible to configure a Dockerfile with a public (Debian/Ubuntu-based) image as its base.
