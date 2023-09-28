@@ -12,10 +12,9 @@ description: Learn how to use the Gitpod browser extension to quickly spin up Gi
 
 Creating a workspace is as easy as prefixing any GitHub URL with `gitpod.io/#`.
 
-For convenience, we developed a Gitpod browser extension. It adds a button to GitHub, GitLab or Bitbucket that does the
-prefixing for you - as simple as that.
+For convenience, we developed the Gitpod browser extension. It adds a button to GitHub, GitLab or Bitbucket repositories that does the prefixing for you – as simple as that.
 
-![Browser Extension](/images/docs/browser-extension-lense.png)
+![The Gitpod button on a GitHub repository, created by the browser extension](/images/docs/browser-extension-repo.png)
 
 We provide the extension for:
 
@@ -24,22 +23,15 @@ We provide the extension for:
 
 ## Access the extension settings
 
-1. Right-click on the Gitpod extension icon.
-2. Select `Options` for chrome based browsers. For Firefox, select `Manage Extension` and then `Preferences`.
+You can access the extension settings by clicking on the Gitpod icon in the browser toolbar. In the resulting popup you can find a comprehensive view of all possible customization.
 
-<img class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="Gitpod browser extension configuration" src="/images/docs/beta/integrations/new-browser-extension-options.png">
+<img class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="Gitpod browser extension configuration" src="/images/docs/browser-extension-settings.webp">
 
 ## Use a custom Gitpod instance URL
 
-If you are using custom Gitpod instance (e.g. [dedicated](https://www.gitpod.io/dedicated)) you can still use the browser extension by configuring it with your instance URL
+If you are using a custom Gitpod instance (e.g., [Gitpod Dedicated](/dedicated)) you can still use the browser extension by configuring it with your instance URL.
 
-After you have installed the extension go to the options panel and enter your custom Gitpod instance URL.
-
-<img class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="Gitpod browser extension configuration" src="/images/docs/beta/integrations/browser-extension-options.png">
-
-## Open repositories with <Keybind>.</Keybind> (dot) keybind
-
-Toggle on the `Enable . keybind to open repositories in Gitpod` option in the Gitpod extension [preferences/options](#accessing-the-extension-optionspreferences). After doing this, whenever you hit <Keybind>.</Keybind> on GitHub or GitLab, the current repository will open in Gitpod.
+After you have installed the extension, open its options and enter your custom Gitpod instance URL.
 
 ## Source Code
 

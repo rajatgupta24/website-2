@@ -23,7 +23,7 @@
 
 <Header
 	title="Gitpod for {currentBrowser} is now active"
-	text="The browser extension has been installed. To see it in action, select your Git provider:."
+	text="The browser extension has been installed. To see it in action, select your SCM provider:"
 	class="max-w-6xl !text-left md:!text-center justify-start"
 />
 

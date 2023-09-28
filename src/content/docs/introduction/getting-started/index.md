@@ -45,9 +45,9 @@ Work in the browser with [VS Code Browser](/docs/references/ides-and-editors/vsc
 
 ### Install the browser extension
 
-![Browser Extension](/images/docs/browser-extension-lense.png)
+![Browser Extension](/images/docs/browser-extension-repo.png)
 
-A convenient way to work with Gitpod is using the custom [browser extension](/docs/configure/user-settings/browser-extension). Using the extension you can open workspaces directly from inside GitHub and GitLab.
+A convenient way to work with Gitpod is using our [browser extension](/docs/configure/user-settings/browser-extension). Using the extension you can open workspaces directly from inside GitHub, GitLab or Bitbucket.
 
 ### Set your Dotfiles
 
