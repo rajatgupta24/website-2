@@ -48,7 +48,7 @@ In both deployments models, a control plane keeps the installation up-to-date. T
 -   [Architecture](/docs/gitpod-dedicated/reference/architecture)
 -   [Networking and Data Flow](/docs/gitpod-dedicated/reference/networking-data-flows)
 -   [Infrastructure Cost](/docs/gitpod-dedicated/reference/infrastructure-cost)
--   [Infrastrcture Update Changelog](/docs/gitpod-dedicated/reference/infrastructure-update-changelog)
+-   [Infrastructure Update Changelog](/docs/gitpod-dedicated/reference/infrastructure-update-changelog)
 
 </details>
 
