@@ -80,8 +80,6 @@ Gitpod Dedicated is best for organizations who have more stringent security requ
 
 Gitpod Dedicated is deployed into the customer AWS account using a CloudFormation template. The actual deployment process itself takes around 30 minutes. To begin, create a new AWS account within the customer’s AWS organization. Then, execute a CloudFormation template that creates the necessary infrastructure. After that, the instance will register itself with the Dedicated Control plane and installs the latest version of Gitpod.
 
-Gitpod Dedicated is deployed into the customer AWS account using a CloudFormation template. To begin, create a new AWS account within the customer’s AWS organization. Then, execute a CloudFormation template that creates the necessary infrastructure. After that, the instance will register itself with the Dedicated Control plane and installs the latest version of Gitpod.
-
 ![Gitpod Dedicated Architecture](/images/docs/gitpod-dedicated/gitpod-dedicated-architecture.webp)
 
 Once deployed, the instance is able to connect to a source control management system (SCM) and other development resources on a corporate network *privately (*using a Transit Gateway attachment).
