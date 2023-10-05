@@ -17,6 +17,7 @@ const allowedEvents = [
 	'waitlist_joined',
 	'website_clicked',
 	'whitepaper_downloaded',
+	'aws_workshop_submission',
 ];
 
 export const POST: RequestHandler = async ({ request }) => {

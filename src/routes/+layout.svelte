@@ -59,7 +59,7 @@
 	<LayoutMain>
 		<slot />
 	</LayoutMain>
-	{#if $page.url.pathname !== '/extension-activation'}
+	{#if $page.url.pathname !== '/extension-activation' && $page.url.pathname !== '/workshop-login/aws'}
 		<Footer />
 	{/if}
 </LayoutRoot>
