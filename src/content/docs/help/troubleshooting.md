@@ -16,9 +16,24 @@ If you cannot find your issue here or in the documentation, please contact Gitpo
 
 These logs contain information about the workspace, the session, and the Visual Studio Code environment. They are useful for diagnosing connection issues and other unexpected behavior.
 
--   Open the Visual Studio Code Command Palette (<Keybind>CtrlCmd + Shift + P</Keybind>) and type **Export logs**, select **Gitpod: Export all logs** from the list to download a zip file containing all of the logs.
+**Steps to Collect Logs**
 
-**Important:** The content of these logs should **NOT** be shared publicly as they could contain sensitive information about your workspace. Instead, send them to `troubleshooting@gitpod.io` along with a link to a corresponding GitHub issue if needed.
+1. Open the Command Palette in Visual Studio Code (<Keybind>CtrlCmd + Shift + P</Keybind>).
+2. Type **Export logs** and select **Gitpod: Export all logs** to download a zip file of the logs.
+3. Make sure to collect these logs from the window of the affected workspace.
+
+**Caution**: Do **NOT** share these logs publicly as they may contain sensitive information. Send them to [troubleshooting@gitpod.io](mailto:troubleshooting@gitpod.io) and include a link to a relevant GitHub issue if needed.
+
+### VS Code Desktop: Workspace Connectivity Tracing
+
+If experiencing connectivity issues on VS Code Desktop, enable detailed logging:
+
+-   In your VS Code settings, set `gitpod.lssh.logLevel` to `debug`.
+-   Reproduce the issue, and after reestablishing the connection, collect logs from the affected window.
+
+![Enable Workspace Connectivity Tracing](/images/editors/vscode-desktop-localssh-debug.png)
+
+**Note**: Use this setting only for troubleshooting purposes.
 
 ## Gitpod logs in JetBrains Gateway
 

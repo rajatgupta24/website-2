@@ -199,11 +199,11 @@ See [Workspace Trust](https://code.visualstudio.com/docs/editor/workspace-trust)
 
 ### How do I know how I'm connecting to VS Code Desktop?
 
-If you're unsure whether you're connecting via the local companion, or SSH Gateway approach, when connected to your Gitpod workspace, VS Code Desktop will show the connection host in the bottom left.
+If you're uncertain about your connection method to Gitpod via VS Code Desktop, you can check the connection host displayed at the bottom left of the VS Code window.
 
--   **Local SSH** - `SSH: <workspaceid>.vss.gitpod.io` or `SSH: <workspaceid>.vsi.gitpod.io`
--   **[SSH Gateway](/docs/references/ides-and-editors/legacy-vscode-connections#connect-to-vs-code-desktop-using-an-uploaded-public-ssh-key)** - `SSH: <workspaceid>.ssh.*.gitpod.io`
--   **[Local Companion](/docs/references/ides-and-editors/legacy-vscode-connections#connect-to-vs-code-desktop-using-local-companion)**: `<workspaceid>` (no domain)
+-   **Recommended** - Appears as `SSH: <workspaceid>.vss.gitpod.io` or `SSH: <workspaceid>.vsi.gitpod.io`
+-   **[SSH Gateway](/docs/references/ides-and-editors/legacy-vscode-connections#connect-to-vs-code-desktop-using-an-uploaded-public-ssh-key)** (Legacy) - Shows as `SSH: <workspaceid>.ssh.*.gitpod.io`
+-   **[Local Companion](/docs/references/ides-and-editors/legacy-vscode-connections#connect-to-vs-code-desktop-using-local-companion)** (Retired) - Displays only the `<workspaceid>` without a domain
 
 ![The SSH host information shown in the bottom left of VS Code Desktop](/images/editors/show-ssh-connection-vscode-light-theme.png)
 ![The SSH host information shown in the bottom left of VS Code Desktop](/images/editors/show-ssh-connection-vscode-dark-theme.png)
@@ -241,8 +241,9 @@ You can upload files to your workspace by dragging and dropping them into the ed
 
 ## Troubleshooting
 
-If you are still having issues connecting to VS Code Desktop from Gitpod, try:
+If you are having issues connecting to VS Code Desktop from Gitpod, try to:
 
-1. Check if your VS Code Desktop application and Gitpod VS Code Desktop extension version are all using the latest version.
-2. Identify [which method you're using to connect to Gitpod](/docs/references/ides-and-editors/vscode#how-do-i-know-how-im-connecting-to-vs-code-desktop), if it's `SSH Gateway` or `Local Companion` see their troubleshooting [here](/docs/references/ides-and-editors/legacy-vscode-connections#troubleshooting)
-3. If it's Local SSH, please [export log](/docs/help/troubleshooting#gitpod-logs-in-vs-code-browser-and-desktop) on the failed to connect window and [email us](mailto:contact@gitpod.io)
+1. Ensure both your VS Code Desktop application and Gitpod VS Code Desktop extension are up-to-date.
+2. Determine [your current connection method to Gitpod](/docs/references/ides-and-editors/vscode#how-do-i-know-how-im-connecting-to-vs-code-desktop).
+3. If you're not using the **recommended** mode, [switch to it](/docs/references/ides-and-editors/vscode#connecting-to-vs-code-desktop). If you can't switch, consult the [legacy docs](/docs/references/ides-and-editors/legacy-vscode-connections#troubleshooting).
+4. If you're already using the **recommended** mode, [export the logs](/docs/help/troubleshooting#gitpod-logs-in-vs-code-browser-and-desktop) from the failed to connect window and [email us](mailto:contact@gitpod.io).
