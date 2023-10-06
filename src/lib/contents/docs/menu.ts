@@ -68,14 +68,6 @@ export const MENU: MenuEntry[] = [
 	M('Projects', 'configure/projects', false, [
 		// Why is this side bar name different to the title / URL?
 		M('Prebuilds', 'configure/projects/prebuilds'),
-		M('Incremental Prebuilds', 'configure/projects/incremental-prebuilds'),
-		M(
-			'Last Successful Prebuild',
-			'configure/projects/last-successful-prebuild',
-			false,
-			[],
-			'alpha',
-		),
 		M('Environment Variables', 'configure/projects/environment-variables'),
 	]),
 
@@ -251,6 +243,9 @@ export const MENU: MenuEntry[] = [
 	]),
 	M('Integrations', 'integrations', false, [
 		M('Amazon Web Services (AWS)', 'integrations/aws', false, []),
+		M('Bitbucket', 'integrations/bitbucket'),
+		M('GitLab', 'integrations/gitlab'),
+		M('GitHub', 'integrations/github'),
 		M(
 			'JetBrains Gateway',
 			'integrations/jetbrains-gateway',
@@ -258,7 +253,6 @@ export const MENU: MenuEntry[] = [
 			[],
 			'beta',
 		),
-		M('Tailscale', 'integrations/tailscale'),
 	]),
 	M('Gitpod CLI', 'references/gitpod-cli'),
 	M('Compatibility', 'references/compatibility?user'),
