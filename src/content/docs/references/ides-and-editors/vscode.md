@@ -13,6 +13,30 @@ With VS Code Desktop Support, you keep your local editor configurations<sup>1</s
 
 `youtube: kI6firDA0Bw`
 
+## Prerequisites
+
+To open a Workspace directly from VS Code desktop, you'll need to install and sign into the [Gitpod extension](https://marketplace.visualstudio.com/items?itemName=gitpod.gitpod-desktop), which you can find by searching for `Gitpod` inside of VS Code's Extensions tab.
+
+1. In VS Code, from the Activity Bar, click the Gitpod icon and then choose `Sign in`. Alternatively, open the Command Palette (<Keybind>CtrlCmd + Shift + P</Keybind>) and type **gitpod**. Then select `Gitpod: Sign In`
+
+![Sign in VS Code from Gitpod view](/images/editors/vscode-desktop-view-signin.png)
+_Sign in to VS Code Desktop from the Gitpod view_
+
+![Sign in VS Code from Command Palette](/images/editors/vscode-desktop-command-signin.png)
+_Sign in to VS Code Desktop from the Command Palette_
+
+2. A dialog will appear asking permission to open your browser for authenticating VS Code with Gitpod. Click `Open` to proceed.
+
+![Open external website](/images/editors/vscode-desktop-open-external.png)
+
+3. Check your browser, you should see a Gitpod tab asking to authorize the VS Code Gitpod extension, click `Authorize`.
+
+![Authorize VSCode Gitpod extension](/images/editors/vscode-desktop-authorize.png)
+
+4. You will be redirected to VS Code and authentication should be completed. In the Activity Bar, click the Accounts icon and you should see your Gitpod account listed.
+
+![Authenticated VS Code Gitpod extension](/images/editors/vscode-desktop-authenticated.png)
+
 ## Open a workspace in VS Code Desktop
 
 There are currently three supported ways to open a VS Code Desktop session connected to a Gitpod workspace, either by opening it from the [Gitpod dashboard](https://gitpod.io/workspaces), choosing VS Code Desktop as your default preference, or directly from within VS Code Browser itself.
