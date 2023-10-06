@@ -101,7 +101,7 @@ export const programBenefits: Card[] = [
 		},
 		transform: 'scale(.95)',
 		title: 'Free Gitpod Cloud',
-		text: 'Maintainers get 2,500 credits per month for use on public repos. This is equivalent to 250 hours of Standard workspace usage.',
+		text: 'Maintainers get 2,500 credits per month for use Gitpod Cloud. This is equivalent to 250 hours of Standard workspace usage.',
 	},
 	{
 		icon: {
