@@ -16,7 +16,7 @@ const sitemap = (pages: string[]) => `<?xml version="1.0" encoding="UTF-8" ?>
 		xmlns:mobile="https://www.google.com/schemas/sitemap-mobile/1.0"
 		xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
 		xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
-	>		
+	>
 		${pages.map((page) => `<url><loc>${removeTrailingSlash(page)}</loc></url>`).join('')}
 	</urlset>
 `;
