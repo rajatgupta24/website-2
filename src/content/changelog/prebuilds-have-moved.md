@@ -38,6 +38,13 @@ Previously only the [GitHub integration](/docs/integrations/github) could filter
 
 > **Deprecation:** Prebuild settings in the `.gitpod.yml` are deprecated. All existing `.gitpod.yml` settings will apply until prebuilds are manually enabled in project settings. <br /> <br /> See [configuring Prebuilds via .gitpod.yml](/docs/integrations/github-gitpod-yaml) for archived documentation.
 
+### The way `init` tasks work is changing, here's what you need to know:
+
+When you open a workspace and Gitpod finds an existing prebuild for an older commit, Gitpod will start the workspace and then run the `init` steps from the `.gitpod.yml` again on top of the existing prebuild. Gitpod will only use prebuilds that have an identical `.gitpod.yml` as your current commit. This new behavior works best for you when your `init` steps:
+
+1. Can be executed repeatedly, while always producing the same end-state in the file system for a given reposiotry state.
+2. Execute quickly when executed the second time (e.g. process changes incrementally).
+
 ---
 
 For more, see [Projects](/docs/configure/projects) and [Prebuilds](/docs/configure/projects/prebuilds).
