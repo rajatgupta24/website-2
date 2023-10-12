@@ -68,7 +68,7 @@ Gitpod Account Manager to determine which stacks need updates and the impact of 
      </div>
      </details>
 
-3. Select "Replace current template", select Amazon S3 URL as the template source then paste the S3 url for the `gitpod-role` template into the field.
+3. Select "Replace current template", select Amazon S3 URL as the template source then paste the S3 url for the `gitpod-instance` template into the field.
      <details>
 
      <summary class="text-body mt-3 text-p-medium ml-6"> Screenshot </summary>
