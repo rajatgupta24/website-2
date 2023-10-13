@@ -159,16 +159,8 @@
 					<div class="flex flex-row md:flex-row justify-between">
 						{#if imagesDirectoryName === 'blog'}
 							<SubscribeRssFeed href="/blog/rss.xml" />
-							<RequestChanges
-								href={`https://github.com/gitpod-io/website/edit/main/src/content/blog/${slug}.md`}
-							/>
 						{/if}
 					</div>
-					{#if imagesDirectoryName === 'guides'}
-						<RequestChanges
-							href={`https://github.com/gitpod-io/website/edit/main/src/content/guides/${slug}.md`}
-						/>
-					{/if}
 				</div>
 			</main>
 		</div>

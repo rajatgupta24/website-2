@@ -46,9 +46,9 @@
 		class:extended-sticky={$displayBanner}
 		class="lg:w-1/5 flex-col top-24 self-start sticky gap-4 pl-8 hidden lg:flex max-w-none flex-auto min-w-0"
 	>
-		<div class="lg:mb-4">
+		<!-- <div class="lg:mb-4">
 			<EditInGitpod isIndex={data.isIndex} />
-		</div>
+		</div> -->
 
 		<OnThisPageNav headings={data.metadata.headings} />
 	</div>

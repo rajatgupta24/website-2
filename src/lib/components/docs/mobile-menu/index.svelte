@@ -57,7 +57,7 @@
 			/>
 		{/if}
 	{/if}
-	<div class="mt-4">
+	<!-- <div class="mt-4">
 		<EditInGitpod {isIndex} renderedOn="mobile" />
-	</div>
+	</div> -->
 </div>

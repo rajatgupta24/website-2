@@ -342,7 +342,7 @@ export const MENU: MenuEntry[] = [
 	M('Help', 'help', true),
 	M('Contribute', 'help/contribute', false, [
 		M('Content', 'help/contribute/content'),
-		M('Documentation', 'help/contribute/documentation'),
+		// M('Documentation', 'help/contribute/documentation'),
 		M('Features & Patches', 'help/contribute/features-and-patches'),
 	]),
 

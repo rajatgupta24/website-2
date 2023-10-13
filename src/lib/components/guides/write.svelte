@@ -13,7 +13,6 @@
 	<LinkButton
 		size="large"
 		variant="primary"
-		href="https://github.com/gitpod-io/website/issues/new/choose"
-		target="_blank">Create Guide</LinkButton
+		href="/contact/support?subject=other">Get in contact</LinkButton
 	>
 </div>
